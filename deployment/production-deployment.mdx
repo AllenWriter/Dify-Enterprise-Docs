@@ -1,0 +1,59 @@
+---
+title: Production Deployment
+---
+
+## Requirements
+> This requirements can support up to `3000 active users daily`. If you have more users, you can scale the resources as needed.
+
+- Kubernetes Cluster
+    - 3 Master Nodes: Each one 4 CPU, 16 GB RAM
+    - 6 Worker Nodes: Each one 8 CPU, 32 GB RAM
+- Persistence Storage
+    - s3, azure-blob, aliyun-oss, google-storage
+    - 512 GB Storage
+- Postgres Database
+    - Version 14+
+    - 4 CPU, 8 GB RAM
+    - 512 GB `SSD` Storage
+- Redis Database
+    - Version 6+
+    - 2 GB RAM
+- [Vector DB Virtual Machine - Qdrant Cluster](../configuration/qdrant/qdrant-cluster.md)
+    - 3 Virtual Machines
+    - 8 CPU, 64 GB RAM
+    - 100 GB Storage
+
+## Dify Services Resources
+
+| Services                 | Replicas  | CPU  | RAM - GB  | Total CPU | Total RAM - GB |
+| ------------------------ | --------- | ---- | --------- | --------- | -------------- |
+| dify-api                 | 3         | 4    | 10        | 12        | 30             |
+| dify-worker              | 3         | 3    | 10        | 9         | 30             |
+| unstructured             | 3         | 1    | 4         | 3         | 12             |
+| dify-web                 | 3         | 2    | 8         | 6         | 24             |
+| dify-sandbox             | 3         | 1    | 4         | 3         | 12             |
+| ssrf-proxy               | 3         | 1    | 4         | 3         | 12             |
+| dify-enterprise          | 3         | 1    | 4         | 3         | 12             |
+| dify-enterprise-frontend | 3         | 1    | 4         | 3         | 12             |
+|                          |           |      | **Total** | 42        | 144            |
+
+## Deployment
+### Initial External Resources
+- Persistence Storage
+- Postgres Database
+- Redis Database
+- Vector DB Virtual Machine
+
+### Update Helm Chart Values `values-no-infra-for-prod.yaml`
+- Update `persistence` with your persistence storage configuration
+- Update `externalPostgres` with your postgres database configuration
+- Update `externalRedis` with your redis database configuration
+- Update `vectorDB` with your vector db virtual machine configuration
+
+### Install Dify Enterprise
+You can install Dify Enterprise using the following guide. But you need to use `values-no-infra-for-prod.yaml` instead of `values.yaml`.
+- [How to install Dify Enterprise](../quick-start/kubernetes.md)
+
+### Verify Services Status
+After the installation, you can verify the services status referring to the following guide.
+- [How to verify Dify Enterprise services status](./verify-services-status.md)

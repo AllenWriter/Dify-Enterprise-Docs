@@ -1,0 +1,36 @@
+---
+title: Dify System Logo
+---
+
+## Requirements
+- favicon.ico
+  - height: 48px
+  - width: 48px
+- logo-site.png
+  - height: 40px
+  - width: any
+  - ![logo-site.png](../.assets/logo-site.png)
+
+## Configuration
+### Base64 encode images
+You can use the following command to encode images to base64.
+```bash
+base64 -i favicon.ico -o favicon.ico.txt
+base64 -i logo-site.png -o logo-site.png.txt
+```
+
+#### Update Helm values
+Copy the base64 encoded string from the generated files and replace the `#REPLACE_ME#` in the following values.
+
+```yaml
+web:
+  logoConfig:
+    enabled: true
+    # image:
+    #   repository: g-hsod9681-docker.pkg.coding.net/dify-artifact/dify/busybox
+    #   tag: "1.36.1"
+    faviconIcoBase64: |
+      #REPLACE_ME#
+    logoSitePngBase64: |
+      #REPLACE_ME#
+```

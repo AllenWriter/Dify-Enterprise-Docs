@@ -1,0 +1,92 @@
+---
+title: Members Management
+---
+
+# Member Management
+
+Administrators can view and manage all members within the enterprise in the **Members** page, including members' permission roles in various Workspaces, member status, and view members' creation date and last active date.
+
+## Member Permission Management
+
+Each member has permissions at both the team level and Workspace level. System administrators can add team members and invite new system administrators, as well as assign a member's permissions to a Workspace.
+
+### Team-level Permissions
+
+1. **Regular User**
+   - Users added on the Members page have regular user permissions by default.
+   - Members in this user group can perform the following operations:
+     * Log in and use the Dify enterprise
+
+2. **System Administrator**
+   - Users added on the Settings page have system administrator permissions by default.
+   - Members in this user group can perform the following operations:
+     * Log in to the enterprise dashboard
+     * Add / delete / disable team members
+     * Add members to Workspaces and assign permissions
+
+   For more operations guides for system administrators, please refer to System Settings Docs.
+
+### Workspace-level Permissions
+
+Workspaces include three permission groups: Owner, Admin, and Normal.
+
+1. **Owner**
+   - The creator of the Workspace. 
+   - Each workspace has only one Owner.
+   - Has the permission to create and edit all applications within the workspace.
+   - Can enter the settings page to add model providers, create API extensions, and other operations.
+
+2. **Admin**
+   - Workspace administrators. 
+   - Each workspace can have multiple administrators.
+   - Has the permission to create and edit all applications within the workspace.
+   - Can enter the settings page to add model providers, create API extensions, and other operations.
+
+3. **Normal**
+   - Normal members of the Workspace. 
+   - Each workspace can have multiple regular members.
+   - Can only use applications within the workspace but cannot edit or modify them.
+   - Cannot access the settings page to add model providers, create API extensions, or perform similar operations.
+
+## Adding New Members to the Team
+
+If your team hasn't enabled SSO authentication, you can log in using a username and password.
+
+1. Click the blue Add button in the upper right corner
+2. Fill in the username and email
+3. When adding a member for the first time, the default login password will be displayed only once
+
+To add an administrator to the team, please refer to System Administrator Settings Docs.
+
+## Adding New Members to a Workspace
+
+If you want to add new members to a specific workspace, please refer to Workspace Management Docs.
+
+## Disabling Members
+
+Compared to directly deleting members, disabling members allows you to deny user access requests while retaining their data. 
+
+To disable a member:
+1. Click the menu button on the right side of the member's entry
+2. Switch their Status to "banned"
+
+## Resetting Member Passwords
+
+If a member has lost their password, the system administrator needs to manually send a password reset email. 
+
+1. Click the menu button on the right side of the member's entry
+2. Tap "Reset Password"
+
+## Deleting Members
+
+⚠️ **All applications and usage data under the member's name will be deleted. Please handle with caution.**
+
+To delete a member:
+1. Click the menu button on the right side of a member
+2. Tap the "Delete" option
+
+**Note**: Once members are added to a workspace, they cannot be removed. Clicking Delete on the Members page will be considered as removing the member from the team.
+
+## Searching for Members
+
+Administrators can query users in the search box using workspace ID and user email, and you can also switch user status for queries.

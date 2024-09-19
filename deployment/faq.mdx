@@ -1,0 +1,68 @@
+---
+title: FAQ
+---
+
+## How to config Nginx Ingress Controller
+
+This is common configuration for Nginx Ingress Controller. You can use other ingress controller depend on your cloud provider. You can execute the following commands to install the Nginx Ingress Controller on your Kubernetes cluster:
+
+```bash
+kubectl apply -f ./ingress-nginx-controller-v1.10.1.yaml
+```
+
+Update the `values.yaml` and set the ingress configuration.
+
+```yaml
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations: {
+    # set file upload size limit
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+  }
+```
+
+After all the configuration is done, you can execute the following commands to upgrade the application on your Kubernetes cluster:
+
+```bash
+helm upgrade -i dify -f values.yaml dify/dify
+```
+
+## How to access Dify services
+
+After the installation, if you want to access services, you should configure the ingress first. You can get the ingress IP by the following command:
+
+```bash
+kubectl get services -o wide -w -n ingress-nginx
+```
+
+Then get the ingress IP and set the domain in your local `/etc/hosts` file.
+
+```
+4.152.1.216 console.dify.local
+4.152.1.216 app.dify.local
+4.152.1.216 enterprise.dify.local
+```
+
+## How to access Dify Enterprise Dashboard
+
+Open the url `enterprise.dify.local` in your browser, and login with the default username and password. You can change the password after login.
+
+- username: dashboard@dify.ai
+- password: difyai123456
+
+## Display helm chart values
+
+To see what options are configurable on a chart, use helm show values:
+
+```bash
+helm show values dify/dify
+```
+
+## Use helm template to generate Kubernetes YAML
+
+Please use the commands below:
+
+```bash
+helm template dify -f values.yaml dify/dify > dify-k8s-template.yaml
+```

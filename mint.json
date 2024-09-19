@@ -5,7 +5,7 @@
     "dark": "/logo/dify-logo.svg",
     "light": "/logo/dify-logo.svg"
   },
-  "favicon": "/docs-logo.avif",
+  "favicon": "/dify-logo.png",
   "colors": {
     "primary": "#346DDB",
     "light": "#688FE8",
@@ -23,36 +23,65 @@
   ],
   "navigation": [
     {
-      "group": "Dify Enterprise Documentation",
+      "group": "",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "introduction"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Deployment",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        {
+          "group": "Prerequisites",
+          "pages": [
+            "deployment/prerequisites/resources-checklist",
+            "deployment/prerequisites/dify-helm-chart",
+            "deployment/prerequisites/kubernetes",
+            "deployment/prerequisites/minikube"
+        ]
+      },
+      "deployment/testing-deployment",
+      "deployment/production-deployment",
+      "deployment/verify-services-status",
+      {
+        "group": "Advanced Configuration",
+        "pages": [
+          "deployment/advanced-configuration/ingress-nginx-controller",
+          "deployment/advanced-configuration/domain-and-ssl-certificate",
+          "deployment/advanced-configuration/dify-system-logo",
+          {
+            "group": "Qdrant",
+            "pages": [
+              "deployment/advanced-configuration/qdrant/single-node",
+              "deployment/advanced-configuration/qdrant/qdrant-cluster"
+          ]
+        },
+        "deployment/advanced-configuration/docker-image-pull-secret"
+      ]
+    },
+    "deployment/faq"
+
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "Administrator Guide",
       "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "administrator-guide/workspace-management",
+        "administrator-guide/members-management",
+        {
+          "group": "SSO Authentication",
+          "pages": [
+            "administrator-guide/sso/introduction",
+            {
+              "group": "Okta",
+              "pages": [
+                "administrator-guide/sso/okta/oidc",
+                "administrator-guide/sso/okta/saml"
+            ]
+          }
+        ]
+      },
+      "administrator-guide/system-settings"
       ]
     }
   ],

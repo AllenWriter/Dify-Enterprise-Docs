@@ -1,0 +1,75 @@
+---
+title: 'Minikube'
+---
+
+## Requirements
+- Minikube
+  - 4 CPU 16 GB RAM
+- Helm 3.14+
+- Kubectl
+
+## Installation
+### Start minikube
+You can execute the following commands to start minikube:
+```bash
+minikube start --driver=docker --cpus=4 --memory=16384
+```
+
+### Set docker image pull secret
+You need to set the docker image pull secret before installing Dify Enterprise.
+- [How to set docker image pull secret](../configuration/docker-image-pull-secret.md)
+
+### Persistence Configration
+You need to edit `values.yaml` and set the persistence type. You are doing this to prepare for configuration after the pulling of image.
+The storage type support: s3, azure-blob, aliyun-oss, google-storage.
+```
+persistence:
+  type: "s3"
+  s3:
+    endpoint: "https://xxx.r2.cloudflarestorage.com"
+    accessKey: "#REPLACE_ME#"
+    secretKey: "#REPLACE_ME#"
+    region: "us-east-1"
+    bucketName: "your-bucket-name"
+```
+
+### Install Dify Enterprise
+Dify Enterprise is deployed using Helm. 
+
+```bash
+helm repo add dify https://langgenius.github.io/dify-helm
+helm repo update
+
+helm upgrade -i dify -f values.yaml dify/dify
+```
+
+For more information, please refer to the [Dify Helm Chart](../configuration/dify-helm-chart.md).
+
+### Set up Ingress Controller
+You can execute the following commands to enable the Ingress controller on your minikube cluster:
+```bash
+minikube addons enable ingress
+```
+
+You should use the `minikube tunnel` command to expose the services to the host machine.
+```bash
+minikube tunnel
+```
+
+### Access Dify Enterprise
+After Ingress controller is enabled, you can set the domain in your local `/etc/hosts` file.
+```
+127.0.0.1 console.dify.local
+127.0.0.1 app.dify.local
+127.0.0.1 api.dify.local
+127.0.0.1 upload.dify.local
+127.0.0.1 enterprise.dify.local
+```
+
+### Verify Installation
+- Dify Console: visit `http://console.dify.local` and finish the installation.
+- Enterprise Dashboard: visit `http://enterprise.dify.local`, and login with the default email and password. You can change the password after login.
+  ```
+  email: dashboard@dify.ai
+  password: difyai123456
+  ```

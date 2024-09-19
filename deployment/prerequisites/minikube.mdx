@@ -17,7 +17,7 @@ minikube start --driver=docker --cpus=4 --memory=16384
 
 ### Set docker image pull secret
 You need to set the docker image pull secret before installing Dify Enterprise.
-- [How to set docker image pull secret](../configuration/docker-image-pull-secret.md)
+- [How to set docker image pull secret](/deployment/advanced-configuration/docker-image-pull-secret)
 
 ### Persistence Configration
 You need to edit `values.yaml` and set the persistence type. You are doing this to prepare for configuration after the pulling of image.
@@ -43,7 +43,7 @@ helm repo update
 helm upgrade -i dify -f values.yaml dify/dify
 ```
 
-For more information, please refer to the [Dify Helm Chart](../configuration/dify-helm-chart.md).
+For more information, please refer to the [Dify Helm Chart](/deployment/prerequisites/dify-helm-chart).
 
 ### Set up Ingress Controller
 You can execute the following commands to enable the Ingress controller on your minikube cluster:

@@ -35,11 +35,16 @@
           "group": "Prerequisites",
           "pages": [
             "deployment/prerequisites/resources-checklist",
-            "deployment/prerequisites/dify-helm-chart",
-            "deployment/prerequisites/kubernetes",
-            "deployment/prerequisites/minikube"
+            "deployment/prerequisites/dify-helm-chart"
         ]
       },
+      {
+        "group": "Install Dify Enterprise",
+        "pages": [
+          "deployment/prerequisites/kubernetes",
+          "deployment/prerequisites/minikube"
+      ]
+    },      
       "deployment/testing-deployment",
       "deployment/production-deployment",
       "deployment/verify-services-status",

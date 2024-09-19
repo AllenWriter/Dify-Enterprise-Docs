@@ -1,71 +1,180 @@
 ---
 title: Introduction
-description: 'Welcome to the home of your new documentation'
 ---
 
-<img
-  className="block dark:hidden"
-  src="/images/hero-light.svg"
-  alt="Hero Light"
-/>
-<img
-  className="hidden dark:block"
-  src="/images/hero-dark.svg"
-  alt="Hero Dark"
-/>
+The Dify Enterprise is a professional private deployment product designed for large organizations and teams, aimed at providing secure and reliable AI middleware services for internal enterprise organizations, empowering teams to transition towards AI+. 
 
-## Setting up
+## Advantages
 
-The first step to world-class documentation is setting up your editing environments.
+Our enterprise-level solution offers the following advantages:
 
-<CardGroup cols={2}>
-  <Card
-    title="Edit Your Docs"
-    icon="pen-to-square"
-    href="https://mintlify.com/docs/quickstart"
-  >
-    Get your docs set up locally for easy development
-  </Card>
-  <Card
-    title="Preview Changes"
-    icon="image"
-    href="https://mintlify.com/docs/development"
-  >
-    Preview your changes before you push to make sure they're perfect
-  </Card>
-</CardGroup>
+- **Unlimited member seats**: Supports enterprise expansion based on personnel needs without worrying about additional licensing costs.
+- **Advanced team management**: Flexibly manage "workspaces" and "team members" within the enterprise Dify platform, allowing administrators to easily control access permissions and team structures.
+- **Enterprise-grade access security**: Integrates with internal enterprise SSO (Single Sign-On) systems, ensuring secure and reliable authentication while avoiding potential data risks.
 
-## Make it yours
+## Applicable Scenarios
 
-Update your docs to your brand and add valuable content for the best user conversion.
+### High data security requirements
 
-<CardGroup cols={2}>
-  <Card
-    title="Customize Style"
-    icon="palette"
-    href="https://mintlify.com/docs/settings/global"
-  >
-    Customize your docs to your company's colors and brands
-  </Card>
-  <Card
-    title="Reference APIs"
-    icon="code"
-    href="https://mintlify.com/docs/api-playground/openapi"
-  >
-    Automatically generate endpoints from an OpenAPI spec
-  </Card>
-  <Card
-    title="Add Components"
-    icon="screwdriver-wrench"
-    href="https://mintlify.com/docs/components/accordion"
-  >
-    Build interactive features and designs to guide your users
-  </Card>
-  <Card
-    title="Get Inspiration"
-    icon="stars"
-    href="https://mintlify.com/customers"
-  >
-    Check out our showcase of our favorite documentation
-  </Card>
-</CardGroup>
+For industries and enterprises with very high data security requirements, such as finance and healthcare sectors. Dify Enterprise Edition provides:
+
+- End-to-end encrypted transmission
+- Strict data access control
+- Local deployment options, ensuring sensitive data doesn't leave the enterprise intranet
+
+### Large-scale AI application deployment and control
+
+For organizations needing to deploy and manage AI applications on a large scale within the enterprise.
+
+- Centralized AI asset management, including models, datasets, and applications. Administrators can easily view and monitor the operation of multiple AI applications within the enterprise.
+- Model neutrality, allowing administrators to connect open-source/closed-source AI large models themselves, applying them to business scenarios faster.
+- Easy to use, supporting business personnel in rapidly developing and testing product prototypes.
+- Permission management system, ensuring resource sharing while protecting sensitive information.
+
+### Extensive AI capability integration scenarios
+
+For enterprises needing to seamlessly integrate AI capabilities into existing business processes and systems.
+
+- Provides rich API endpoints, supporting integration with enterprise systems
+- Custom workflow engine, implementing complex business logic
+- Multi-language support, meeting internationalization needs
+
+### High concurrency and high availability requirements
+
+For large enterprises or internet companies with extremely high requirements for system stability and performance.
+
+- Distributed architecture, supporting horizontal scaling
+- Load balancing and failover mechanisms, ensuring high service availability
+
+## Installation
+
+### Requirements
+
+- Kubernetes 1.24+
+- Helm 3.0+
+- Kubectl
+
+### Preparation
+
+#### Set docker image pull secret
+
+You should have docker image pull secret for enterprise registry. You can create the secret by the following command:
+
+```bash
+kubectl create secret docker-registry dify-artifacts-token \
+    --docker-server=artifacts.langgenius.ai \
+    --docker-username=xxx \
+    --docker-password=xxx
+```
+
+#### Persistence Configuration
+
+You need to edit `values.yaml` and set the persistence type. The storage type support: s3, azure-blob, aliyun-oss, google-storage.
+
+```yaml
+persistence:
+  type: "s3"
+  s3:
+    endpoint: "https://xxx.r2.cloudflarestorage.com"
+    accessKey: "#REPLACE_ME#"
+    secretKey: "#REPLACE_ME#"
+    region: "us-east-1"
+    bucketName: "your-bucket-name"
+    addressType: ""
+    useAwsManagedIam: false
+```
+
+### Installation
+
+You can execute the following commands to upgrade the application on your Kubernetes cluster:
+
+```bash
+# Add the Dify Helm repository
+helm repo add dify https://langgenius.github.io/dify-helm
+helm repo update
+
+helm upgrade -i dify -f values.yaml dify/dify
+```
+
+### Upgrade
+
+You can execute the following commands to upgrade the application on your Kubernetes cluster:
+
+```bash
+helm upgrade -i dify -f values.yaml dify/dify
+```
+
+### Uninstallation
+
+You can execute the following commands to uninstall the application from your Kubernetes cluster:
+
+```bash
+helm uninstall dify
+```
+
+## FAQ
+
+### How to config Nginx Ingress Controller
+
+This is common configuration for Nginx Ingress Controller. You can use other ingress controller depend on your cloud provider. You can execute the following commands to install the Nginx Ingress Controller on your Kubernetes cluster:
+
+```bash
+kubectl apply -f ./ingress-nginx-controller-v1.10.1.yaml
+```
+
+Update the `values.yaml` and set the ingress configuration.
+
+```yaml
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations: {
+    # set file upload size limit
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+  }
+```
+
+After all the configuration is done, you can execute the following commands to upgrade the application on your Kubernetes cluster:
+
+```bash
+helm upgrade -i dify -f values.yaml dify/dify
+```
+
+### How to access Dify services
+
+After the installation, if you want to access services, you should configure the ingress first. You can get the ingress IP by the following command:
+
+```bash
+kubectl get services -o wide -w -n ingress-nginx
+```
+
+Then get the ingress IP and set the domain in your local `/etc/hosts` file.
+
+```
+4.152.1.216 console.dify.local
+4.152.1.216 app.dify.local
+4.152.1.216 enterprise.dify.local
+```
+
+### How to access Dify Enterprise Dashboard
+
+Open the url `enterprise.dify.local` in your browser, and login with the default username and password. You can change the password after login.
+
+- username: dashboard@dify.ai
+- password: difyai123456
+
+### Display helm chart values
+
+To see what options are configurable on a chart, use helm show values:
+
+```bash
+helm show values dify/dify
+```
+
+### Use helm template to generate Kubernetes YAML
+
+Please use the commands below:
+
+```bash
+helm template dify -f values.yaml dify/dify > dify-k8s-template.yaml
+```

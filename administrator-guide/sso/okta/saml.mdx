@@ -9,7 +9,13 @@ In this guide, we will use Okta as the SSO provider, utilizing the SAML protocol
 1. Access the Okta admin dashboard
 2. Navigate to the Applications page
 3. Click the "Create App Integration" button
+
+![](/images/okta-saml-1.png)
+
 4. Select "SAML 2.0" as the application type
+
+![](/images/okta-saml-2.png)
+
 5. Click Next to access the Configure SAML page
 6. Wait before filling in the parameters and open a new browser tab
 
@@ -22,6 +28,8 @@ Follow the instructions below to obtain the necessary information, then continue
    - Tap **"+ New Identity Provider → New OIDC Provider"**
    - View the Callback URL
 
+   ![](/images/okta-saml-3.png)
+
    It typically follows this format:
 
    ```
@@ -29,10 +37,14 @@ Follow the instructions below to obtain the necessary information, then continue
    ```
 
 2. Configure Okta:
-   - Paste the Callback URL into the "Single sign-on URL" and "Audience URI (SP Entity ID)" fields on the Configure SAML page
-   - Set the Name ID format to EmailAddress
-   - Under "Show Advanced Settings", verify that both the response and assertion signatures are set to Signed
-   - Click the "Next" button to complete the setup
+   
+   Paste it into the Single sign-on URL and Audience URI (SP Entity ID) fields on the Configure SAML page.
+
+   ![](/images/okta-saml-4.png)
+
+   After filling in the URL, continue with the following settings:
+      - Set the Name ID format to EmailAddress
+      - Under "Show Advanced Settings", verify that both the response and assertion signatures are set to Signed Click the "Next" button to complete the setup.
 
 ## 3. Complete the configuration on Dify
 
@@ -41,8 +53,12 @@ Follow the instructions below to obtain the necessary information, then continue
      - Sign-on URL
      - Signing certificate
 
+   ![](/images/okta-saml-5.png)
+
 2. Assign members:
    - On the "Assignments" page, assign the members who are allowed to use SSO login
+
+   ![](/images/okta-saml-6.png)
 
 3. Configure Dify:
    - Return to the Authentication page of the Dify Enterprise
@@ -57,8 +73,10 @@ Follow the instructions below to obtain the necessary information, then continue
    -----END CERTIFICATE-----
    ```
 
+   ![](/images/okta-saml-7.png)
+
 ## 4. Enable SSO Enforcement
 
-1. After completing the SAML Provider configuration, tap the toggle button to the right of **"Workspaces SSO"** to enable SSO authentication for your team
+After completing the SAML Provider configuration, tap the toggle button to the right of **"Workspaces SSO"** to enable SSO authentication for your team. 
 
-2. Once enabled, members of your organization must complete the SSO authentication before accessing resources in the Dify Enterprise
+Once enabled, members of your organization must complete the SSO authentication before accessing resources in the Dify Enterprise

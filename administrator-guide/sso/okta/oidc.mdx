@@ -9,9 +9,14 @@ In this guide, we will use Okta as the SSO provider, utilizing the OIDC protocol
 1. Access the Okta admin dashboard
 2. Navigate to the Applications page
 3. Click the "Create App Integration" button
+
+![](/images/okta-oidc-1.png)
+
 4. Select "OIDC - OpenID Connect"
 5. Choose "Web Application" as the application type
 6. Complete the creation process
+
+![](/images/okta-oidc-2.png)
 
 ## 2. Configure the Okta application
 
@@ -19,6 +24,8 @@ In this guide, we will use Okta as the SSO provider, utilizing the OIDC protocol
    - Click on the Authentication page of the Dify Enterprise dashboard
    - Tap **"+ New Identity Provider → New OIDC Provider"**
    - View the Callback URL
+
+   ![](/images/okta-oidc-3.png)
 
    It typically follows this format:
 
@@ -31,21 +38,28 @@ In this guide, we will use Okta as the SSO provider, utilizing the OIDC protocol
    - Find the `Sign-in redirect URIs` field
    - Enter the Dify Callback URL into it
 
+![](/images/okta-oidc-4.png)
+
 ## 3. Complete the configuration on Dify
 
 1. Gather information from Okta:
    - Go to the "General" page of your Okta application and find:
      - Client ID
      - Client secret
+     
+     ![](/images/okta-oidc-5.png)
+
    - Head to the "Sign On" page and find:
      - **Issuer URL** (in the **Issuer** field)
 
-   The Issuer URL format is typically `https://<your-okta-domain>/oauth2/default` or `https://<your-okta-domain>`.
+>   The Issuer URL format is typically `https://<your-okta-domain>/oauth2/default` or `https://<your-okta-domain>`.
 
 2. Configure Dify:
    - Click on the Authentication page of the Dify Enterprise dashboard
    - Tap **"+ New Identity Provider → New OIDC Provider"**
    - Paste the information obtained from Okta to complete the configuration
+
+![](/images/okta-oidc-6.png)
 
 ## 4. Enable SSO Enforcement
 

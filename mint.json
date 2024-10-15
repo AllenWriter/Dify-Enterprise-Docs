@@ -62,6 +62,7 @@
           {
             "group": "向量数据库 - Qdrant",
             "pages": [
+              "deployment/advanced-configuration/qdrant/vector-database",
               "deployment/advanced-configuration/qdrant/single-node",
               "deployment/advanced-configuration/qdrant/qdrant-cluster"
           ]

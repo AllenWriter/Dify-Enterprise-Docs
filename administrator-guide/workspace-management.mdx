@@ -1,72 +1,48 @@
 ---
-title: Workspace Management
+title: 工作区管理
 ---
 
-**Workspace** is where team members create and manage their various AI applications. Administrators can view and manage all workspaces on the **Workspaces** page of the Enterprise dashboard.
+> 本篇文档面向企业版管理员。
 
-## Create Workspace
+工作区 Workspace 是团队成员用于创建、管理各个 AI 应用的空间。管理员可以在企业版管理后台的 Workspaces 页查看并管理所有工作区。
 
-To create a new workspace within the team:
+## 新建工作区
 
-1. Click the blue "Add" button in the upper right corner of the Workspaces page
-2. Set a name
-3. Specify a team member's email
+点击 Workspace 右上角的蓝色 Add 按钮，输入名称并指定某位团队成员的邮箱即可在团队内创建新的工作区。每个 Workspace 都需要指派一位 Owner。关于 Workspace 内成员的权限划分，请参考 成员管理
 
-Each Workspace must be assigned an Owner. For details on member permission within a workspace, please refer to Member Management Docs.
-
-## Managing Workspaces
-
-Administrators can reassign the Owner and modify members' names and status on the **Workspaces** page:
-
-1. Click the menu button on the right side of the Workspace
-2. Tap the "Edit" option
-3. Make changes on the newly popped-up editing page
+## 管理工作区
+工作区支持修改名称、状态；也可以重新指派 Owner。点击 Workspace 右侧的菜单按钮，轻点 “Edit” 选项，在新弹出的编辑页进行修改。
 
 ![](/images/workspace-management-1.png)
 
-## Viewing Members in a Workspace
-
-Administrators can view the Owner and members of any workspace:
-
-1. Select any workspace
-2. Click the menu button on the right
-3. Tap "Show member" to view
+## 查看工作区内的成员
+管理员可以查看任意工作区的 Owner 与成员。选中任意工作区，点击右侧的菜单按钮，轻点 "Show member" 进行查看。
 
 ![](/images/workspace-management-2.png)
 
-## Adding Members to a Workspace
+## 在工作区内新增成员
 
-Administrators can add members to a workspace on the back end:
+管理员可以在后台为某个工作区新增成员。点击 Workspace 右侧的菜单按钮，轻点 "Join member"，指派新成员的 Role 并添加成员的邮箱。
+- Admin 管理员，具备 Workspace 的管理权限，能够创建、编辑应用
+- Normal 普通成员，仅具备 Workspace 内的应用查看权限，无法创建或编辑应用
 
-1. Click the menu button on the right side of the Workspace
-2. Tap "Join member"
-3. Assign the Role for the new member
-4. Add the member's email
+在工作区新增成员后，无法将成员移除出工作区。
 
-Roles:
-* **Admin**: Has management permissions for the Workspace, can create and edit applications
-* **Normal**: Regular member, only has viewing permissions for applications within the Workspace, cannot create or edit applications
+## 调整工作区状态
 
-**Note**: After adding a member to a workspace, the member cannot be removed from the workspace.
+工作区包含以下两种状态：
+- Normal
+  当前工作区正常运行，成员可以在工作区里正常使用或创建应用。
+- Archive
+当前工作区已被归档，成员无法继续在工作区内使用或创建应用。
 
-## Adjusting Workspace Status
+## 删除工作区
 
-Workspaces include the following two statuses:
+⚠️ 该操作属危险操作，删除后将丢失所有工作区内的数据。
+点击 Workspace 右侧的菜单按钮，轻点 "Delete" 完成删除。
 
-* **Normal**: The current workspace is operating normally, members can normally use or create applications in the workspace.
-* **Archive**: The current workspace has been archived, members cannot continue to use or create applications in the workspace.
+## 搜索工作区
 
-## Deleting a Workspace
-
-⚠️ **This operation is dangerous, and all data within the workspace will be lost after deletion.**
-
-To delete a workspace:
-
-1. Click the menu button on the right side of the **Workspaces** page
-2. Tap "Delete"
-
-## Searching for Workspaces
-
-You can query all workspaces in the enterprise version through the workspace ID and name in the search box. Click "Reset" to reset all search conditions.
+管理员可以通过工作区 id 和名称在搜索框内查询企业版内的所有工作区。点击 "Reset" 将重置所有搜索条件。
 
 ![](/images/workspace-management-3.png)

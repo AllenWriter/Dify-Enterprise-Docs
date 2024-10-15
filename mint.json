@@ -15,6 +15,9 @@
       "to": "#346DDB"
     }
   },
+  "versions": [
+    "v1.0"
+  ],  
   "topbarLinks": [
     {
       "name": "Support",
@@ -24,62 +27,106 @@
   "navigation": [
     {
       "group": "",
+      "version": "v1.0",
       "pages": [
-        "introduction"
+        "introduction",
+        "roadmap"
       ]
     },
     {
-      "group": "Deployment",
+      "group": "部署手册",
       "pages": [
-        {
-          "group": "Prerequisites",
-          "pages": [
-            "deployment/prerequisites/resources-checklist",
-            "deployment/prerequisites/dify-helm-chart"
-        ]
-      },
+        "deployment/checklist",
+        "deployment/resources-checklist",
       {
-        "group": "Install Dify Enterprise",
+        "group": "安装指引",
         "pages": [
           "deployment/prerequisites/kubernetes",
           "deployment/prerequisites/minikube"
       ]
-    },      
-      "deployment/testing-deployment",
-      "deployment/production-deployment",
+    },
+    {
+      "group": "环境隔离",
+      "pages": [
+        "deployment/test-production/testing-deployment",
+        "deployment/test-production/production-deployment",
+        "deployment/test-production/verify-services-status"
+    ]
+  },
       "deployment/verify-services-status",
       {
-        "group": "Advanced Configuration",
+        "group": "高级配置",
         "pages": [
-          "deployment/advanced-configuration/ingress-nginx-controller",
-          "deployment/advanced-configuration/domain-and-ssl-certificate",
-          "deployment/advanced-configuration/dify-system-logo",
+          "deployment/advanced-configuration/persistent-storage",
+          "deployment/advanced-configuration/postgresql-database",
           {
-            "group": "Qdrant",
+            "group": "向量数据库 - Qdrant",
             "pages": [
               "deployment/advanced-configuration/qdrant/single-node",
               "deployment/advanced-configuration/qdrant/qdrant-cluster"
           ]
         },
-        "deployment/advanced-configuration/docker-image-pull-secret"
-      ]
-    },
-    "deployment/faq"
-
+        "deployment/advanced-configuration/rag",
+        "deployment/advanced-configuration/email-provider",
+        "deployment/advanced-configuration/file-upload",
+        "deployment/advanced-configuration/ingress-nginx-controller",
+        "deployment/advanced-configuration/domain-and-ssl-certificate",
+        "deployment/advanced-configuration/dify-system-logo",
+        "deployment/advanced-configuration/environment-variables",
+        "deployment/advanced-configuration/dify-helm-chart",
+        {
+          "group": "Docker",
+          "pages": [
+            "deployment/docker/docker-image-pull-secret",
+            "deployment/docker/docker-registry"
+        ]
+      }
       ]
     },
     {
-      "group": "Administrator Guide",
+      "group": "云基础设施",
+      "pages": [
+        "deployment/cloud-infrastructure/azure-poc-infra-setup"
+    ]
+  },    
+    "deployment/faq"
+      ]
+    },
+    {
+      "group": "管理员手册",
       "pages": [
         "administrator-guide/workspace-management",
         "administrator-guide/members-management",
         {
-          "group": "SSO Authentication",
+          "group": "身份认证",
           "pages": [
-            "administrator-guide/sso/introduction",
+            "administrator-guide/authentication",
             {
-              "group": "Okta",
+              "group": "企业 SSO",
               "pages": [
+                "administrator-guide/sso/introduction",
+                "administrator-guide/sso/okta/oidc",
+                "administrator-guide/sso/okta/saml"
+            ]
+          }
+        ]
+      },
+      "administrator-guide/system-settings"
+      ]
+    },
+    {
+      "group": "用户手册",
+      "pages": [
+        "administrator-guide/workspace-management",
+        "administrator-guide/members-management",
+        {
+          "group": "身份认证",
+          "pages": [
+            "administrator-guide/authentication",
+            {
+              "group": "企业 SSO",
+              "pages": [
+                "administrator-guide/sso/introduction",
                 "administrator-guide/sso/okta/oidc",
                 "administrator-guide/sso/okta/saml"
             ]

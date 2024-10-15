@@ -1,109 +1,78 @@
 ---
-title: Members Management
+title: 成员管理
 ---
 
-Administrators can view and manage all members within the enterprise in the **Members** page, including members' permission roles in various Workspaces, member status, and view members' creation date and last active date.
+> 本篇文档面向企业版系统管理员。
+
+系统管理员可以在 Members 页查看并管理当前企业内的所有成员，包括成员在各个 Workspace 的权限角色、成员状态、查看成员的创建日期和上次活跃日期。
 
 ![](/images/members-management-1.png)
 
-## Member Permission Management
+## 成员权限管理
 
-Each member has permissions at both the team level and Workspace level. System administrators can add team members and invite new system administrators, as well as assign a member's permissions to a Workspace.
-
+每位成员都具备团队级和 Workspace 级两个维度的权限。团队管理员可以添加普通成员和邀请新的系统管理员，也可以分配某个成员在 Workspace 的权限。
 ![](/images/members-management-2.png)
 
-### Team-level Permissions
+## 团队级权限
 
-1. **Regular User**
-   Users added on the Members page have regular user permissions by default.
-   ![](/images/members-management-3.png)
-   Members in this user group can perform the following operations:
-     * Log in and use the Dify enterprise
+- 普通用户
+在 Members 页添加的用户默认拥有普通用户权限。
+![](/images/members-management-3.png)
+  位于该用户组的成员可以进行以下操作：
+  - 登录和使用 Dify 企业版
 
-2. **System Administrator**
-   Users added on the Settings page have system administrator permissions by default. For more operations guides for system administrators, please refer to [System Settings](/administrator-guide/system-settings). 
-   ![](/images/members-management-4.png)
-   Members in this user group can perform the following operations:
+- 系统管理员
+在 Settings 页添加的用户默认拥有系统管理员权限。关于更多系统管理员的操作指南，请参考 系统设置
+![](/images/members-management-4.png)
 
-     * Log in to the enterprise dashboard
-     * Add / delete / disable team members
-     * Add members to Workspaces and assign permissions
+  位于该用户组的成员可以进行以下操作：
+  - 登录企业版管理后台
+  - 添加 / 删除 / 禁用团队成员
+  - 为 Workspace 添加成员并分配权限
 
-   For more operations guides for system administrators, please refer to [System Settings](/administrator-guide/system-settings).
-
-### Workspace-level Permissions
-
-Workspaces include three permission groups: Owner, Admin, and Normal.
-
+## Workspace 级权限
+Workspace 包含 Owner、Admin、Normal 三种权限组。
 ![](/images/members-management-5.png)
 
-1. **Owner**
-   - The creator of the Workspace. 
-   - Each workspace has only one Owner.
-   - Has the permission to create and edit all applications within the workspace.
-   - Can enter the settings page to add model providers, create API extensions, and other operations.
+- Owner
+Workspace 的创建者，每个工作区只有一位 Owner，拥有工作区内所有应用的创建和编辑权限。允许用户进入设置页添加模型供应商、创建 API 扩展等操作。
+- Admin
+Workspace 的管理员，每个工作区可以有多位管理员，拥有工作区内所有应用的创建和编辑权限。允许用户进入设置页添加模型供应商、创建 API 扩展等操作。
+- Normal
+Workspace 的普通成员。每个工作区可以有多位普通成员，仅能够使用工作区内的应用，无法编辑和修改。无法进入设置页添加模型供应商、创建 API 扩展等操作。
 
-2. **Admin**
-   - Workspace administrators. 
-   - Each workspace can have multiple administrators.
-   - Has the permission to create and edit all applications within the workspace.
-   - Can enter the settings page to add model providers, create API extensions, and other operations.
+## 添加新成员至团队
 
-3. **Normal**
-   - Normal members of the Workspace. 
-   - Each workspace can have multiple regular members.
-   - Can only use applications within the workspace but cannot edit or modify them.
-   - Cannot access the settings page to add model providers, create API extensions, or perform similar operations.
-
-## Adding New Members to the Team
-
-If your team hasn't enabled SSO authentication, you can log in using a username and password.
-
-1. Click the blue Add button in the upper right corner
-2. Fill in the username and email
-3. When adding a member for the first time, the default login password will be displayed only once
-
-To add an administrator to the team, please refer to [System Settings](/administrator-guide/system-settings).
-
+如果你的团队未开启 SSO 认证，则可以使用用户名称和密码进行登录。
+点击右上角的蓝色 Add 按钮，填写用户名称和邮箱。首次添加成员时，将展示默认登录密码。如需为团队添加管理员，请参考 系统管理员设置。
 ![](/images/members-management-6.png)
 
-## Adding New Members to a Workspace
+## 添加新成员至工作区
 
-If you want to add new members to a specific workspace, please refer to Workspace Management Docs.
+如果你想要为某个工作区添加新成员，请参考 工作区管理。
 
-## Disabling Members
+## 禁用成员
 
-Compared to directly deleting members, disabling members allows you to deny user access requests while retaining their data. 
-
-To disable a member:
-1. Click the menu button on the right side of the member's entry
-2. Switch their Status to "banned"
-
+相较于直接删除成员，禁用成员能够在保留数据的同时，拒绝用户的访问请求。点击成员右侧的菜单按钮，将 Status 切换为 banned 状态即可禁用成员。
 ![](/images/members-management-7.png)
 
-## Resetting Member Passwords
+## 重置成员密码
 
-If a member has lost their password, the system administrator needs to manually send a password reset email. 
-
-1. Click the menu button on the right side of the member's entry
-2. Tap "Reset Password"
+如果某位成员遗失了密码，需要系统管理员手动发送重置密码邮件。点击成员右侧的菜单按钮，轻点 Reset Password。
 
 ![](/images/members-management-8.png)
 
-## Deleting Members
+## 删除成员
 
-⚠️ **All applications and usage data under the member's name will be deleted. Please handle with caution.**
-
-To delete a member:
-1. Click the menu button on the right side of a member
-2. Tap the "Delete" option
+⚠️ 成员名下的所有应用和使用数据都会被删除，请谨慎处理。
+点击某位成员右侧的菜单按钮，轻点 "Delete" 选项即可删除成员。
 
 ![](/images/members-management-9.png)
 
-**Note**: Once members are added to a workspace, they cannot be removed. Clicking Delete on the Members page will be considered as removing the member from the team.
+工作区的成员一经添加后将无法被移除。点击 Members 页的 Delete 将会被视为在团队内移除成员。
 
-## Searching for Members
+## 搜索成员
 
-Administrators can query users in the search box using workspace ID and user email, and you can also switch user status for queries.
+管理员可以通过工作区 ID 和用户邮箱在搜索框内查询用户，也可以切换用户状态进行查询。
 
 ![](/images/members-management-10.png)

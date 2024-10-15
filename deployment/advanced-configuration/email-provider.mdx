@@ -1,0 +1,31 @@
+---
+title: Email Provider
+---
+
+## Display Helm Chart Values
+
+```bash
+helm show values dify/dify
+```
+
+## Find the Email Provider configuration in the Helm Chart Values
+
+```yaml
+mail:
+  type: ''
+  defaultSender: 'YOUR EMAIL FROM (eg: no-reply <no-reply@dify.ai>)'
+  resend:
+    apiKey: ''
+    apiUrl: https://api.resend.com
+  smtp:
+    server: ''
+    port: 587
+    username: ''
+    password: ''
+    useTLS: false
+  ... ...
+```
+
+## The options for the `mail.type` field
+- `resend`: Use the Resend service to send emails
+- `smtp`: Use the SMTP service to send emails

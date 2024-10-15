@@ -1,0 +1,36 @@
+---
+title: Docker Registry
+---
+
+## Display Helm Chart Values
+```bash
+helm show values dify/dify
+```
+
+## Find the Docker Registry configuration in the Helm Chart Values
+This is an example of the Docker Registry configuration in the Helm chart values.
+You can set the image repository and tag in the Helm chart values.
+
+```yaml
+api:
+  image:
+    repository: langgenius/dify-api
+    tag: "x.x.x"
+  ... ...
+```
+
+## How to sync images to your private registry
+You can sync the images to your private registry using the `sync.sh` script. Dify images support ARM64 and AMD64 architectures.
+
+### Set shell variables
+Edit the `sync.sh` file and set the following variables:
+- `REGISTRY_URL`: The URL of your private registry
+- `NAMESPACE`: The namespace of your private registry
+
+### Sync images
+Before syncing the images, you need to login to your private registry first.
+
+```bash
+# ./sync.sh <image> <version>
+./sync.sh dify-api x.x.x
+```

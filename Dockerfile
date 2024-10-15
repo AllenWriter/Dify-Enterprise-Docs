@@ -19,5 +19,14 @@ COPY . .
 # 设置默认端口为 3000，但允许在运行时覆盖
 ENV PORT=3000
 
-# 启动 Mintlify，使用环境变量中的端口
-CMD mintlify dev --port $PORT
+# 安装 supervisor
+RUN apk add --no-cache supervisor
+
+# 创建 supervisor 配置目录
+RUN mkdir -p /etc/supervisor.d/
+
+# 添加 supervisor 配置文件
+COPY supervisord.conf /etc/supervisor.d/supervisord.conf
+
+# 将 CMD 改为运行 supervisor
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor.d/supervisord.conf"]

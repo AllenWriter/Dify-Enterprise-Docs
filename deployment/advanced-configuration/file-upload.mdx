@@ -1,0 +1,38 @@
+---
+title: File Upload
+---
+
+## Display Helm Chart Values
+```bash
+helm show values dify/dify
+```
+
+## Find the File Upload configuration in the Helm Chart Values
+This is an example of the file upload configuration in the Helm chart values.
+
+```yaml
+api:
+  limits:
+    # upload file size limit in MB
+    uploadFileSize: 15
+    # upload file batch count limit
+    uploadFileBatchCount: 5
+    # upload image file size limit in MB
+    uploadImageFileSize: 5
+  ... ...
+```
+
+## Nginx Ingress Controller Configuration
+
+If you are using the Nginx Ingress Controller, you should set the file upload size limit in the `annotations` field, too.
+
+```yaml
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations: {
+    # set file upload size limit
+    nginx.ingress.kubernetes.io/proxy-body-size: "15m"
+  }
+  ... ...
+```

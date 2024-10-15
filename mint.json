@@ -77,8 +77,8 @@
         {
           "group": "Docker",
           "pages": [
-            "deployment/docker/docker-image-pull-secret",
-            "deployment/docker/docker-registry"
+            "deployment/advanced-configuration/docker/docker-image-pull-secret",
+            "deployment/advanced-configuration/docker/docker-registry"
         ]
       }
       ]
@@ -117,22 +117,78 @@
     {
       "group": "用户手册",
       "pages": [
-        "administrator-guide/workspace-management",
-        "administrator-guide/members-management",
+        "user-guide/welcome",
         {
-          "group": "身份认证",
+          "group": "构建应用",
           "pages": [
-            "administrator-guide/authentication",
+            "user-guide/build-app/chatbot",
+            "user-guide/build-app/text-generator",
+            "user-guide/build-app/agent",
             {
-              "group": "企业 SSO",
+              "group": "Chatflow & Workflow",
               "pages": [
-                "administrator-guide/sso/introduction",
-                "administrator-guide/sso/okta/oidc",
-                "administrator-guide/sso/okta/saml"
+                "user-guide/build-app/flow-app/concepts",
+                "user-guide/build-app/flow-app/create-flow-app",
+                "user-guide/build-app/flow-app/variables",
+                {
+                  "group": "节点说明",
+                  "pages": [
+                    "user-guide/build-app/flow-app/nodes/start",
+                    "user-guide/build-app/flow-app/nodes/end",
+                    "user-guide/build-app/flow-app/nodes/answer",
+                    "user-guide/build-app/flow-app/nodes/llm",
+                    "user-guide/build-app/flow-app/nodes/knowledge-retrieval",
+                    "user-guide/build-app/flow-app/nodes/question-classifier",
+                    "user-guide/build-app/flow-app/nodes/ifelse",
+                    "user-guide/build-app/flow-app/nodes/code",
+                    "user-guide/build-app/flow-app/nodes/template",
+                    "user-guide/build-app/flow-app/nodes/variable-aggregation",
+                    "user-guide/build-app/flow-app/nodes/variable-assigner",
+                    "user-guide/build-app/flow-app/nodes/iteration",
+                    "user-guide/build-app/flow-app/nodes/parameter-extractor",
+                    "user-guide/build-app/flow-app/nodes/http-request",
+                    "user-guide/build-app/flow-app/nodes/tools"
+                ]
+              },
+              "user-guide/build-app/flow-app/orchestrate-node"
             ]
           }
         ]
       },
+      {
+        "group": "调试应用",
+        "pages": [
+        "user-guide/debug-app/chatbot",
+        "user-guide/debug-app/text-generator",
+        "user-guide/debug-app/agent",
+        {
+          "group": "Chatflow & Workflow",
+          "pages": [
+          "user-guide/debug-app/chatflow-and-workflow/step-run",
+          "user-guide/debug-app/chatflow-and-workflow/log",
+          "user-guide/debug-app/chatflow-and-workflow/preview",
+          "user-guide/debug-app/chatflow-and-workflow/history",
+          "user-guide/debug-app/chatflow-and-workflow/api"
+        ]
+      }
+      ]
+    },      
+      {
+        "group": "发布应用",
+        "pages": [
+          {
+            "group": "发布为公开 Web 站点",
+            "pages": [
+            "user-guide/application-publishing/launch-your-webapp-quickly/web-app-settings",
+            "user-guide/application-publishing/launch-your-webapp-quickly/text-generator",
+            "user-guide/application-publishing/launch-your-webapp-quickly/conversation-application"
+          ]
+        },
+        "user-guide/application-publishing/embedding-in-websites",
+        "user-guide/application-publishing/developing-with-apis",
+        "user-guide/application-publishing/based-on-frontend-templates"
+      ]
+    },
       "administrator-guide/system-settings"
       ]
     }

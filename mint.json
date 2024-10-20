@@ -83,7 +83,13 @@
                 "administrator-guide/sso/okta/oidc",
                 "administrator-guide/sso/okta/saml"
             ]
-          }
+          },
+          {
+            "group": "Azure",
+            "pages": [
+              "administrator-guide/sso/azure/saml"
+          ]
+        }
         ]
       },
       "administrator-guide/system-settings"

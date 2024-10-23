@@ -2,26 +2,26 @@
 title: 'Minikube'
 ---
 
-## Requirements
+## 要求
 - Minikube
   - 4 CPU 16 GB RAM
 - Helm 3.14+
 - Kubectl
 
-## Installation
-### Start minikube
-You can execute the following commands to start minikube:
+## 安装
+### 启动 minikube
+您可以执行以下命令来启动 minikube：
 ```bash
 minikube start --driver=docker --cpus=4 --memory=16384
 ```
 
-### Set docker image pull secret
-You need to set the docker image pull secret before installing Dify Enterprise.
-- [How to set docker image pull secret](/deployment/advanced-configuration/docker-image-pull-secret)
+### 设置 Docker 镜像拉取密钥
+在安装 Dify Enterprise 之前，您需要设置 Docker 镜像拉取密钥。
+- [如何设置 Docker 镜像拉取密钥](/deployment/advanced-configuration/docker-image-pull-secret)
 
-### Persistence Configration
-You need to edit `values.yaml` and set the persistence type. You are doing this to prepare for configuration after the pulling of image.
-The storage type support: s3, azure-blob, aliyun-oss, google-storage.
+### 持久化配置
+您需要编辑 `values.yaml` 并设置持久化类型。这是为了在拉取镜像后进行配置做准备。
+支持的存储类型：s3、azure-blob、aliyun-oss、google-storage。
 ```
 persistence:
   type: "s3"
@@ -33,8 +33,8 @@ persistence:
     bucketName: "your-bucket-name"
 ```
 
-### Install Dify Enterprise
-Dify Enterprise is deployed using Helm. 
+### 安装 Dify Enterprise
+Dify Enterprise 使用 Helm 进行部署。
 
 ```bash
 helm repo add dify https://langgenius.github.io/dify-helm
@@ -43,21 +43,21 @@ helm repo update
 helm upgrade -i dify -f values.yaml dify/dify
 ```
 
-For more information, please refer to the [Dify Helm Chart](/deployment/prerequisites/dify-helm-chart).
+更多信息，请参考 [Dify Helm Chart](/deployment/prerequisites/dify-helm-chart)。
 
-### Set up Ingress Controller
-You can execute the following commands to enable the Ingress controller on your minikube cluster:
+### 设置 Ingress 控制器
+您可以执行以下命令在 minikube 集群上启用 Ingress 控制器：
 ```bash
 minikube addons enable ingress
 ```
 
-You should use the `minikube tunnel` command to expose the services to the host machine.
+您应该使用 `minikube tunnel` 命令将服务暴露给主机。
 ```bash
 minikube tunnel
 ```
 
-### Access Dify Enterprise
-After Ingress controller is enabled, you can set the domain in your local `/etc/hosts` file.
+### 访问 Dify Enterprise
+启用 Ingress 控制器后，您可以在本地 `/etc/hosts` 文件中设置域名。
 ```
 127.0.0.1 console.dify.local
 127.0.0.1 app.dify.local
@@ -66,10 +66,10 @@ After Ingress controller is enabled, you can set the domain in your local `/etc/
 127.0.0.1 enterprise.dify.local
 ```
 
-### Verify Installation
-- Dify Console: visit `http://console.dify.local` and finish the installation.
-- Enterprise Dashboard: visit `http://enterprise.dify.local`, and login with the default email and password. You can change the password after login.
+### 验证安装
+- Dify 控制台：访问 `http://console.dify.local` 并完成安装。
+- Enterprise 仪表板：访问 `http://enterprise.dify.local`，并使用默认的电子邮件和密码登录。登录后可以更改密码。
   ```
-  email: dashboard@dify.ai
-  password: difyai123456
+  电子邮件：dashboard@dify.ai
+  密码：difyai123456
   ```

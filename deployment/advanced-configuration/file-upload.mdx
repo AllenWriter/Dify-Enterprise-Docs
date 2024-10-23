@@ -1,39 +1,40 @@
 ---
-title: File Upload
+title: 文件上传
 ---
 
-## Find the File Upload configuration in the Helm Chart Values
-### Display Helm Chart Values
+## 显示 Helm Chart 值
+
 ```bash
 helm show values dify/dify
-```
+````
 
-## Find the File Upload configuration in the Helm Chart Values
-This is an example of the file upload configuration in the Helm chart values.
+## 在 Helm Chart 值中查找文件上传配置
+这是 Helm chart 值中文件上传配置的示例。
 
-```yaml
+````yaml
 api:
   limits:
-    # upload file size limit in MB
+    # 上传文件大小限制（单位：MB）
     uploadFileSize: 15
-    # upload file batch count limit
+    # 上传文件批次数量限制
     uploadFileBatchCount: 5
-    # upload image file size limit in MB
+    # 上传图片文件大小限制（单位：MB）
     uploadImageFileSize: 5
   ... ...
-```
+````
 
-## Nginx Ingress Controller Configuration
 
-If you are using the Nginx Ingress Controller, you should set the file upload size limit in the `annotations` field, too.
+## Nginx Ingress 控制器配置
 
-```yaml
+如果您使用的是 Nginx Ingress 控制器，您还应该在 `annotations` 字段中设置文件上传大小限制。
+
+````yaml
 ingress:
   enabled: true
   className: "nginx"
   annotations: {
-    # set file upload size limit
+    # 设置文件上传大小限制
     nginx.ingress.kubernetes.io/proxy-body-size: "15m"
   }
   ... ...
-```
+````

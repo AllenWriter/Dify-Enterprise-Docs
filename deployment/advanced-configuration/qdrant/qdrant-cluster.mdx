@@ -1,30 +1,31 @@
 ---
-title: Qdrant Cluster Deployment
+title: Qdrant 集群部署
 ---
 
-## Requirements
-- Three VMs with Docker installed
-- Docker installed
-  - [Install Docker](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
-  - [Manage Docker as a non-root user](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
-- Open ports 6333 and 6335 on the VMs
-  - 6333: Port for external communication with qdrant nodes.
-  - 6335: Port for internal communication between qdrant nodes. Don't expose to public. 
+## 要求
+- 三台安装了 Docker 的虚拟机
+- 已安装 Docker
+  - [安装 Docker](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
+  - [以非 root 用户身份管理 Docker](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
+- 在虚拟机上开放 6333 和 6335 端口
+  - 6333：用于与 qdrant 节点进行外部通信的端口。
+  - 6335：用于 qdrant 节点之间内部通信的端口。不要暴露给公众。
 
-## Installation
-### `QDRANT__SERVICE__API_KEY` is a required environment variable
-You can generate a random 32-byte hex string using the following command:
+## 安装
+### `QDRANT__SERVICE__API_KEY` 是必需的环境变量
+您可以使用以下命令生成一个随机的 32 字节十六进制字符串：
 
 ```bash
 openssl rand -hex 32
-```
+````
 
-Copy and paste the generated string to replace `#REPLACE_ME#` in the `docker-compose.yml` file.
 
-### [First VM] Create the `docker-compose.yml` file for first VM
-- replace commmand with `--uri` option to current VM address
+复制并粘贴生成的字符串，替换 `docker-compose.yml` 文件中的 `#REPLACE_ME#`。
 
-```bash
+### [第一台虚拟机] 为第一台虚拟机创建 `docker-compose.yml` 文件
+- 将命令中的 `--uri` 选项替换为当前虚拟机地址
+
+````bash
 version: "3.8"
 services:
   qdrant:
@@ -37,12 +38,13 @@ services:
     environment:
       QDRANT__SERVICE__API_KEY: #REPLACE_ME#
       QDRANT__CLUSTER__ENABLED: 'true'
-```
+````
 
-### [Second VM] Create the `docker-compose.yml` file for second VM
-- replace commmand with `--bootstrap` option to first VM address and `--uri` option to current VM address
 
-```bash
+### [第二台虚拟机] 为第二台虚拟机创建 `docker-compose.yml` 文件
+- 将命令中的 `--bootstrap` 选项替换为第一台虚拟机地址，`--uri` 选项替换为当前虚拟机地址
+
+````bash
 version: "3.8"
 services:
   qdrant:
@@ -55,12 +57,13 @@ services:
     environment:
       QDRANT__SERVICE__API_KEY: #REPLACE_ME#
       QDRANT__CLUSTER__ENABLED: 'true'
-```
+````
 
-### [Third VM] Create the `docker-compose.yml` file for third VM
-- replace commmand with `--bootstrap` option to first VM address and `--uri` option to current VM address
 
-```bash
+### [第三台虚拟机] 为第三台虚拟机创建 `docker-compose.yml` 文件
+- 将命令中的 `--bootstrap` 选项替换为第一台虚拟机地址，`--uri` 选项替换为当前虚拟机地址
+
+````bash
 version: "3.8"
 services:
   qdrant:
@@ -73,16 +76,20 @@ services:
     environment:
       QDRANT__SERVICE__API_KEY: #REPLACE_ME#
       QDRANT__CLUSTER__ENABLED: 'true'
-```
+````
 
-## Check the cluster status
-Login one of VMs and run the following command to check the cluster status.
-```bash
+
+## 检查集群状态
+登录其中一台虚拟机并运行以下命令来检查集群状态。
+````bash
 curl -H 'api-key: <QDRANT__SERVICE__API_KEY>' localhost:6333/cluster | python3 -m json.tool
-```
+````
 
-After you run the above command, you should see the following example output:
-```json
+
+运行上述命令后，您应该看到以下示例输出：
+
+
+````json
 {
     "result": {
         "status": "enabled",
@@ -115,12 +122,13 @@ After you run the above command, you should see the following example output:
     "status": "ok",
     "time": 8.7e-06
 }
-```
+````
 
-## Add Load Balancer
-- After deploying the qdrant cluster, you can add a load balancer to distribute the requests to the qdrant nodes.
-- Load balancer should be configured to distribute the requests to the qdrant nodes on port 6333.
-- 6335 only for internal communication, no need to expose it to the public.
 
-## References
-- [qdrant distributed deployment](https://qdrant.tech/documentation/guides/distributed_deployment/)
+## 添加负载均衡器
+- 部署 qdrant 集群后，您可以添加一个负载均衡器来分配请求到 qdrant 节点。
+- 负载均衡器应配置为在 6333 端口上分配请求到 qdrant 节点。
+- 6335 端口仅用于内部通信，无需暴露给公众。
+
+## 参考资料
+- [qdrant 分布式部署](https://qdrant.tech/documentation/guides/distributed_deployment/)

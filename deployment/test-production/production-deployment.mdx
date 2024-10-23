@@ -1,59 +1,59 @@
 ---
-title: Production Deployment
+title: 生产环境部署
 ---
 
-## Requirements
-> This requirements can support up to `3000 active users daily`. If you have more users, you can scale the resources as needed.
+## 要求
+> 这些要求可以支持每日最多 `3000 活跃用户`。如果您有更多用户，可以根据需要扩展资源。
 
-- Kubernetes Cluster
-    - 3 Master Nodes: Each one 4 CPU, 16 GB RAM
-    - 6 Worker Nodes: Each one 8 CPU, 32 GB RAM
-- Persistence Storage
-    - s3, azure-blob, aliyun-oss, google-storage
-    - 512 GB Storage
-- Postgres Database
-    - Version 14+
-    - 4 CPU, 8 GB RAM
-    - 512 GB `SSD` Storage
-- Redis Database
-    - Version 6+
+- Kubernetes 集群
+    - 3 个主节点：每个 4 CPU，16 GB RAM
+    - 6 个工作节点：每个 8 CPU，32 GB RAM
+- 持久化存储
+    - s3、azure-blob、aliyun-oss、google-storage
+    - 512 GB 存储空间
+- Postgres 数据库
+    - 版本 14+
+    - 4 CPU，8 GB RAM
+    - 512 GB `SSD` 存储空间
+- Redis 数据库
+    - 版本 6+
     - 2 GB RAM
-- [Vector DB Virtual Machine - Qdrant Cluster](/deployment/advanced-configuration/qdrant/qdrant-cluster)
-    - 3 Virtual Machines
-    - 8 CPU, 64 GB RAM
-    - 100 GB Storage
+- [向量数据库虚拟机 - Qdrant 集群](/deployment/advanced-configuration/qdrant/qdrant-cluster)
+    - 3 台虚拟机
+    - 8 CPU，64 GB RAM
+    - 100 GB 存储空间
 
-## Dify Services Resources
+## Dify 服务资源
 
-| Services                 | Replicas  | CPU  | RAM - GB  | Total CPU | Total RAM - GB |
-| ------------------------ | --------- | ---- | --------- | --------- | -------------- |
-| dify-api                 | 3         | 4    | 10        | 12        | 30             |
-| dify-worker              | 3         | 3    | 10        | 9         | 30             |
-| unstructured             | 3         | 1    | 4         | 3         | 12             |
-| dify-web                 | 3         | 2    | 8         | 6         | 24             |
-| dify-sandbox             | 3         | 1    | 4         | 3         | 12             |
-| ssrf-proxy               | 3         | 1    | 4         | 3         | 12             |
-| dify-enterprise          | 3         | 1    | 4         | 3         | 12             |
-| dify-enterprise-frontend | 3         | 1    | 4         | 3         | 12             |
-|                          |           |      | **Total** | 42        | 144            |
+| 服务                     | 副本数    | CPU  | RAM - GB  | 总 CPU   | 总 RAM - GB    |
+| ------------------------ | --------- | ---- | --------- | -------- | -------------- |
+| dify-api                 | 3         | 4    | 10        | 12       | 30             |
+| dify-worker              | 3         | 3    | 10        | 9        | 30             |
+| unstructured             | 3         | 1    | 4         | 3        | 12             |
+| dify-web                 | 3         | 2    | 8         | 6        | 24             |
+| dify-sandbox             | 3         | 1    | 4         | 3        | 12             |
+| ssrf-proxy               | 3         | 1    | 4         | 3        | 12             |
+| dify-enterprise          | 3         | 1    | 4         | 3        | 12             |
+| dify-enterprise-frontend | 3         | 1    | 4         | 3        | 12             |
+|                          |           |      | **总计**  | 42       | 144            |
 
-## Deployment
-### Initial External Resources
-- Persistence Storage
-- Postgres Database
-- Redis Database
-- Vector DB Virtual Machine
+## 部署
+### 初始化外部资源
+- 持久化存储
+- Postgres 数据库
+- Redis 数据库
+- 向量数据库虚拟机
 
-### Update Helm Chart Values `values-no-infra-for-prod.yaml`
-- Update `persistence` with your persistence storage configuration
-- Update `externalPostgres` with your postgres database configuration
-- Update `externalRedis` with your redis database configuration
-- Update `vectorDB` with your vector db virtual machine configuration
+### 更新 Helm Chart 值文件 `values-no-infra-for-prod.yaml`
+- 使用您的持久化存储配置更新 `persistence`
+- 使用您的 Postgres 数据库配置更新 `externalPostgres`
+- 使用您的 Redis 数据库配置更新 `externalRedis`
+- 使用您的向量数据库虚拟机配置更新 `vectorDB`
 
-### Install Dify Enterprise
-You can install Dify Enterprise using the following guide. But you need to use `values-no-infra-for-prod.yaml` instead of `values.yaml`.
-- [How to install Dify Enterprise](/deployment/prerequisites/kubernetes)
+### 安装 Dify Enterprise
+您可以使用以下指南安装 Dify Enterprise。但是您需要使用 `values-no-infra-for-prod.yaml` 而不是 `values.yaml`。
+- [如何安装 Dify Enterprise](/deployment/prerequisites/kubernetes)
 
-### Verify Services Status
-After the installation, you can verify the services status referring to the following guide.
-- [How to verify Dify Enterprise services status](/deployment/verify-services-status)
+### 验证服务状态
+安装完成后，您可以参考以下指南验证服务状态。
+- [如何验证 Dify Enterprise 服务状态](/deployment/verify-services-status)

@@ -2,53 +2,53 @@
 title: 资源清单
 ---
 
-For the beginning of the deployment, you need to prepare the following resources.
+在开始部署之前，您需要准备以下资源。
 
-# Requirements
+# 要求
 - Kubernetes 1.24+
 - Helm 3.14+
 
-- `Warning`: If you are using a restricted environment, please make sure to allow the pods to run as `root` (like OpenShift).
+- `警告`：如果您使用的是受限环境，请确保允许 pod 以 `root` 身份运行（如 OpenShift）。
 
-# Domains
-Dify Enterprise requires 5 domains to be set up. The domains are:
-- Console: console.dify.local
-- Services API: api.dify.local
-- APP: app.dify.local
-- Files: upload.dify.local
-- Enterprise Dashboard: enterprise.dify.local
+# 域名
+Dify Enterprise 需要设置 5 个域名。这些域名是：
+- 控制台：console.dify.local
+- 服务 API：api.dify.local
+- 应用：app.dify.local
+- 文件：upload.dify.local
+- 企业仪表板：enterprise.dify.local
 
-# Testing Deployment Resources
-- Kubernetes Cluster
-    - 1 Worker Node: 4 CPU, 16 GB RAM
-- Persistence Storage
-    - s3, amazon-s3, azure-blob, aliyun-oss, google-storage, tencent-cos, oci-storage
-    - 100 GB Storage
-- Postgres Database
-    - Version 14+
-    - 2 CPU, 4 GB RAM
-    - 256 GB Storage
-- Redis Database
-    - Version 6+
+# 测试部署资源
+- Kubernetes 集群
+    - 1 个工作节点：4 CPU，16 GB RAM
+- 持久化存储
+    - s3、amazon-s3、azure-blob、aliyun-oss、google-storage、tencent-cos、oci-storage
+    - 100 GB 存储空间
+- Postgres 数据库
+    -  14+
+    - 2 CPU，4 GB RAM
+    - 256 GB 存储空间
+- Redis 数据库
+    - 版本 6+
     - 1 GB RAM
-- Vector DB Virtual Machine - Qdrant Single Node
-    - 1 Virtual Machines
-    - 4 CPU, 8 GB RAM
+- 向量数据库虚拟机 - Qdrant 单节点
+    - 1 台虚拟机
+    - 4 CPU，8 GB RAM
 
-# Production Deployment Resources
-- Kubernetes Cluster
-    - 6 Worker Nodes: Each one 8 CPU, 32 GB RAM
-- Persistence Storage
-    - s3, amazon-s3, azure-blob, aliyun-oss, google-storage, tencent-cos, oci-storage
-    - 512 GB Storage
-- Postgres Database
-    - Version 14+
-    - 4 CPU, 8 GB RAM
-    - 512 GB `SSD` Storage
-- Redis Database
-    - Version 6+
+# 生产部署资源
+- Kubernetes 集群
+    - 6 个工作节点：每个 8 CPU，32 GB RAM
+- 持久化存储
+    - s3、amazon-s3、azure-blob、aliyun-oss、google-storage、tencent-cos、oci-storage
+    - 512 GB 存储空间
+- Postgres 数据库
+    - 版本 14+
+    - 4 CPU，8 GB RAM
+    - 512 GB `SSD` 存储空间
+- Redis 数据库
+    - 版本 6+
     - 2 GB RAM
-- Vector DB Virtual Machine - Qdrant Cluster
-    - 3 Virtual Machines
-    - 8 CPU, 64 GB RAM
-    - 100 GB Storage
+- 向量数据库虚拟机 - Qdrant 集群
+    - 3 台虚拟机
+    - 8 CPU，64 GB RAM
+    - 100 GB 存储空间

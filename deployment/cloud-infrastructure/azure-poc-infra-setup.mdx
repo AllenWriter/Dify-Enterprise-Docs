@@ -1,17 +1,17 @@
 ---
-title: Azure POC Infra Setup
+title: Azure POC 基础设施设置
 ---
 
-This is a guide to set up the Azure infrastructure for the POC.
+这是一个设置 Azure POC 基础设施的指南。
 
-## Requirements
+## 要求
 - AKS
-    - System Pool - 1 node - Standard_DS2_v2 (2 vcpus, 7 GiB memory)
-    - User Pool - 1 node - Standard_DS2_v2 (2 vcpus, 7 GiB memory)
+    - 系统池 - 1 个节点 - Standard_DS2_v2 (2 个 vCPU，7 GiB 内存)
+    - 用户池 - 1 个节点 - Standard_DS2_v2 (2 个 vCPU，7 GiB 内存)
 - [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
 - Helm 3.14+
 
-## Define environment variables
+## 定义环境变量
 ```bash
 export RANDOM_ID="$(openssl rand -hex 3)"
 
@@ -21,10 +21,11 @@ export LOCATION="eastus2"
 export DIFY_AKS_CLUSTER_NAME="difyakscluster$RANDOM_ID"
 export DIFY_AKS_SYSTEM_VM_SIZE="Standard_DS2_v2"
 export DIFY_AKS_USER_VM_SIZE="Standard_DS2_v2"
-```
+````
 
-## Create System Pool
-```bash
+
+## 创建系统池
+````bash
 az aks create \
     --name $DIFY_AKS_CLUSTER_NAME \
     --resource-group $DIFY_RESOURCE_GROUP_NAME \
@@ -33,10 +34,11 @@ az aks create \
     --os-sku Ubuntu \
     --nodepool-name systempool \
     --generate-ssh-keys
-```
+````
 
-## Create User Pool
-```bash
+
+## 创建用户池
+````bash
 az aks nodepool add \
     --resource-group $DIFY_RESOURCE_GROUP_NAME \
     --cluster-name $DIFY_AKS_CLUSTER_NAME \
@@ -45,9 +47,10 @@ az aks nodepool add \
     --node-vm-size $DIFY_AKS_USER_VM_SIZE \
     --os-sku Ubuntu \
     --mode User
-```
+````
 
-## Get the credentials for the AKS cluster
-```bash
+
+## 获取 AKS 集群的凭证
+````bash
 az aks get-credentials --resource-group $DIFY_RESOURCE_GROUP_NAME --name $DIFY_AKS_CLUSTER_NAME
-```
+````

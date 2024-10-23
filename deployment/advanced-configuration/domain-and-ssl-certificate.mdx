@@ -1,49 +1,33 @@
 ---
-title: Domain and SSL Certificate
+title: 域名和 SSL 证书
 ---
 
-## Domain Requirements
-Dify Enterprise requires 5 domains to be set up. The domains are:
-- Console: console.dify.local
-- Services API: api.dify.local
-- APP: app.dify.local
-- Files: upload.dify.local
-- Enterprise: enterprise.dify.local
+## 域名配置
+Dify Enterprise 需要设置 5 个域名。这些域名是：
+- 控制台：console.dify.local
+- 服务 API：api.dify.local
+- 应用：app.dify.local
+- 文件：upload.dify.local
+- 企业版：enterprise.dify.local
 
-## Find the Domain Configuration in the Helm Chart Values
-### Display Helm Chart Values
-```bash
-helm show values dify/dify
-```
-This is an example of the domain configuration in the Helm chart values.
-```yaml
-global:
-  consoleApiDomain: "console.dify.local"
-  consoleWebDomain: "console.dify.local"
-  serviceApiDomain: "api.dify.local"
-  appApiDomain: "app.dify.local"
-  appWebDomain: "app.dify.local"
-  filesDomain: "upload.dify.local"
-  enterpriseDomain: "enterprise.dify.local"
-  ... ...
-```
-
-## How to Config SSL Certificate
-### Generate SSL Certificate
+## 如何配置 SSL 证书
+### 生成 SSL 证书
 ```bash
 kubectl create secret tls example-tls --key example.key --cert example.crt
-```
+````
 
-### Update Helm values
-#### Set `useTLS` to `true`
-```yaml
+
+### 更新 Helm 值
+#### 将 `useTLS` 设置为 `true`
+````yaml
 global:
   useTLS: true
-```
+````
 
-#### Update Ingress values
-If you only have one certificate, you can set it like this
-```yaml
+
+#### 更新 Ingress 值
+如果您只有一个证书，可以这样设置
+````yaml
 ingress:
   tls: 
   - hosts:
@@ -53,10 +37,11 @@ ingress:
     - upload.dify.local
     - enterprise.dify.local
     secretName: example-tls
-```
+````
 
-If you have multiple certificates, you can set it like this
-```yaml
+
+如果您有多个证书，可以这样设置
+````yaml
 ingress:
   tls: 
   - hosts:
@@ -74,4 +59,4 @@ ingress:
   - hosts:
     - enterprise.dify.local
     secretName: example-tls-5
-```
+````

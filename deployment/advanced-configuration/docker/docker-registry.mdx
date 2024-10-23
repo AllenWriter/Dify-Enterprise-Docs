@@ -1,38 +1,38 @@
 ---
-title: Docker Registry
+title: Docker 仓库
 ---
 
-## Find the Docker Registry configuration in the Helm Chart Values
-
-### Display Helm Chart Values
+## 显示 Helm Chart 值
 ```bash
 helm show values dify/dify
-```
+````
 
-## Find the Docker Registry configuration in the Helm Chart Values
-This is an example of the Docker Registry configuration in the Helm chart values.
-You can set the image repository and tag in the Helm chart values.
 
-```yaml
+## 在 Helm Chart 值中查找 Docker 仓库配置
+这是 Helm chart 值中 Docker 仓库配置的示例。
+您可以在 Helm chart 值中设置镜像仓库和标签。
+
+````yaml
 api:
   image:
     repository: langgenius/dify-api
     tag: "x.x.x"
   ... ...
-```
+````
 
-## How to sync images to your private registry
-You can sync the images to your private registry using the `sync.sh` script. Dify images support ARM64 and AMD64 architectures.
 
-### Set shell variables
-Edit the `sync.sh` file and set the following variables:
-- `REGISTRY_URL`: The URL of your private registry
-- `NAMESPACE`: The namespace of your private registry
+## 如何将镜像同步到您的私有仓库
+您可以使用 `sync.sh` 脚本将镜像同步到您的私有仓库。Dify 镜像支持 ARM64 和 AMD64 架构。
 
-### Sync images
-Before syncing the images, you need to login to your private registry first.
+### 设置 shell 变量
+编辑 `sync.sh` 文件并设置以下变量：
+- `REGISTRY_URL`：您的私有仓库的 URL
+- `NAMESPACE`：您的私有仓库的命名空间
 
-```bash
-# ./sync.sh <image> <version>
+### 同步镜像
+在同步镜像之前，您需要先登录到您的私有仓库。
+
+````bash
+# ./sync.sh <镜像> <版本>
 ./sync.sh dify-api x.x.x
-```
+````

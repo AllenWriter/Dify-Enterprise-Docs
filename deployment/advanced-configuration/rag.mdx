@@ -2,23 +2,22 @@
 title: RAG
 ---
 
-## Find the RAG configuration in the Helm Chart Values
-### Display Helm Chart Values
+## 显示 Helm Chart 值
 
 ```bash
 helm show values dify/dify
-```
+````
 
-## Find the RAG configuration in the Helm Chart Values
-This is an example of the RAG configuration in the Helm chart values.
+## 在 Helm Chart 值中查找 RAG 配置
+这是 Helm chart 值中 RAG 配置的示例。
 
-```yaml
+````yaml
 global:
   rag:
     etlType: "Unstructured"
   ... ...
-```
+````
 
-## The options for the `global.rag.etlType` field
-- Unstructured: [Unstructured.io](https://unstructured.io/) file extraction scheme
-- dify: Dify's proprietary file extraction scheme
+## `global.rag.etlType` 字段的选项
+- Unstructured: [Unstructured.io](https://unstructured.io/) 文件提取方案
+- dify: Dify 的专有文件提取方案

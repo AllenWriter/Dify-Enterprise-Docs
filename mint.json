@@ -49,8 +49,7 @@
       "group": "环境隔离",
       "pages": [
         "deployment/test-production/testing-deployment",
-        "deployment/test-production/production-deployment",
-        "deployment/test-production/verify-services-status"
+        "deployment/test-production/production-deployment"
     ]
   },
       "deployment/verify-services-status",
@@ -60,9 +59,9 @@
           "deployment/advanced-configuration/persistent-storage",
           "deployment/advanced-configuration/postgresql-database",
           {
-            "group": "向量数据库 - Qdrant",
+            "group": "向量数据库",
             "pages": [
-              "deployment/advanced-configuration/qdrant/vector-database",
+              "deployment/advanced-configuration/vector-database",
               "deployment/advanced-configuration/qdrant/single-node",
               "deployment/advanced-configuration/qdrant/qdrant-cluster"
           ]
@@ -87,7 +86,8 @@
     {
       "group": "云基础设施",
       "pages": [
-        "deployment/cloud-infrastructure/azure-poc-infra-setup"
+        "deployment/cloud-infrastructure/azure-poc-infra-setup",
+        "deployment/cloud-infrastructure/aws-setup"
     ]
   },    
     "deployment/faq"
@@ -108,11 +108,11 @@
                 "administrator-guide/sso/introduction",
                 "administrator-guide/sso/okta/oidc",
                 "administrator-guide/sso/okta/saml"
-            ]
-          }
-        ]
-      },
-      "administrator-guide/system-settings"
+              ]
+            }
+          ]
+        },
+        "administrator-guide/system-settings"
       ]
     },
     {
@@ -155,45 +155,165 @@
             ]
           }
         ]
-      },
-      {
-        "group": "调试应用",
-        "pages": [
-        "user-guide/debug-app/chatbot",
-        "user-guide/debug-app/text-generator",
-        "user-guide/debug-app/agent",
+        },
         {
-          "group": "Chatflow & Workflow",
+          "group": "调试应用",
           "pages": [
-          "user-guide/debug-app/chatflow-and-workflow/step-run",
-          "user-guide/debug-app/chatflow-and-workflow/log",
-          "user-guide/debug-app/chatflow-and-workflow/preview",
-          "user-guide/debug-app/chatflow-and-workflow/history",
-          "user-guide/debug-app/chatflow-and-workflow/api"
-        ]
-      }
-      ]
-    },      
-      {
-        "group": "发布应用",
-        "pages": [
-          {
-            "group": "发布为公开 Web 站点",
-            "pages": [
-            "user-guide/application-publishing/launch-your-webapp-quickly/web-app-settings",
-            "user-guide/application-publishing/launch-your-webapp-quickly/text-generator",
-            "user-guide/application-publishing/launch-your-webapp-quickly/conversation-application"
+            "user-guide/debug-app/chatbot",
+            "user-guide/debug-app/text-generator",
+            "user-guide/debug-app/agent",
+            {
+              "group": "Chatflow & Workflow",
+              "pages": [
+                "user-guide/debug-app/chatflow-and-workflow/step-run",
+                "user-guide/debug-app/chatflow-and-workflow/log",
+                "user-guide/debug-app/chatflow-and-workflow/preview",
+                "user-guide/debug-app/chatflow-and-workflow/history",
+                "user-guide/debug-app/chatflow-and-workflow/api"
+              ]
+            }
           ]
         },
-        "user-guide/application-publishing/embedding-in-websites",
-        "user-guide/application-publishing/developing-with-apis",
-        "user-guide/application-publishing/based-on-frontend-templates"
-      ]
-    },
-      "administrator-guide/system-settings"
+        {
+          "group": "发布应用",
+          "pages": [
+            {
+              "group": "发布为公开 Web 站点",
+              "pages": [
+              "user-guide/application-publishing/launch-your-webapp-quickly/web-app-settings",
+              "user-guide/application-publishing/launch-your-webapp-quickly/text-generator",
+              "user-guide/application-publishing/launch-your-webapp-quickly/conversation-application"
+            ]
+          },
+          "user-guide/application-publishing/embedding-in-websites",
+          "user-guide/application-publishing/developing-with-apis",
+          "user-guide/application-publishing/based-on-frontend-templates"
+          ]
+        },
+        {
+          "group": "管理应用",
+          "pages": [
+          "user-guide/management/app-management",
+          "user-guide/management/team-members-management",
+          "user-guide/management/personal-account-management"
+          ]
+        },
+        {
+          "group": "应用监测",
+          "pages": [
+          "user-guide/monitoring/analysis",
+          "user-guide/monitoring/logs",
+          "user-guide/monitoring/annotation-reply",
+          {
+            "group": "集成外部与 Ops 工具",
+            "pages": [
+            "user-guide/monitoring/integrate-external-ops-tools/integrate-langfuse",
+            "user-guide/monitoring/integrate-external-ops-tools/integrate-langsmith"
+          ]
+        }
+          ]
+        },
+        {
+          "group": "知识库",
+          "pages": [
+            {
+              "group": "创建知识库",
+              "pages": [
+                "user-guide/knowledge-base/knowledge-base-creation/upload-documents",
+                "user-guide/knowledge-base/knowledge-base-creation/sync-from-notion",
+                "user-guide/knowledge-base/knowledge-base-creation/sync-from-website",
+                "user-guide/knowledge-base/knowledge-base-creation/connect-external-knowledge-base"
+              ]
+            },
+            {
+              "group": "索引与检索",
+              "pages": [
+                "user-guide/knowledge-base/indexing-and-retrieval/retrieval-augment",
+                "user-guide/knowledge-base/indexing-and-retrieval/hybrid-search",
+                "user-guide/knowledge-base/indexing-and-retrieval/rerank",
+                "user-guide/knowledge-base/indexing-and-retrieval/retrieval"
+              ]
+            },
+            "user-guide/knowledge-base/retrieval-test-and-citation",
+            "user-guide/knowledge-base/knowledge-and-documents-maintenance",
+            {
+              "group": "在应用内集成知识库",
+              "pages": [
+                "user-guide/knowledge-base/integrate-knowledge-within-application"
+              ]
+            },
+            {
+              "group": "API",
+              "pages": [
+                "user-guide/knowledge-base/api-connection/maintain-dataset-via-api",
+                "user-guide/knowledge-base/api-connection/external-knowledge-api-documentation"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "工具扩展",
+          "pages": [
+            "user-guide/tools/introduction",
+            {
+              "group": "工具配置",
+              "pages": [
+                {
+                  "group": "Dify 官方工具",
+                  "pages": [
+                    "user-guide/tools/dify/google",
+                    "user-guide/tools/dify/bing",
+                    "user-guide/tools/dify/perplexity",
+                    "user-guide/tools/dify/stable-diffusion"
+                  ]
+                },
+                {
+                  "group": "社区工具",
+                  "pages": [
+                    "user-guide/tools/community/searchapi",
+                    "user-guide/tools/community/alphavantage",
+                    "user-guide/tools/community/comfyui",
+                    "user-guide/tools/community/searxng",
+                    "user-guide/tools/community/serper",
+                    "user-guide/tools/community/siliconflow"
+                  ]
+                }
+              ]
+            },
+            "user-guide/tools/quick-tool-integration",
+            "user-guide/tools/advanced-tool-integration",
+            {
+              "group": "API 扩展",
+              "pages": [
+                "user-guide/tools/extensions/api-based/external-data-tool",
+                "user-guide/tools/extensions/api-based/cloudflare-workers",
+                "user-guide/tools/extensions/api-based/moderation"
+              ]
+            },
+            {
+              "group": "代码扩展",
+              "pages": [
+                "user-guide/tools/extensions/code-based/external-data-tool",
+                "user-guide/tools/extensions/code-based/moderation"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "API 文档",
+          "pages": [
+          "user-guide/api-documentation/text-generator",
+          "user-guide/api-documentation/chatbot",
+          "user-guide/api-documentation/workflow",
+          "user-guide/api-documentation/knowledge-base",
+          "user-guide/api-documentation/external-knowledge-api-documentation"
+          ]
+        },        
+        "administrator-guide/system-settings"
       ]
     }
   ],
+  
   "footerSocials": {
     "x": "https://x.com/dify_ai",
     "github": "https://github.com/langgenius/dify",

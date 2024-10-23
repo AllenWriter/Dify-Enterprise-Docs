@@ -1,26 +1,27 @@
 ---
-title: Qdrant Single Node
+title: Qdrant 单节点
 ---
 
-## Requirements
-- Docker installed
-  - [Install Docker](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
-  - [Manage Docker as a non-root user](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
-- Open port 6333 on the VM
+## 要求
+- 已安装 Docker
+  - [安装 Docker](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
+  - [以非 root 用户身份管理 Docker](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
+- 在虚拟机上开放 6333 端口
 
-## Installation
-### `QDRANT__SERVICE__API_KEY` is a required environment variable
-You can generate a random 32-byte hex string using the following command:
+## 安装
+### `QDRANT__SERVICE__API_KEY` 是必需的环境变量
+您可以使用以下命令生成一个随机的 32 字节十六进制字符串：
 
 ```bash
 openssl rand -hex 32
-```
+````
 
-Copy and paste the generated string to replace `#REPLACE_ME#` in the `docker-compose.yml` file.
 
-### Create the `docker-compose.yml` file, and replace `#REPLACE_ME#`
+复制并粘贴生成的字符串，替换 `docker-compose.yml` 文件中的 `#REPLACE_ME#`。
 
-```bash
+### 创建 `docker-compose.yml` 文件，并替换 `#REPLACE_ME#`
+
+````bash
 version: "3.8"
 services:
   qdrant:
@@ -31,9 +32,10 @@ services:
       - /data/qdrant/data/:/qdrant/storage
     environment:
       QDRANT__SERVICE__API_KEY: #REPLACE_ME#
-```
+````
 
-### Start the qdrant service
-```bash
+
+### 启动 qdrant 服务
+````bash
 docker-compose up -d
-```
+````

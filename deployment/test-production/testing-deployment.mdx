@@ -1,44 +1,45 @@
 ---
-title: Testing Deployment
+title: 测试环境部署
 ---
 
-## Requirements
-This is the recommended configuration for testing deployment or staging deployment. You can adjust the configuration based on your requirements.
+## 要求
 
-- Kubernetes Cluster
-    - 1 Worker Nodes: 4 CPU, 16 GB RAM
-- Persistence Storage
-    - s3, azure-blob, aliyun-oss, google-storage
-    - 100 GB Storage
-- Postgres Database
-    - Version 14+
-    - 2 CPU, 4 GB RAM
-    - 256 GB Storage
-- Redis Database
-    - Version 6+
+这是测试环境部署或预发布环境部署的推荐配置。您可以根据自己的需求调整配置。
+
+- Kubernetes 集群
+    - 1 个工作节点：4 CPU，16 GB RAM
+- 持久化存储
+    - s3、azure-blob、aliyun-oss、google-storage
+    - 100 GB 存储空间
+- Postgres 数据库
+    - 版本 14+
+    - 2 CPU，4 GB RAM
+    - 256 GB 存储空间
+- Redis 数据库
+    - 版本 6+
     - 1 GB RAM
-- [Vector DB Virtual Machine - Qdrant Single Node](/deployment/advanced-configuration/qdrant/single-node)
-    - 1 Virtual Machines
-    - 4 CPU, 8 GB RAM
-    - 100 GB Storage
+- [向量数据库虚拟机 - Qdrant 单节点](/deployment/advanced-configuration/qdrant/single-node)
+    - 1 台虚拟机
+    - 4 CPU，8 GB RAM
+    - 100 GB 存储空间
 
-## Deployment
-### Initial External Resources
-- Persistence Storage
-- Postgres Database
-- Redis Database
-- Vector DB Virtual Machine
+## 部署
+### 初始化外部资源
+- 持久化存储
+- Postgres 数据库
+- Redis 数据库
+- 向量数据库虚拟机
 
-### Update Helm Chart Values `values-no-infra-for-testing.yaml`
-- Update `persistence` with your persistence storage configuration
-- Update `externalPostgres` with your postgres database configuration
-- Update `externalRedis` with your redis database configuration
-- Update `vectorDB` with your vector db virtual machine configuration
+### 更新 Helm Chart 值文件 `values-no-infra-for-testing.yaml`
+- 使用您的持久化存储配置更新 `persistence`
+- 使用您的 Postgres 数据库配置更新 `externalPostgres`
+- 使用您的 Redis 数据库配置更新 `externalRedis`
+- 使用您的向量数据库虚拟机配置更新 `vectorDB`
 
-### Install Dify Enterprise
-You can install Dify Enterprise using the following guide. But you need to use `values-no-infra-for-testing.yaml` instead of `values.yaml`.
-- [How to install Dify Enterprise](/deployment/prerequisites/kubernetes)
+### 安装 Dify Enterprise
+您可以使用以下指南安装 Dify Enterprise。但是您需要使用 `values-no-infra-for-testing.yaml` 而不是 `values.yaml`。
+- [如何安装 Dify Enterprise](/deployment/prerequisites/kubernetes)
 
-### Verify Services Status
-After the installation, you can verify the services status referring to the following guide.
-- [How to verify Dify Enterprise services status](/deployment/verify-services-status)
+### 验证服务状态
+安装完成后，您可以参考以下指南验证服务状态。
+- [如何验证 Dify Enterprise 服务状态](/deployment/verify-services-status)

@@ -1,36 +1,44 @@
 ---
-title: Environment Variables
+title: 环境变量
 ---
 
-## Special Environment Variables Explanation
-- `serverWorkerAmount`: This ENV is used at `API` service.
-  - Default value is `9`, if you are in testing environment, you can set it to `1` to save resources.
-  - The number of API server workers, i.e., the number of gevent workers. Formula: `number of cpu cores x 2 + 1`
-  - Reference: https://docs.gunicorn.org/en/stable/design.html#how-many-workers
-- `celeryWorkerAmount`: This ENV is used at `Worker` service.
-  - Default value is `9`, if you are in testing environment, you can set it to `1` to save resources.
+## 显示 Helm Chart 值
 
-## How to configure environment variables not found in `values.yaml`?
-If you want to configure the environment variables not found in `values.yaml`, you can use the `extraEnv` field in the `values.yaml` file. 
+```bash
+helm show values dify/dify
+````
 
-```yaml
+
+## 特殊环境变量说明
+- `serverWorkerAmount`：此环境变量用于 `API` 服务。
+  - 默认值为 `9`，如果您在测试环境中，可以将其设置为 `1` 以节省资源。
+  - API 服务器工作进程的数量，即 gevent 工作进程的数量。公式：`CPU 核心数 x 2 + 1`
+  - 参考：https://docs.gunicorn.org/en/stable/design.html#how-many-workers
+- `celeryWorkerAmount`：此环境变量用于 `Worker` 服务。
+  - 默认值为 `9`，如果您在测试环境中，可以将其设置为 `1` 以节省资源。
+
+## 如何配置在 `values.yaml` 中未找到的环境变量？
+如果您想配置在 `values.yaml` 中未找到的环境变量，可以使用 `values.yaml` 文件中的 `extraEnv` 字段。
+
+````yaml
 api:
   extraEnv:
     - name: "DEMO_ENV_VAR"
       value: "demo"
-```
+````
 
-For more information, please refer to the [official documentation](https://docs.dify.ai/getting-started/install-self-hosted/environments).
 
-## How to configure `HTTP_PROXY` and `HTTPS_PROXY`?
-Sometimes, for security reasons, you may need to configure the `HTTP_PROXY` and `HTTPS_PROXY` environment variables for the Dify `API` service.
-You can use the `extraEnv` field in the `values.yaml` file. 
+更多信息，请参考[官方文档](https://docs.dify.ai/getting-started/install-self-hosted/environments)。
 
-```yaml
+## 如何配置 `HTTP_PROXY` 和 `HTTPS_PROXY`？
+有时出于安全原因，您可能需要为 Dify `API` 服务配置 `HTTP_PROXY` 和 `HTTPS_PROXY` 环境变量。
+您可以使用 `values.yaml` 文件中的 `extraEnv` 字段。
+
+````yaml
 api:
   extraEnv:
     - name: "HTTP_PROXY"
       value: "http://proxy.example.com:8080"
     - name: "HTTPS_PROXY"
       value: "http://proxy.example.com:8080"
-```
+````

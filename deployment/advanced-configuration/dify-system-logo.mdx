@@ -1,27 +1,28 @@
 ---
-title: Dify System Logo
+title: Dify 系统 Logo
 ---
 
-## Requirements
+## 要求
 - favicon.ico
-  - height: 48px
-  - width: 48px
+  - 高度：48px
+  - 宽度：48px
 - logo-site.png
-  - height: 40px
-  - width: any
+  - 高度：40px
+  - 宽度：任意
 
-## Configuration
-### Base64 encode images
-You can use the following command to encode images to base64.
+## 配置
+### 将图片转换为 Base64 编码
+您可以使用以下命令将图片编码为 base64。
 ```bash
 base64 -i favicon.ico -o favicon.ico.txt
 base64 -i logo-site.png -o logo-site.png.txt
-```
+````
 
-#### Update Helm values
-Copy the base64 encoded string from the generated files and replace the `#REPLACE_ME#` in the following values.
 
-```yaml
+#### 更新 Helm 值
+从生成的文件中复制 base64 编码的字符串，并替换以下值中的 `#REPLACE_ME#`。
+
+````yaml
 web:
   logoConfig:
     enabled: true
@@ -32,4 +33,4 @@ web:
       #REPLACE_ME#
     logoSitePngBase64: |
       #REPLACE_ME#
-```
+````

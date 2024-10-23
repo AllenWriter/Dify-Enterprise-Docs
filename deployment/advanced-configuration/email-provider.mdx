@@ -1,21 +1,20 @@
 ---
-title: Email Provider
+title: 邮件提供商
 ---
 
-## Find the Email Provider configuration in the Helm Chart Values
-
-### Display Helm Chart Values
+## 显示 Helm Chart 值
 
 ```bash
 helm show values dify/dify
-```
+````
 
-This is an example of the email provider configuration in the Helm chart values.
 
-```yaml
+## 在 Helm Chart 值中查找邮件提供商配置
+
+````yaml
 mail:
   type: ''
-  defaultSender: 'YOUR EMAIL FROM (eg: no-reply <no-reply@dify.ai>)'
+  defaultSender: '您的发件人邮箱 (例如: no-reply <no-reply@dify.ai>)'
   resend:
     apiKey: ''
     apiUrl: https://api.resend.com
@@ -26,8 +25,9 @@ mail:
     password: ''
     useTLS: false
   ... ...
-```
+````
 
-## The options for the `mail.type` field
-- `resend`: Use the Resend service to send emails
-- `smtp`: Use the SMTP service to send emails
+
+## `mail.type` 字段的选项
+- `resend`: 使用 Resend 服务发送邮件
+- `smtp`: 使用 SMTP 服务发送邮件

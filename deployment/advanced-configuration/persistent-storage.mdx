@@ -1,14 +1,15 @@
-# Persistent Storage
+---
+title: 持久化存储
+---
 
-## Find the Persistent Storage Configuration in the Helm Chart Values
-### Display Helm Chart Values
+## 显示 Helm Chart 值
 
 ```bash
 helm show values dify/dify
 ```
 
-## Find the Persistent Storage Configuration in the Helm Chart Values
-This is an example of the persistent storage configuration in the Helm chart values.
+## 在 Helm Chart 值中查找持久化存储配置
+这是 Helm chart 值中持久化存储配置的示例。
 ```yaml
 persistence:
   type: "s3"
@@ -23,15 +24,15 @@ persistence:
   ... ...
 ```
 
-## The options for the `persistence.type` field
+## `persistence.type` 字段的选项
 - s3
 - azure-blob
 - aliyun-oss
 - google-storage
 - tencent-cos
 
-## How to configure the Amazon S3 storage using IAM roles
-If you want to use the AWS IAM roles to access the S3 bucket, you can set the `useAwsManagedIam` field to `true` in the Helm chart values. The `region` and `bucketName` fields are required.
+## 如何使用 IAM 角色配置 Amazon S3 存储
+如果您想使用 AWS IAM 角色访问 S3 存储桶，可以在 Helm chart 值中将 `useAwsManagedIam` 字段设置为 `true`。`region` 和 `bucketName` 字段是必需的。
 ```yaml
 persistence:
   type: "s3"

@@ -36,36 +36,35 @@
           "pages": [
             "deployment/prerequisites/resources-checklist",
             "deployment/prerequisites/dify-helm-chart"
-        ]
-      },
-      {
-        "group": "Install Dify Enterprise",
-        "pages": [
-          "deployment/prerequisites/kubernetes",
-          "deployment/prerequisites/minikube"
-      ]
-    },      
-      "deployment/testing-deployment",
-      "deployment/production-deployment",
-      "deployment/verify-services-status",
-      {
-        "group": "Advanced Configuration",
-        "pages": [
-          "deployment/advanced-configuration/ingress-nginx-controller",
-          "deployment/advanced-configuration/domain-and-ssl-certificate",
-          "deployment/advanced-configuration/dify-system-logo",
-          {
-            "group": "Qdrant",
-            "pages": [
-              "deployment/advanced-configuration/qdrant/single-node",
-              "deployment/advanced-configuration/qdrant/qdrant-cluster"
           ]
         },
-        "deployment/advanced-configuration/docker-image-pull-secret"
-      ]
-    },
-    "deployment/faq"
-
+        {
+          "group": "Install Dify Enterprise",
+          "pages": [
+            "deployment/prerequisites/kubernetes",
+            "deployment/prerequisites/minikube"
+          ]
+        },
+        "deployment/testing-deployment",
+        "deployment/production-deployment",
+        "deployment/verify-services-status",
+        {
+          "group": "Advanced Configuration",
+          "pages": [
+            "deployment/advanced-configuration/ingress-nginx-controller",
+            "deployment/advanced-configuration/domain-and-ssl-certificate",
+            "deployment/advanced-configuration/dify-system-logo",
+            {
+              "group": "Qdrant",
+              "pages": [
+                "deployment/advanced-configuration/qdrant/single-node",
+                "deployment/advanced-configuration/qdrant/qdrant-cluster"
+              ]
+            },
+            "deployment/advanced-configuration/docker-image-pull-secret"
+          ]
+        },
+        "deployment/faq"
       ]
     },
     {
@@ -82,11 +81,208 @@
               "pages": [
                 "administrator-guide/sso/okta/oidc",
                 "administrator-guide/sso/okta/saml"
-            ]
-          }
-        ]
-      },
-      "administrator-guide/system-settings"
+              ]
+            }
+          ]
+        },
+        "administrator-guide/system-settings"
+      ]
+    },
+    {
+      "group": "User Guide",
+      "pages": [
+        "user-guide/welcome",
+        {
+          "group": "Application Orchestration",
+          "pages": [
+            "user-guide/build-app/chatbot",
+            "user-guide/build-app/text-generator",
+            "user-guide/build-app/agent",
+            {
+              "group": "Chatflow & Workflow",
+              "pages": [
+                "user-guide/build-app/flowapp/concepts",
+                "user-guide/build-app/flow-app/create-flow-app",
+                "user-guide/build-app/flow-app/variables",
+                {
+                  "group": "Node Description",
+                  "pages": [
+                    "user-guide/build-app/flow-app/nodes/start",
+                    "user-guide/build-app/flow-app/nodes/end",
+                    "user-guide/build-app/flow-app/nodes/answer",
+                    "user-guide/build-app/flow-app/nodes/llm",
+                    "user-guide/build-app/flow-app/nodes/knowledge-retrieval",
+                    "user-guide/build-app/flow-app/nodes/question-classifier",
+                    "user-guide/build-app/flow-app/nodes/ifelse",
+                    "user-guide/build-app/flow-app/nodes/code",
+                    "user-guide/build-app/flow-app/nodes/template",
+                    "user-guide/build-app/flow-app/nodes/variable-aggregation",
+                    "user-guide/build-app/flow-app/nodes/variable-assigner",
+                    "user-guide/build-app/flow-app/nodes/iteration",
+                    "user-guide/build-app/flow-app/nodes/parameter-extractor",
+                    "user-guide/build-app/flow-app/nodes/http-request",
+                    "user-guide/build-app/flow-app/nodes/tools"
+                  ]
+                },
+                "user-guide/build-app/flow-app/orchestrate-node"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "Debug and Preview",
+          "pages": [
+            "user-guide/debug-app/chatbot",
+            "user-guide/debug-app/text-generator",
+            "user-guide/debug-app/agent",
+            {
+              "group": "Chatflow & Workflow",
+              "pages": [
+                "user-guide/debug-app/chatflow-and-workflow/step-run",
+                "user-guide/debug-app/chatflow-and-workflow/log",
+                "user-guide/debug-app/chatflow-and-workflow/preview",
+                "user-guide/debug-app/chatflow-and-workflow/history",
+                "user-guide/debug-app/chatflow-and-workflow/api"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "Application Publishing",
+          "pages": [
+            {
+              "group": "Publish as a Single-page Web App",
+              "pages": [
+                "user-guide/application-publishing/launch-your-webapp-quickly/web-app-settings",
+                "user-guide/application-publishing/launch-your-webapp-quickly/text-generator",
+                "user-guide/application-publishing/launch-your-webapp-quickly/conversation-application"
+              ]
+            },
+            "user-guide/application-publishing/embedding-in-websites",
+            "user-guide/application-publishing/developing-with-apis",
+            "user-guide/application-publishing/based-on-frontend-templates"
+          ]
+        },
+        {
+          "group": "App Management",
+          "pages": [
+            "user-guide/management/app-management",
+            "user-guide/management/team-members-management",
+            "user-guide/management/personal-account-management"
+          ]
+        },
+        {
+          "group": "Monitoring",
+          "pages": [
+            "user-guide/monitoring/analysis",
+            "user-guide/monitoring/logs",
+            "user-guide/monitoring/annotation-reply",
+            {
+              "group": "Integrate External Ops Tools",
+              "pages": [
+                "user-guide/monitoring/integrate-external-ops-tools/integrate-langfuse",
+                "user-guide/monitoring/integrate-external-ops-tools/integrate-langsmith"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "Knowledge Base",
+          "pages": [
+            {
+              "group": "Create Knowledge Base",
+              "pages": [
+                "user-guide/knowledge-base/knowledge-base-creation/upload-documents",
+                "user-guide/knowledge-base/knowledge-base-creation/sync-from-notion",
+                "user-guide/knowledge-base/knowledge-base-creation/sync-from-website",
+                "user-guide/knowledge-base/knowledge-base-creation/connect-external-knowledge-base"
+              ]
+            },
+            {
+              "group": "Indexing & Retrieval",
+              "pages": [
+                "user-guide/knowledge-base/indexing-and-retrieval/retrieval-augment",
+                "user-guide/knowledge-base/indexing-and-retrieval/hybrid-search",
+                "user-guide/knowledge-base/indexing-and-retrieval/rerank",
+                "user-guide/knowledge-base/indexing-and-retrieval/retrieval"
+              ]
+            },
+            "user-guide/knowledge-base/retrieval-test-and-citation",
+            "user-guide/knowledge-base/knowledge-and-documents-maintenance",
+            {
+              "group": "Integrate Knowledge Base Within Application",
+              "pages": [
+                "user-guide/knowledge-base/integrate-knowledge-within-application"
+              ]
+            },
+            {
+              "group": "API",
+              "pages": [
+                "user-guide/knowledge-base/api-connection/maintain-dataset-via-api",
+                "user-guide/knowledge-base/api-connection/external-knowledge-api-documentation"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "Tools",
+          "pages": [
+            "user-guide/tools/introduction",
+            {
+              "group": "Tool Configuration",
+              "pages": [
+                {
+                  "group": "Dify Official Tools",
+                  "pages": [
+                    "user-guide/tools/dify/google",
+                    "user-guide/tools/dify/bing",
+                    "user-guide/tools/dify/perplexity",
+                    "user-guide/tools/dify/stable-diffusion"
+                  ]
+                },
+                {
+                  "group": "Community Tools",
+                  "pages": [
+                    "user-guide/tools/community/searchapi",
+                    "user-guide/tools/community/alphavantage",
+                    "user-guide/tools/community/comfyui",
+                    "user-guide/tools/community/searxng",
+                    "user-guide/tools/community/serper",
+                    "user-guide/tools/community/siliconflow"
+                  ]
+                }
+              ]
+            },
+            "user-guide/tools/quick-tool-integration",
+            "user-guide/tools/advanced-tool-integration",
+            {
+              "group": "API-based Extensions",
+              "pages": [
+                "user-guide/tools/extensions/api-based/external-data-tool",
+                "user-guide/tools/extensions/api-based/cloudflare-workers",
+                "user-guide/tools/extensions/api-based/moderation"
+              ]
+            },
+            {
+              "group": "Code-based Extensions",
+              "pages": [
+                "user-guide/tools/extensions/code-based/external-data-tool",
+                "user-guide/tools/extensions/code-based/moderation"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "API",
+          "pages": [
+            "user-guide/api-documentation/text-generator",
+            "user-guide/api-documentation/chatbot",
+            "user-guide/api-documentation/workflow",
+            "user-guide/api-documentation/knowledge-base",
+            "user-guide/api-documentation/external-knowledge-api-documentation"
+          ]
+        },
+        "administrator-guide/system-settings"
       ]
     }
   ],

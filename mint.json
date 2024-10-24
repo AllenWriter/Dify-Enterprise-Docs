@@ -101,9 +101,10 @@
             {
               "group": "Chatflow & Workflow",
               "pages": [
-                "user-guide/build-app/flowapp/concepts",
+                "user-guide/build-app/flow-app/concepts",
                 "user-guide/build-app/flow-app/create-flow-app",
                 "user-guide/build-app/flow-app/variables",
+                
                 {
                   "group": "Node Description",
                   "pages": [

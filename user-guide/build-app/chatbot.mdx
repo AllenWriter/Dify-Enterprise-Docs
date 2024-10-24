@@ -17,15 +17,15 @@ Here, we use a interviewer application as an example to introduce the way to com
 #### Step 1 Create an application
 
 Click the "Create Application" button on the homepage to create an application. Fill in the application name, and select **"Chat App"** as the application type.
-```
-<figure><img src="../../.gitbook/assets/chat-app.png" alt=""><figcaption><p>Create Application</p></figcaption></figure>
-```
+
+![Create Application](../../../assets/chat-app.png)
+
 #### Step 2: Compose the Application
 
 After the application is successfully created, it will automatically redirect to the application overview page. Click on the button on the left menu: **"Orchestrate"** to compose the application.
-```
-<figure><img src="../../.gitbook/assets/compose-the-app.png" alt=""><figcaption></figcaption></figure>
-```
+
+![](../../../assets/compose-the-app.png)
+
 **2.1 Fill in Prompts**
 
 Prompt phrases are used to guide AI in providing professional responses, making the replies more precise. You can utilize the built-in prompt generator to craft suitable prompts. Prompts support the insertion of form variables, such as `{{input}}`. The values in the prompt variables will be replaced with the values filled in by the user.
@@ -39,9 +39,9 @@ Example:
 For a better experience, we will add an opening dialogue: `"Hello, {{name}}. I'm your interviewer, Bob. Are you ready?"`
 
 To add the opening dialogue, click the "Add Feature" button in the upper left corner, and enable the "Conversation remarkers" feature:
-```
-<figure><img src="../../.gitbook/assets/conversation-remarkers.png" alt=""><figcaption></figcaption></figure>
-```
+
+![](../../../assets/conversation-remarkers.png)
+
 And then edit the opening remarks:
 
 ![](../../.gitbook/assets/conversation-options.png)
@@ -56,21 +56,21 @@ If an application wants to generate content based on private contextual conversa
 
 Enter user inputs on the right side and check the respond content.
 
-![](../../.gitbook/assets/debug.png)
+![](../../../assets/debug.png)
 
 If the results are not satisfactory, you can adjust the prompts and model parameters. Click on the model name in the upper right corner to set the parameters of the model:
 
-![](../../.gitbook/assets/adjust-model-parameters.png)
+![](../../../assets/adjust-model-parameters.png)
 
 **Debugging with multiple models:**
 
 If debugging with a single model feels inefficient, you can utilize the **Debug as Multiple Models** feature to batch-test the models’ response effectiveness.
 
-![](../../.gitbook/assets/multiple-models.png)
+![](../../../assets/multiple-models.png)
 
 Supports adding up to 4 LLMs at the same time.
 
-![](../../.gitbook/assets/multiple-models-2.png)
+![](../../../assets/multiple-models-2.png)
 
 > ⚠️ When using the multi-model debugging feature, if only some large models are visible, it is because other large models’ keys have not been added yet. You can manually add multiple models’ keys in [“Add New Provider”](https://docs.dify.ai/guides/model-configuration/new-provider).
 

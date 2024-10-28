@@ -93,6 +93,17 @@
       "pages": [
         "user-guide/welcome",
         {
+          "group": "Model",
+          "pages": [
+            "user-guide/models/new-provider",
+            "user-guide/models/predefined-model",
+            "user-guide/models/customizable-model",
+            "user-guide/models/interfaces",
+            "user-guide/models/schema",
+            "user-guide/models/load-balancing"
+          ]
+        },
+        {
           "group": "Application Orchestration",
           "pages": [
             "user-guide/build-app/chatbot",

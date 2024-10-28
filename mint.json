@@ -144,17 +144,14 @@
         {
           "group": "Debug and Preview",
           "pages": [
-            "user-guide/debug-app/chatbot",
-            "user-guide/debug-app/text-generator",
-            "user-guide/debug-app/agent",
             {
               "group": "Chatflow & Workflow",
               "pages": [
+                "user-guide/debug-app/chatflow-and-workflow/preview-and-run",
                 "user-guide/debug-app/chatflow-and-workflow/step-run",
                 "user-guide/debug-app/chatflow-and-workflow/log",
-                "user-guide/debug-app/chatflow-and-workflow/preview",
+                "user-guide/debug-app/chatflow-and-workflow/checklist",
                 "user-guide/debug-app/chatflow-and-workflow/history",
-                "user-guide/debug-app/chatflow-and-workflow/api"
               ]
             }
           ]

@@ -15,7 +15,9 @@ version: 'v1.0'
 
 #### **示例1：长文章迭代生成器**
 
-![](../../../.gitbook/assets/iteration-story-generator.png)
+<Frame caption="长故事生成器">
+  <img src="/user-guide/.gitbook/assets/iteration-story-generator.png" alt="长故事生成器流程图" />
+</Frame>
 
 1. 在 **开始节点** 内输入故事标题和大纲
 2. 使用 **LLM 节点=** 基于用户输入的故事标题和大纲，让 LLM 开始编写内容
@@ -27,47 +29,59 @@ version: 'v1.0'
 
 1. 在 **开始节点** 配置故事标题（title）和大纲（outline）；
 
-![](../../../.gitbook/assets/image (262).png)
+<Frame caption="开始节点配置" width="375">
+  <img src="/user-guide/.gitbook/assets/image (262).png" alt="开始节点配置界面" />
+</Frame>
 
 2. 选择 **LLM 节点** 基于用户输入的故事标题和大纲，让 LLM 开始编写文本；
 
-![](../../../.gitbook/assets/iteration-llm-node.png)
+<Frame caption="模板节点" width="375">
+  <img src="/user-guide/.gitbook/assets/iteration-llm-node.png" alt="LLM节点配置界面" />
+</Frame>
 
 3. 选择 **参数提取节点**，将故事文本转换成为数组（Array）结构。提取参数为 `sections` ，参数类型为 `Array[Object]`
 
-![](../../../.gitbook/assets/zh-iteration-extract-node.png)
+<Frame caption="参数提取" width="375">
+  <img src="/user-guide/.gitbook/assets/zh-iteration-extract-node.png" alt="参数提取节点配置界面" />
+</Frame>
 
-<Info>
-参数提取效果受模型推理能力和指令影响，使用推理能力更强的模型，在**指令**内增加示例可以提高参数提取的效果。
-</Info>
+> 参数提取效果受模型推理能力和指令影响，使用推理能力更强的模型，在**指令**内增加示例可以提高参数提取的效果。
 
 4. 将数组格式的故事大纲作为迭代节点的输入，在迭代节点内部使用 **LLM 节点** 进行处理
 
-![](../../../.gitbook/assets/image (271).png)
+<Frame caption="配置迭代节点" width="375">
+  <img src="/user-guide/.gitbook/assets/image (271).png" alt="迭代节点配置界面" />
+</Frame>
 
 在 LLM 节点内配置输入变量 `GenerateOverallOutline/output` 和 `Iteration/item`
 
-![](../../../.gitbook/assets/image (272).png)
+<Frame caption="配置 LLM 节点" width="375">
+  <img src="/user-guide/.gitbook/assets/image (272).png" alt="LLM节点内部配置界面" />
+</Frame>
 
-<Info>
-迭代的内置变量：`items[object]` 和 `index[number]`
-
-`items[object] 代表以每轮迭代的输入条目；`
-
-`index[number] 代表当前迭代的轮次；`
-</Info>
+> 迭代的内置变量：`items[object]` 和 `index[number]`
+>
+> `items[object] 代表以每轮迭代的输入条目；`
+>
+> `index[number] 代表当前迭代的轮次；`
 
 5. 在迭代节点内部配置 **直接回复节点** ，可以实现在每轮迭代生成之后流式输出。
 
-![](../../../.gitbook/assets/image (274).png)
+<Frame caption="配置 Answer 节点" width="375">
+  <img src="/user-guide/.gitbook/assets/image (274).png" alt="直接回复节点配置界面" />
+</Frame>
 
 6. 完整调试和预览
 
-![](../../../.gitbook/assets/image (273).png)
+<Frame caption="按故事章节多轮迭代生成">
+  <img src="/user-guide/.gitbook/assets/image (273).png" alt="完整调试和预览界面" />
+</Frame>
 
 #### **示例 2：长文章迭代生成器（另一种编排方式）**
 
-![](../../../.gitbook/assets/image (55).png)
+<Frame caption="长文章迭代生成器（另一种编排方式）">
+  <img src="/user-guide/.gitbook/assets/image (55).png" alt="长文章迭代生成器另一种编排方式流程图" />
+</Frame>
 
 * 在 **开始节点** 内输入故事标题和大纲
 * 使用 **LLM 节点** 生成文章小标题，以及小标题对应的内容
@@ -129,11 +143,15 @@ version: 'v1.0'
 
 **使用 CODE 节点返回**
 
-![](../../../.gitbook/assets/image (264).png)
+<Frame caption="code 节点输出 array" width="375">
+  <img src="/user-guide/.gitbook/assets/image (264).png" alt="CODE节点返回数组格式内容界面" />
+</Frame>
 
 **使用 参数提取 节点返回**
 
-![](../../../.gitbook/assets/image (265).png)
+<Frame caption="参数提取节点输出 array" width="375">
+  <img src="/user-guide/.gitbook/assets/image (265).png" alt="参数提取节点返回数组格式内容界面" />
+</Frame>
 
 ### 如何将数组转换为文本
 
@@ -141,7 +159,9 @@ version: 'v1.0'
 
 **使用代码节点转换**
 
-![](../../../.gitbook/assets/image (54).png)
+<Frame caption="代码节点转换" width="334">
+  <img src="/user-guide/.gitbook/assets/image (54).png" alt="使用代码节点将数组转换为文本界面" />
+</Frame>
 
 代码示例：
 
@@ -155,7 +175,9 @@ def main(articleSections: list):
 
 **使用模板节点转换**
 
-![](../../../.gitbook/assets/image (56).png)
+<Frame caption="模板节点转换" width="332">
+  <img src="/user-guide/.gitbook/assets/image (56).png" alt="使用模板节点将数组转换为文本界面" />
+</Frame>
 
 代码示例：
 

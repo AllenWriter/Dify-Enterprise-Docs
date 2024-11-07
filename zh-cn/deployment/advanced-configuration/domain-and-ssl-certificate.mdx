@@ -2,13 +2,35 @@
 title: 域名和 SSL 证书
 ---
 
-## 域名配置
+## 域名要求
 Dify Enterprise 需要设置 5 个域名。这些域名是：
 - 控制台：console.dify.local
 - 服务 API：api.dify.local
 - 应用：app.dify.local
 - 文件：upload.dify.local
 - 企业版：enterprise.dify.local
+
+## 在 Helm Chart 值中找到域名配置
+
+### 显示 Helm Chart 值
+
+```bash
+helm show values dify/dify
+```
+
+以下是 Helm chart 值中域名配置的示例。
+
+```yaml
+global:
+  consoleApiDomain: "console.dify.local"
+  consoleWebDomain: "console.dify.local"
+  serviceApiDomain: "api.dify.local"
+  appApiDomain: "app.dify.local"
+  appWebDomain: "app.dify.local"
+  filesDomain: "upload.dify.local"
+  enterpriseDomain: "enterprise.dify.local"
+  ... ...
+```
 
 ## 如何配置 SSL 证书
 ### 生成 SSL 证书
@@ -26,7 +48,9 @@ global:
 
 
 #### 更新 Ingress 值
-如果您只有一个证书，可以这样设置
+
+如果您只有一个证书，可以这样设置：
+
 ````yaml
 ingress:
   tls: 
@@ -40,7 +64,8 @@ ingress:
 ````
 
 
-如果您有多个证书，可以这样设置
+如果您有多个证书，可以这样设置：
+
 ````yaml
 ingress:
   tls: 

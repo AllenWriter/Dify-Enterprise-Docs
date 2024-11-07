@@ -5,9 +5,11 @@ version: 'v1.0'
 
 ### 定义
 
-根据 if/else/elif 条件将 workflow 拆分成多个分支。
+根据 If/else/elif 条件将 Chatflow / Workflow 流程拆分成多个分支。
 
-条件分支节点有六个部分：
+### 节点功能
+
+条件分支的运行机制包含以下六个路径：
 
 * IF 条件：选择变量，设置条件和满足条件的值；
 * IF 条件判断为 `True`，执行 IF 路径；
@@ -16,6 +18,8 @@ version: 'v1.0'
 * ELIF 条件判断为 `False`，继续判断下一个 ELIF 路径或执行最后的 ELSE 路径；
 
 **条件类型**
+
+支持设置以下条件类型：
 
 * 包含（Contains）
 * 不包含（Not contains）
@@ -30,7 +34,9 @@ version: 'v1.0'
 
 ### 场景
 
-![](../../../.gitbook/assets/zh-if-else-elif.png)
+<Frame>
+  <img src="/user-guide/.gitbook/assets/zh-if-else-elif.png" alt="" />
+</Frame>
 
 以**文本总结工作流**作为示例说明各个条件：
 
@@ -42,6 +48,8 @@ version: 'v1.0'
 
 **多重条件判断**
 
-涉及复杂的条件判断时，可以设置多重条件判断，在条件之间设置**AND**或者**OR**，即在条件之间取**交集**或者**并集**。
+涉及复杂的条件判断时，可以设置多重条件判断，在条件之间设置 **AND** 或者 **OR**，即在条件之间取**交集**或者**并集**。
 
-![](../../../.gitbook/assets/image (73).png)
+<Frame caption="多重条件判断" width="369">
+  <img src="/user-guide/.gitbook/assets/image (73).png" alt="" />
+</Frame>

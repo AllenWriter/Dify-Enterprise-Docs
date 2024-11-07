@@ -2,22 +2,16 @@
 title: 环境变量
 ---
 
-## 显示 Helm Chart 值
-
-```bash
-helm show values dify/dify
-````
-
-
 ## 特殊环境变量说明
 - `serverWorkerAmount`：此环境变量用于 `API` 服务。
   - 默认值为 `9`，如果您在测试环境中，可以将其设置为 `1` 以节省资源。
   - API 服务器工作进程的数量，即 gevent 工作进程的数量。公式：`CPU 核心数 x 2 + 1`
-  - 参考：https://docs.gunicorn.org/en/stable/design.html#how-many-workers
+  - [参考文档](https://docs.gunicorn.org/en/stable/design.html#how-many-workers)
 - `celeryWorkerAmount`：此环境变量用于 `Worker` 服务。
   - 默认值为 `9`，如果您在测试环境中，可以将其设置为 `1` 以节省资源。
 
 ## 如何配置在 `values.yaml` 中未找到的环境变量？
+
 如果您想配置在 `values.yaml` 中未找到的环境变量，可以使用 `values.yaml` 文件中的 `extraEnv` 字段。
 
 ````yaml
@@ -27,8 +21,8 @@ api:
       value: "demo"
 ````
 
-
-更多信息，请参考[官方文档](https://docs.dify.ai/getting-started/install-self-hosted/environments)。
+> <a href="/assets/values.yaml" download="values.yaml">点击此处</a>下载 `values.yaml` 文件。
+更多信息，请参考[变量](/user-guide/build-app/flow-app/variables)。
 
 ## 如何配置 `HTTP_PROXY` 和 `HTTPS_PROXY`？
 有时出于安全原因，您可能需要为 Dify `API` 服务配置 `HTTP_PROXY` 和 `HTTPS_PROXY` 环境变量。

@@ -25,18 +25,18 @@ version: 'v1.0'
 检索器会在所有与应用关联的知识库中去检索与用户问题相关的文本内容，并将多路召回的相关文档结果合并，以下是召回策略的技术流程图：
 
 <Frame>
-  <img src="user-guide/.gitbook/assets/rerank-flow-chart.png" alt="" />
+  <img src="/user-guide/.gitbook/assets/rerank-flow-chart.png" alt="" />
 </Frame>
 
 根据用户意图同时检索所有添加至 **“上下文”** 的知识库，在多个知识库内查询相关文本片段，选择所有和用户问题相匹配的内容，最后通过 Rerank 策略找到最适合的内容并回答用户。该方法的检索原理更为科学。
 
 <Frame>
-  <img src="user-guide/.gitbook/assets/zh-rag-multiple.png" alt="" />
+  <img src="/user-guide/.gitbook/assets/zh-rag-multiple.png" alt="" />
 </Frame>
 
 举例：A 应用的上下文关联了 K1、K2、K3 三个知识库，当用户输入问题后，将在三个知识库内检索并汇总多条内容。为确保能找到最匹配的内容，需要通过 Rerank 策略确定与用户问题最相关的内容，确保结果更加精准与可信。
 
-在实际问答场景中，每个知识库的内容来源和检索方式可能都有所差异。针对检索返回的多条混合内容，[Rerank 策略](https://docs.dify.ai/v/zh-hans/learn-more/extended-reading/retrieval-augment/rerank)是一个更加科学的内容排序机制。它可以帮助确认候选内容列表与用户问题的匹配度，改进多个知识间排序的结果以找到最匹配的内容，提高回答质量和用户体验。
+在实际问答场景中，每个知识库的内容来源和检索方式可能都有所差异。针对检索返回的多条混合内容，[Rerank 策略](/user-guide/knowledge-base/indexing-and-retrieval/rerank)是一个更加科学的内容排序机制。它可以帮助确认候选内容列表与用户问题的匹配度，改进多个知识间排序的结果以找到最匹配的内容，提高回答质量和用户体验。
 
 考虑到 Rerank 的使用成本和业务需求，多路召回模式提供了以下两种 Rerank 设置：
 
@@ -62,12 +62,12 @@ Rerank 模型是一种外部评分系统，它会计算用户问题与给定的�
 
 虽然此方法会产生一定的额外花费，但是更加擅长处理知识库内容来源复杂的情况，例如混合了语义查询和关键词匹配的内容，或返回内容存在多语言的情况。
 
-> 点击了解更多[重排序](https://docs.dify.ai/v/zh-hans/learn-more/extended-reading/retrieval-augment/rerank)机制。
+> 点击了解更多[重排序](/user-guide/knowledge-base/indexing-and-retrieval/rerank)机制。
 
 Dify 目前支持多个 Rerank 模型，进入 “模型供应商” 页填入 Rerank 模型（例如 Cohere、Jina AI 等模型）的 API Key。
 
 <Frame caption="在模型供应商内配置 Rerank 模型">
-  <img src="user-guide/.gitbook/assets/zh-rerank-model-api.png" alt="" />
+  <img src="/user-guide/.gitbook/assets/zh-rerank-model-api.png" alt="" />
 </Frame>
 
 **可调参数**

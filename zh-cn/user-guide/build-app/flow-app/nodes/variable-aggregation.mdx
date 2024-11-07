@@ -3,7 +3,9 @@ title: 变量聚合
 version: 'v1.0'
 ---
 
-### 1 定义
+# 变量聚合
+
+### 定义
 
 将多路分支的变量聚合为一个变量，以实现下游节点统一配置。
 
@@ -11,7 +13,7 @@ version: 'v1.0'
 
 ***
 
-### 2 场景
+### 场景
 
 通过变量聚合，可以将诸如问题分类或条件分支等多路输出聚合为单路，供流程下游的节点使用和操作，简化了数据流的管理。
 
@@ -19,24 +21,28 @@ version: 'v1.0'
 
 未添加变量聚合，分类1 和 分类 2 分支经不同的知识库检索后需要重复定义下游的 LLM 和直接回复节点。
 
-![](../../../.gitbook/assets/image (278).png)
+<Frame caption="问题分类（无变量聚合）">
+  <img src="/user-guide/.gitbook/assets/image (278).png" alt="问题分类无变量聚合的流程图" />
+</Frame>
 
 添加变量聚合，可以将两个知识检索节点的输出聚合为一个变量。
 
-![](../../../.gitbook/assets/image (276).png)
+<Frame caption="问题分类后的多路聚合">
+  <img src="/user-guide/.gitbook/assets/image (276).png" alt="问题分类后添加变量聚合的流程图" />
+</Frame>
 
 **IF/ELSE 条件分支后的多路聚合**
 
-![](../../../.gitbook/assets/image (277).png)
+<Frame caption="IF/ELSE 条件分支后的多路聚合">
+  <img src="/user-guide/.gitbook/assets/image (277).png" alt="IF/ELSE 条件分支后添加变量聚合的流程图" />
+</Frame>
 
-### 3 格式要求
+### 格式要求
 
-变量聚合器支持聚合多种数据类型，包括字符串（`String`）、数字（`Number`）、对象（`Object`）以及数组（`Array`）。
+变量聚合器支持聚合多种数据类型，包括字符串（`String`）、数字（`Number`）、文件（`File`）对象（`Object`）以及数组（`Array`）
 
 **变量聚合器只能聚合同一种数据类型的变量**。若第一个添加至变量聚合节点内的变量数据格式为 `String`，后续连线时会自动过滤可添加变量为 `String` 类型。
 
 **聚合分组**
-
-v0.6.10 版本之后已支持聚合分组。
 
 开启聚合分组后，变量聚合器可以聚合多组变量，各组内聚合时要求同一种数据类型。

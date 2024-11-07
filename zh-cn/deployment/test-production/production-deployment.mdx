@@ -44,7 +44,10 @@ title: 生产环境部署
 - Redis 数据库
 - 向量数据库虚拟机
 
-### 更新 Helm Chart 值文件 `values-no-infra-for-prod.yaml`
+### 更新 Helm Chart 值文件
+
+更新 <a href="/assets/helm-values/values-no-infra-for-prod.yaml" download="values-no-infra-for-prod.yaml">values-no-infra-for-prod.yaml</a> 文件。
+
 - 使用您的持久化存储配置更新 `persistence`
 - 使用您的 Postgres 数据库配置更新 `externalPostgres`
 - 使用您的 Redis 数据库配置更新 `externalRedis`

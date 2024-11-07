@@ -4,13 +4,13 @@ title: 资源清单
 
 在开始部署之前，您需要准备以下资源。
 
-# 要求
+## 1. 要求
 - Kubernetes 1.24+
 - Helm 3.14+
 
 - `警告`：如果您使用的是受限环境，请确保允许 pod 以 `root` 身份运行（如 OpenShift）。
 
-# 域名
+## 2. 域名
 Dify Enterprise 需要设置 5 个域名。这些域名是：
 - 控制台：console.dify.local
 - 服务 API：api.dify.local
@@ -18,7 +18,7 @@ Dify Enterprise 需要设置 5 个域名。这些域名是：
 - 文件：upload.dify.local
 - 企业仪表板：enterprise.dify.local
 
-# 测试部署资源
+## 3. 测试部署资源
 - Kubernetes 集群
     - 1 个工作节点：4 CPU，16 GB RAM
 - 持久化存储
@@ -35,7 +35,7 @@ Dify Enterprise 需要设置 5 个域名。这些域名是：
     - 1 台虚拟机
     - 4 CPU，8 GB RAM
 
-# 生产部署资源
+## 4. 生产部署资源
 - Kubernetes 集群
     - 6 个工作节点：每个 8 CPU，32 GB RAM
 - 持久化存储

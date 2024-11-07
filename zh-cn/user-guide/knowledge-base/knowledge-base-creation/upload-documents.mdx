@@ -19,12 +19,11 @@ version: 'v1.0'
 
 - 拖拽或选中文件进行上传，批量上传的文件数量取决于[订阅计划](https://dify.ai/pricing);
 - 如果还没有准备好文档，可以先创建一个空知识库;
-- 如果你在创建知识库时选择了使用外部数据源（Notion 或同步 Web 站点），该知识库的类型不可更改；此举是为了防止单一知识库存在多数据源而造成的管理困难。如果你需要使用多个数据源，建议创建多个知识库并使用 [多路召回](https://docs.dify.ai/v/zh-hans/guides/knowledge-base/integrate-knowledge-within-application#duo-lu-zhao-hui-tui-jian) 模式在同一个应用内引用多个知识库。
+- 如果你在创建知识库时选择了使用外部数据源（Notion 或同步 Web 站点），该知识库的类型不可更改；此举是为了防止单一知识库存在多数据源而造成的管理困难。如果你需要使用多个数据源，建议创建多个知识库并使用 [多路召回](/user-guide/knowledge-base/indexing-and-retrieval/rerank) 模式在同一个应用内引用多个知识库。
 
 **上传文档存在以下限制：**
 
 - 单文档的上传大小限制为 15MB；
-- SaaS 版本的不同[订阅计划](https://dify.ai/pricing)限定了**批量上传个数、文档上传总数、向量存储空间。**
 
 <Frame caption="创建知识库">
   <img src="../../../images/en-upload-files-1.png" alt="" />
@@ -117,7 +116,7 @@ version: 'v1.0'
     </Frame>
   </Tab>
 
-  <Tab title="Q&A 模式" >
+  <Tab title="Q&A 模式（仅社区版支持）" >
     在知识库上传文档时，系统将对文本进行分段，总结后为每分段生成 Q\&A 匹配对。与高质量与经济模式中所采用的「Q to P」（用户问题匹配文本段落）策略不同，QA 模式采用 「Q to Q」（问题匹配问题）策略。
     这是因为问题文本**通常是是具有完整语法结构的自然语言**，Q to Q 的模式会令语意和匹配更加清晰，并同时满足一些高频和高相似度问题的提问场景。
     当用户提问时，系统会找出与之最相似的问题，然后返回对应的分段作为答案。这种方式更加精确，因为它直接针对用户问题进行匹配，可以更准确地帮助用户检索真正需要的信息。
@@ -235,7 +234,7 @@ version: 'v1.0'
   <img src="../../../images/en-upload-files-8.png" alt="" />
 </Frame>
 
-指定检索设置后，你可以参考[召回测试/引用归属](https://docs.dify.ai/zh-hans/guides/knowledge-base/retrieval-test-and-citation)查看关键词与内容块的匹配情况。
+指定检索设置后，你可以参考[召回测试/引用归属](/user-guide/knowledge-base/retrieval-test-and-citation)查看关键词与内容块的匹配情况。
 
 ## 5 完成上传
 
@@ -250,8 +249,6 @@ version: 'v1.0'
 在 RAG 的生产级应用中，为了获得更好的数据召回效果，需要对多源数据进行预处理和清洗，即 ETL （_extract, transform, load_）。为了增强非结构化/半结构化数据的预处理能力，Dify 支持了可选的 ETL 方案：**Dify ETL** 和[ ](https://docs.unstructured.io/welcome)[**Unstructured ETL** ](https://unstructured.io/)。
 
 > Unstructured 能够高效地提取并转换您的数据为干净的数据用于后续的步骤。Dify 各版本的 ETL 方案选择：
-
-* 默认使用 Dify ETL ，可通过[环境变量](https://docs.dify.ai/v/zh-hans/getting-started/install-self-hosted/environments#zhi-shi-ku-pei-zhi)开启 Unstructured ETL；
 
 文件解析支持格式的差异：
 

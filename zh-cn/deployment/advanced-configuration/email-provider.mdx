@@ -1,0 +1,33 @@
+---
+title: 邮件提供商
+---
+
+## 显示 Helm Chart 值
+
+```bash
+helm show values dify/dify
+````
+
+
+## 在 Helm Chart 值中查找邮件提供商配置
+
+````yaml
+mail:
+  type: ''
+  defaultSender: '您的发件人邮箱 (例如: no-reply <no-reply@dify.ai>)'
+  resend:
+    apiKey: ''
+    apiUrl: https://api.resend.com
+  smtp:
+    server: ''
+    port: 587
+    username: ''
+    password: ''
+    useTLS: false
+  ... ...
+````
+
+
+## `mail.type` 字段的选项
+- `resend`: 使用 Resend 服务发送邮件
+- `smtp`: 使用 SMTP 服务发送邮件

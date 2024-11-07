@@ -1,0 +1,70 @@
+---
+title: 'Kubernetes'
+---
+
+> **警告**：这是 Kubernetes 的快速入门指南。我们使用持久卷进行存储。请勿将此指南用于生产环境部署。
+
+## 要求
+- Kubernetes 1.24+
+  - 4 CPU 16 GB RAM
+- Helm 3.14+
+- Kubectl
+
+## 安装
+### 设置 Docker 镜像拉取密钥
+在安装 Dify Enterprise 之前，您需要设置 Docker 镜像拉取密钥。
+- [如何设置 Docker 镜像拉取密钥](/deployment/advanced-configuration/docker-image-pull-secret)
+
+### 持久化配置
+您需要编辑 `values.yaml` 并设置持久化类型。
+支持的存储类型：s3、azure-blob、aliyun-oss、google-storage。
+```
+persistence:
+  type: "s3"
+  s3:
+    endpoint: "https://xxx.r2.cloudflarestorage.com"
+    accessKey: "#REPLACE_ME#"
+    secretKey: "#REPLACE_ME#"
+    region: "us-east-1"
+    bucketName: "your-bucket-name"
+```
+
+### 安装 Dify Enterprise
+Dify Enterprise 使用 Helm 进行部署。
+
+```bash
+helm repo add dify https://langgenius.github.io/dify-helm
+helm repo update
+
+helm upgrade -i dify -f values.yaml dify/dify
+```
+
+更多信息，请参考 [Dify Helm Chart](/deployment/prerequisites/dify-helm-chart)。
+
+### 设置 Ingress 控制器
+Helm chart 中没有默认的 Ingress 控制器。您需要自行设置 Ingress 控制器。
+我们使用 `Nginx Ingress Controller` 进行快速入门。
+- [如何设置 Nginx Ingress Controller](/deployment/advanced-configuration/ingress-nginx-controller)
+
+### 访问 Dify Enterprise
+设置 Ingress 控制器后，首先获取 Ingress 控制器的外部 IP。
+```bash
+kubectl get svc -n ingress-nginx
+```
+
+然后获取 Ingress 控制器的外部 IP，并将以下行添加到您的 `/etc/hosts` 文件中。
+```bash
+4.152.1.216 console.dify.local
+4.152.1.216 app.dify.local
+4.152.1.216 api.dify.local
+4.152.1.216 upload.dify.local
+4.152.1.216 enterprise.dify.local
+```
+
+### 验证安装
+- Dify 控制台：访问 `http://console.dify.local` 并完成安装。
+- Enterprise 仪表板：访问 `http://enterprise.dify.local`，并使用默认的电子邮件和密码登录。登录后可以更改密码。
+  ```
+  电子邮件：dashboard@dify.ai
+  密码：difyai123456
+  ```

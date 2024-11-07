@@ -1,0 +1,41 @@
+---
+title: Dify Helm Chart
+---
+
+## 要求
+- Helm 3.14+
+
+## Helm Chart 仓库
+您可以使用以下命令添加 Dify Helm chart 仓库：
+```bash
+helm repo add dify https://langgenius.github.io/dify-helm
+helm repo update
+````
+
+
+## 安装或升级
+对于首次安装或升级 Dify，您可以使用以下命令：
+````bash
+helm upgrade -i dify -f values.yaml dify/dify
+````
+
+
+## 卸载
+要卸载 Dify，您可以使用以下命令：
+````bash
+helm uninstall dify
+````
+
+
+## 显示 Helm Chart 值
+要了解更多关于 Helm chart 值的信息，您可以使用以下命令：
+````bash
+helm show values dify/dify
+````
+
+## 使用 Helm 模板生成 Kubernetes YAML
+如果您无法使用 Helm 安装 Dify，可以使用 Helm 模板生成 Kubernetes YAML。
+
+````bash
+helm template dify -f values.yaml dify/dify > dify-k8s-template.yaml
+````

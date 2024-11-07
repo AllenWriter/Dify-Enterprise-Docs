@@ -1,0 +1,358 @@
+---
+title: AWS CDK 部署指南
+---
+
+使用 CDK 在 AWS 上部署 Dify Enterprise。
+
+# 组件
+
+### 测试部署
+
+| **组件**        | **Helm Chart 值**   | **数量** | **vCPU** | **内存 (GB)** | **存储 (GB)** | **备注** |
+| --------------- | -------------------- | --------- | -------- | ------------- | ------------- | -------- |
+| S3              | persistence          | 1         |          |               |               |          |
+| Redis DB        | externalRedis        | 1         | 2        | 6.38          |               |          |
+| RDS Postgres DB | externalPostgres     | 2         | 2        | 8             |               |          |
+| K8S Worker Node |                      | 1         | 4        | 16            | 100           |          |
+| OpenSearch      | vectorDB             | 1         | 2        | 16            | 100           |          |
+
+### 生产部署
+
+| **组件**        | **Helm Chart 值**   | **数量** | **vCPU** | **内存 (GB)** | **存储 (GB)** | **备注** |
+| --------------- | -------------------- | --------- | -------- | ------------- | ------------- | -------- |
+| S3              | persistence          | 1         |          |               |               |          |
+| Redis DB        | externalRedis        | 1         | 2        | 12.93         |               |          |
+| RDS Postgres DB | externalPostgres     | 1         | 4        | 32            |               |          |
+| K8S Worker Node |                      | 6         | 8        | 32            | 100           |          |
+| OpenSearch      | vectorDB             | 2         | 8        | 64            | 100           |          |
+
+# 部署
+
+> 整个过程预计需要 60 分钟
+
+1. ### 配置 AWS CLI：
+
+   安装并配置 [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)：
+
+   ```bash
+   aws configure
+   ```
+
+2. ### 克隆此仓库：
+
+   ```bash
+   git clone https://github.com/langgenius/aws-cdk-for-dify.git
+   ```
+
+3. ### 安装 NodeJS 依赖：
+
+   ```bash
+   npm install
+   ```
+
+4. ### 配置环境变量：
+
+   ```bash
+   cp .env.example .env
+   ```
+
+   修改 `.env` 文件中的环境变量值。
+
+   - `ENVIRONMENT`：指定部署环境；必须是 `test` 或 `prod`。
+
+   - `CDK_DEFAULT_REGION`：Dify Enterprise 将部署的 AWS 区域。
+
+   - `CDK_DEFAULT_ACCOUNT`：您的 AWS 账户 ID。
+
+   - `DEPLOY_VPC_ID`：用于部署的现有 VPC 的 ID。如果未设置，CDK 将为您创建一个。
+
+   - **注意：** **如果使用现有 VPC**
+
+     - 确保您有 2 个或更多**公共**子网用于应用负载均衡器，以及 2 个或更多可以访问互联网的**私有**子网（与 NAT 关联）以从互联网拉取 docker 镜像。
+
+     - 为子网添加**标签**（**否则**，步骤 6 将显示关于自动标记失败的警告，这将导致应用负载均衡器无法成功创建）：
+
+       | 子网类型 | 标签键                          | 标签值 |
+       | -------- | ------------------------------- | ------ |
+       | 公共     | kubernetes.io/role/elb          | 1      |
+       | 私有     | kubernetes.io/role/internal-elb | 1      |
+
+   - 子网配置（需要 `DEPLOY_VPC_ID`，用逗号分隔，不带空格，AWS 安全最佳实践推荐使用**私有子网**）：
+
+     - `EKS_CLUSTER_SUBNETS`：EKS 控制平面的子网 ID。需要至少 2 个不同可用区 (AZ) 的子网。
+     - `EKS_NODES_SUBNETS`：EKS 工作节点的子网 ID。需要至少 2 个不同 AZ 的子网。
+     - `REDIS_SUBNETS`：Redis 部署的子网 ID。
+     - `RDS_SUBNETS`：RDS 数据库的子网 ID。（至少需要 2 个不同 AZ 的子网）
+     - `OPENSEARCH_SUBNETS`：OpenSearch 部署的子网 ID。
+
+   - `AWS_EKS_CHART_REPO_URL`：（仅适用于 AWS 中国区域）AWS EKS Helm chart 仓库 URL。
+
+   - `RDS_PUBLIC_ACCESSIBLE`：设置为 `true` 使 RDS 可公开访问（不推荐）。
+
+   **注意：**
+
+   - 如果您使用的是 AWS 中国区域，必须配置 `AWS_EKS_CHART_REPO_URL` 以确保正常功能。请联系 Dify 团队获取 URL。
+   - 建议使用现有 VPC 以便更容易访问资源。
+
+5. ### CDK 引导：
+
+   初始化 CDK 环境：
+
+   ```bash
+   npm run init
+   ```
+
+6. ### CDK 部署：
+
+   - 部署 Dify Enterprise：
+
+     ```bash
+     npm run deploy
+     ```
+
+7. ### 更新 AWS EKS 访问权限：
+
+   1. 导航到 EKS 集群面板，选择"访问"菜单，然后点击"管理访问"：
+      ![Dify-Testing-DifyStackTest-EKS](images/README/eks-access-panel.png)
+   2. 在"管理访问"对话框中，选择"EKS API 和 ConfigMap"，然后点击"保存更改"。
+   3. 在 IAM 访问条目面板中，点击"创建访问条目"：
+      ![IAM 访问条目](images/README/eks-iam-access.png)
+   4. 添加您的 IAM 用户并分配以下权限：
+      - `AmazonEKSAdminPolicy`
+      - `AmazonEKSAdminViewPolicy`
+      - `AmazonEKSClusterAdminPolicy`
+
+8. ### 配置 `kubeconfig` 以在本地访问 Kubernetes (K8S) 集群：
+
+   ```bash
+   aws eks update-kubeconfig --region <cn-northwest-1> --name <Dify-Testing-DifyStackTest-EKS>
+   ```
+
+   根据您的部署调整 `region` 和 `name` 参数：
+
+   - **region：** 您的集群部署的 AWS 区域。
+   - **name：** EKS 集群名称（`Dify-Testing-DifyStackTest-EKS` 或 `Dify-Production-DifyStackProd-EKS`）。
+
+9. ### 数据持久化配置：
+
+   更改 Helm `values.yaml` 文件。要启用它，请按如下方式修改 `persistence` 部分，将 `{your-region-name}` 和 `{your-s3-bucket-name}` 替换为 CDK 创建的资源名称，确保您已打开 `useAwsManagedIam`
+
+   ```yaml
+   persistence:
+     type: "s3"
+     s3:
+       endpoint: "https://s3.{your-region-name}.amazonaws.com"
+       region: "{your-region-name}"
+       bucketName: "{your-s3-bucket-name}"
+       useAwsManagedIam: true
+   ```
+
+10. ### 数据库配置：
+
+    更改 Helm `values.yaml` 文件，**删除** `postgre` 部分，并按如下方式修改 `externalPostgres` 部分，将 `{your-postgres-endpoint}` 和 `{your-postgres-password}` 替换为存储在 AWS **Secret Manager** 中的数据：
+
+    ```yaml
+    postgre:
+      enabled: false
+    externalPostgres:
+      enabled: true
+      address: "{your-postgres-endpoint}"
+      port: 5432
+      credentials:
+        dify:
+          database: "postgres"
+          username: "clusteradmin"
+          password: "{your-postgres-password}"
+          sslmode: "disable"
+        enterprise:
+          database: "postgres"
+          username: "clusteradmin"
+          password: "{your-postgres-password}"
+          sslmode: "disable"
+    ```
+
+11. ### Redis 配置：
+
+    更改 Helm `values.yaml` 文件，**删除** `redis` 部分，并按如下方式修改 `externalRedis` 部分，将 `{your-redis-host}` 替换为 **ElastiCache-Redis OSS caches** 控制台中的 `Primary endpoint`
+
+    **注意：** **删除** `Primary endpoint` 的端口号
+
+    ```yaml
+    redis:
+      enabled: false
+    externalRedis:
+      enabled: true
+      host: "{your-redis-host}"
+      port: 6379
+      username: ""
+      password: ""
+      useSSL: false
+    ```
+
+12. ### 向量数据库配置：
+
+    更改 Helm `values.yaml` 文件，按如下方式修改 `externalType` 部分，将 `{openSearch_endpont}` 替换为 AWS Opensearch 实例的 **Domain endpoint**，删除 `https://` 并使用剩余部分：
+
+    ```yaml
+    vectorDB:
+      useExternal: true
+      externalType: "opensearch"
+      externalOpenSearch:
+        host: "{openSearch_endpont}"
+        port: 9200
+        user: ""
+        password: ""
+        useTLS: false
+    ```
+
+13. ### 设置 docker 镜像拉取密钥
+
+    在安装 Dify Enterprise 之前，您需要设置 docker 镜像拉取密钥。
+    
+    **注意：** 如果您还没有获得用户名和密码，请联系我们，电子邮件地址：[Support@dify.ai](support@dify.ai)
+
+14. ### TLS
+
+    #### 对于测试：
+
+    如果您只是测试部署过程，可以忽略此步骤并继续。
+
+    #### 对于生产：
+
+    转到 AWS `ACM` 为您在 helm chart 配置文件 `values.yaml` 中声明的域名申请证书：
+
+    ```yaml
+      consoleApiDomain: "console.xxxx.com"
+      consoleWebDomain: "console.xxxx.com"
+      serviceApiDomain: "api.xxxx.com"
+      appApiDomain: "app.xxxx.com"
+      appWebDomain: "app.xxxx.com"
+      filesDomain: "upload.xxxx.com"
+      enterpriseDomain: "enterprise.xxxx.com"
+    ```
+
+    它们是：
+
+    ```yaml
+    console.xxxx.com
+    api.xxxx.com
+    app.xxxx.com
+    upload.xxxx.com
+    enterprise.xxxx.com
+    ```
+
+    转到您的域名服务提供商（例如 cloud flare、aws route53 等）并设置 `cname` 以证明您对这些域名的所有权。
+
+    **更改 values.yaml 参数：global.useTLS**
+
+    ```
+      useTLS: true
+    ```
+
+15. ### AWS 负载均衡器配置
+
+    建议在 Helm `values.yaml` 文件中使用 AWS 应用负载均衡器（ALB）进行入口配置。要启用它，请按如下方式修改 `ingress` 部分：
+
+    **对于测试：**
+
+    ```yaml
+    ingress:
+        enabled: true
+        className: "alb"
+        annotations: {
+            # 现有注释
+            ...
+            # 添加以下注释
+            alb.ingress.kubernetes.io/target-type: "ip",
+            alb.ingress.kubernetes.io/scheme: "internet-facing",
+        }
+    ```
+
+    **对于生产：**
+
+    参考：[AWS 负载均衡器控制器设置](https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.9/guide/ingress/cert_discovery/)
+
+    ```yaml
+    ingress:
+      enabled: true
+      className: "alb"
+      annotations: {
+        # 设置文件上传大小限制
+            alb.ingress.kubernetes.io/target-type: "ip",
+            alb.ingress.kubernetes.io/scheme: "internet-facing",
+            alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
+      }
+    ```
+
+16. ### 安装 Dify Enterprise
+
+    Dify Enterprise 使用 Helm 部署。
+
+    ```bash
+    helm repo add dify https://langgenius.github.io/dify-helm
+    helm repo update
+    
+    helm upgrade -i dify -f values.yaml dify/dify
+    ```
+
+17. ### 访问 Dify Enterprise
+
+    #### 对于测试：
+
+    设置完成后，获取 ALB 的临时外部 IP。
+
+    ```bash
+    ping {aws_alb_dns}
+    ```
+
+    然后将以下行添加到您的 `/etc/hosts` 文件中。
+
+    ```bash
+    4.152.1.216 console.dify.local
+    4.152.1.216 app.dify.local
+    4.152.1.216 api.dify.local
+    4.152.1.216 upload.dify.local
+    4.152.1.216 enterprise.dify.local
+    ```
+
+    #### 对于生产
+
+    转到您的域名服务提供商，并将 DNS 设置为 ALB 地址（转到 AWS-EC2-Load Balancer 获取 alb 的 dns）：
+
+    | 域名                | cname     |
+    | ------------------- | --------- |
+    | api.xxxx.com        | alb_dns |
+    | app.xxxx.com        | alb_dns |
+    | upload.xxxx.com     | alb_dns |
+    | enterprise.xxxx.com | alb_dns |
+    | console.xxxx.com    | alb_dns |
+
+18. ### 验证安装
+
+    **警告**：在登录 Dify Enterprise Dashboard `http://enterprise.dify.local` 之前，您必须先设置 Dify Console `http://console.dify.local`。
+
+    - Dify Console：访问 `http://console.dify.local` 并完成安装。
+
+    - Enterprise Dashboard：访问 `http://enterprise.dify.local`，并使用默认的电子邮件和密码登录。登录后可以更改密码。
+
+      ```
+      email: dashboard@dify.ai
+      password: difyai123456
+      ```
+
+# 销毁
+
+> 该过程可能需要 20 分钟。
+
+销毁 `.env` 文件中 `ENVIRONMENT` 指定环境的部署。
+
+```bash
+npm run destroy
+```
+
+**注意**：登录 AWS 控制台，检查 VPC，确保 CDK 创建的 VPC 已被销毁，如果没有，请检查 `Cloudformation` 并执行删除操作。
+
+### 高级配置
+
+要自定义部署配置，请修改测试环境的 [test.ts](./configs/test.ts) 文件或生产环境的 [prod.ts](./configs/prod.ts) 文件。
+

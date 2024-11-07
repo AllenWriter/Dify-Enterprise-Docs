@@ -15,6 +15,11 @@
       "to": "#346DDB"
     }
   },
+  "versions": [
+    "English",
+    "简体中文",
+    "日本語"
+  ],  
   "topbarLinks": [
     {
       "name": "Support",
@@ -24,12 +29,21 @@
   "navigation": [
     {
       "group": "",
+      "version": "English",
       "pages": [
         "introduction"
       ]
     },
     {
+      "group": "",
+      "version": "简体中文",
+      "pages": [
+        "zh-cn/introduction"
+      ]
+    },
+    {
       "group": "Deployment",
+      "version": "English",
       "pages": [
         {
           "group": "Prerequisites",
@@ -67,6 +81,72 @@
         "deployment/faq"
       ]
     },
+    {
+      "group": "部署手册",
+      "version": "简体中文",
+      "pages": [
+        "zh-cn/deployment/checklist",
+        "zh-cn/deployment/resources-checklist",
+      {
+        "group": "安装指引",
+        "pages": [
+          "zh-cn/deployment/prerequisites/kubernetes",
+          "zh-cn/deployment/prerequisites/minikube"
+      ]
+    },
+    {
+      "group": "环境隔离",
+      "pages": [
+        "zh-cn/deployment/test-production/testing-deployment",
+        "zh-cn/deployment/test-production/production-deployment"
+    ]
+  },
+      "zh-cn/deployment/verify-services-status",
+      {
+        "group": "高级配置",
+        "pages": [
+          "zh-cn/deployment/advanced-configuration/persistent-storage",
+          "zh-cn/deployment/advanced-configuration/postgresql-database",
+          {
+            "group": "向量数据库",
+            "pages": [
+              "zh-cn/deployment/advanced-configuration/vector-database",
+              "zh-cn/deployment/advanced-configuration/qdrant/single-node",
+              "zh-cn/deployment/advanced-configuration/qdrant/qdrant-cluster"
+          ]
+        },
+        "zh-cn/deployment/advanced-configuration/rag",
+        "zh-cn/deployment/advanced-configuration/email-provider",
+        "zh-cn/deployment/advanced-configuration/file-upload",
+        "zh-cn/deployment/advanced-configuration/nginx/ingress-nginx-controller",
+        "zh-cn/deployment/advanced-configuration/domain-and-ssl-certificate",
+        "zh-cn/deployment/advanced-configuration/dify-system-logo",
+        "zh-cn/deployment/advanced-configuration/environment-variables",
+        "zh-cn/deployment/advanced-configuration/dify-helm-chart",
+        {
+          "group": "Docker",
+          "pages": [
+            "zh-cn/deployment/advanced-configuration/docker/docker-image-pull-secret",
+            "zh-cn/deployment/advanced-configuration/docker/docker-registry"
+        ]
+      }
+      ]
+    },
+    {
+      "group": "云基础设施",
+      "pages": [
+        "zh-cn/deployment/cloud-infrastructure/azure-poc-infra-setup",
+        "zh-cn/deployment/cloud-infrastructure/aws-setup"
+    ]
+  },
+  {
+    "group": "常见问题",
+    "pages": [
+      "zh-cn/deployment/faq/deploying"
+  ]
+  }
+      ]
+    },    
     {
       "group": "Administrator Guide",
       "pages": [

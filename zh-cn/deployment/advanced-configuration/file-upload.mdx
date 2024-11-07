@@ -1,0 +1,40 @@
+---
+title: 文件上传
+---
+
+## 显示 Helm Chart 值
+
+```bash
+helm show values dify/dify
+````
+
+## 在 Helm Chart 值中查找文件上传配置
+这是 Helm chart 值中文件上传配置的示例。
+
+````yaml
+api:
+  limits:
+    # 上传文件大小限制（单位：MB）
+    uploadFileSize: 15
+    # 上传文件批次数量限制
+    uploadFileBatchCount: 5
+    # 上传图片文件大小限制（单位：MB）
+    uploadImageFileSize: 5
+  ... ...
+````
+
+
+## Nginx Ingress 控制器配置
+
+如果您使用的是 Nginx Ingress 控制器，您还应该在 `annotations` 字段中设置文件上传大小限制。
+
+````yaml
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations: {
+    # 设置文件上传大小限制
+    nginx.ingress.kubernetes.io/proxy-body-size: "15m"
+  }
+  ... ...
+````

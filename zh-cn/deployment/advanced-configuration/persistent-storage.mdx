@@ -1,0 +1,44 @@
+---
+title: 持久化存储
+---
+
+## 显示 Helm Chart 值
+
+```bash
+helm show values dify/dify
+```
+
+## 在 Helm Chart 值中查找持久化存储配置
+这是 Helm chart 值中持久化存储配置的示例。
+```yaml
+persistence:
+  type: "s3"
+  s3:
+    endpoint: "https://xxx.r2.cloudflarestorage.com"
+    accessKey: "#REPLACE_ME#"
+    secretKey: "#REPLACE_ME#"
+    region: "us-east-1"
+    bucketName: "your-bucket-name"
+    addressType: ""
+    useAwsManagedIam: false
+  ... ...
+```
+
+## `persistence.type` 字段的选项
+- s3
+- azure-blob
+- aliyun-oss
+- google-storage
+- tencent-cos
+
+## 如何使用 IAM 角色配置 Amazon S3 存储
+如果您想使用 AWS IAM 角色访问 S3 存储桶，可以在 Helm chart 值中将 `useAwsManagedIam` 字段设置为 `true`。`region` 和 `bucketName` 字段是必需的。
+```yaml
+persistence:
+  type: "s3"
+  s3:
+    endpoint: "https://s3.xxxxx.amazonaws.com"
+    region: "us-east-1"
+    bucketName: "your-bucket-name"
+    useAwsManagedIam: true
+```

@@ -45,40 +45,66 @@
       "group": "Deployment",
       "version": "English",
       "pages": [
-        {
-          "group": "Prerequisites",
-          "pages": [
-            "deployment/prerequisites/resources-checklist",
-            "deployment/prerequisites/dify-helm-chart"
+        "en-us/deployment/checklist",
+        "en-us/deployment/resources-checklist",
+      {
+        "group": "Quick Start for POC",
+        "pages": [
+          "en-us/deployment/prerequisites/kubernetes",
+          "en-us/deployment/prerequisites/minikube"
+      ]
+    },
+    {
+      "group": "Deployment for Testing and Production",
+      "pages": [
+        "en-us/deployment/test-production/testing-deployment",
+        "en-us/deployment/test-production/production-deployment"
+    ]
+  },
+      "en-us/deployment/verify-services-status",
+      {
+        "group": "Advanced Configuration",
+        "pages": [
+          "en-us/deployment/advanced-configuration/persistent-storage",
+          "en-us/deployment/advanced-configuration/postgresql-database",
+          {
+            "group": "Vector Database",
+            "pages": [
+              "en-us/deployment/advanced-configuration/vector-database",
+              "en-us/deployment/advanced-configuration/qdrant/single-node",
+              "en-us/deployment/advanced-configuration/qdrant/qdrant-cluster"
           ]
         },
+        "en-us/deployment/advanced-configuration/rag",
+        "en-us/deployment/advanced-configuration/email-provider",
+        "en-us/deployment/advanced-configuration/file-upload",
+        "en-us/deployment/advanced-configuration/nginx/ingress-nginx-controller",
+        "en-us/deployment/advanced-configuration/domain-and-ssl-certificate",
+        "en-us/deployment/advanced-configuration/dify-system-logo",
+        "en-us/deployment/advanced-configuration/environment-variables",
+        "en-us/deployment/advanced-configuration/dify-helm-chart",
         {
-          "group": "Install Dify Enterprise",
+          "group": "Docker",
           "pages": [
-            "deployment/prerequisites/kubernetes",
-            "deployment/prerequisites/minikube"
-          ]
-        },
-        "deployment/testing-deployment",
-        "deployment/production-deployment",
-        "deployment/verify-services-status",
-        {
-          "group": "Advanced Configuration",
-          "pages": [
-            "deployment/advanced-configuration/ingress-nginx-controller",
-            "deployment/advanced-configuration/domain-and-ssl-certificate",
-            "deployment/advanced-configuration/dify-system-logo",
-            {
-              "group": "Qdrant",
-              "pages": [
-                "deployment/advanced-configuration/qdrant/single-node",
-                "deployment/advanced-configuration/qdrant/qdrant-cluster"
-              ]
-            },
-            "deployment/advanced-configuration/docker-image-pull-secret"
-          ]
-        },
-        "deployment/faq"
+            "en-us/deployment/advanced-configuration/docker/docker-image-pull-secret",
+            "en-us/deployment/advanced-configuration/docker/docker-registry"
+        ]
+      }
+      ]
+    },
+    {
+      "group": "Cloud Infrastructure",
+      "pages": [
+        "en-us/deployment/cloud-infrastructure/azure-poc-infra-setup",
+        "en-us/deployment/cloud-infrastructure/aws-setup"
+    ]
+  },
+  {
+    "group": "FAQ",
+    "pages": [
+      "en-us/deployment/faq/deploying"
+  ]
+  }
       ]
     },
     {

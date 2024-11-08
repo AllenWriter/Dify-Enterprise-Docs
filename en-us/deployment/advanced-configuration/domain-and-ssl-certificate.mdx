@@ -2,7 +2,7 @@
 title: Domain and SSL Certificate
 ---
 
-## Domain Configuration
+## Domain Requirements
 Dify Enterprise requires 5 domains to be set up. The domains are:
 - Console: console.dify.local
 - Services API: api.dify.local
@@ -10,7 +10,27 @@ Dify Enterprise requires 5 domains to be set up. The domains are:
 - Files: upload.dify.local
 - Enterprise: enterprise.dify.local
 
-## How to Config SSL Certificate
+## Find the Domain Configuration in the Helm Chart Values
+### Display Helm Chart Values
+```bash
+helm show values dify/dify
+```
+
+This is an example of the domain configuration in the Helm chart values.
+```yaml
+global:
+  consoleApiDomain: "console.dify.local"
+  consoleWebDomain: "console.dify.local"
+  serviceApiDomain: "api.dify.local"
+  appApiDomain: "app.dify.local"
+  appWebDomain: "app.dify.local"
+  filesDomain: "upload.dify.local"
+  enterpriseDomain: "enterprise.dify.local"
+  ... ...
+```
+
+
+## How to configure SSL Certificate
 ### Generate SSL Certificate
 ```bash
 kubectl create secret tls example-tls --key example.key --cert example.crt
@@ -56,4 +76,12 @@ ingress:
   - hosts:
     - enterprise.dify.local
     secretName: example-tls-5
+```
+
+## The cache error of Http/Https
+After you configure the SSL Certificate, if you encounter the http/https errors on your browser, you can uninstall dify and try to install again.
+
+```bash
+helm uninstall dify
+helm upgrade -i dify -f values.yaml dify/dify
 ```

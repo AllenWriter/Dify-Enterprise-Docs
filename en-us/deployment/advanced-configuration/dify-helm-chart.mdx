@@ -1,14 +1,18 @@
 ---
-title: 'Dify Helm Chart'
+title: Dify Helm Chart
+Version: 'English'
 ---
 
 ## Requirements
 
 - Kubernetes 1.24+
 - Helm 3.14+
-- `Warning`: If you are using a restricted environment, please make sure to allow the pods to run as `root` (like OpenShift).
+- `Warning`: If you are using a restricted environment (like OpenShift), make sure pods are allowed to run as `root`.
+
+> <a href="/assets/values.yaml" download="values.yaml">Click here</a> to download the `values.yaml` file.
 
 ## Quick Start
+
 ### Helm Chart Repository
 You can use the following command to add the Dify Helm chart repository:
 ```bash
@@ -17,15 +21,10 @@ helm repo add dify https://langgenius.github.io/dify-helm
 
 ### Installation or Upgrade
 For the first time installation or upgrade Dify, you can use the following command:
-
-**Warning**: Before upgrade, please make sure to backup your database. If failed to upgrade, you can rollback version and restore the database quickly.
-
 ```bash
 helm repo update
 helm search repo dify/dify
 helm upgrade -i dify -f values.yaml dify/dify
-# If you want to upgrade to target version, you can use the following command:
-# helm upgrade -i dify -f values.yaml dify/dify --version x.x.x
 ```
 
 ## Advanced Usage
@@ -45,4 +44,11 @@ helm show values dify/dify
 You can use the following command to generate the Kubernetes YAML files:
 ```bash
 helm template dify -f values.yaml dify/dify > dify-k8s-template.yaml
+```
+
+### Download the Helm Chart locally
+You can use the following command to download the Helm chart:
+```bash
+helm pull dify/dify
+helm pull dify/dify --version x.x.x
 ```

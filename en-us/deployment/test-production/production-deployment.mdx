@@ -1,5 +1,6 @@
 ---
 title: Production Deployment
+version: 'English'
 ---
 
 ## Requirements
@@ -18,7 +19,7 @@ title: Production Deployment
 - Redis Database
     - Version 6+
     - 2 GB RAM
-- [Vector DB Virtual Machine - Qdrant Cluster](/deployment/advanced-configuration/qdrant/qdrant-cluster)
+- [Vector DB Virtual Machine - Qdrant Cluster](/en-us/deployment/advanced-configuration/qdrant/qdrant-cluster)
     - 3 Virtual Machines
     - 8 CPU, 64 GB RAM
     - 100 GB Storage
@@ -44,7 +45,10 @@ title: Production Deployment
 - Redis Database
 - Vector DB Virtual Machine
 
-### Update Helm Chart Values `values-no-infra-for-prod.yaml`
+### Update Helm Chart Values
+
+Update the <a href="/assets/helm-values/values-no-infra-for-prod.yaml" download="values-no-infra-for-testing.yaml">values-no-infra-for-testing.yaml</a> file.
+
 - Update `persistence` with your persistence storage configuration
 - Update `externalPostgres` with your postgres database configuration
 - Update `externalRedis` with your redis database configuration
@@ -52,8 +56,8 @@ title: Production Deployment
 
 ### Install Dify Enterprise
 You can install Dify Enterprise using the following guide. But you need to use `values-no-infra-for-prod.yaml` instead of `values.yaml`.
-- [How to install Dify Enterprise](/deployment/prerequisites/kubernetes)
+- [How to install Dify Enterprise](/en-us/deployment/prerequisites/kubernetes)
 
 ### Verify Services Status
 After the installation, you can verify the services status referring to the following guide.
-- [How to verify Dify Enterprise services status](/deployment/verify-services-status)
+- [How to verify Dify Enterprise services status](/en-us/deployment/verify-services-status)

@@ -1,6 +1,9 @@
 ---
 title: 'Kubernetes'
+version: 'English'
 ---
+
+# Quick Start for Kubernetes
 
 > **Warning**: This is a quick start guide for Kubernetes. We use Persistent Volume for storage. Don't use this guide for production deployment.
 
@@ -13,21 +16,14 @@ title: 'Kubernetes'
 ## Installation
 ### Set docker image pull secret
 You need to set the docker image pull secret before installing Dify Enterprise.
-- [How to set docker image pull secret](/deployment/advanced-configuration/docker-image-pull-secret)
+- [How to set docker image pull secret](/en-us/deployment/advanced-configuration/docker/docker-image-pull-secret)
 
 ### Persistence Configration
 You need to edit `values.yaml` and set the persistence type.
-The storage type support: s3, azure-blob, aliyun-oss, google-storage.
-```
-persistence:
-  type: "s3"
-  s3:
-    endpoint: "https://xxx.r2.cloudflarestorage.com"
-    accessKey: "#REPLACE_ME#"
-    secretKey: "#REPLACE_ME#"
-    region: "us-east-1"
-    bucketName: "your-bucket-name"
-```
+
+For more information, please refer to the [Persistent Storage](/en-us/deployment/advanced-configuration/persistent-storage).
+
+> <a href="/assets/values.yaml" download="values.yaml">Click here</a> to download the `values.yaml` file.
 
 ### Install Dify Enterprise
 Dify Enterprise is deployed using Helm. 
@@ -39,12 +35,12 @@ helm repo update
 helm upgrade -i dify -f values.yaml dify/dify
 ```
 
-For more information, please refer to the [Dify Helm Chart](/deployment/prerequisites/dify-helm-chart).
+For more information, please refer to the [Dify Helm Chart](/en-us/deployment/advanced-configuration/dify-helm-chart).
 
 ### Set up Ingress Controller
 There is no default ingress controller in the Helm chart. You need to set up the ingress controller by yourself.
 We use the `Nginx Ingress Controller` for quick start.
-- [How to set up Nginx Ingress Controller](/deployment/advanced-configuration/ingress-nginx-controller)
+- [How to set up Nginx Ingress Controller](/en-us/deployment/advanced-configuration/ingress-nginx-controller)
 
 ### Access Dify Enterprise
 After Ingress Controller is set up, get the external IP of the Ingress Controller first.
@@ -62,6 +58,8 @@ Then get the external IP of the Ingress Controller and add the following line to
 ```
 
 ### Verify Installation
+**Warning**: You have to set up Dify Console `http://console.dify.local` first before login to Dify Enterprise Dashboard `http://enterprise.dify.local`.
+
 - Dify Console: visit `http://console.dify.local` and finish the installation.
 - Enterprise Dashboard: visit `http://enterprise.dify.local`, and login with the default email and password. You can change the password after login.
   ```

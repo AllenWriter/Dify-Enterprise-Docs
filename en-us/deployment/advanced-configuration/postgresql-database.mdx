@@ -1,0 +1,10 @@
+---
+title: Postgresql Database
+---
+
+## `max_connections` configuration
+
+- If you encounter the error message `FATAL: remaining connection slots are reserved for non-replication superuser connections`, you need to increase the `max_connections` configuration for the Postgresql database.
+- Suggestions:
+  - The default value is 100.
+  - Suggest setting the `max_connections` value to `2000`.

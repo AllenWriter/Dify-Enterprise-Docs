@@ -1,0 +1,76 @@
+---
+title: ## デプロイメント関連
+---
+
+## Nginx Ingress コントローラーの設定方法
+
+Nginx Ingress コントローラーの一般的な設定手順は以下の通りです。クラウドサービスプロバイダーに応じて、他の Ingress コントローラーを使用することも可能です。Kubernetes クラスターに Nginx Ingress コントローラーをインストールするためには、次のコマンドを実行します：
+
+```bash
+kubectl apply -f ./ingress-nginx-controller-v1.10.1.yaml
+```
+
+このコマンドは、Nginx Ingress コントローラーの設定ファイルを適用します。
+
+次に、`values.yaml` ファイルを更新して Ingress の設定を行います。
+
+> [こちらをクリックして](/assets/values.yaml) `values.yaml` ファイルをダウンロードしてください。
+
+```yaml
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations: {
+    # ファイルアップロードサイズの制限を設定
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+  }
+```
+
+すべての設定が完了したら、以下のコマンドを使用して Kubernetes クラスターでアプリケーションをアップグレードします：
+
+```bash
+helm upgrade -i dify -f values.yaml dify/dify
+```
+
+## Dify サービスへのアクセス方法
+
+インストールが完了したら、サービスにアクセスするために Ingress を設定する必要があります。以下のコマンドを使用して Ingress IP を取得します：
+
+```bash
+kubectl get services -o wide -w -n ingress-nginx
+```
+
+次に、取得した Ingress IP をローカルの `/etc/hosts` ファイルに設定します。
+
+```
+4.152.1.216 console.dify.local
+4.152.1.216 app.dify.local
+4.152.1.216 enterprise.dify.local
+```
+
+## Dify Enterprise ダッシュボードへのアクセス方法
+
+ブラウザで `enterprise.dify.local` のURLを開き、以下のデフォルトのユーザー名とパスワードを使用してログインします。ログイン後にパスワードを変更することができます。
+
+- ユーザー名：dashboard@dify.ai
+- パスワード：difyai123456
+
+### Helm チャートの値を表示する
+
+設定可能なオプションを確認するには、次のコマンドを実行します：
+
+```bash
+helm show values dify/dify
+```
+
+### Helm テンプレートを使用して Kubernetes YAML を生成する
+
+次のコマンドを使用して、Kubernetes 用の YAML を生成します：
+
+```bash
+helm template dify -f values.yaml dify/dify > dify-k8s-template.yaml
+```
+
+## Difyエンタプライス版のアップデート方法
+
+最新バージョンを確認するには、[Dify Enterprise Release](https://langgenius.github.io/dify-helm/#/)を参照し、Helm を使用してアップデートを行います。Enterprise バージョンの更新は、コミュニティ版の更新よりも遅れる場合がありますが、より安定したサービスを提供するためのものです。

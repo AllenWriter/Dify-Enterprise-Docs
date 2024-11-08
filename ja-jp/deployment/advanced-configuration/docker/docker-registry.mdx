@@ -1,0 +1,39 @@
+---
+title: Docker レジストリ
+---
+
+## Helm Chartの値でDockerレジストリの設定を見つける
+### Helm Chartの値を表示する
+```bash
+helm show values dify/dify
+````
+
+## Helm Chartの値でDockerレジストリの設定を見つける
+これはHelm Chartの値におけるDockerレジストリの設定の例です。
+Helm Chartの値でイメージリポジトリとタグを設定できます。
+
+````yaml
+api:
+  image:
+    repository: langgenius/dify-api
+    tag: "x.x.x"
+  ... ...
+````
+
+## プライベートレジストリにイメージを同期する方法
+`sync.sh`スクリプトを使用して、イメージをプライベートレジストリに同期できます。DifyイメージはARM64およびAMD64アーキテクチャをサポートしています。
+
+> クリックして [スクリプトファイル](./sync.sh) を取得します。
+
+### シェル変数を設定する
+`sync.sh`ファイルを編集し、以下の変数を設定します:
+- `REGISTRY_URL`: プライベートレジストリのURL
+- `NAMESPACE`: プライベートレジストリのネームスペース
+
+### イメージを同期する
+イメージを同期する前に、まずプライベートレジストリにログインする必要があります。
+
+````bash
+# ./sync.sh <イメージ> <バージョン>
+./sync.sh dify-api x.x.x
+````

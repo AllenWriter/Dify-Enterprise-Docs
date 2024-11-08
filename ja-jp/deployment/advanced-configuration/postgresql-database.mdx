@@ -1,0 +1,10 @@
+---
+title: PostgreSQLデータベース
+---
+
+## `max_connections` 設定
+
+- エラーメッセージ `FATAL: remaining connection slots are reserved for non-replication superuser connections`（致命的なエラー：残りの接続スロットは非レプリケーションスーパーユーザー接続用に予約されています）に遭遇した場合、PostgreSQLデータベースの `max_connections` 設定を増やす必要があります。
+- 推奨：
+  - デフォルト値は100です。
+  - `max_connections` の値を `2000` に設定することをお勧めいたします。

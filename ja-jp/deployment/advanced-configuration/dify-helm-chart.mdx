@@ -1,0 +1,54 @@
+---
+title: Dify Helm Chart
+version: 'v1.0.0'
+---
+
+## 必要条件
+
+- Kubernetes 1.24+
+- Helm 3.14+
+- `注意`: OpenShiftなどの特定の環境を使用する場合、ポッドが`root`ユーザーとして実行できることを確認してください。
+
+> <a href="/assets/values.yaml" download="values.yaml">点击此处</a>下载 `values.yaml` 文件。
+## クイックスタート
+
+## Helm Chartリポジトリの追加
+以下のコマンドを使って、Dify Helm Chartリポジトリを追加できます。
+```bash
+helm repo add dify https://langgenius.github.io/dify-helm
+```
+
+## インストールまたはアップグレード
+初回インストールやアップグレードには、以下のコマンドを使用してください。
+
+**注意**：アップグレードの前にデータベースのバックアップを行ってください。アップグレードが失敗した場合、迅速にバージョンをロールバックしてデータベースを復元することができます。
+
+```bash
+helm repo update
+helm search repo dify/dify
+helm upgrade -i dify -f values.yaml dify/dify
+# 特定のバージョンにアップグレードしたい場合は、次のコマンドを使ってください：
+# helm upgrade -i dify -f values.yaml dify/dify --version x.x.x
+```
+
+## 詳細な使用法
+
+## アンインストール
+Difyを削除するには、以下のコマンドを使用してください。
+```bash
+helm uninstall dify
+```
+
+## Helm Chartの値を確認
+
+Helm Chartの値については、次のコマンドで詳細を確認できます。
+```bash
+helm show values dify/dify
+```
+
+## Kubernetes YAML の生成
+
+Helm を使って Dify をインストールできない場合、Helm テンプレートを活用して Kubernetes YAML を生成できます。
+```bash
+helm template dify -f values.yaml dify/dify > dify-k8s-template.yaml
+```

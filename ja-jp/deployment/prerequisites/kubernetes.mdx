@@ -1,0 +1,75 @@
+---
+title: 'Kubernetes'
+---
+
+> **警告**: これはKubernetesのクイックスタートガイドです。ストレージにはPersistent Volumeを使用します。このガイドを本番環境のデプロイメントには使用しないでください。
+
+## 必要条件
+- Kubernetes 1.24+
+  - 4 CPU 16 GB RAM
+- Helm 3.14+
+- Kubectl
+
+## インストール
+### Dockerイメージプルシークレットの設定
+Difyエンタプライス版をインストールする前に、Dockerイメージプルシークレットを設定する必要があります。
+- [Dockerイメージプルシークレットの設定方法](/deployment/advanced-configuration/docker-image-pull-secret)
+
+### 永続化設定
+
+`values.yaml`を編集して永続化タイプを設定する必要があります。
+
+サポートされているストレージタイプ: s3, azure-blob, aliyun-oss, google-storage.
+
+> <a href="/assets/values.yaml" download="values.yaml">点击此处</a>下载 `values.yaml` 文件。
+
+```
+persistence:
+  type: "s3"
+  s3:
+    endpoint: "https://xxx.r2.cloudflarestorage.com"
+    accessKey: "#REPLACE_ME#"
+    secretKey: "#REPLACE_ME#"
+    region: "us-east-1"
+    bucketName: "your-bucket-name"
+```
+
+### Difyエンタプライス版のインストール
+Difyエンタプライス版はHelmを使用してデプロイされます。
+
+```bash
+helm repo add dify https://langgenius.github.io/dify-helm
+helm repo update
+
+helm upgrade -i dify -f values.yaml dify/dify
+```
+
+詳細については、[Dify Helm Chart](/deployment/prerequisites/dify-helm-chart)を参照してください。
+
+### Ingressコントローラーの設定
+Helm ChartにはデフォルトのIngressコントローラーが含まれていません。自分でIngressコントローラーを設定する必要があります。
+クイックスタートには`Nginx Ingress Controller`を使用します。
+- [Nginx Ingress Controllerの設定方法](/deployment/advanced-configuration/ingress-nginx-controller)
+
+### Difyエンタプライス版へのアクセス
+Ingressコントローラーが設定された後、まずIngressコントローラーの外部IPを取得します。
+```bash
+kubectl get svc -n ingress-nginx
+```
+
+次に、Ingressコントローラーの外部IPを取得し、以下の行を`/etc/hosts`ファイルに追加します。
+```bash
+4.152.1.216 console.dify.local
+4.152.1.216 app.dify.local
+4.152.1.216 api.dify.local
+4.152.1.216 upload.dify.local
+4.152.1.216 enterprise.dify.local
+```
+
+### インストールの確認
+- Difyコンソール: `http://console.dify.local`にアクセスしてインストールを完了します。
+- エンタープライズダッシュボード: `http://enterprise.dify.local`にアクセスし、デフォルトのメールアドレスとパスワードでログインします。ログイン後にパスワードを変更できます。
+  ```
+  电子邮件：dashboard@dify.ai
+  密码：difyai123456
+  ```

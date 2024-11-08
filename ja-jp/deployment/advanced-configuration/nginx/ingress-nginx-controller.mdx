@@ -1,0 +1,13 @@
+---
+title: Nginx Ingress
+---
+
+> **注意**: 一般的に、クラウドプロバイダーには独自のイングレスコントローラーがあります。クラウドプロバイダーのイングレスコントローラーを使用することができます。[詳細については、kubernetesのドキュメントを参照してください。](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/)
+
+以下のコマンドを実行して、KubernetesクラスターにNginx Ingress Controllerをインストールすることができます:
+
+```bash
+kubectl apply -f ./ingress-nginx-controller-v1.10.1.yaml
+```
+
+> <a href="/assets/ingress-nginx-controller-v1.10.1.yaml" download="ingress-nginx-controller-v1.10.1.yaml">点击此处</a>下载 `ingress-nginx-controller-v1.10.1.yaml` 文件。

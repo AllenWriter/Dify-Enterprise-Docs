@@ -42,6 +42,13 @@
       ]
     },
     {
+      "group": "",
+      "version": "日本語",
+      "pages": [
+        "ja-jp/introduction"
+      ]
+    },    
+    {
       "group": "Deployment",
       "version": "English",
       "pages": [

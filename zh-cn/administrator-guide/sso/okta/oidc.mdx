@@ -9,7 +9,7 @@ title: 使用 Okta 配置 OIDC
 1. 访问 Okta 的管理员后台页，导航到 Applications 页，轻点 Create App Integration 按钮。
 2. 然后选择 "OIDC - OpenID Connect"，选择 "Web Application" 应用类型后完成创建。
 
-![](/images/okta-oidc-1.png)
+![](/zh-cn/images/okta-oidc-1.png)
 
 ## 2. 配置 Okta 应用程序
 
@@ -17,7 +17,7 @@ title: 使用 Okta 配置 OIDC
 
 1. 点击 Dify 企业版的 Authentication 页，轻点 **"+ New Identity Provider → New OIDC Provider"**，然后即可查看 Callback URL。
 
-   ![](/images/okta-oidc-3.png)
+   ![](/zh-cn/images/okta-oidc-3.png)
 
    它通常为以下格式：
 
@@ -27,7 +27,7 @@ title: 使用 Okta 配置 OIDC
 
 2. 然后前往 Okta 应用程序的 "General" 页，找到 `Sign-in redirect URIs` 字段，并将 Dify 的 Callback URL 填入其中。
 
-![](/images/okta-oidc-4.png)
+![](/zh-cn/images/okta-oidc-4.png)
 
 ## 3. 完成在 Dify 上的配置
 
@@ -35,7 +35,7 @@ title: 使用 Okta 配置 OIDC
    * Client ID
    * Client secret
 
-   ![](/images/okta-oidc-5.png)
+   ![](/zh-cn/images/okta-oidc-5.png)
 
 2. 然后在 "Sign On" 页中找到 Issuer 字段，你可以在此处找到 **Issuer URL**。
 
@@ -43,7 +43,7 @@ title: 使用 Okta 配置 OIDC
 
 3. 系统管理员点击 Dify 企业版的 Authentication 页，轻点 **"+ New Identity Provider → New OIDC Provider"**，粘贴上文中获取的信息完成配置。
 
-![](/images/okta-oidc-6.png)
+![](/zh-cn/images/okta-oidc-6.png)
 
 ## 4. 开启 SSO 强制认证
 

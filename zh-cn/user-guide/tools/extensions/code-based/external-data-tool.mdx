@@ -1,6 +1,6 @@
 ---
 title: 外部数据工具
-version: 'v1.0'
+version: '简体中文'
 ---
 
 ## 功能介绍
@@ -19,29 +19,29 @@ version: 'v1.0'
 2. Dify 提供了集中式的 API 管理，在设置界面统一添加 API 扩展配置后，即可在 Dify 上的各类应用中直接使用。
 
 <Frame caption="API-based Extension">
-  <img src="/user-guide/.gitbook/assets/api_based.png" alt="API-based Extension" />
+  <img src="/zh-cn/user-guide/.gitbook/assets/api_based.png" alt="API-based Extension" />
 </Frame>
 
 3. 我们以"查询天气"为例，在"新增基于 API 的扩展"对话框输入名字，API 端点，API Key。保存后我们就可以调用 API 了。
 
 <Frame caption="Weather Inquiry">
-  <img src="/user-guide/.gitbook/assets/weather inquiry.png" alt="Weather Inquiry" />
+  <img src="/zh-cn/user-guide/.gitbook/assets/weather inquiry.png" alt="Weather Inquiry" />
 </Frame>
 
 4. 在提示词编排页面，点击"工具"右侧的"+添加"按钮，在打开的"添加 工具"对话框，填写名称和变量名称（变量名称会被引用到提示词中，请填写英文），以及选择第 2 步中已经添加的基于 API 的扩展。
 
 <Frame caption="External_data_tool">
-  <img src="/user-guide/.gitbook/assets/api_based_extension1.png" alt="External_data_tool" />
+  <img src="/zh-cn/user-guide/.gitbook/assets/api_based_extension1.png" alt="External_data_tool" />
 </Frame>
 
 5. 这样，我们在提示词编排框就可以把查询到的外部数据拼装到提示词中。比如我们要查询今天的伦敦天气，可以添加`location` 变量，输入"London"，结合外部数据工具的扩展变量名称`weather_data`，调试输出如下：
 
 <Frame caption="Weather_search_tool">
-  <img src="/user-guide/.gitbook/assets/Weather_search_tool.jpeg" alt="Weather_search_tool" />
+  <img src="/zh-cn/user-guide/.gitbook/assets/Weather_search_tool.jpeg" alt="Weather_search_tool" />
 </Frame>
 
 在对话日志中，我们也可以看到 API 返回的实时数据：
 
 <Frame caption="Prompt Log">
-  <img src="/user-guide/.gitbook/assets/log.jpeg" alt="Prompt Log" width="335" />
+  <img src="/zh-cn/user-guide/.gitbook/assets/log.jpeg" alt="Prompt Log" width="335" />
 </Frame>

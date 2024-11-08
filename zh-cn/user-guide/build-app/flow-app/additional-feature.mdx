@@ -1,6 +1,6 @@
 ---
 title: 附加功能
-version: 'v1.0'
+version: '简体中文'
 ---
 
 Workflow 和 Chatflow 应用均支持开启附加功能以增强使用者的交互体验。例如添加文件上传入口、给 LLM 应用添加一段自我介绍或使用欢迎语，让应用使用者获得更加丰富的交互体验。
@@ -38,7 +38,7 @@ Workflow 类型应用仅支持 **"图片上传"** 功能。开启后，Workflow 
 最后在 END 节点内选择 LLM 节点的输出变量即可完成设置。
 
 <Frame caption="开启视觉分析能力">
-  <img src="/user-guide/.gitbook/assets/image (7).png" alt="LLM节点中开启视觉分析能力的设置界面" />
+  <img src="/zh-cn/user-guide/.gitbook/assets/image (7).png" alt="LLM节点中开启视觉分析能力的设置界面" />
 </Frame>
 
 ### Chatflow
@@ -59,7 +59,7 @@ Chatflow 类型应用支持以下功能：
     支持以下文件类型：文档、图片、音频、视频以及其它文件类型。开启此功能后，应用使用者可以在应用对话的过程中随时上传并更新文件。最多支持同时上传 10 个文件，每个文件的大小上限为 15MB。
 
     <Frame caption="文件上传功能">
-      <img src="/user-guide/.gitbook/assets/image (8).png" alt="Chatflow应用中文件上传功能的设置界面" />
+      <img src="/zh-cn/user-guide/.gitbook/assets/image (8).png" alt="Chatflow应用中文件上传功能的设置界面" />
     </Frame>
 
 *   **引用和归属**
@@ -78,7 +78,7 @@ Chatflow 类型应用支持以下功能：
 **对于应用使用者而言：** 已开启文件上传功能的 Chatflow 应用将会在对话框右侧出现 "回形针" 标识，点击后即可上传文件并与 LLM 交互。
 
 <Frame caption="使用文件上传">
-  <img src="/user-guide/.gitbook/assets/image (9).png" alt="Chatflow应用中使用文件上传功能的界面" />
+  <img src="/zh-cn/user-guide/.gitbook/assets/image (9).png" alt="Chatflow应用中使用文件上传功能的界面" />
 </Frame>
 
 **对于应用开发者而言：**
@@ -99,7 +99,7 @@ LLM 并不具备直接读取文档文件的能力，因此需要使用 [文档�
 使用此方法搭建出的 Chatflow 应用无法记忆已上传的文件内容。应用使用者每次对话时都需要在聊天框中上传文档文件。如果你希望应用能够记忆已上传的文件，请参考 [《文件上传：在开始节点添加变量》](file-upload.md#fang-fa-er-zai-tian-jia-wen-jian-bian-liang)。
 
 <Frame caption="文档文件编排">
-  <img src="/user-guide/.gitbook/assets/image (372).png" alt="处理文档文件的工作流编排示意图" />
+  <img src="/zh-cn/user-guide/.gitbook/assets/image (372).png" alt="处理文档文件的工作流编排示意图" />
 </Frame>
 
 * **图片文件**
@@ -113,7 +113,7 @@ LLM 并不具备直接读取文档文件的能力，因此需要使用 [文档�
 3. 在末尾添加 "直接回复" 节点，填写 LLM 节点的输出变量。
 
 <Frame caption="开启视觉分析能力">
-  <img src="/user-guide/.gitbook/assets/image (3) (2).png" alt="LLM节点中开启视觉分析能力的设置界面" />
+  <img src="/zh-cn/user-guide/.gitbook/assets/image (3) (2).png" alt="LLM节点中开启视觉分析能力的设置界面" />
 </Frame>
 
 * **混合文件类型**
@@ -128,7 +128,7 @@ LLM 并不具备直接读取文档文件的能力，因此需要使用 [文档�
 应用使用者同时上传文档文件和图片后，文档文件自动分流至文档提取器节点，图片文件自动分流至 LLM 节点以实现对于文件的共同处理。
 
 <Frame caption="混合文件处理">
-  <img src="/user-guide/.gitbook/assets/image (16).png" alt="处理混合文件类型的工作流编排示意图" />
+  <img src="/zh-cn/user-guide/.gitbook/assets/image (16).png" alt="处理混合文件类型的工作流编排示意图" />
 </Frame>
 
 * **音视频文件**

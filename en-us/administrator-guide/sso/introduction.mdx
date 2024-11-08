@@ -1,0 +1,42 @@
+# SSO Authentication in Dify Enterprise
+
+The Dify Enterprise supports enforced Single Sign-On (SSO) for organization members. Once enabled, team members must log in to the Dify Enterprise Platform through an identity provider (such as Microsoft Entra ID, Okta, Auth0, and OneLogin).
+
+System administrators only need to select the corresponding protocol and configure parameters on the Authentication page to enable a more secure identity authentication system for the Dify Enterprise Version, supporting OpenID Connect (OIDC), SAML, and New OAuth2 protocols.
+
+## SSO Application Scope
+
+The Dify Enterprise's SSO authentication system provides two different scopes of Single Sign-On (SSO) configuration options:
+
+### Workspace SSO
+
+- Controls how users access the Dify Enterprise Platform itself.
+- When enabled, all users need to authenticate through your specified identity provider (IdP) before entering any workspace.
+
+### Web App SSO
+
+- Controls how users access Web applications created within the Dify Enterprise Platform.
+- When enabled, users need to authenticate through the specified identity provider (IDP) before using any Web application created on the Dify Enterprise Platform.
+
+**Note**: Enabling this option may affect the functionality of certain Web applications, especially embedded chatbots. Many identity providers, for security reasons, prohibit displaying their login pages in iframes by default. If your application uses iframe embedded code, additional configuration may be required.
+
+## Configuring SSO Authentication
+
+Administrators can easily integrate the Dify Enterprise Version with various identity providers, such as Okta, OneLogin, or Azure Active Directory (Azure AD). The Dify Enterprise supports any OIDC-compliant or SAML identity provider.
+
+You can refer to the following SSO provider configuration guides:
+
+- [Configure OIDC using Okta](/administrator-guide/sso/okta/oidc)
+- [Configure SAML using Okta](/administrator-guide/sso/okta/saml)
+
+## Setting Session Timeout Limits
+
+This option is used to set the session duration for organization members. After this time, the system will prompt members to re-authenticate with the identity provider to regain access to Dify Enterprise resources. The default value is 7 days.
+
+## Enabling SSO Authentication
+
+Tap the blue button in the **SSO Enforcement** column to enable SSO authentication.
+
+## FAQ
+
+TODO

@@ -1,5 +1,5 @@
 ---
-title: Chat-based Application
+title: Chatbot Application
 ---
 
 Conversation applications use a one-question-one-answer mode to have a continuous conversation with the user.
@@ -18,13 +18,13 @@ Here, we use a interviewer application as an example to introduce the way to com
 
 Click the "Create Application" button on the homepage to create an application. Fill in the application name, and select **"Chat App"** as the application type.
 
-![Create Application](../../../assets/chat-app.png)
+![Create Application](/en-us/img/chat-app.png)
 
 #### Step 2: Compose the Application
 
 After the application is successfully created, it will automatically redirect to the application overview page. Click on the button on the left menu: **"Orchestrate"** to compose the application.
 
-![](../../../assets/compose-the-app.png)
+![](/en-us/img/compose-the-app.png)
 
 **2.1 Fill in Prompts**
 
@@ -40,7 +40,7 @@ For a better experience, we will add an opening dialogue: `"Hello, {{name}}. I'm
 
 To add the opening dialogue, click the "Add Feature" button in the upper left corner, and enable the "Conversation remarkers" feature:
 
-![](../../../assets/conversation-remarkers.png)
+![](/en-us/img/conversation-remarkers.png)
 
 And then edit the opening remarks:
 
@@ -56,21 +56,21 @@ If an application wants to generate content based on private contextual conversa
 
 Enter user inputs on the right side and check the respond content.
 
-![](../../../assets/debug.png)
+![](/en-us/img/debug.png)
 
 If the results are not satisfactory, you can adjust the prompts and model parameters. Click on the model name in the upper right corner to set the parameters of the model:
 
-![](../../../assets/adjust-model-parameters.png)
+![](/en-us/img/adjust-model-parameters.png)
 
 **Debugging with multiple models:**
 
 If debugging with a single model feels inefficient, you can utilize the **Debug as Multiple Models** feature to batch-test the models’ response effectiveness.
 
-![](../../../assets/multiple-models.png)
+![](/en-us/img/multiple-models.png)
 
 Supports adding up to 4 LLMs at the same time.
 
-![](../../../assets/multiple-models-2.png)
+![](/en-us/img/multiple-models-2.png)
 
 > ⚠️ When using the multi-model debugging feature, if only some large models are visible, it is because other large models’ keys have not been added yet. You can manually add multiple models’ keys in [“Add New Provider”](https://docs.dify.ai/guides/model-configuration/new-provider).
 

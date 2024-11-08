@@ -250,22 +250,34 @@
       "group": "Administrator Guide",
       "version": "English",
       "pages": [
-        "administrator-guide/workspace-management",
-        "administrator-guide/members-management",
+        "en-us/administrator-guide/workspace-management",
+        "en-us/administrator-guide/members-management",
         {
-          "group": "SSO Authentication",
+          "group": "Identity Authentication",
           "pages": [
-            "administrator-guide/sso/introduction",
+            "en-us/administrator-guide/authentication",
             {
-              "group": "Okta",
+              "group": "SSO",
               "pages": [
-                "administrator-guide/sso/okta/oidc",
-                "administrator-guide/sso/okta/saml"
+                "en-us/administrator-guide/sso/introduction",
+                {
+                  "group": "Okta",
+                  "pages": [
+                    "en-us/administrator-guide/sso/okta/oidc",
+                    "en-us/administrator-guide/sso/okta/saml"
+                ]
+              },
+              {
+                "group": "Azure",
+                "pages": [
+                  "en-us/administrator-guide/sso/azure/saml"
+              ]
+            }
               ]
             }
           ]
         },
-        "administrator-guide/system-settings"
+        "en-us/administrator-guide/system-settings"
       ]
     },
     {
@@ -296,52 +308,52 @@
       "group": "User Guide",
       "version": "English",
       "pages": [
-        "user-guide/welcome",
+        "en-us/user-guide/welcome",
         {
           "group": "Model",
           "pages": [
-            "user-guide/models/new-provider",
-            "user-guide/models/predefined-model",
-            "user-guide/models/customizable-model",
-            "user-guide/models/interfaces",
-            "user-guide/models/schema",
-            "user-guide/models/load-balancing"
+            "en-us/user-guide/models/new-provider",
+            "en-us/user-guide/models/predefined-model",
+            "en-us/user-guide/models/customizable-model",
+            "en-us/user-guide/models/interfaces",
+            "en-us/user-guide/models/schema",
+            "en-us/user-guide/models/load-balancing"
           ]
         },
         {
           "group": "Application Orchestration",
           "pages": [
-            "user-guide/build-app/chatbot",
-            "user-guide/build-app/text-generator",
-            "user-guide/build-app/agent",
+            "en-us/user-guide/build-app/chatbot",
+            "en-us/user-guide/build-app/text-generator",
+            "en-us/user-guide/build-app/agent",
             {
               "group": "Chatflow & Workflow",
               "pages": [
-                "user-guide/build-app/flow-app/concepts",
-                "user-guide/build-app/flow-app/create-flow-app",
-                "user-guide/build-app/flow-app/variables",
+                "en-us/user-guide/build-app/flow-app/concepts",
+                "en-us/user-guide/build-app/flow-app/create-flow-app",
+                "en-us/user-guide/build-app/flow-app/variables",
                 
                 {
                   "group": "Node Description",
                   "pages": [
-                    "user-guide/build-app/flow-app/nodes/start",
-                    "user-guide/build-app/flow-app/nodes/end",
-                    "user-guide/build-app/flow-app/nodes/answer",
-                    "user-guide/build-app/flow-app/nodes/llm",
-                    "user-guide/build-app/flow-app/nodes/knowledge-retrieval",
-                    "user-guide/build-app/flow-app/nodes/question-classifier",
-                    "user-guide/build-app/flow-app/nodes/ifelse",
-                    "user-guide/build-app/flow-app/nodes/code",
-                    "user-guide/build-app/flow-app/nodes/template",
-                    "user-guide/build-app/flow-app/nodes/variable-aggregation",
-                    "user-guide/build-app/flow-app/nodes/variable-assigner",
-                    "user-guide/build-app/flow-app/nodes/iteration",
-                    "user-guide/build-app/flow-app/nodes/parameter-extractor",
-                    "user-guide/build-app/flow-app/nodes/http-request",
-                    "user-guide/build-app/flow-app/nodes/tools"
+                    "en-us/user-guide/build-app/flow-app/nodes/start",
+                    "en-us/user-guide/build-app/flow-app/nodes/end",
+                    "en-us/user-guide/build-app/flow-app/nodes/answer",
+                    "en-us/user-guide/build-app/flow-app/nodes/llm",
+                    "en-us/user-guide/build-app/flow-app/nodes/knowledge-retrieval",
+                    "en-us/user-guide/build-app/flow-app/nodes/question-classifier",
+                    "en-us/user-guide/build-app/flow-app/nodes/ifelse",
+                    "en-us/user-guide/build-app/flow-app/nodes/code",
+                    "en-us/user-guide/build-app/flow-app/nodes/template",
+                    "en-us/user-guide/build-app/flow-app/nodes/variable-aggregation",
+                    "en-us/user-guide/build-app/flow-app/nodes/variable-assigner",
+                    "en-us/user-guide/build-app/flow-app/nodes/iteration",
+                    "en-us/user-guide/build-app/flow-app/nodes/parameter-extractor",
+                    "en-us/user-guide/build-app/flow-app/nodes/http-request",
+                    "en-us/user-guide/build-app/flow-app/nodes/tools"
                   ]
                 },
-                "user-guide/build-app/flow-app/orchestrate-node"
+                "en-us/user-guide/build-app/flow-app/orchestrate-node"
               ]
             }
           ]
@@ -352,11 +364,11 @@
             {
               "group": "Chatflow & Workflow",
               "pages": [
-                "user-guide/debug-app/chatflow-and-workflow/preview-and-run",
-                "user-guide/debug-app/chatflow-and-workflow/step-run",
-                "user-guide/debug-app/chatflow-and-workflow/log",
-                "user-guide/debug-app/chatflow-and-workflow/checklist",
-                "user-guide/debug-app/chatflow-and-workflow/history"
+                "en-us/user-guide/debug-app/chatflow-and-workflow/preview-and-run",
+                "en-us/user-guide/debug-app/chatflow-and-workflow/step-run",
+                "en-us/user-guide/debug-app/chatflow-and-workflow/log",
+                "en-us/user-guide/debug-app/chatflow-and-workflow/checklist",
+                "en-us/user-guide/debug-app/chatflow-and-workflow/history"
               ]
             }
           ]
@@ -367,35 +379,35 @@
             {
               "group": "Publish as a Single-page Web App",
               "pages": [
-                "user-guide/application-publishing/launch-your-webapp-quickly/web-app-settings",
-                "user-guide/application-publishing/launch-your-webapp-quickly/text-generator",
-                "user-guide/application-publishing/launch-your-webapp-quickly/conversation-application"
+                "en-us/user-guide/application-publishing/launch-your-webapp-quickly/web-app-settings",
+                "en-us/user-guide/application-publishing/launch-your-webapp-quickly/text-generator",
+                "en-us/user-guide/application-publishing/launch-your-webapp-quickly/conversation-application"
               ]
             },
-            "user-guide/application-publishing/embedding-in-websites",
-            "user-guide/application-publishing/developing-with-apis",
-            "user-guide/application-publishing/based-on-frontend-templates"
+            "en-us/user-guide/application-publishing/embedding-in-websites",
+            "en-us/user-guide/application-publishing/developing-with-apis",
+            "en-us/user-guide/application-publishing/based-on-frontend-templates"
           ]
         },
         {
           "group": "App Management",
           "pages": [
-            "user-guide/management/app-management",
-            "user-guide/management/team-members-management",
-            "user-guide/management/personal-account-management"
+            "en-us/user-guide/management/app-management",
+            "en-us/user-guide/management/team-members-management",
+            "en-us/user-guide/management/personal-account-management"
           ]
         },
         {
           "group": "Monitoring",
           "pages": [
-            "user-guide/monitoring/analysis",
-            "user-guide/monitoring/logs",
-            "user-guide/monitoring/annotation-reply",
+            "en-us/user-guide/monitoring/analysis",
+            "en-us/user-guide/monitoring/logs",
+            "en-us/user-guide/monitoring/annotation-reply",
             {
               "group": "Integrate External Ops Tools",
               "pages": [
-                "user-guide/monitoring/integrate-external-ops-tools/integrate-langfuse",
-                "user-guide/monitoring/integrate-external-ops-tools/integrate-langsmith"
+                "en-us/user-guide/monitoring/integrate-external-ops-tools/integrate-langfuse",
+                "en-us/user-guide/monitoring/integrate-external-ops-tools/integrate-langsmith"
               ]
             }
           ]
@@ -406,34 +418,34 @@
             {
               "group": "Create Knowledge Base",
               "pages": [
-                "user-guide/knowledge-base/knowledge-base-creation/upload-documents",
-                "user-guide/knowledge-base/knowledge-base-creation/sync-from-notion",
-                "user-guide/knowledge-base/knowledge-base-creation/sync-from-website",
-                "user-guide/knowledge-base/knowledge-base-creation/connect-external-knowledge-base"
+                "en-us/user-guide/knowledge-base/knowledge-base-creation/upload-documents",
+                "en-us/user-guide/knowledge-base/knowledge-base-creation/sync-from-notion",
+                "en-us/user-guide/knowledge-base/knowledge-base-creation/sync-from-website",
+                "en-us/user-guide/knowledge-base/knowledge-base-creation/connect-external-knowledge-base"
               ]
             },
             {
               "group": "Indexing & Retrieval",
               "pages": [
-                "user-guide/knowledge-base/indexing-and-retrieval/retrieval-augment",
-                "user-guide/knowledge-base/indexing-and-retrieval/hybrid-search",
-                "user-guide/knowledge-base/indexing-and-retrieval/rerank",
-                "user-guide/knowledge-base/indexing-and-retrieval/retrieval"
+                "en-us/user-guide/knowledge-base/indexing-and-retrieval/retrieval-augment",
+                "en-us/user-guide/knowledge-base/indexing-and-retrieval/hybrid-search",
+                "en-us/user-guide/knowledge-base/indexing-and-retrieval/rerank",
+                "en-us/user-guide/knowledge-base/indexing-and-retrieval/retrieval"
               ]
             },
-            "user-guide/knowledge-base/retrieval-test-and-citation",
-            "user-guide/knowledge-base/knowledge-and-documents-maintenance",
+            "en-us/user-guide/knowledge-base/retrieval-test-and-citation",
+            "en-us/user-guide/knowledge-base/knowledge-and-documents-maintenance",
             {
               "group": "Integrate Knowledge Base Within Application",
               "pages": [
-                "user-guide/knowledge-base/integrate-knowledge-within-application"
+                "en-us/user-guide/knowledge-base/integrate-knowledge-within-application"
               ]
             },
             {
               "group": "API",
               "pages": [
-                "user-guide/knowledge-base/api-connection/maintain-dataset-via-api",
-                "user-guide/knowledge-base/api-connection/external-knowledge-api-documentation"
+                "en-us/user-guide/knowledge-base/api-connection/maintain-dataset-via-api",
+                "en-us/user-guide/knowledge-base/api-connection/external-knowledge-api-documentation"
               ]
             }
           ]
@@ -441,47 +453,47 @@
         {
           "group": "Tools",
           "pages": [
-            "user-guide/tools/introduction",
+            "en-us/user-guide/tools/introduction",
             {
               "group": "Tool Configuration",
               "pages": [
                 {
                   "group": "Dify Official Tools",
                   "pages": [
-                    "user-guide/tools/dify/google",
-                    "user-guide/tools/dify/bing",
-                    "user-guide/tools/dify/perplexity",
-                    "user-guide/tools/dify/stable-diffusion"
+                    "en-us/user-guide/tools/dify/google",
+                    "en-us/user-guide/tools/dify/bing",
+                    "en-us/user-guide/tools/dify/perplexity",
+                    "en-us/user-guide/tools/dify/stable-diffusion"
                   ]
                 },
                 {
                   "group": "Community Tools",
                   "pages": [
-                    "user-guide/tools/community/searchapi",
-                    "user-guide/tools/community/alphavantage",
-                    "user-guide/tools/community/comfyui",
-                    "user-guide/tools/community/searxng",
-                    "user-guide/tools/community/serper",
-                    "user-guide/tools/community/siliconflow"
+                    "en-us/user-guide/tools/community/searchapi",
+                    "en-us/user-guide/tools/community/alphavantage",
+                    "en-us/user-guide/tools/community/comfyui",
+                    "en-us/user-guide/tools/community/searxng",
+                    "en-us/user-guide/tools/community/serper",
+                    "en-us/user-guide/tools/community/siliconflow"
                   ]
                 }
               ]
             },
-            "user-guide/tools/quick-tool-integration",
-            "user-guide/tools/advanced-tool-integration",
+            "en-us/user-guide/tools/quick-tool-integration",
+            "en-us/user-guide/tools/advanced-tool-integration",
             {
               "group": "API-based Extensions",
               "pages": [
-                "user-guide/tools/extensions/api-based/external-data-tool",
-                "user-guide/tools/extensions/api-based/cloudflare-workers",
-                "user-guide/tools/extensions/api-based/moderation"
+                "en-us/user-guide/tools/extensions/api-based/external-data-tool",
+                "en-us/user-guide/tools/extensions/api-based/cloudflare-workers",
+                "en-us/user-guide/tools/extensions/api-based/moderation"
               ]
             },
             {
               "group": "Code-based Extensions",
               "pages": [
-                "user-guide/tools/extensions/code-based/external-data-tool",
-                "user-guide/tools/extensions/code-based/moderation"
+                "en-us/user-guide/tools/extensions/code-based/external-data-tool",
+                "en-us/user-guide/tools/extensions/code-based/moderation"
               ]
             }
           ]
@@ -489,11 +501,11 @@
         {
           "group": "API",
           "pages": [
-            "user-guide/api-documentation/text-generator",
-            "user-guide/api-documentation/chatbot",
-            "user-guide/api-documentation/workflow",
-            "user-guide/api-documentation/knowledge-base",
-            "user-guide/api-documentation/external-knowledge-api-documentation"
+            "en-us/user-guide/api-documentation/text-generator",
+            "en-us/user-guide/api-documentation/chatbot",
+            "en-us/user-guide/api-documentation/workflow",
+            "en-us/user-guide/api-documentation/knowledge-base",
+            "en-us/user-guide/api-documentation/external-knowledge-api-documentation"
           ]
         }
       ]

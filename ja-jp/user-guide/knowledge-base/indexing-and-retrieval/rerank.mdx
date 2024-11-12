@@ -10,7 +10,7 @@ version: '日本語'
 **Rerankモデルは、候補ドキュメントリストとユーザーのクエリの意味的一致度を計算し、それに基づいて再度並び替えを行います。これにより、意味的なソートの結果を改善することができます。** この原理は、各候補ドキュメントとユーザーのクエリの関連スコアを計算し、高い関連性の順にドキュメントを並び替えたリストを返すことです。一般的なRerankモデルには、Cohere rerankやbge-rerankerなどがあります。
 
 <Frame title="ハイブリッド検索+Rerank">
-  <img src="../../../img/image (128).png" alt="" />
+  <img src="../../../ja-jp/img/image (128).png" alt="" />
 </Frame>
 
 Rerankは通常、検索プロセスの最後のステップで行われます。これは、数百万のドキュメントとの関連性スコアを計算するのが非常に効率的ではないためです。そのため、**Rerankは異なる検索システムからの結果を統合および並べ替えるのに非常に適しています**。
@@ -30,7 +30,7 @@ Cohere Rerankを例にすると、アカウントを登録してAPIを申請す�
 Difyは現在、Cohere Rerankモデルをサポートしており、"モデルプロバイダー->Cohere"ページにアクセスしてRerankモデルのAPIキーを入力してください：
 
 <Frame title="Cohere Rerankモデルをモデルプロバイダー内で設定する">
-  <img src="../../../img/jp-rerank-cohere.png" alt="" />
+  <img src="../../../ja-jp/img/jp-rerank-cohere.png" alt="" />
 </Frame>
 
 ### Cohere Rerankモデルを入手する方法
@@ -42,7 +42,7 @@ Difyは現在、Cohere Rerankモデルをサポートしており、"モデル�
 "データセット->データセットの作成->検索設定"ページにアクセスし、Rerank設定を追加してください。データセットを作成する際にRerankを設定できるだけでなく、既存のデータセットの設定内でRerank構成を変更したり、アプリケーションのレイアウトに適用されているデータセット召回モードの設定でRerankを変更することもできます。
 
 <Frame title="データセット検索モードでRerankモデルを設定する">
-  <img src="../../../img/jp-rerank-explore.png" alt="" width="563" />
+  <img src="../../../ja-jp/img/jp-rerank-explore.png" alt="" width="563" />
 </Frame>
 
 **TopK：** Rerank後に返される関連文書の数を設定します。
@@ -56,5 +56,5 @@ Difyは現在、Cohere Rerankモデルをサポートしており、"モデル�
 複数の召回モードに関する詳細は、[「複数の召回」](../integrate-knowledge-within-application)をご覧ください。
 
 <Frame title="データセットの複数の召回モードでRerankモデルを設定する">
-  <img src="../../../img/jp-rerank-setting.png" alt="" />
+  <img src="../../../ja-jp/img/jp-rerank-setting.png" alt="" />
 </Frame>

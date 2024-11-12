@@ -1,10 +1,7 @@
 ---
-description: 
-  This document primarily introduces how to scrape data from a web page, parse
-  it into Markdown, and import it into the Dify knowledge base.
 title: Sync Data from Website
+version: 'English'
 ---
-
 
 Dify knowledge base supports crawling content from public web pages using third-party tools such as [Jina Reader](https://jina.ai/reader/) and [Firecrawl](https://www.firecrawl.dev/), parsing it into Markdown content, and importing it into the knowledge base.
 
@@ -20,27 +17,25 @@ The following sections will introduce the usage methods for Firecrawl and Jina R
 
 Click on the avatar in the upper right corner, then go to the **DataSource** page, and click the **Configure** button next to Firecrawl.
 
-![](../https://filesimages.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FRncMhlfeYTrpujwzDIqw%2Fuploads%2FQ2CvvgqQXmsUMXZR4u8N%2Fimage.png?alt=media&#x26;token=f7273557-94f7-4250-adfe-8d2e11f6a307)Configuring Firecrawl Credentials
+<Frame>
+  <img src="/en-us/images/assets/sync-from-website-1.png" alt="Configuring Firecrawl Credentials" />
+</Frame>
 
 Log in to the [Firecrawl website](https://www.firecrawl.dev/) to complete registration, get your API Key, and then enter and save it in Dify.
-
-[Get the API Key and save it in Dify](https://filesimages.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FRncMhlfeYTrpujwzDIqw%2Fuploads%2FtAwcLoAYT1A2v12pfJC3%2Fimage.png?alt=media&#x26;token=3b5b784f-2808-431f-8595-2638d038c190)
 
 #### 2. Scrape target webpage
 
 On the knowledge base creation page, select **Sync from website**, choose Firecrawl as the provider, and enter the target URL to be crawled.
 
-![Web scraping configuration](../../../images/assets/image (102).png)
+<Frame>
+  <img src="/images/assets/image (102).png" alt="Web scraping configuration" />
+</Frame>
 
 The configuration options include: Whether to crawl sub-pages, Page crawling limit, Page scraping max depth, Excluded paths, Include only paths, and Content extraction scope. After completing the configuration, click **Run** to preview the parsed pages.
-
-![Execute scraping](../../../images/assets/image (103).png)
 
 #### 3. Review import results
 
 After importing the parsed text from the webpage, it is stored in the knowledge base documents. View the import results and click **Add URL** to continue importing new web pages.
-
-![Importing parsed web text into the knowledge base](../../../images/assets/image (104).png)
 
 ***
 
@@ -50,24 +45,34 @@ After importing the parsed text from the webpage, it is stored in the knowledge 
 
 Click on the avatar in the upper right corner, then go to the **DataSource** page, and click the **Configure** button next to Jina Reader.
 
-![Configuring Jina Reader](../../../images/assets/image (105).png)
+<Frame>
+  <img src="/images/assets/image (105).png" alt="Configuring Jina Reader" />
+</Frame>
 
 Log in to the [Jina Reader website](https://jina.ai/reader/), complete registration, obtain the API Key, then fill it in and save.
 
-![Fill in Jina configuration](../../../images/assets/image (106).png)
+<Frame>
+  <img src="/images/assets/image (106).png" alt="Fill in Jina configuration" />
+</Frame>
 
 #### 2. Using Jina Reader to Crawl Web Content&#x20;
 
 On the knowledge base creation page, select Sync from website, choose Jina Reader as the provider, and enter the target URL to be crawled.
 
-![Web Crawling Configuration](../../../images/assets/image (107).png)
+<Frame>
+  <img src="/images/assets/image (107).png" alt="Web Crawling Configuration" />
+</Frame>
 
 Configuration options include: whether to crawl subpages, maximum number of pages to crawl, and whether to use sitemap for crawling. After completing the configuration, click the **Run** button to preview the page links to be crawled.
 
-![Executing the Crawl](../../../images/assets/image (109).png)
+<Frame>
+  <img src="/images/assets/image (109).png" alt="Executing the Crawl" />
+</Frame>
 
 Import the parsed text from web pages and store it in the knowledge base documents, then view the import results. To continue adding web pages, click the Add URL button on the right to import new web pages.
 
-![Importing parsed web text into the knowledge base](../../../images/assets/image (110).png)
+<Frame>
+  <img src="/images/assets/image (110).png" alt="Importing parsed web text into the knowledge base" />
+</Frame>
 
 After crawling is complete, the content from the web pages will be incorporated into the knowledge base.

@@ -1,5 +1,6 @@
 ---
 title: Retrieval Test/Citation
+version: 'English'
 ---
 
 ### 1. Retrieval Testing
@@ -8,14 +9,14 @@ The Dify Knowledge Base provides a text retrieval testing feature to debug the r
 
 ![Recall Testing](../../../images/assets/Retrieval-testing.png)
 
-Clicking the icon in the upper right corner of the source text input box allows you to change the retrieval method and specific parameters of the current knowledge base. **Changes will only take effect during the recall testing process.** After completing the recall test and confirming changes to the retrieval parameters of the knowledge base, you need to make changes in [Knowledge Base Settings > Retrieval Settings](create-knowledge-and-upload-documents/#id-6-retrieval-settings).
+Clicking the icon in the upper right corner of the source text input box allows you to change the retrieval method and specific parameters of the current knowledge base. **Changes will only take effect during the recall testing process.** After completing the recall test and confirming changes to the retrieval parameters of the knowledge base, you need to make changes in [Knowledge Base Settings > Retrieval Settings](/en-us/user-guide/knowledge-base/knowledge-base-creation/upload-documents#4-retrieval-settings).
 
 ![Retrieval Settings](../../../images/assets/Retrieval-testing-setting.png)
 
 **Suggested Steps for Recall Testing:**
 
 1. Design and organize test cases/test question sets covering common user questions.
-2. Choose an appropriate retrieval strategy: vector search/full-text search/hybrid search. For the pros and cons of different retrieval methods, please refer to the extended reading [Retrieval-Augmented Generation (RAG)](../../learn-more/extended-reading/retrieval-augment/).
+2. Choose an appropriate retrieval strategy: vector search/full-text search/hybrid search. For the pros and cons of different retrieval methods, please refer to the extended [reference](/en-us/user-guide/knowledge-base/knowledge-base-creation/upload-documents#inverted-index).
 3. Debug the number of recall segments (TopK) and the recall score threshold (Score). Choose appropriate parameter combinations based on the application scenario, including the quality of the documents themselves.
 
 **How to Configure TopK Value and Recall Threshold (Score)**

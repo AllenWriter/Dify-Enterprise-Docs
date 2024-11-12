@@ -6,7 +6,7 @@ title: 環境変数
 - `serverWorkerAmount`: この環境変数は `API` サービスで使用されます。
   - デフォルト値は `9` です。テスト環境ではリソースを節約するために `1` に設定できます。
   - APIサーバーワーカーの数、つまりgeventワーカーの数。計算式: `CPUコア数 x 2 + 1`
-  - 参考: https://docs.gunicorn.org/en/stable/design.html#how-many-workers
+  - [参考](https://docs.gunicorn.org/en/stable/design.html#how-many-workers)
 - `celeryWorkerAmount`: この環境変数は `Worker` サービスで使用されます。
   - デフォルト値は `9` です。テスト環境ではリソースを節約するために `1` に設定できます。
 
@@ -22,7 +22,7 @@ api:
 ````
 
 <a href="/assets/values.yaml" download="values.yaml">こちらをクリック</a>して、`values.yaml`ファイルをダウンロードしてください。
-詳細については、[変数](/user-guide/build-app/flow-app/variables)をご覧ください。
+詳細については、[変数](/ja-jp/user-guide/build-app/flow-app/variables)をご覧ください。
 
 ## `HTTP_PROXY` と `HTTPS_PROXY` を設定する方法
 セキュリティ上の理由から、Dify `API` サービスの `HTTP_PROXY` と `HTTPS_PROXY` 環境変数を設定する必要がある場合があります。

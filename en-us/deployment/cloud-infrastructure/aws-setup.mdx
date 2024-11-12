@@ -120,14 +120,18 @@ Deploy Dify Enterprise on AWS using CDK.
 7. ### Update AWS EKS Access Permissions:
 
    1. Navigate to the EKS Cluster panel, select the "Access" menu, and click on "Manage access":
-      <Frame caption="EKS cluster">
-        <img src="/en-us/img/cdk-2.png" alt="Dify-Testing-DifyStackTest-EKS" />
-      </Frame>
+
+    <Frame caption="AWS CDK infra">
+      <img src="/en-us/img/aws-cdk-2.png" alt="AWS CDK infra" />
+    </Frame>
+      
    2. In the "Manage access" dialog, select "EKS API and ConfigMap," then click "Save Changes."
    3. In the IAM Access Entries panel, click "Create access entry":
-      <Frame caption="IAM access entries">
-        <img src="/en-us/img/cdk-3.png" alt="IAM access entries" />
-      </Frame>
+
+    <Frame caption="IAM access entries">
+      <img src="/en-us/img/aws-cdk-3.png" alt="IAM access entries" />
+    </Frame>
+
    4. Add your IAM user and assign the following permissions:
       - `AmazonEKSAdminPolicy`
       - `AmazonEKSAdminViewPolicy`
@@ -371,4 +375,4 @@ npm run destroy
 
 ### Advanced Configuration
 
-To customize deployment configurations, modify the [test.ts](./configs/test.ts) file for the testing environment or the [prod.ts](./configs/prod.ts) file for the production environment.
+To customize deployment configurations, modify the <a href="/assets/configs/test.ts" download="test.ts" target="_blank" rel="noopener noreferrer">test.ts</a> file for the testing environment or the <a href="/assets/configs/prod.ts" download="prod.ts" target="_blank" rel="noopener noreferrer">prod.ts</a> file for the production environment.

@@ -1,5 +1,6 @@
 ---
 title: Okta を使用して OIDC を設定する
+version: '日本語'
 ---
 
 このドキュメントでは、Okta を SSO アイデンティティプロバイダーとして使用し、OIDC プロトコルを使用して Dify エンタープライズ版に接続します。
@@ -9,7 +10,7 @@ title: Okta を使用して OIDC を設定する
 1. Okta の管理人バックエンドページにアクセスし、Applications ページに移動して Create App Integration ボタンをクリックします。
 2. 次に "OIDC - OpenID Connect" を選択し、"Web Application" アプリケーションタイプを選択して作成を完了します。
 
-![](/images/okta-oidc-1.png)
+![](/ja-jp/images/okta-oidc-1.png)
 
 ## 2. Okta アプリケーションを設定する
 
@@ -17,7 +18,7 @@ title: Okta を使用して OIDC を設定する
 
 1. Dify エンタープライズ版の Authentication ページをクリックし、**"+ New Identity Provider → New OIDC Provider"** をクリックして Callback URL を確認します。
 
-   ![](/images/okta-oidc-3.png)
+   ![](/ja-jp/images/okta-oidc-3.png)
 
    通常、次の形式になります：
 
@@ -27,7 +28,7 @@ title: Okta を使用して OIDC を設定する
 
 2. 次に Okta アプリケーションの "General" ページに移動し、`Sign-in redirect URIs` フィールドを見つけて、Dify の Callback URL を入力します。
 
-![](/images/okta-oidc-4.png)
+![](/ja-jp/images/okta-oidc-4.png)
 
 ## 3. Dify での設定を完了する
 
@@ -35,7 +36,7 @@ title: Okta を使用して OIDC を設定する
    * Client ID
    * Client secret
 
-   ![](/images/okta-oidc-5.png)
+   ![](/ja-jp/images/okta-oidc-5.png)
 
 2. 次に "Sign On" ページで Issuer フィールドを見つけ、**Issuer URL** を見つけることができます。
 
@@ -43,7 +44,7 @@ title: Okta を使用して OIDC を設定する
 
 3. システム管理人は Dify エンタープライズ版の Authentication ページをクリックし、**"+ New Identity Provider → New OIDC Provider"** をクリックして、上記の情報を貼り付けて設定を完了します。
 
-![](/images/okta-oidc-6.png)
+![](/ja-jp/images/okta-oidc-6.png)
 
 ## 4. SSO 強制認証を有効にする
 

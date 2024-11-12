@@ -1,5 +1,6 @@
 ---
 title: LLM
+version: 'English'
 ---
 
 ### Definition
@@ -38,7 +39,7 @@ By selecting the appropriate model and writing prompts, you can build powerful a
 4. **Advanced Settings**: You can enable memory, set memory windows, and use the Jinja-2 template language for more complex prompts.
 
 <Note>
-If you are using Dify for the first time, you need to complete the [model configuration](../../model-configuration/) in **System Settings-Model Providers** before selecting a model in the LLM node.
+If you are using Dify for the first time, you need to complete the [model configuration](/en-us/user-guide/models/model-configuration) in **System Settings-Model Providers** before selecting a model in the LLM node.
 </Note>
 
 #### **Writing Prompts**
@@ -67,7 +68,7 @@ Context variables are a special type of variable defined within the LLM node, us
 
 In common knowledge base Q\&A applications, the downstream node of knowledge retrieval is typically the LLM node. The **output variable** `result` of knowledge retrieval needs to be configured in the **context variable** within the LLM node for association and assignment. After association, inserting the **context variable** at the appropriate position in the prompt can incorporate the externally retrieved knowledge into the prompt.
 
-This variable can be used not only as external knowledge introduced into the prompt context for LLM responses but also supports the application's [**citation and attribution**](../../knowledge-base/retrieval\_test\_and\_citation.md#id-2-yin-yong-yu-gui-shu) feature due to its data structure containing segment reference information.
+This variable can be used not only as external knowledge introduced into the prompt context for LLM responses but also supports the application's **citation and attribution** feature due to its data structure containing segment reference information.
 
 <Note>
 If the context variable is associated with a common variable from an upstream node, such as a string type variable from the start node, the context variable can still be used as external knowledge, but the **citation and attribution** feature will be disabled.
@@ -75,19 +76,21 @@ If the context variable is associated with a common variable from an upstream no
 
 **Conversation History**
 
-To achieve conversational memory in text completion models (e.g., gpt-3.5-turbo-Instruct), Dify designed the conversation history variable in the original [Prompt Expert Mode (discontinued)](../../../learn-more/extended-reading/prompt-engineering/prompt-engineering-1/). This variable is carried over to the LLM node in Chatflow, used to insert chat history between the AI and the user into the prompt, helping the LLM understand the context of the conversation.
+To achieve conversational memory in text completion models (e.g., gpt-3.5-turbo-Instruct), Dify designed the conversation history variable in the original Prompt Expert Mode (discontinued). This variable is carried over to the LLM node in Chatflow, used to insert chat history between the AI and the user into the prompt, helping the LLM understand the context of the conversation.
 
 <Note>
 The conversation history variable is not widely used and can only be inserted when selecting text completion models in Chatflow.
 </Note>
 
-![Inserting Conversation History Variable](/images/assets/image (204).png)
+<Frame>
+  <img src="/images/assets/image (204).png" alt="Inserting Conversation History Variable" />
+</Frame>
 
 **Model Parameters**
 
 The parameters of the model affect the output of the model. Different models have different parameters. The following figure shows the parameter list for `gpt-4`.
 
-![](../../../../images/assets/截屏2024-10-18 11.35.17.png)
+![](/en-us/images/assets/llm-img.png)
 
 The main parameter terms are explained as follows:
 
@@ -101,7 +104,7 @@ The main parameter terms are explained as follows:
 
 If you do not understand what these parameters are, you can choose to load presets and select from the three presets: Creative, Balanced, and Precise.
 
-![](../../../../images/assets/截屏2024-10-18 11.37.43.png)
+![](/en-us/images/assets/llm-img-1.png)
 
 ***
 
@@ -121,13 +124,13 @@ If you do not understand what these parameters are, you can choose to load prese
 
 * **Reading Knowledge Base Content**
 
-To enable workflow applications to read "[Knowledge Base](../../knowledge-base/)" content, such as building an intelligent customer service application, please follow these steps:
+To enable workflow applications to read "[Knowledge Base](/en-us/user-guide/knowledge-base/knowledge-base-creation/upload-documents)" content, such as building an intelligent customer service application, please follow these steps:
 
 1. Add a knowledge base retrieval node upstream of the LLM node;
 2. Fill in the **output variable** `result` of the knowledge retrieval node into the **context variable** of the LLM node;
 3. Insert the **context variable** into the application prompt to give the LLM the ability to read text within the knowledge base.
 
-![](../../../../images/assets/image (135).png)
+![](/en-us/images/assets/image-(135).png)
 
 The `result` variable output by the Knowledge Retrieval Node also includes segmented reference information. You can view the source of information through the **Citation and Attribution** feature.
 
@@ -143,7 +146,7 @@ To enable workflow applications to read document contents, such as building a Ch
 * Add a document extractor node upstream of the LLM node, using the file variable as an input variable;
 * Fill in the **output variable** `text` of the document extractor node into the prompt of the LLM node.
 
-For more information, please refer to [File Upload](../file-upload.md).
+For more information, please refer to [File Upload](/en-us/user-guide/build-app/flow-app/file-upload).
 
-![input system prompts](../../../../images/assets/image (137).png)
+![input system prompts](/en-us/images/assets/image-(137).png)
 

@@ -1,5 +1,6 @@
 ---
 title: Integrate Langfuse
+version: 'English'
 ---
 
 ### 1. What is Langfuse
@@ -17,35 +18,51 @@ Introduction to Langfuse: [https://langfuse.com/](https://langfuse.com/)
 1. Register and log in to Langfuse on the [official website](https://langfuse.com/)
 2. Create a project in Langfuse. After logging in, click **New** on the homepage to create your own project. The **project** will be used to associate with **applications** in Dify for data monitoring.
 
-![Create a project in Langfuse](../../../images/assets/image (249) (1).png)
+<Frame>
+  <img src="/images/assets/image (249) (1).png" alt="Create a project in Langfuse" />
+</Frame>
 
 Edit a name for the project.
 
-![Create a project in Langfuse](../../../images/assets/image (251) (1).png)
+<Frame>
+  <img src="/images/assets/image (251) (1).png" alt="Create a project in Langfuse" />
+</Frame>
 
 3. Create project API credentials. In the left sidebar of the project, click **Settings** to open the settings.
 
-![Create project API credentials](../../../images/assets/image (253) (1).png)
+<Frame>
+  <img src="/images/assets/image (253) (1).png" alt="Create project API credentials" />
+</Frame>
 
 In Settings, click **Create API Keys** to create project API credentials.
 
-![Create project API credentials](../../../images/assets/image (252) (1).png)
+<Frame>
+  <img src="/images/assets/image (252) (1).png" alt="Create project API credentials" />
+</Frame>
 
 Copy and save the **Secret Key**, **Public Key**, and **Host**.
 
-![Get API Key configuration](../../../images/assets/image (254) (1).png)
+<Frame>
+  <img src="/images/assets/image (254) (1).png" alt="Get API Key configuration" />
+</Frame>
 
 4. Configure Langfuse in Dify. Open the application you need to monitor, open **Monitoring** in the side menu, and select **Tracing app performance** on the page.
 
-![Configure Langfuse](../../../images/assets/tracing-app-performance-langfuse.png)
+<Frame>
+  <img src="/images/assets/tracing-app-performance-langfuse.png" alt="Configure Langfuse" />
+</Frame>
 
 After clicking configure, paste the **Secret Key, Public Key, Host** created in Langfuse into the configuration and save.
 
-![Configure Langfuse](../../../images/assets/config-langfuse.png)
+<Frame>
+  <img src="/images/assets/config-langfuse.png" alt="Configure Langfuse" />
+</Frame>
 
 Once successfully saved, you can view the status on the current page. If it shows as started, it is being monitored.
 
-![View configuration status](../../../images/assets/monitored-by-langfuse.png)
+<Frame>
+  <img src="/images/assets/monitored-by-langfuse.png" alt="View configuration status" />
+</Frame>
 
 ***
 
@@ -53,299 +70,303 @@ Once successfully saved, you can view the status on the current page. If it show
 
 After configuration, debugging or production data of the application in Dify can be viewed in Langfuse.
 
-![Debugging Applications in Dify](../../../images/assets/debug-app-in-dify.png)
+<Frame>
+  <img src="/images/assets/debug-app-in-dify.png" alt="Debugging Applications in Dify" />
+</Frame>
 
-![Viewing application data in Langfuse](../../../images/assets/view-traces-in-langfuse.png)
+<Frame>
+  <img src="/images/assets/view-traces-in-langfuse.png" alt="Viewing application data in Langfuse" />
+</Frame>
 
 ***
 
-### 4 List of monitoring data
+### 4. List of monitoring data
 
 #### Trace the information of Workflow and Chatflow
 
 **Tracing workflow and chatflow**
 
-| Workflow                                 | LangFuse Trace          |
-| ---------------------------------------- | ----------------------- |
-| workflow\_app\_log\_id/workflow\_run\_id | id                      |
-| user\_session\_id                        | user\_id                |
-| workflow\_{id}                           | name                    |
-| start\_time                              | start\_time             |
-| end\_time                                | end\_time               |
-| inputs                                   | input                   |
-| outputs                                  | output                  |
-| Model token consumption                  | usage                   |
-| metadata                                 | metadata                |
-| error                                    | level                   |
-| error                                    | status\_message         |
-| \[workflow]                              | tags                    |
-| \["message", conversation\_mode]         | session\_id             |
-| conversion\_id                           | parent\_observation\_id |
+| Workflow | LangFuse Trace |
+|----------|----------------|
+| workflow_app_log_id/workflow_run_id | id |
+| user_session_id | user_id |
+| workflow_{id} | name |
+| start_time | start_time |
+| end_time | end_time |
+| inputs | input |
+| outputs | output |
+| Model token consumption | usage |
+| metadata | metadata |
+| error | level |
+| error | status_message |
+| [workflow] | tags |
+| ["message", conversation_mode] | session_id |
+| conversion_id | parent_observation_id |
 
 **Workflow Trace Info**
 
-* workflow\_id - Unique ID of Workflow
-* conversation\_id - Conversation ID
-* workflow\_run\_id - Workflow ID of this runtime
-* tenant\_id - Tenant ID
-* elapsed\_time - Elapsed time at this runtime
+* workflow_id - Unique ID of Workflow
+* conversation_id - Conversation ID
+* workflow_run_id - Workflow ID of this runtime
+* tenant_id - Tenant ID
+* elapsed_time - Elapsed time at this runtime
 * status - Runtime status
 * version - Workflow version
-* total\_tokens - Total token used at this runtime
-* file\_list - List of files processed
-* triggered\_from - Source that triggered this runtime
-* workflow\_run\_inputs - Input of this workflow
-* workflow\_run\_outputs - Output of this workflow
+* total_tokens - Total token used at this runtime
+* file_list - List of files processed
+* triggered_from - Source that triggered this runtime
+* workflow_run_inputs - Input of this workflow
+* workflow_run_outputs - Output of this workflow
 * error - Error Message
 * query - Queries used at runtime
-* workflow\_app\_log\_id - Workflow Application Log ID
-* message\_id - Relevant Message ID
-* start\_time - Start time of this runtime
-* end\_time - End time of this runtime
+* workflow_app_log_id - Workflow Application Log ID
+* message_id - Relevant Message ID
+* start_time - Start time of this runtime
+* end_time - End time of this runtime
 * workflow node executions - Workflow node runtime information
 * Metadata
-  * workflow\_id - Unique ID of Workflow
-  * conversation\_id - Conversation ID
-  * workflow\_run\_id - Workflow ID of this runtime
-  * tenant\_id - Tenant ID
-  * elapsed\_time - Elapsed time at this runtime
+  * workflow_id - Unique ID of Workflow
+  * conversation_id - Conversation ID
+  * workflow_run_id - Workflow ID of this runtime
+  * tenant_id - Tenant ID
+  * elapsed_time - Elapsed time at this runtime
   * status - Operational state
   * version - Workflow version
-  * total\_tokens - Total token used at this runtime
-  * file\_list - List of files processed
-  * triggered\_from - Source that triggered this runtime
+  * total_tokens - Total token used at this runtime
+  * file_list - List of files processed
+  * triggered_from - Source that triggered this runtime
 
 #### Message Trace Info
 
 **For trace llm conversation**
 
-| Message                          | LangFuse Generation/Trace |
-| -------------------------------- | ------------------------- |
-| message\_id                      | id                        |
-| user\_session\_id                | user\_id                  |
-| message\_{id}                    | name                      |
-| start\_time                      | start\_time               |
-| end\_time                        | end\_time                 |
-| inputs                           | input                     |
-| outputs                          | output                    |
-| Model token consumption          | usage                     |
-| metadata                         | metadata                  |
-| error                            | level                     |
-| error                            | status\_message           |
-| \["message", conversation\_mode] | tags                      |
-| conversation\_id                 | session\_id               |
-| conversion\_id                   | parent\_observation\_id   |
+| Message | LangFuse Generation/Trace |
+|---------|--------------------------|
+| message_id | id |
+| user_session_id | user_id |
+| message_{id} | name |
+| start_time | start_time |
+| end_time | end_time |
+| inputs | input |
+| outputs | output |
+| Model token consumption | usage |
+| metadata | metadata |
+| error | level |
+| error | status_message |
+| ["message", conversation_mode] | tags |
+| conversation_id | session_id |
+| conversion_id | parent_observation_id |
 
 **Message Trace Info**
 
-* message\_id - Message ID
-* message\_data - Message data
-* user\_session\_id - Session ID for user
-* conversation\_model - Conversation model
-* message\_tokens - Message tokens
-* answer\_tokens - Answer Tokens
-* total\_tokens - Total Tokens from Message and Answer
+* message_id - Message ID
+* message_data - Message data
+* user_session_id - Session ID for user
+* conversation_model - Conversation model
+* message_tokens - Message tokens
+* answer_tokens - Answer Tokens
+* total_tokens - Total Tokens from Message and Answer
 * error - Error Message
 * inputs - Input data
 * outputs - Output data
-* file\_list - List of files processed
-* start\_time - Start time
-* end\_time - End time
-* message\_file\_data - Message of relevant file data
-* conversation\_mode - Conversation mode
+* file_list - List of files processed
+* start_time - Start time
+* end_time - End time
+* message_file_data - Message of relevant file data
+* conversation_mode - Conversation mode
 * Metadata
-  * conversation\_id - Conversation ID
-  * ls\_provider - Model provider
-  * ls\_model\_name - Model ID
+  * conversation_id - Conversation ID
+  * ls_provider - Model provider
+  * ls_model_name - Model ID
   * status - Message status
-  * from\_end\_user\_id - Sending user's ID
-  * from\_account\_id - Sending account's ID
-  * agent\_based - Whether agent based
-  * workflow\_run\_id - Workflow ID of this runtime
-  * from\_source - Message source
-  * message\_id - Message ID
+  * from_end_user_id - Sending user's ID
+  * from_account_id - Sending account's ID
+  * agent_based - Whether agent based
+  * workflow_run_id - Workflow ID of this runtime
+  * from_source - Message source
+  * message_id - Message ID
 
 #### Moderation Trace Information
 
 **Used to track conversation moderation**
 
-| Moderation    | LangFuse Generation/Trace |
-| ------------- | ------------------------- |
-| user\_id      | user\_id                  |
-| moderation    | name                      |
-| start\_time   | start\_time               |
-| end\_time     | end\_time                 |
-| inputs        | input                     |
-| outputs       | output                    |
-| metadata      | metadata                  |
-| \[moderation] | tags                      |
-| message\_id   | parent\_observation\_id   |
+| Moderation | LangFuse Generation/Trace |
+|------------|--------------------------|
+| user_id | user_id |
+| moderation | name |
+| start_time | start_time |
+| end_time | end_time |
+| inputs | input |
+| outputs | output |
+| metadata | metadata |
+| [moderation] | tags |
+| message_id | parent_observation_id |
 
 **Message Trace Info**
 
-* message\_id - Message ID
-* user\_id - user ID
-* workflow\_app\_log\_id workflow\_app\_log\_id
+* message_id - Message ID
+* user_id - user ID
+* workflow_app_log_id workflow_app_log_id
 * inputs - Input data for review
-* message\_data - Message Data
+* message_data - Message Data
 * flagged - Whether it is flagged for attention
 * action - Specific actions to implement
-* preset\_response - Preset response
-* start\_time - Start time of review
-* end\_time - End time of review
+* preset_response - Preset response
+* start_time - Start time of review
+* end_time - End time of review
 * Metadata
-  * message\_id - Message ID
+  * message_id - Message ID
   * action - Specific actions to implement
-  * preset\_response - Preset response
+  * preset_response - Preset response
 
 #### Suggested Question Trace Information
 
 **Used to track suggested questions**
 
-| Suggested Question     | LangFuse Generation/Trace |
-| ---------------------- | ------------------------- |
-| user\_id               | user\_id                  |
-| suggested\_question    | name                      |
-| start\_time            | start\_time               |
-| end\_time              | end\_time                 |
-| inputs                 | input                     |
-| outputs                | output                    |
-| metadata               | metadata                  |
-| \[suggested\_question] | tags                      |
-| message\_id            | parent\_observation\_id   |
+| Suggested Question | LangFuse Generation/Trace |
+|-------------------|--------------------------|
+| user_id | user_id |
+| suggested_question | name |
+| start_time | start_time |
+| end_time | end_time |
+| inputs | input |
+| outputs | output |
+| metadata | metadata |
+| [suggested_question] | tags |
+| message_id | parent_observation_id |
 
 **Message Trace Info**
 
-* message\_id - Message ID
-* message\_data - Message data
+* message_id - Message ID
+* message_data - Message data
 * inputs - Input data
 * outputs - Output data
-* start\_time - Start time
-* end\_time - End time
-* total\_tokens - Total tokens
+* start_time - Start time
+* end_time - End time
+* total_tokens - Total tokens
 * status - Message Status
 * error - Error Message
-* from\_account\_id - Sending account ID
-* agent\_based - Whether agent based
-* from\_source - Message source
-* model\_provider - Model provider
-* model\_id - Model ID
-* suggested\_question - Suggested question
+* from_account_id - Sending account ID
+* agent_based - Whether agent based
+* from_source - Message source
+* model_provider - Model provider
+* model_id - Model ID
+* suggested_question - Suggested question
 * level - Status level
-* status\_message - Message status
+* status_message - Message status
 * Metadata
-  * message\_id - Message ID
-  * ls\_provider - Model Provider
-  * ls\_model\_name - Model ID
+  * message_id - Message ID
+  * ls_provider - Model Provider
+  * ls_model_name - Model ID
   * status - Message status
-  * from\_end\_user\_id - Sending user's ID
-  * from\_account\_id - Sending Account ID
-  * workflow\_run\_id - Workflow ID of this runtime
-  * from\_source - Message source
+  * from_end_user_id - Sending user's ID
+  * from_account_id - Sending Account ID
+  * workflow_run_id - Workflow ID of this runtime
+  * from_source - Message source
 
 #### Dataset Retrieval Trace Information
 
 **Used to track knowledge base retrieval**
 
-| Dataset Retrieval     | LangFuse Generation/Trace |
-| --------------------- | ------------------------- |
-| user\_id              | user\_id                  |
-| dataset\_retrieval    | name                      |
-| start\_time           | start\_time               |
-| end\_time             | end\_time                 |
-| inputs                | input                     |
-| outputs               | output                    |
-| metadata              | metadata                  |
-| \[dataset\_retrieval] | tags                      |
-| message\_id           | parent\_observation\_id   |
+| Dataset Retrieval | LangFuse Generation/Trace |
+|-------------------|--------------------------|
+| user_id | user_id |
+| dataset_retrieval | name |
+| start_time | start_time |
+| end_time | end_time |
+| inputs | input |
+| outputs | output |
+| metadata | metadata |
+| [dataset_retrieval] | tags |
+| message_id | parent_observation_id |
 
 **Dataset Retrieval Trace Info**
 
-* message\_id - Message ID
+* message_id - Message ID
 * inputs - Input Message
 * documents - Document data
-* start\_time - Start time
-* end\_time - End time
-* message\_data - Message data
+* start_time - Start time
+* end_time - End time
+* message_data - Message data
 * Metadata
-  * message\_id - Message ID
-  * ls\_provider - Model Provider
-  * ls\_model\_name - Model ID
+  * message_id - Message ID
+  * ls_provider - Model Provider
+  * ls_model_name - Model ID
   * status - Model status
-  * from\_end\_user\_id - Sending user's ID
-  * from\_account\_id - Sending account's ID
-  * agent\_based - Whether agent based
-  * workflow\_run\_id - Workflow ID of this runtime
-  * from\_source - Message Source
+  * from_end_user_id - Sending user's ID
+  * from_account_id - Sending account's ID
+  * agent_based - Whether agent based
+  * workflow_run_id - Workflow ID of this runtime
+  * from_source - Message Source
 
 #### Tool Trace Information
 
 **Used to track tool invocation**
 
-| Tool                  | LangFuse Generation/Trace |
-| --------------------- | ------------------------- |
-| user\_id              | user\_id                  |
-| tool\_name            | name                      |
-| start\_time           | start\_time               |
-| end\_time             | end\_time                 |
-| inputs                | input                     |
-| outputs               | output                    |
-| metadata              | metadata                  |
-| \["tool", tool\_name] | tags                      |
-| message\_id           | parent\_observation\_id   |
+| Tool | LangFuse Generation/Trace |
+|------|--------------------------|
+| user_id | user_id |
+| tool_name | name |
+| start_time | start_time |
+| end_time | end_time |
+| inputs | input |
+| outputs | output |
+| metadata | metadata |
+| ["tool", tool_name] | tags |
+| message_id | parent_observation_id |
 
 **Tool Trace Info**
 
-* message\_id - Message ID
-* tool\_name - Tool Name
-* start\_time - Start time
-* end\_time - End time
-* tool\_inputs - Tool inputs
-* tool\_outputs - Tool outputs
-* message\_data - Message data
+* message_id - Message ID
+* tool_name - Tool Name
+* start_time - Start time
+* end_time - End time
+* tool_inputs - Tool inputs
+* tool_outputs - Tool outputs
+* message_data - Message data
 * error - Error Message，if exist
 * inputs - Input of Message
 * outputs - Output of Message
-* tool\_config - Tool config
-* time\_cost - Time cost
-* tool\_parameters - Tool Parameters
-* file\_url - URL of relevant files
+* tool_config - Tool config
+* time_cost - Time cost
+* tool_parameters - Tool Parameters
+* file_url - URL of relevant files
 * Metadata
-  * message\_id - Message ID
-  * tool\_name - Tool Name
-  * tool\_inputs - Tool inputs
-  * tool\_outputs - Tool outputs
-  * tool\_config - Tool config
-  * time\_cost - Time. cost
+  * message_id - Message ID
+  * tool_name - Tool Name
+  * tool_inputs - Tool inputs
+  * tool_outputs - Tool outputs
+  * tool_config - Tool config
+  * time_cost - Time cost
   * error - Error Message
-  * tool\_parameters - Tool parameters
-  * message\_file\_id - Message file ID
-  * created\_by\_role - Created by role
-  * created\_user\_id - Created user ID
+  * tool_parameters - Tool parameters
+  * message_file_id - Message file ID
+  * created_by_role - Created by role
+  * created_user_id - Created user ID
 
 #### Generate Name Trace
 
 **Used to track conversation title generation**
 
-| Generate Name     | LangFuse Generation/Trace |
-| ----------------- | ------------------------- |
-| user\_id          | user\_id                  |
-| generate\_name    | name                      |
-| start\_time       | start\_time               |
-| end\_time         | end\_time                 |
-| inputs            | input                     |
-| outputs           | output                    |
-| metadata          | metadata                  |
-| \[generate\_name] | tags                      |
+| Generate Name | LangFuse Generation/Trace |
+|---------------|--------------------------|
+| user_id | user_id |
+| generate_name | name |
+| start_time | start_time |
+| end_time | end_time |
+| inputs | input |
+| outputs | output |
+| metadata | metadata |
+| [generate_name] | tags |
 
 **Generate Name Trace Info**
 
-* conversation\_id - Conversation ID
+* conversation_id - Conversation ID
 * inputs - Input data
 * outputs - Generated session name
-* start\_time - Start time
-* end\_time - End time
-* tenant\_id - Tenant ID
+* start_time - Start time
+* end_time - End time
+* tenant_id - Tenant ID
 * Metadata
-  * conversation\_id - Conversation ID
-  * tenant\_id - Tenant ID
+  * conversation_id - Conversation ID
+  * tenant_id - Tenant ID

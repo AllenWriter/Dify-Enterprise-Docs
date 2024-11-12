@@ -1,5 +1,6 @@
 ---
 title: Knowledge Base and Document Maintenance
+version: 'English'
 ---
 
 ## Knowledge Base Management
@@ -8,7 +9,9 @@ title: Knowledge Base and Document Maintenance
 
 On the Dify team homepage, click the "Knowledge Base" tab at the top, select the knowledge base you want to manage, then click **Settings** in the left navigation panel to make adjustments. You can modify the knowledge base name, description, visibility permissions, indexing mode, embedding model, and retrieval settings.
 
-<figure><img src="../../.gitbook/assets/knowledge-settings-01.png" alt=""><figcaption><p>Knowledge Base Settings</p></figcaption></figure>
+<Frame>
+  <img src="/images/assets/knowledge-settings-01.png" alt="Knowledge Base Settings" />
+</Frame>
 
 **Knowledge Base Name**: Used to distinguish among different knowledge bases.
 
@@ -34,7 +37,9 @@ Users without appropriate permissions cannot access the knowledge base. When gra
 
 Dify Knowledge Base provides a complete set of standard APIs. Developers can use API calls to perform daily management and maintenance operations such as adding, deleting, modifying, and querying documents and chunks in the knowledge base. Please refer to the [Knowledge Base API Documentation](maintain-dataset-via-api.md).
 
-<figure><img src="../../.gitbook/assets/knowledge-base-api.png" alt=""><figcaption><p>Knowledge base API management</p></figcaption></figure>
+<Frame>
+  <img src="/images/assets/knowledge-base-api.png" alt="Knowledge base API management" />
+</Frame>
 
 ## Maintaining Text in the Knowledge Base
 
@@ -42,13 +47,15 @@ Dify Knowledge Base provides a complete set of standard APIs. Developers can use
 
 Each document uploaded to the knowledge base is stored in the form of text chunks. You can view the specific text content of each chunks in the chunks list.
 
-<figure><img src="../../.gitbook/assets/viewing-uploaded-document-segments.png" alt=""><figcaption><p>Viewing uploaded document chunks</p></figcaption></figure>
+<Frame>
+  <img src="/images/assets/viewing-uploaded-document-segments.png" alt="Viewing uploaded document chunks" />
+</Frame>
 
 ***
 
 ### Checking Chunk Quality
 
-The quality of document chunk significantly affects the Q\&A performance of the knowledge base application. It is recommended to manually check the chunks quality before associating the knowledge base with the application.
+The quality of document chunk significantly affects the Q&A performance of the knowledge base application. It is recommended to manually check the chunks quality before associating the knowledge base with the application.
 
 Although automated chunk methods based on character length, identifiers, or NLP semantic chunk can significantly reduce the workload of large-scale text chunk, the quality of chunk is related to the text structure of different document formats and the semantic context. Manual checking and correction can effectively compensate for the shortcomings of machine chunk in semantic recognition.
 
@@ -56,15 +63,21 @@ When checking chunk quality, pay attention to the following situations:
 
 * **Overly short text chunks**, leading to semantic loss;
 
-<figure><img src="../../.gitbook/assets/short-text-segments.png" alt="" width="373"><figcaption><p>Overly short text chunks</p></figcaption></figure>
+<Frame>
+  <img src="/images/assets/short-text-segments.png" alt="Overly short text chunks" width="373" />
+</Frame>
 
 * **Overly long text chunks**, leading to semantic noise affecting matching accuracy;
 
-<figure><img src="../../.gitbook/assets/long-text-segments.png" alt="" width="375"><figcaption><p>Overly long text chunks</p></figcaption></figure>
+<Frame>
+  <img src="/images/assets/long-text-segments.png" alt="Overly long text chunks" width="375" />
+</Frame>
 
 * **Obvious semantic truncation**, which occurs when using maximum segment length limits, leading to forced semantic truncation and missing content during recall;
 
-<figure><img src="../../.gitbook/assets/semantic-truncation.png" alt="" width="357"><figcaption><p>Obvious semantic truncation</p></figcaption></figure>
+<Frame>
+  <img src="/images/assets/semantic-truncation.png" alt="Obvious semantic truncation" width="357" />
+</Frame>
 
 ***
 
@@ -72,13 +85,15 @@ When checking chunk quality, pay attention to the following situations:
 
 In the chunk list, click "Add Segment" to add one or multiple custom chunks to the document.
 
-<figure><img src="../../.gitbook/assets/add-a-chunk.png" alt=""><figcaption></figcaption></figure>
-
-Add a chunk
+<Frame>
+  <img src="/images/assets/add-a-chunk.png" alt="Add a chunk" />
+</Frame>
 
 When adding chunks in bulk, you need to first download the CSV format chunk upload template, edit all the chunk content in Excel according to the template format, save the CSV file, and then upload it.
 
-<figure><img src="../../.gitbook/assets/bulk-add-custom-segment (1).png" alt=""><figcaption><p>Bulk adding custom chunks</p></figcaption></figure>
+<Frame>
+  <img src="/images/assets/bulk-add-custom-segment (1).png" alt="Bulk adding custom chunks" />
+</Frame>
 
 ***
 
@@ -86,7 +101,9 @@ When adding chunks in bulk, you need to first download the CSV format chunk uplo
 
 In the chunk list, you can directly edit the content of the added chunks, including the text content and keywords of the chunks.
 
-<figure><img src="../../.gitbook/assets/edit-segment (1).png" alt=""><figcaption><p>Editing document chunks</p></figcaption></figure>
+<Frame>
+  <img src="/images/assets/edit-segment (1).png" alt="Editing document chunks" />
+</Frame>
 
 ***
 
@@ -94,11 +111,13 @@ In the chunk list, you can directly edit the content of the added chunks, includ
 
 In addition to marking metadata information from different source documents, such as the title, URL, keywords, and description of web data, metadata will be used in the chunk recall process of the knowledge base as structured fields for recall filtering or displaying citation sources.
 
-{% hint style="info" %}
+<Tip>
 The metadata filtering and citation source functions are not yet supported in the current version.
-{% endhint %}
+</Tip>
 
-<figure><img src="../../.gitbook/assets/metadata.png" alt="" width="258"><figcaption><p>Add metadata</p></figcaption></figure>
+<Frame>
+  <img src="/images/assets/metadata.png" alt="Add metadata" width="258" />
+</Frame>
 
 ***
 
@@ -108,7 +127,9 @@ In "Knowledge Base > Document List," click "Add File" to upload new documents or
 
 A knowledge base (Knowledge) is a collection of documents (Documents). Documents can be uploaded by developers or operators, or synchronized from other data sources (usually corresponding to a file unit in the data source).
 
-<figure><img src="../../.gitbook/assets/en-knowledge-add-document.png" alt=""><figcaption><p>Upload new document at Knowledge base</p></figcaption></figure>
+<Frame>
+  <img src="/images/assets/en-knowledge-add-document.png" alt="Upload new document at Knowledge base" />
+</Frame>
 
 ***
 

@@ -15,7 +15,7 @@ LLMs cannot directly read or interpret document contents. Therefore, it's necess
 
 The document extractor node can be understood as an information processing center. It recognizes and reads files in the input variables, extracts information, and converts it into string-type output variables for downstream nodes to call.
 
-![](../../../../images/assets/image (11).png)
+![](/en-us/images/assets/image-(11).png)
 
 The document extractor node structure is divided into input variables and output variables.
 
@@ -43,7 +43,7 @@ In a typical file interaction Q\&A scenario, the document extractor can serve as
 
 This section will introduce the usage of the document extractor node through a typical ChatPDF example workflow template.
 
-![](../../../../images/assets/image (12).png)
+![](/en-us/images/assets/image-(12).png)
 
 **Configuration Process:**
 
@@ -51,11 +51,11 @@ This section will introduce the usage of the document extractor node through a t
 2. Add a document extractor node and select the `pdf` variable in the input variables.
 3. Add an LLM node and select the output variable of the document extractor node in the system prompt. The LLM can read the contents of the file through this output variable.
 
-![](../../../../images/assets/image (13).png)
+![](/en-us/images/assets/image-(13).png)
 
 Configure the end node by selecting the output variable of the LLM node in the end node.
 
-![](../../../../images/assets/image (14).png)
+![](/en-us/images/assets/image-(14).png)
 
 After configuration, the application will have file upload functionality, allowing users to upload PDF files and engage in conversation.
 

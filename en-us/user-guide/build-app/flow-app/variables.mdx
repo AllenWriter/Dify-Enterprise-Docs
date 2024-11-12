@@ -145,17 +145,17 @@ Environment variables have the following characteristics:
 * Environment variable names cannot be duplicated
 * Environment variables are read-only and cannot be written to
 
-### Session Variables
+### Conversation Variables
 
-> Session variables are designed for multi-round conversation scenarios. Since Workflow type applications have linear and independent interactions without multiple conversation exchanges, session variables are only applicable to Chatflow type (Chat Assistant → Workflow Orchestration) applications.
+> Conversation variables are designed for multi-round conversation scenarios. Since Workflow type applications have linear and independent interactions without multiple conversation exchanges, conversation variables are only applicable to Chatflow type (Chat Assistant → Workflow Orchestration) applications.
 
-**Session variables allow application developers to specify particular information that needs to be temporarily stored within the same Chatflow session, ensuring this information can be referenced across multiple rounds of dialogue within the current workflow**. This includes context, files uploaded to the dialogue box (coming soon), and user preferences input during conversations. It's like providing LLM with a "memo" that can be checked at any time, avoiding information discrepancies due to LLM memory errors.
+**Conversation variables allow application developers to specify particular information that needs to be temporarily stored within the same Chatflow session, ensuring this information can be referenced across multiple rounds of dialogue within the current workflow**. This includes context, files uploaded to the dialogue box (coming soon), and user preferences input during conversations. It's like providing LLM with a "memo" that can be checked at any time, avoiding information discrepancies due to LLM memory errors.
 
-For example, you can store the language preference input by users in the first round of conversation in session variables, and LLM will reference this information when responding and use the specified language to reply to users in subsequent conversations.
+For example, you can store the language preference input by users in the first round of conversation in conversation variables, and LLM will reference this information when responding and use the specified language to reply to users in subsequent conversations.
 
 ![](/en-us/img/conversation-var.png)
 
-**Session variables** support the following six data types:
+**Conversation variables** support the following six data types:
 
 * String
 * Number
@@ -164,13 +164,13 @@ For example, you can store the language preference input by users in the first r
 * Array[number]
 * Array[object]
 
-**Session variables** have the following characteristics:
+**Conversation variables** have the following characteristics:
 
-* Session variables can be globally referenced in most nodes
-* Writing to session variables requires using the [Variable Assigner](./nodes/variable-assigner) node
-* Session variables are readable and writable
+* Conversation variables can be globally referenced in most nodes
+* Writing to conversation variables requires using the [Variable Assigner](./nodes/variable-assigner) node
+* Conversation variables are readable and writable
 
-For information on how to use session variables with variable assigner nodes, please refer to the [Variable Assigner](./nodes/variable-assigner) node documentation.
+For more details about how to use conversation variables with variable assigner nodes, please refer to the [Variable Assigner](./nodes/variable-assigner) node documentation.
 
 ### Notes
 

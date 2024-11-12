@@ -1,5 +1,6 @@
 ---
 title: Integrate LangSmith
+version: 'English'
 ---
 
 ### What is LangSmith
@@ -20,39 +21,55 @@ For more details, please refer to [LangSmith](https://www.langchain.com/langsmit
 
 Create a project in LangSmith. After logging in, click **New Project** on the homepage to create your own project. The **project** will be used to associate with **applications** in Dify for data monitoring.
 
-![Create a project in LangSmith](../../../images/assets/image (3) (1) (1) (1).png)
+<Frame>
+  <img src="/images/assets/image (3) (1) (1) (1).png" alt="Create a project in LangSmith" />
+</Frame>
 
 Once created, you can view all created projects in the Projects section.
 
-![View created projects in LangSmith](../../../images/assets/image (7) (1) (2).png)
+<Frame>
+  <img src="/images/assets/image (7) (1) (2).png" alt="View created projects in LangSmith" />
+</Frame>
 
 #### 3. Create Project Credentials
 
 Find the project settings **Settings** in the left sidebar.
 
-![Project settings](../../../images/assets/image (8) (1) (2).png)
+<Frame>
+  <img src="/images/assets/image (8) (1) (2).png" alt="Project settings" />
+</Frame>
 
 Click **Create API Key** to create project credentials.
 
-![Create a project API Key](../../../images/assets/image (3) (1) (1) (1) (2).png)
+<Frame>
+  <img src="/images/assets/image (3) (1) (1) (1) (2).png" alt="Create a project API Key" />
+</Frame>
 
 Select **Personal Access Token** for subsequent API authentication.
 
-![Create an API Key](../../../images/assets/image (5) (1) (1) (1).png)
+<Frame>
+  <img src="/images/assets/image (5) (1) (1) (1).png" alt="Create an API Key" />
+</Frame>
 
 Copy and save the created API key.
 
-![Copy API Key](../../../images/assets/image (9) (2).png)
+<Frame>
+  <img src="/images/assets/image (9) (2).png" alt="Copy API Key" />
+</Frame>
 
 #### 4. Integrating LangSmith with Dify
 
 Configure LangSmith in the Dify application. Open the application you need to monitor, open **Monitoring** in the side menu, and select **Tracing app performance** on the page.
 
-![Tracing app performance](../../../images/assets/tracing-app-performance.png)
+<Frame>
+  <img src="/images/assets/tracing-app-performance.png" alt="Tracing app performance" />
+</Frame>
 
 After clicking configure, paste the **API Key** and **project name** created in LangSmith into the configuration and save.
 
-![Configure LangSmith](../../../images/assets/config-langsmith.png)
+<Frame>
+  <img src="/images/assets/config-langsmith.png" alt="Configure LangSmith" />
+</Frame>
 
 <Note>
 The configured project name needs to match the project set in LangSmith. If the project names do not match, LangSmith will automatically create a new project during data synchronization.
@@ -60,21 +77,29 @@ The configured project name needs to match the project set in LangSmith. If the 
 
 Once successfully saved, you can view the monitoring status on the current page.
 
-![View configuration status](../../../images/assets/integrate-with-langsmith.png)
+<Frame>
+  <img src="/images/assets/integrate-with-langsmith.png" alt="View configuration status" />
+</Frame>
 
 ### Viewing Monitoring Data in LangSmith
 
 Once configured, the debug or production data from applications within Dify can be monitored in LangSmith.
 
-![Debugging Applications in Dify](../../../images/assets/debug-app-in-dify.png)
+<Frame>
+  <img src="/images/assets/debug-app-in-dify.png" alt="Debugging Applications in Dify" />
+</Frame>
 
 When you switch to LangSmith, you can view detailed operation logs of Dify applications in the dashboard.
 
-![Viewing application data in LangSmith](../../../images/assets/image (2) (1) (1) (1).png)
+<Frame>
+  <img src="/images/assets/image (2) (1) (1) (1).png" alt="Viewing application data in LangSmith" />
+</Frame>
 
 Detailed LLM operation logs through LangSmith will help you optimize the performance of your Dify application.
 
-![Viewing application data in LangSmith](../../../images/assets/viewing-app-data-in-langsmith.png)
+<Frame>
+  <img src="/images/assets/viewing-app-data-in-langsmith.png" alt="Viewing application data in LangSmith" />
+</Frame>
 
 ### Monitoring Data List
 

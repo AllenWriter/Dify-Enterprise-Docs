@@ -10,14 +10,13 @@ The end node is a termination point in the process; no further nodes can be adde
 
 The end node must declare one or more output variables, which can reference any upstream node's output variables.
 
-
 <Note>End nodes are not supported within Chatflow.</Note>
 
 ***
 
 ### 2 Scenarios
 
-In the following [long story generation workflow](iteration.md#example-2-long-article-iterative-generation-another-scheduling-method), the variable `Output` declared by the end node is the output of the upstream code node. This means the workflow will end after the Code node completes execution and will output the execution result of Code.
+In the following long story generation workflow, the variable `Output` declared by the end node is the output of the upstream code node. This means the workflow will end after the Code node completes execution and will output the execution result of Code.
 
 ![](/images/assets/end-answer.png)
 

@@ -456,12 +456,7 @@
             },
             "en-us/user-guide/knowledge-base/retrieval-test-and-citation",
             "en-us/user-guide/knowledge-base/knowledge-and-documents-maintenance",
-            {
-              "group": "Integrate Knowledge Base Within Application",
-              "pages": [
-                "en-us/user-guide/knowledge-base/integrate-knowledge-within-application"
-              ]
-            },
+            "en-us/user-guide/knowledge-base/integrate-knowledge-within-application",
             "en-us/user-guide/knowledge-base/faq"
           ]
         },
@@ -651,12 +646,7 @@
             },
             "zh-cn/user-guide/knowledge-base/retrieval-test-and-citation",
             "zh-cn/user-guide/knowledge-base/knowledge-and-documents-maintenance",
-            {
-              "group": "在应用内集成知识库",
-              "pages": [
-                "zh-cn/user-guide/knowledge-base/integrate-knowledge-within-application"
-              ]
-            },
+            "zh-cn/user-guide/knowledge-base/integrate-knowledge-within-application",
             "zh-cn/user-guide/knowledge-base/faq"
           ]
         },
@@ -861,12 +851,7 @@
             },
             "ja-jp/user-guide/knowledge-base/retrieval-test-and-citation",
             "ja-jp/user-guide/knowledge-base/knowledge-and-documents-maintenance",
-            {
-              "group": "アプリ内でのナレッジベースの統合",
-              "pages": [
-                "ja-jp/user-guide/knowledge-base/integrate-knowledge-within-application"
-              ]
-            },
+            "ja-jp/user-guide/knowledge-base/integrate-knowledge-within-application",
             "ja-jp/user-guide/knowledge-base/faq"
           ]
         },

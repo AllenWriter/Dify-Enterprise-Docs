@@ -451,8 +451,7 @@
                 "en-us/user-guide/knowledge-base/knowledge-base-creation/upload-documents",
                 "en-us/user-guide/knowledge-base/knowledge-base-creation/sync-from-notion",
                 "en-us/user-guide/knowledge-base/knowledge-base-creation/sync-from-website",
-                "en-us/user-guide/knowledge-base/knowledge-base-creation/connect-external-knowledge",
-                "en-us/user-guide/knowledge-base/knowledge-base-creation/external-knowledge-api"
+                "en-us/user-guide/knowledge-base/knowledge-base-creation/connect-external-knowledge"
               ]
             },
             "en-us/user-guide/knowledge-base/retrieval-test-and-citation",
@@ -462,7 +461,8 @@
               "pages": [
                 "en-us/user-guide/knowledge-base/integrate-knowledge-within-application"
               ]
-            }
+            },
+            "en-us/user-guide/knowledge-base/faq"
           ]
         },
         {
@@ -524,6 +524,7 @@
         {
           "group": "接入模型",
           "pages": [
+            "zh-cn/user-guide/models/model-configuration",
             "zh-cn/user-guide/models/new-provider",
             "zh-cn/user-guide/models/predefined-model",
             "zh-cn/user-guide/models/customizable-model",

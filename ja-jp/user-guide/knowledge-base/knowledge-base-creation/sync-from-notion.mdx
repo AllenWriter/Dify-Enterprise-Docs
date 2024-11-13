@@ -11,7 +11,7 @@ Difyのナレッジベースでは、Notionからのデータインポートを�
 2. あるいは、**設定 -- データソース -- データソースを追加**に進み、Notionのデータソースをクリックして**バインド**し、認証を完了させることもできます。
 
 <Frame caption="Notionをバインド">
-  <img src="../../../ja-jp/img/binding-notion (1).png" alt="" />
+  <img src="/ja-jp/img/binding-notion (1).png" alt="" />
 </Frame>
 
 ## Notionデータのインポート
@@ -29,7 +29,7 @@ _**注意：画像やファイルのインポートはサポートされてい�
 Notionの内容が変更された場合、Difyデータセットの**ドキュメントリストページ**で**同期**をクリックすることで、データを一括で同期できます。このステップでもTokenを消費します。
 
 <Frame caption="Notionコンテンツの同期">
-  <img src="../../../ja-jp/img/sync-notion (1).png" alt="" />
+  <img src="/ja-jp/img/sync-notion (1).png" alt="" />
 </Frame>
 
 ## Notionの統合構成方法
@@ -45,13 +45,13 @@ Notionの統合は**内部統合**と**外部統合**の2つの方法に分か�
 「New integration」ボタンをクリックします。タイプはデフォルトで **Internal**（変更不可）になっています。関連付けるワークスペースを選択し、統合の名前を入力し、ロゴをアップロードした後に「Submit」ボタンをクリックして統合を作成します。
 
 <Frame caption="">
-  <img src="../../../ja-jp/img/integrate-notion-1.png" alt="" />
+  <img src="/ja-jp/img/integrate-notion-1.png" alt="" />
 </Frame>
 
 統合を作成した後、必要に応じて Capabilities タブで設定を更新し、Secrets を表示してコピーするために、Secrets の下の「Show」ボタンをクリックします。これにより、Secrets を簡単にコピーできます。
 
 <Frame>
-  <img src="../../../ja-jp/img/notion-secret.png" alt="" />
+  <img src="/ja-jp/img/notion-secret.png" alt="" />
 </Frame>
 
 コピーしたら、Dify のソースコードに戻り、**.env** ファイルに関連する環境変数を設定します。環境変数は以下のようになります：
@@ -65,13 +65,13 @@ Notionの統合は**内部統合**と**外部統合**の2つの方法に分か�
 **Internal 統合を Public 統合にアップグレードする必要があります。** 統合の Distribution ページに移動し、スイッチを切り替えて統合を公開します。スイッチをパブリック設定にし、Organization Information フォームに会社名、ウェブサイト、リダイレクト URL などの情報を入力し、「Submit」ボタンをクリックします。
 
 <Frame caption="">
-  <img src="../../../ja-jp/img/public-integration.png" alt="" />
+  <img src="/ja-jp/img/public-integration.png" alt="" />
 </Frame>
 
 統合の設定ページで統合を正常に公開した後、統合のキーにアクセスできるようになります：
 
 <Frame caption="">
-  <img src="../../../ja-jp/img/notion-public-secret.png" alt="" />
+  <img src="/ja-jp/img/notion-public-secret.png" alt="" />
 </Frame>
 
 Dify のソースコードに戻り、**.env** ファイルに関連する環境変数を設定します。環境変数は以下のようになります：

@@ -26,7 +26,7 @@ Difyのメインナビゲーションバーから「ナレッジベース」を�
 - 1つのドキュメントのアップロードサイズは最大15MBです。
 
 <Frame caption="ナレッジベースを作成">
-  <img src="../../../ja-jp/images/en-upload-files-1.png" alt="" />
+  <img src="/ja-jp/images/en-upload-files-1.png" alt="" />
 </Frame>
 
 ***
@@ -61,7 +61,7 @@ Difyのメインナビゲーションバーから「ナレッジベース」を�
     自動モードは、セクショニングや前処理に関する知識があまりない初心者ユーザーに適しています。このモードでは、Difyがコンテンツファイルを自動的にセクション分割し、クリーニングを行います。
 
     <Frame caption="自動セクショニングとクリーニング">
-      <img src="../../../ja-jp/images/en-upload-files-2.avif" alt="Automatic segmentation and cleaning" />
+      <img src="/ja-jp/images/en-upload-files-2.avif" alt="Automatic segmentation and cleaning" />
     </Frame>
     
   </Tab>
@@ -83,7 +83,7 @@ Difyのメインナビゲーションバーから「ナレッジベース」を�
     * すべてのURLと電子メールアドレスを削除します。
 
     <Frame caption="カスタムセクショニングとクリーニング">
-      <img src="../../../ja-jp/images/en-upload-files-3.webp" alt="Custom segmentation and cleaning" />
+      <img src="/ja-jp/images/en-upload-files-3.webp" alt="Custom segmentation and cleaning" />
     </Frame>
   </Tab>
 </Tabs>
@@ -104,14 +104,14 @@ Difyのメインナビゲーションバーから「ナレッジベース」を�
     高品質モードでは、セグメンテーションされたテキストを数値ベクトルに変換する埋め込みモデル（切り替え可能）を最初に呼び出し、開発者が大量のテキスト情報を効果的に圧縮および保存するのを支援します。また、ユーザーとLLMの対話時により高い精度を提供することも可能です。
     高品質インデックス方法には、ベクトル検索、全文検索、ハイブリッド検索の3つの検索設定が提供されています。詳細な検索設定については、[検索設定](./upload-documents#)をご覧ください。
     <Frame caption="高品質モード">
-      <img src="../../../ja-jp/images/en-upload-files-4.webp" alt="" />
+      <img src="/ja-jp/images/en-upload-files-4.webp" alt="" />
     </Frame>
   </Tab>
 
   <Tab title="コスト効率" >
     オフラインのベクトルエンジンとキーワードインデックス方式を使用し、トークンを追加コストなしで削減するが、精度が低下します。検索方式では逆インデックスのみが提供され、詳細については[後述](./upload-documents#)をご覧ください。
     <Frame caption="コスト効率モード">
-      <img src="../../../ja-jp/images/en-upload-files-5.webp" alt="" />
+      <img src="/ja-jp/images/en-upload-files-5.webp" alt="" />
     </Frame>
   </Tab>
 
@@ -134,7 +134,7 @@ Difyのメインナビゲーションバーから「ナレッジベース」を�
     **定義：** ユーザーの入力した質問をベクトル化し、クエリベクトルとナレッジベース内の対応するテキストベクトルの距離を比較し、最も近いセグメントコンテンツを見つけます。
 
     <Frame caption="ベクトル検索">
-      <img src="../../../ja-jp/images/en-upload-files-8.png" alt="" />
+      <img src="/ja-jp/images/en-upload-files-8.png" alt="" />
     </Frame>
 
     **ベクトル検索設定：**
@@ -154,7 +154,7 @@ Difyのメインナビゲーションバーから「ナレッジベース」を�
     **定義：** キーワード検索、つまり文書内のすべての単語をインデックスします。ユーザーが質問を入力すると、ナレッジベース内の対応するテキストセグメントに明示的なキーワードマッチングを行い、キーワードに一致するテキストセグメントを返します。これは、検索エンジンのキーワード検索に類似しています。
 
     <Frame caption="全文检索">
-      <img src="../../../ja-jp/images/en-upload-files-9.png" alt="" />
+      <img src="/ja-jp/images/en-upload-files-9.png" alt="" />
     </Frame>
 
     **Rerank モデル：** 全文検索で取得したセグメントに対して、サードパーティの Rerank モデルを使用して再評価し、意味に基づいて結果を最適化します。まず、"モデルサプライヤー" ページで Rerank モデルの API キーを設定し、その後、検索設定で "Rerank モデル" をオンにしてください。
@@ -171,7 +171,7 @@ Difyのメインナビゲーションバーから「ナレッジベース」を�
     **定义：** 定義： 全文検索とベクトル検索を同時に実行し、リランクステップを適用して、2種類のクエリ結果からユーザーの質問に最も適した結果を選びます。このモードでは、「重み設定」を指定するか、Rerank モデルを選択して検索できます。
 
     <Frame caption="混合检索">
-      <img src="../../../ja-jp/images/en-upload-files-10.png" alt="" />
+      <img src="/ja-jp/images/en-upload-files-10.png" alt="" />
     </Frame>
 
     ハイブリッド検索の設定では、**「重み設定」** または **「Rerankモデル」** を有効にすることが可能です。
@@ -219,7 +219,7 @@ Difyのメインナビゲーションバーから「ナレッジベース」を�
 **TopK：** ユーザーの質問に最も類似したテキスト断片を選択するために使用されます。システムは、選択されたモデルのコンテキストウィンドウサイズに基づいて、断片の数を動的に調整します。システムのデフォルト値は3です。数値が高いほど、期待されるテキスト断片の数が多く取得されます。
 
 <Frame caption="転置インデックス">
-  <img src="../../../ja-jp/images/en-upload-files-8.png" alt="" />
+  <img src="/ja-jp/images/en-upload-files-8.png" alt="" />
 </Frame>
 
 検索設定を指定した後、[リコールテスト/引用の帰属](../retrieval-test-and-citation)を参照して、キーワードとコンテンツブロックの一致状況を確認できます。

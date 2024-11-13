@@ -12,7 +12,7 @@ version: '日本語'
 Difyチームのホームページで、「ナレッジベース」タブをクリックし、管理したいナレッジベースを選択して、左のナビゲーションパネルで **設定** をクリックして調整を行います。ナレッジベースの名前、説明、表示権限、索引モード、埋め込みモデル、および検索設定を変更することができます。
 
 <Frame caption="ナレッジベースの設定">
-  <img src="../../ja-jp/img/knowledge-settings-01.png" alt="" />
+  <img src="/ja-jp/img/knowledge-settings-01.png" alt="" />
 </Frame>
 
 **ナレッジベースの名前**：異なるナレッジベースを区別するために使用されます。
@@ -40,7 +40,7 @@ Difyチームのホームページで、「ナレッジベース」タブをク�
 Difyナレッジベースは、標準APIの完全なセットを提供しています。開発者はAPI呼び出しを行うことで、ナレッジベース内のドキュメントやチャンクの追加、削除、変更、クエリなどの日常的な管理およびメンテナンス操作を実行できます。詳細については、[ナレッジベースAPIドキュメント](./api-connection/maintain-dataset-via-api)を参照してください。
 
 <Frame caption="ナレッジベースAPIの管理">
-  <img src="../../ja-jp/img/knowledge-base-api.png" alt="" />
+  <img src="/ja-jp/img/knowledge-base-api.png" alt="" />
 </Frame>
 
 ## ナレッジベースにおけるテキストのメンテナンス
@@ -52,7 +52,7 @@ Difyナレッジベースは、標準APIの完全なセットを提供してい�
 「ナレッジベース」>「ドキュメントリスト」をクリックし、「ファイルを追加」をタップして、作成したナレッジベースに新しいドキュメントをアップロードします。
 
 <Frame caption="新しいドキュメントをナレッジ ベースにアップロードする">
-  <img src="../../ja-jp/img/image (10).png" alt="" />
+  <img src="/ja-jp/img/image (10).png" alt="" />
 </Frame>
 
 ***
@@ -69,8 +69,8 @@ Difyナレッジベースは、標準APIの完全なセットを提供してい�
 
 ナレッジベースにアップロードされた各ドキュメントは、テキスト分段（Chunks）として保存されます。セクションリストで、各セクションの具体的なテキストコンテンツを表示することができます。
 
-<Frame caption="查看已上传的文档分段">
-  <img src="../../ja-jp/img/viewing-uploaded-document-segments.png" alt="" />
+<Frame caption="アップロードされた文書セグメントを表示する">
+  <img src="/ja-jp/img/viewing-uploaded-document-segments.png" alt="" />
 </Frame>
 
 ***
@@ -85,20 +85,20 @@ Difyナレッジベースは、標準APIの完全なセットを提供してい�
 
 * **過度に短いテキストチャンク**：意味の損失を引き起こす可能性があります；
 
-<Frame caption="过短的文本分段">
-  <img src="../../ja-jp/img/short-text-segments.png" alt="" width="373" />
+<Frame caption="過度に短いテキストチャンク">
+  <img src="/ja-jp/img/short-text-segments.png" alt="" width="373" />
 </Frame>
 
 * **過度に長いテキストチャンク**：一致精度に影響を与える意味のノイズを引き起こす可能性があります；
 
-<Frame caption="过长的文本分段">
-  <img src="../../ja-jp/img/long-text-segments.png" alt="" width="375" />
+<Frame caption="過度に長いテキストチャンク">
+  <img src="/ja-jp/img/long-text-segments.png" alt="" width="375" />
 </Frame>
 
 * **明らかなセマンティック切り捨て**：最大セグメント長制限を使用した際に発生し、強制的なセマンティック切り捨てやリコール中のコンテンツ欠落を引き起こす可能性があります；
 
-<Frame caption="明显的语义截断">
-  <img src="../../ja-jp/img/semantic-truncation.png" alt="" width="357" />
+<Frame caption="明らかなセマンティック切り捨て">
+  <img src="/ja-jp/img/semantic-truncation.png" alt="" width="357" />
 </Frame>
 
 ***
@@ -108,13 +108,13 @@ Difyナレッジベースは、標準APIの完全なセットを提供してい�
 チャンクリストで「セグメントの追加」をクリックして、ドキュメントに1つまたは複数のカスタムチャンクを追加します。
 
 <Frame caption="">
-  <img src="../../ja-jp/img/add-a-chunk.png" alt="" />
+  <img src="/ja-jp/img/add-a-chunk.png" alt="" />
 </Frame>
 
 一括でチャンクを追加する場合は、まずCSV形式のチャンクアップロードテンプレートをダウンロードし、Excelでテンプレート形式に従ってすべてのチャンクコンテンツを編集し、CSVファイルを保存してからアップロードします。
 
-<Frame caption="批量添加自定义分段">
-  <img src="../../ja-jp/img/bulk-add-custom-segment.png" alt="" />
+<Frame caption="テキストチャンクの追加">
+  <img src="/ja-jp/img/bulk-add-custom-segment.png" alt="" />
 </Frame>
 
 ***
@@ -124,7 +124,7 @@ Difyナレッジベースは、標準APIの完全なセットを提供してい�
 テキストブロックの一覧では、追加したテキストブロックの内容を直接編集できます。これには、テキストの内容やテキストブロックのキーワードが含まれます。
 
 <Frame caption="文書のテキストブロックを編集">
-  <img src="../../ja-jp/img/edit-segment.png" alt="" />
+  <img src="/ja-jp/img/edit-segment.png" alt="" />
 </Frame>
 
 ***
@@ -137,6 +137,6 @@ Difyナレッジベースは、標準APIの完全なセットを提供してい�
   現在のバージョンでは、メタデータのフィルタリングおよび引用元の機能はサポートされていません。
 </Info>
 
-<Frame caption="元数据管理">
-  <img src="../../ja-jp/img/metadata.png" alt="" />
+<Frame caption="メタデータ管理">
+  <img src="/ja-jp/img/metadata.png" alt="" />
 </Frame>

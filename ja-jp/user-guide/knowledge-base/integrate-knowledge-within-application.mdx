@@ -25,13 +25,13 @@ version: '日本語'
 検索エンジンは、関連するすべてのナレッジベース内でユーザーの質問に関連するテキストコンテンツを検索し、複数の関連ドキュメントを統合します。以下のテクニカルフローチャートは召回戦略のプロセスを示しています：
 
 <Frame>
-  <img src="../../ja-jp/img/rerank-flow-chart.png" alt="" />
+  <img src="/ja-jp/img/rerank-flow-chart.png" alt="" />
 </Frame>
 
 ユーザーの意図に基づいて、すべての「コンテキスト」に追加されたナレッジベースを同時に検索し、関連するテキスト断片を複数のナレッジベースから取得します。最もユーザーの質問に一致するコンテンツを選択し、最終的にRerank戦略を使用して最適なコンテンツを見つけてユーザーに回答します。この方法は、より科学的な検索原理に基づいています。
 
 <Frame>
-  <img src="../../ja-jp/img/jp-rag-multiple.png" alt="" />
+  <img src="/ja-jp/img/jp-rag-multiple.png" alt="" />
 </Frame>
 
 例として、AアプリケーションのコンテキストにK1、K2、K3の3つのナレッジベースが関連付けられている場合、ユーザーが質問を入力すると、これら3つのナレッジベースに対してクエリを実行し、関連するコンテンツを統合します。最適なコンテンツを見つけるためにRerank戦略を使用し、ユーザーの質問と最も関連性の高いコンテンツを特定します。これにより、結果がより正確かつ信頼性の高いものになります。
@@ -67,7 +67,7 @@ Rerank モデルは外部のスコアリングシステムであり、ユーザ�
 Dify は現在、複数の Rerank モデルをサポートしており、"モデルプロバイダー" ページに Rerank モデル（例：Cohere、Jina AI など）の API キーを入力することができます。
 
 <Frame caption="モデルプロバイダー内での Rerank モデルの設定">
-  <img src="../../ja-jp/img/jp-rerank-model-api.png" alt="" />
+  <img src="/ja-jp/img/jp-rerank-model-api.png" alt="" />
 </Frame>
 
 **調整可能なパラメータ**
@@ -99,7 +99,7 @@ Dify は現在、複数の Rerank モデルをサポートしており、"モデ
     ナレッジベースの検索方法がテキスト取得に与える影響は次のとおりです：
 
     <Frame>
-      <img src="/ja-jp/images/jp-knowledge-base-table.png" alt="" />
+      <img src="../../images/assets/image (101).png" alt="Knowledge Base Integration" />
     </Frame>
 
 3. **複数のナレッジベースを引用する際に "重み設定" を調整できず、エラーが表示される場合の対処方法**

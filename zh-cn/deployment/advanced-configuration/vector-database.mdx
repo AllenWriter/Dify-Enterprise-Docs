@@ -1,0 +1,41 @@
+---
+title: 向量数据库简介
+version: '简体中文'
+---
+
+## 在 Helm Chart 值中查找向量数据库配置
+
+### 显示 Helm Chart 值
+
+```bash
+helm show values dify/dify
+````
+
+
+## 在 Helm Chart 值中查找向量数据库配置
+这是 Helm chart 值中向量数据库配置的示例。
+
+````yaml
+vectorDB:
+  useExternal: true
+  externalType: "qdrant"
+  externalQdrant:
+    endpoint: "http://your-qdrant-cluster-url.qdrant.tech/"
+    apiKey: "#REPLACE_ME#"
+  ... ...
+````
+
+
+## `vectorDB.externalType` 字段的选项
+### 企业支持的类型
+- qdrant
+- weaviate
+- elasticsearch
+
+### 社区支持的类型
+- milvus
+- relyt
+- pgvecto_rs
+- tcvectordb
+- opensearch
+

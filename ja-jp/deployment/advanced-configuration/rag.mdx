@@ -1,0 +1,25 @@
+---
+title: RAG
+---
+
+## Helm Chartの値におけるRAG設定の確認
+
+### Helm Chartの値を表示する
+
+````bash
+helm show values dify/dify
+````
+
+## Helm Chartの値におけるRAG設定の例
+以下は、Helm Chartの値に含まれるRAG設定の一例です。
+
+````yaml
+global:
+  rag:
+    etlType: "Unstructured"
+  ... ...
+````
+
+## `global.rag.etlType` フィールドの選択肢
+- Unstructured: [Unstructured.io](https://unstructured.io/) によるファイル抽出ソリューション
+- dify: Difyのカスタムファイル抽出ソリューション

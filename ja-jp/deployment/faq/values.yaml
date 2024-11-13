@@ -1,0 +1,157 @@
+###################################
+# Please replace "dify123456" with your own value
+###################################
+global:
+  edition: "SELF_HOSTED"
+  appSecretKey: 'dify123456'
+  useTLS: false
+  consoleApiDomain: "console.dify.local"
+  consoleWebDomain: "console.dify.local"
+  serviceApiDomain: "api.dify.local"
+  appApiDomain: "app.dify.local"
+  appWebDomain: "app.dify.local"
+  filesDomain: "upload.dify.local"
+  enterpriseDomain: "enterprise.dify.local"
+  dbMigrationEnabled: true
+  rag:
+    etlType: "Unstructured"
+    keywordDataSourceType: "object_storage"
+  integrations:
+    notion:
+      # Notion import configuration, support public and internal
+      integrationType: "internal"
+      clientId: ""
+      clientSecret: ""
+      internalSecret: ""
+
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations: {
+    # set file upload size limit
+    nginx.ingress.kubernetes.io/proxy-body-size: "15m"
+  }
+
+api:
+  enabled: true
+  replicas: 1
+  innerApi:
+    enabled: true
+    apiKey: "dify123456"
+  serverWorkerAmount: 1
+worker:
+  enabled: true
+  replicas: 1
+  celeryWorkerAmount: 1
+web:
+  enabled: true
+  replicas: 1
+sandbox:
+  enabled: true
+  replicas: 1
+  apiKey: "dify123456"
+enterprise:
+  enabled: true
+  replicas: 1
+  appSecretKey: "dify123456"
+  innerApi:
+    enabled: true
+    apiKey: "dify123456"
+enterpriseFrontend:
+  enabled: true
+  replicas: 1
+ssrfProxy:
+  enabled: true
+  replicas: 1
+unstructured:
+  enabled: true
+  replicas: 1
+
+###################################
+# Persistence Configration
+###################################
+persistence:
+  type: "s3"
+  s3:
+    endpoint: "https://xxx.r2.cloudflarestorage.com"
+    accessKey: "#REPLACE_ME#"
+    secretKey: "#REPLACE_ME#"
+    region: "us-east-1"
+    bucketName: "your-bucket-name"
+    addressType: ""
+    useAwsManagedIam: false
+
+###################################
+# Mail Configuration
+###################################
+mail:
+  # Mail configuration, support: resend, smtp
+  type: ''
+  # default email sender from email address, if not not given specific address
+  defaultSender: 'YOUR EMAIL FROM (eg: no-reply <no-reply@dify.ai>)'
+  # the api-key for resend (https://resend.com)
+  resend:
+    apiKey: ''
+    apiUrl: https://api.resend.com
+  smtp:
+    server: ''
+    port: 587
+    username: ''
+    password: ''
+    useTLS: false
+
+###################################
+# postgres
+###################################
+postgresql:
+  enabled: true
+  name: postgres
+  global:
+    storageClass: ""
+    postgresql:
+      auth:
+        postgresPassword: "dify123456"
+        database: "dify"
+#        username: ""
+#        password: ""
+externalPostgres:
+  enabled: false
+
+###################################
+# Redis
+###################################
+redis:
+  enabled: true
+  global:
+    redis:
+      password: "dify123456"
+externalRedis:
+  enabled: false
+
+###################################
+# vectorDB
+###################################
+qdrant:
+  enabled: true
+  replicaCount: 1
+  image:
+    repository: langgenius/qdrant
+    pullPolicy: IfNotPresent
+    tag: "v1.7.3"
+  apiKey: "dify123456"
+  persistence:
+    accessModes: [ "ReadWriteOnce" ]
+    size: 10Gi
+  resources: { }
+    # limits:
+    #   cpu: 100m
+    #   memory: 128Mi
+    # requests:
+    #   cpu: 100m
+    #   memory: 128Mi
+  nodeSelector: {}
+vectorDB:
+  useExternal: false
+
+imagePullSecrets:
+  - name: dify-artifacts-token

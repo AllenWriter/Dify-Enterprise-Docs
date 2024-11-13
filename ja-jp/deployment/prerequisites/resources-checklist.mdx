@@ -1,0 +1,54 @@
+---
+title: リソース仕様
+---
+
+デプロイメントの開始にあたり、以下のリソースを準備する必要があります。
+
+# 要件
+- Kubernetes 1.24+
+- Helm 3.14+
+
+- `警告`: 制限された環境を使用している場合は、ポッドが `root` として実行できるようにしてください（OpenShiftなど）。
+
+# ドメイン
+Difyエンタプライス版には5つのドメインを設定する必要があります。ドメインは以下の通りです：
+- コンソール: console.dify.local
+- サービスAPI: api.dify.local
+- アプリ: app.dify.local
+- ファイル: upload.dify.local
+- エンタープライズダッシュボード: enterprise.dify.local
+
+# テストデプロイメントリソース
+- Kubernetesクラスター
+    - 1ワーカーノード: 4 CPU, 16 GB RAM
+- 永続ストレージ
+    - s3, amazon-s3, azure-blob, aliyun-oss, google-storage, tencent-cos, oci-storage
+    - 100 GBストレージ
+- Postgresデータベース
+    - バージョン14+
+    - 2 CPU, 4 GB RAM
+    - 256 GBストレージ
+- Redisデータベース
+    - バージョン6+
+    - 1 GB RAM
+- ベクターデータベース仮想マシン - Qdrantシングルノード
+    - 1仮想マシン
+    - 4 CPU, 8 GB RAM
+
+# 本番デプロイメントリソース
+- Kubernetesクラスター
+    - 6ワーカーノード: 各8 CPU, 32 GB RAM
+- 永続ストレージ
+    - s3, amazon-s3, azure-blob, aliyun-oss, google-storage, tencent-cos, oci-storage
+    - 512 GBストレージ
+- Postgresデータベース
+    - バージョン14+
+    - 4 CPU, 8 GB RAM
+    - 512 GB `SSD` ストレージ
+- Redisデータベース
+    - バージョン6+
+    - 2 GB RAM
+- ベクターデータベース仮想マシン - Qdrantクラスター
+    - 3仮想マシン
+    - 8 CPU, 64 GB RAM
+    - 100 GBストレージ

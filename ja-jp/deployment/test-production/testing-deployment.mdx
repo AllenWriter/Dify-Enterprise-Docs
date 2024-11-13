@@ -1,0 +1,49 @@
+---
+title: デプロイメントのテスト
+version: '日本語'
+---
+
+## 要件
+
+これは、デプロイメントのテストまたはステージングデプロイメントのための推奨構成です。要件に基づいて構成を調整できます。
+
+- Kubernetes クラスター
+    - 1 ワーカーノード: 4 CPU, 16 GB RAM
+- 永続ストレージ
+    - s3, azure-blob, aliyun-oss, google-storage
+    - 100 GB ストレージ
+- Postgres データベース
+    - バージョン 14+
+    - 2 CPU, 4 GB RAM
+    - 256 GB ストレージ
+- Redis データベース
+    - バージョン 6+
+    - 1 GB RAM
+- [Vector DB 仮想マシン - Qdrant シングルノード](/deployment/advanced-configuration/qdrant/single-node)
+    - 1 仮想マシン
+    - 4 CPU, 8 GB RAM
+    - 100 GB ストレージ
+
+## デプロイメント
+### 初期外部リソース
+- 永続ストレージ
+- Postgres データベース
+- Redis データベース
+- Vector DB 仮想マシン
+
+### Helm Chart 値の更新 `values-no-infra-for-testing.yaml`
+
+更新 <a href="/assets/helm-values/values-no-infra-for-testing.yaml" download="values-no-infra-for-testing.yaml">values-no-infra-for-testing.yaml</a> 文件。
+
+- 永続ストレージ構成で `persistence` を更新
+- Postgres データベース構成で `externalPostgres` を更新
+- Redis データベース構成で `externalRedis` を更新
+- Vector DB 仮想マシン構成で `vectorDB` を更新
+
+### Difyエンタプライス版のインストール
+以下のガイドを使用して Difyエンタプライス版をインストールできます。ただし、`values.yaml` の代わりに `values-no-infra-for-testing.yaml` を使用する必要があります。
+- [Difyエンタプライス版のインストール方法](/deployment/prerequisites/kubernetes)
+
+### サービスステータスの確認
+インストール後、以下のガイドを参照してサービスステータスを確認できます。
+- [Difyエンタプライス版サービスステータスの確認方法](/deployment/verify-services-status)

@@ -1,0 +1,33 @@
+---
+title: メールプロバイダー
+---
+
+## Helm Chartの値からメールプロバイダーの設定を見つける
+
+### Helm Chartの値を表示する
+````bash
+helm show values dify/dify
+````
+
+メールプロバイダーの設定をHelm Chartの値から見つける
+
+````yaml
+mail:
+  type: ''
+  defaultSender: '送信元メールアドレス（例：no-reply <no-reply@dify.ai>）'
+  resend:
+    apiKey: ''
+    apiUrl: https://api.resend.com
+  smtp:
+    server: ''
+    port: 587
+    username: ''
+    password: ''
+    useTLS: false
+  ... ...
+````
+
+
+## `mail.type` フィールドのオプション
+- `resend`: Resendサービスを使用してメールを送信
+- `smtp`: SMTPサービスを使用してメールを送信

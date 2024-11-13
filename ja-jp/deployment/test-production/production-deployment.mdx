@@ -1,0 +1,63 @@
+---
+title: 本番環境デプロイ
+version: '日本語'
+---
+
+## 要件
+> この要件は、1日あたり最大 `3000人のアクティブユーザー` をサポートできます。より多くのユーザーがいる場合は、必要に応じてリソースをスケールできます。
+
+- Kubernetes クラスター
+    - 3つのマスターノード: 各ノード 4 CPU、16 GB RAM
+    - 6つのワーカーノード: 各ノード 8 CPU、32 GB RAM
+- 永続ストレージ
+    - s3、azure-blob、aliyun-oss、google-storage
+    - 512 GB ストレージ
+- Postgres データベース
+    - バージョン 14+
+    - 4 CPU、8 GB RAM
+    - 512 GB `SSD` ストレージ
+- Redis データベース
+    - バージョン 6+
+    - 2 GB RAM
+- [Vector DB 仮想マシン - Qdrant クラスター](/deployment/advanced-configuration/qdrant/qdrant-cluster)
+    - 3つの仮想マシン
+    - 8 CPU、64 GB RAM
+    - 100 GB ストレージ
+
+## Dify サービスリソース
+
+| サービス                 | レプリカ  | CPU  | RAM - GB  | 合計 CPU | 合計 RAM - GB |
+| ------------------------ | --------- | ---- | --------- | --------- | -------------- |
+| dify-api                 | 3         | 4    | 10        | 12        | 30             |
+| dify-worker              | 3         | 3    | 10        | 9         | 30             |
+| unstructured             | 3         | 1    | 4         | 3         | 12             |
+| dify-web                 | 3         | 2    | 8         | 6         | 24             |
+| dify-sandbox             | 3         | 1    | 4         | 3         | 12             |
+| ssrf-proxy               | 3         | 1    | 4         | 3         | 12             |
+| dify-enterprise          | 3         | 1    | 4         | 3         | 12             |
+| dify-enterprise-frontend | 3         | 1    | 4         | 3         | 12             |
+|                          |           |      | **合計**  | 42        | 144            |
+
+## デプロイ
+### 初期外部リソース
+- 永続ストレージ
+- Postgres データベース
+- Redis データベース
+- Vector DB 仮想マシン
+
+### Helm Chart 値の更新 `values-no-infra-for-prod.yaml`
+
+更新 <a href="/assets/helm-values/values-no-infra-for-prod.yaml" download="values-no-infra-for-prod.yaml">values-no-infra-for-prod.yaml</a> 文件。
+
+- `persistence` を永続ストレージの設定で更新
+- `externalPostgres` をPostgresデータベースの設定で更新
+- `externalRedis` をRedisデータベースの設定で更新
+- `vectorDB` をVector DB仮想マシンの設定で更新
+
+### Difyエンタプライス版のインストール
+以下のガイドを使用して Difyエンタプライス版をインストールできます。ただし、`values.yaml` の代わりに `values-no-infra-for-prod.yaml` を使用する必要があります。
+- [Difyエンタプライス版のインストール方法](/deployment/prerequisites/kubernetes)
+
+### サービスステータスの確認
+インストール後、以下のガイドを参照してサービスステータスを確認できます。
+- [Difyエンタプライス版サービスステータスの確認方法](/deployment/verify-services-status)

@@ -1,0 +1,11 @@
+---
+title: Postgresql 数据库
+version: '简体中文'
+---
+
+## `max_connections` 配置
+
+- 如果您遇到错误消息 `FATAL: remaining connection slots are reserved for non-replication superuser connections`（致命错误：剩余的连接槽位已保留给非复制超级用户连接），您需要增加 Postgresql 数据库的 `max_connections` 配置。
+- 建议：
+  - 默认值为 100。
+  - 建议将 `max_connections` 值设置为 `2000`。

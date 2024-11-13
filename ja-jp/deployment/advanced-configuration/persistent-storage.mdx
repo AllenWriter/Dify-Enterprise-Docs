@@ -1,0 +1,45 @@
+---
+title: 永続ストレージ
+---
+
+## Helm Chartの値で永続ストレージの設定を見つける
+
+#### Helm Chartの値を表示
+```bash
+helm show values dify/dify
+```
+
+## Helm Chartの値で永続ストレージの設定を見つける
+これはHelm Chartの値における永続ストレージ設定の例です。
+```yaml
+persistence
+  type: "s3"
+  s3:
+    endpoint: "https://xxx.r2.cloudflarestorage.com"
+    accessKey: "#REPLACE_ME#"
+    secretKey: "#REPLACE_ME#"
+    region: "us-east-1"
+    bucketName: "your-bucket-name"
+    addressType: ""
+    useAwsManagedIam: false
+  ... ...
+```
+
+## `persistence.type` フィールドのオプション
+- s3
+- azure-blob
+- aliyun-oss
+- google-storage
+- tencent-cos
+
+## IAMロールを使用してAmazon S3ストレージを構成する方法
+AWS IAMロールを使用してS3バケットにアクセスする場合は、Helm Chartの値で`useAwsManagedIam`フィールドを`true`に設定できます。`region`および`bucketName`フィールドは必須です。
+```yaml
+persistence:
+  type: "s3"
+  s3:
+    endpoint: "https://s3.xxxxx.amazonaws.com"
+    region: "us-east-1"
+    bucketName: "your-bucket-name"
+    useAwsManagedIam: true
+```

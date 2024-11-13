@@ -1,0 +1,57 @@
+---
+title: SSO Authentication Introduction
+version: 'English'
+---
+
+Dify Enterprise supports enforced Single Sign-On (SSO) for organization members. Once enabled, team members must log in to the Dify Enterprise platform through an identity provider (such as Microsoft Entra ID, Okta, Auth0, and OneLogin).
+
+System administrators only need to select the corresponding protocol and configure parameters on the Authentication page to enable a more secure authentication system for Dify Enterprise, supporting OpenID Connect (OIDC), SAML, and OAuth2 protocols.
+
+![](/en-us/img/1c7db1aa112a2eb395559e0d18ad26ee.png)
+
+## SSO Application Scope
+
+Dify Enterprise's SSO authentication system provides two different scope options for Single Sign-On (SSO) configuration:
+
+### Workspace SSO
+
+* Controls how users access the Dify Enterprise platform itself.
+* When enabled, all users must authenticate through your specified Identity Provider (IDP) before entering any workspace.
+
+### Web App SSO
+
+* Controls user access permissions to Web applications created within the Dify Enterprise platform.
+* When enabled, users must authenticate through the Identity Provider (IDP) before accessing any Web applications created by the Dify Enterprise platform. Access is granted only after authentication. This is a global setting and currently cannot control access permissions for specific WebApps individually. For enabling access control for individual WebApps, please refer to the [FAQ](/en-us/administrator-guide/faq).
+
+**Important Notes**
+
+For security reasons, some Identity Providers (IDPs) disable SSO authentication in iframe pages. This may affect cases where WebApps are embedded in other web pages. You need to check your Identity Provider's CSP: frame-ancestors configuration to ensure this feature works properly. For detailed information, please refer to the [document](/en-us/administrator-guide/faq).
+
+Here are the different security policies provided by various IDP providers:
+
+* Azure EntraID explicitly disallows SSO login pages from being embedded in iframe pages due to security concerns.
+* Okta allows SSO login pages to be embedded with configuration. For detailed information, please refer to the [Okta Official Documentation](https://developer.okta.com/docs/guides/build-sso-integration/saml2/main/).
+
+## Configuring SSO Authentication
+
+Administrators can easily integrate Dify Enterprise with various identity providers such as Okta, OneLogin, or Azure Active Directory (Azure AD). Dify Enterprise works with any OIDC-compliant or SAML identity provider.
+
+You can refer to the following SSO provider configuration guides:
+
+- [Configure OIDC with Okta](/en-us/administrator-guide/sso/okta/oidc)
+- [Configure SAML with Okta](/en-us/administrator-guide/sso/okta/saml)
+- [Configure SAML with Azure](/en-us/administrator-guide/sso/azure/saml)
+
+## Setting Session Timeout Limits
+
+This option is used to set the session duration for organization members. After this time, the system will prompt members to re-authenticate with the identity provider to regain access to Dify Enterprise resources.
+
+The default value is 7 days.
+
+## Enabling SSO Authentication
+
+Click the blue button in the SSO Enforcement column to enable SSO authentication. Administrators can choose to enable login authentication for either Workspace or Web App.
+
+## Frequently Asked Questions
+
+For detailed information, please refer to [FAQ](/en-us/administrator-guide/faq).

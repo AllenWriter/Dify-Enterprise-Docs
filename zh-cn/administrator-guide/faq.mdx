@@ -1,0 +1,26 @@
+---
+title: 常见问题
+---
+
+## 1. 如何为单独 WebApp 开启权限控制？
+
+### 获取应用前端代码
+
+你可以参考以下代码仓库，定制 WebApp 的前端鉴权页面。
+
+- [文本生成类型应应用代码](https://github.com/langgenius/webapp-text-generator)
+- [Chat 类型应用代码](https://github.com/langgenius/webapp-conversation)
+
+### 获取应用后端 API
+
+你可以通过使用 WebApp API，自定义开发权限控制系统。访问任意 Dify 应用，轻点 “访问 API” 获取完整的 API 文档。
+
+![](/zh-cn/img/83116e9cc6c367e59ce712d001860d23.png)
+
+## 2. 如何调整成员在工作空间中的权限？
+
+场景：将 A 成员添加至某个工作空间，并指定权限角色为普通成员（Normal），如何将 A 成员的权限切换为管理员（Admin）？
+
+目前尚不支持在[系统设置](/administrator-guide/system-settings)内切换成员权限。如需调整权限，需移除 A 成员，再重新添加 A 成员并指定权限角色为管理员。
+
+如果需要继续为该工作空间添加成员，建议由工作空间的管理员直接邀请成员加入空间，详细说明请参考[团队成员管理](/zh-cn/user-guide/management/team-members-management)。

@@ -10,7 +10,7 @@ The variable assigner node is used to assign values to writable variables. Curre
 
 Usage: Through the variable assigner node, you can assign workflow variables to conversation variables for temporary storage, which can be continuously referenced in subsequent conversations.
 
-![](../../../../images/assets/variable-assigner.png)
+![](/images/assets/variable-assigner.png)
 
 ***
 
@@ -28,7 +28,7 @@ You can write the **context during the conversation, the file uploaded to the ch
 
 Example: After the conversation starts, LLM will automatically determine whether the user's input contains facts, preferences, or chat history that need to be remembered. If it has, LLM will first extract and store those information, then use it as context to respond. If there is no new information to remember, LLM will directly use the previously relevant memories to answer questions.
 
-![](../../../../images/assets/conversation-variables-scenario-1.png)
+![](/images/assets/conversation-variables-scenario-1.png)
 
 **Configuration process:**
 
@@ -114,7 +114,7 @@ def main(arg1: list) -> str:
 
 Example: Before the chatting, the user specifies "English" in the `language` input box. This language will be written to the conversation variable, and the LLM will reference this information when responding, continuing to use "English" in subsequent conversations.
 
-![](../../../../images/assets/conversation-var-scenario-1.png)
+![](/images/assets/conversation-var-scenario-1.png)
 
 **Configuration Guide:**
 
@@ -130,7 +130,7 @@ Example: Before the chatting, the user specifies "English" in the `language` inp
 
 Example: After starting the conversation, the LLM will ask the user to input items related to the Checklist in the chatting box. Once the user mentions content from the Checklist, it will be updated and stored in the Conversation Variable. The LLM will remind the user to continue supplementing missing items after each round of dialogue.
 
-![](../../../../images/assets/conversation-var-scenario-2-1.png)
+![](/images/assets/conversation-var-scenario-2-1.png)
 
 **Configuration Process:**
 
@@ -144,7 +144,7 @@ Example: After starting the conversation, the LLM will ask the user to input ite
 
 Click the + sign on the right side of the node, select the "variable assigner" node, and fill in "Assigned Variable" and "Set Variable".
 
-![](../../../../images/assets/language-variable-assigner.png)
+![](/images/assets/language-variable-assigner.png)
 
 **Setting Variables:**
 

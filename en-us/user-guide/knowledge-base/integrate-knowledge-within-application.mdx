@@ -26,11 +26,11 @@ In applications that utilize multiple knowledge bases, it is essential to config
 
 The retriever scans all knowledge bases linked to the application for text content relevant to the user's question. The results are then consolidated. Below is the technical flowchart for the Multi-path Retrieval mode:
 
-![](../../images/assets/rerank-flow-chart.png)
+![](/images/assets/rerank-flow-chart.png)
 
 This method simultaneously queries all knowledge bases connected in **"Context"**, seeking relevant text chucks across multiple knowledge bases, collecting all content that aligns with the user's question, and ultimately applying the Rerank strategy to identify the most appropriate content to respond to the user. This retrieval approach offers more comprehensive and accurate results by leveraging multiple knowledge bases simultaneously.
 
-![](../../images/assets/en-rag-multiple.png)
+![](/images/assets/en-rag-multiple.png)
 
 For instance, in application A, with three knowledge bases K1, K2, and K3. When a user send a question, multiple relevant pieces of content will be retrieved and combined from these knowledge bases. To ensure the most pertinent content is identified, the Rerank strategy is employed to find the content that best relates to the user's query, enhancing the precision and reliability of the results.
 
@@ -62,7 +62,7 @@ While this method incurs some additional costs, it is more adept at handling com
 
 Dify currently supports multiple Rerank models. To use external Rerank models, you'll need to provide an API Key. Enter the API Key for the Rerank model (such as Cohere, Jina AI, etc.) on the "Model Provider" page.
 
-![Configuring the Rerank model in the Model Provider](../../images/assets/en-rerank-model-api.png)
+![Configuring the Rerank model in the Model Provider](/images/assets/en-rerank-model-api.png)
 
 **Adjustable Parameters**
 
@@ -94,7 +94,7 @@ If the content in the knowledge base is complex and cannot be matched by simple 
 Here's how the knowledge base retrieval method affects Multi-path Retrieval:
 
 <Frame>
-  <img src="../../images/assets/image (101).png" alt="Knowledge Base Integration" />
+  <img src="/images/assets/image (101).png" alt="Knowledge Base Integration" />
 </Frame>
 
 3. **What should I do if I cannot adjust the “Weight Score” when referencing multiple knowledge bases and an error message appears?**

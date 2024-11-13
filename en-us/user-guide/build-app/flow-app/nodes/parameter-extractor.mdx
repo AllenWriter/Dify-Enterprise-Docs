@@ -19,11 +19,11 @@ Some nodes within the workflow require specific data formats as inputs, such as 
 
 In this example: The Arxiv paper retrieval tool requires **paper author** or **paper ID** as input parameters. The parameter extractor extracts the paper ID **2405.10739** from the query "What is the content of this paper: 2405.10739" and uses it as the tool parameter for precise querying.
 
-![Arxiv Paper Retrieval Tool](../../../../images/assets/precise-query.png)
+![Arxiv Paper Retrieval Tool](/images/assets/precise-query.png)
 
 2. **Converting text to structured data**, such as in the long story iteration generation application, where it serves as a pre-step for the [iteration node](/en-us/user-guide/build-app/flow-app/nodes/iteration), converting chapter content in text format to an array format, facilitating multi-round generation processing by the iteration node.
 
-![](../../../../images/assets/convert-chapter-content.png)
+![](/images/assets/convert-chapter-content.png)
 
 3. **Extracting structured data and using the** [**HTTP Request**](/en-us/user-guide/build-app/flow-app/nodes/http-request), which can request any accessible URL, suitable for obtaining external retrieval results, webhooks, generating images, and other scenarios.
 

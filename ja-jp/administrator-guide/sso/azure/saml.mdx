@@ -1,0 +1,81 @@
+---
+title: Azure Entra IDでのSAMLの設定
+version: '日本語'
+---
+
+このガイドでは、Azure Entra IDをSSOアイデンティティプロバイダーとして使用し、SAMLプロトコルを介してDify Enterpriseに接続します。
+
+## 1. Azureで新しいアプリケーションを作成する
+
+Azure管理バックエンドページにアクセスし、アプリケーションページに移動して「新しいアプリケーション」をクリックします。
+
+![](https://assets-docs.dify.ai/2024/11/4f52715ff661e6c9430af09b4b2a4736.png)
+
+**自分のアプリケーションを作成**を選択し、アプリケーション名（例：dify）を入力し、**ギャラリーに見つからない他のアプリケーションを統合する（非ギャラリー）**を選択して、**作成**をクリックします。
+
+![](https://assets-docs.dify.ai/2024/11/b823ecfaa94d18ba0ac794cc0290dc7f.png)
+
+次に、このアプリケーションに表示されるメンバーを割り当てる必要があります。承認されたAzureメンバーのみがDify Enterpriseにログインできます。アプリケーションの左側で**ユーザーとグループ**を選択し、**ユーザー/グループの追加**をクリックします。
+
+![](https://assets-docs.dify.ai/2024/11/ed3c6f5de21c75e2261bf05d055ffb9e.png)
+
+## 2. アプリケーションを設定する
+
+アプリケーションの左側の**管理**の下にある**シングルサインオン**オプションをクリックし、次に**SAML**を選択します。
+
+![](https://assets-docs.dify.ai/2024/11/7a5f653e751bf20c01c7eb53cc79ddde.png)
+
+SAML設定を編集し、Dify EnterpriseのACS URLをエンティティIDと応答URLの両方のフィールドに入力します。
+
+<div style={{ display: 'flex', gap: '20px' }}>
+  <Frame>
+    <img src="https://assets-docs.dify.ai/2024/11/639bb89e402f8f20078d6c7a14ca0297.png" alt="画像1" />
+  </Frame>
+  <Frame>
+    <img src="https://assets-docs.dify.ai/2024/11/236a4995e4fe338d12b41993fc237611.png" alt="画像2" />
+  </Frame>
+</div>
+
+システム管理者はDify Enterpriseの認証ページに移動し、**+ 新しいアイデンティティプロバイダー → 新しいSAMLプロバイダー**をクリックして、ACS URLを取得する必要があります。
+
+![](https://assets-docs.dify.ai/2024/11/f66303a3902d7fff58c76228f6485386.png)
+
+通常、次の形式になります：
+
+```url
+https://[your-dify-enterprise-url]/console/api/enterprise/sso/oidc/callback
+```
+
+ACS URLを取得したら、Azureアプリケーションページに戻り、SAML証明書タブから証明書をダウンロードし、セットアップページからログインURLをコピーします。これらの2つのパラメータはDify Enterprise管理バックエンドに入力する必要があります。
+
+![](https://assets-docs.dify.ai/2024/11/ab7e3bd7067858ec4627d1d863244e81.png)
+
+**高度な設定：属性とクレームの編集**
+
+1. 必須クレームの下にある一意のユーザー識別子（Name ID）をクリックします。
+
+![](https://assets-docs.dify.ai/2024/11/97a46bf1b5264ef72ad4b202fdf2a772.png)
+
+2. ソース属性を`user.mail`に変更します。
+
+![](https://assets-docs.dify.ai/2024/11/183dd293f17f87081ac4c2390b583fb0.png)
+
+## 3. Difyでの設定を完了する
+
+システム管理者はDify Enterpriseの認証ページをクリックし、**+ 新しいアイデンティティプロバイダー → 新しいSAMLプロバイダー**をクリックします。
+- AzureアプリケーションのログインURLをIdP SSO URLフィールドに入力します。
+- ダウンロードした証明書ファイルの内容をX509署名証明書フィールドに入力し、次の形式を使用します：
+
+   ```certificate
+   -----BEGIN CERTIFICATE-----
+   {certificate}
+   -----END CERTIFICATE-----
+   ```
+
+![](https://assets-docs.dify.ai/2024/11/556e3d68efbc742711e4313534a2e95c.png)
+
+## 4. SSO強制を有効にする
+
+SAMLプロバイダーの設定が完了したら、**「ワークスペースSSO」**の右側にあるトグルボタンをタップして、チームのSSO認証を有効にします。
+
+有効にすると、組織のメンバーはDify Enterpriseのリソースにアクセスする前にSSO認証を完了する必要があります。

@@ -14,14 +14,11 @@ version: '简体中文'
 ## 安装
 ### 设置 Docker 镜像拉取密钥
 在安装 Dify Enterprise 之前，您需要设置 Docker 镜像拉取密钥。
-- [如何设置 Docker 镜像拉取密钥](/deployment/advanced-configuration/docker/docker-image-pull-secret)
+- [如何设置 Docker 镜像拉取密钥](/zh-cn/deployment/advanced-configuration/docker/docker-image-pull-secret)
 
 ### 持久化配置
 
-您需要编辑 `values.yaml` 并设置持久化类型。
-
-有关更多信息，请参阅[持久化存储](/deployment/advanced-configuration/persistent-storage)。
-
+您需要编辑 `values.yaml` 并设置持久化类型。有关更多信息，请参阅[持久化存储](/zh-cn/deployment/advanced-configuration/persistent-storage)。
 
 > <a href="/assets/values.yaml" download="values.yaml">点击此处</a>下载 `values.yaml` 文件。
 
@@ -35,12 +32,12 @@ helm repo update
 helm upgrade -i dify -f values.yaml dify/dify
 ```
 
-更多信息，请参考 [Dify Helm Chart](/deployment/advanced-configuration/dify-helm-chart)。
+更多信息，请参考 [Dify Helm Chart](/zh-cn/deployment/advanced-configuration/dify-helm-chart)。
 
 ### 设置 Ingress 控制器
 Helm chart 中没有默认的 Ingress 控制器。您需要自行设置 Ingress 控制器。
 我们使用 `Nginx Ingress Controller` 进行快速入门。
-- [如何设置 Nginx Ingress Controller](/deployment/advanced-configuration/ingress-nginx-controller)
+- [如何设置 Nginx Ingress Controller](/zh-cn/deployment/advanced-configuration/ingress-nginx-controller)
 
 ### 访问 Dify Enterprise
 设置 Ingress 控制器后，首先获取 Ingress 控制器的外部 IP。

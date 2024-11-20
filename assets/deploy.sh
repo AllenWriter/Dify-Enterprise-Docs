@@ -10,6 +10,10 @@ docker build -t dify-enterprise-docs-demo .
 echo "第二步：删除旧容器"
 docker rm -f dify-docs-demo || true
 
+# 删除未使用的镜像
+echo "删除未使用的镜像"
+docker image prune -a -f
+
 # 运行新容器
 echo "第三步：运行新容器"
 docker run -d --restart unless-stopped --name dify-docs-demo -p 3005:3005 -e PORT=3005 dify-enterprise-docs-demo

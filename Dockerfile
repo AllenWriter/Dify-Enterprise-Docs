@@ -17,7 +17,7 @@ RUN npm install -g mintlify
 COPY . .
 
 # 设置默认端口为 3000，但允许在运行时覆盖
-ENV PORT=3000
+ENV PORT=3005
 
 # 启动 Mintlify，使用环境变量中的端口
 CMD mintlify dev --port $PORT

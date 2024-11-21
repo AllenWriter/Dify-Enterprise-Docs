@@ -16,17 +16,12 @@ You can execute the following commands to start minikube:
 minikube start --driver=docker --cpus=4 --memory=16384
 ```
 
-### Set docker image pull secret
-You need to set the docker image pull secret before installing Dify Enterprise.
-
-- [How to set docker image pull secret](/en-us/deployment/advanced-configuration/docker/docker-image-pull-secret)
-
-> <a href="/assets/values.yaml" download="values.yaml">Click here</a> to download the `values.yaml` file.
-
 ### Persistence Configration
 You need to edit `values.yaml` and set the persistence type. 
 
 For more information, please refer to the [Persistent Storage](/en-us/deployment/advanced-configuration/persistent-storage).
+
+> <a href="/assets/values.yaml" download="values.yaml">Click here</a> to download the `values.yaml` file.
 
 ### Install Dify Enterprise
 Dify Enterprise is deployed using Helm. 
@@ -62,11 +57,18 @@ After Ingress controller is enabled, you can set the domain in your local `/etc/
 ```
 
 ### Verify Installation
-**Warning**: You have to set up Dify Console `http://console.dify.local` first before login to Dify Enterprise Dashboard `http://enterprise.dify.local`.
+**Warning**: You have to init Dify Console `http://console.dify.local` first before login to Dify Enterprise Dashboard `http://enterprise.dify.local`.
 
-- Dify Console: visit `http://console.dify.local` and finish the installation.
-- Enterprise Dashboard: visit `http://enterprise.dify.local`, and login with the default email and password. You can change the password after login.
-  ```
-  email: dashboard@dify.ai
-  password: difyai123456
-  ```
+#### 1. Init Dify Console
+- Visit `http://console.dify.local`.
+- Init Email and Password.
+- After initialization, you will be redirected to the login page and wait for license activation.
+![](/images/license-inactive.png)
+
+#### 2. Init Dify Enterprise Dashboard to Activate License
+- Visit `http://enterprise.dify.local`.
+- Login with the default email and password. You can change the password after login.
+    - email: `dashboard@dify.ai`
+    - password: `difyai123456`
+- License Activation: After login, a dialog will pop up to activate the license.
+  > For more information, please refer to the [License Activation](/en-us/deployment/advanced-configuration/license-activation).

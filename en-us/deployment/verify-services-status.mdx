@@ -3,18 +3,25 @@ title: Verify Dify Services Status
 version: 'English'
 ---
 
-**Warning**: You have to set up Dify Console `http://console.dify.local` first before login to Dify Enterprise Dashboard `http://enterprise.dify.local`.
+**Warning**: You have to init Dify Console `http://console.dify.local` first before login to Dify Enterprise Dashboard `http://enterprise.dify.local`.
 
-## Dify Console
+## 1. Init Dify Console
 - Visit `http://console.dify.local`.
-- Init email and password, enter the workspace.
-- Create a `Knowledge` and upload a file.
-- Create a `Basic Chatbot`, and select the `Context` that you created at the `Knowledge`.
-- Ask the chatbot question and verify the response.
+- Init Email and Password.
+- After initialization, you will be redirected to the login page and wait for license activation.
+![](/images/license-inactive.png)
 
-## Dify Enterprise Dashboard
+## 2. Init Dify Enterprise Dashboard to Activate License
 - Visit `http://enterprise.dify.local`.
 - Login with the default email and password. You can change the password after login.
     - email: `dashboard@dify.ai`
     - password: `difyai123456`
-- Create a new workspace.
+- License Activation: After login, a dialog will pop up to activate the license.
+    > For more information, please refer to the [License Activation](/en-us/deployment/advanced-configuration/license-activation).
+- After license activation, visit `http://enterprise.dify.local/dashboard/workspaces` and create a workspace.
+
+## 3. Verify Dify Console
+- Visit `http://console.dify.local`.
+- Create a `Knowledge` and upload a file.
+- Create a `Basic Chatbot`, and select the `Context` that you created at the `Knowledge`.
+- Ask the chatbot question and verify the response.

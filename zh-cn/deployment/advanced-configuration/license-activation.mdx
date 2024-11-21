@@ -1,30 +1,48 @@
 ---
-title: License Activation
-Version: 'English'
+title: 激活许可证
+Version: '简体中文'
 ---
 
-After you have installed Dify Enterprise, you need to activate the license to use the services.
+安装 Dify Enterprise 后，您需要激活许可证才能使用相关服务。
 
-## Active Type
-- Online (Default)
-- Offline
+## 激活方式
 
-## Online Activation
-- Please contact Dify business team to get the `License ID`.
-![](/images/license-online.png)
+- 在线激活(默认)
+- 离线激活
 
+## 在线激活
 
-## Offline Activation
-- Copy the `Cluster ID` to the Dify business team to get the `Offline Code`.
-- Before you activate the license, you need to set the `licenseMode` to `offline` in the `values.yaml` file.
-    1. Display Helm Chart Values
-        ```
-        helm show values dify/dify
-        ```
+点击 Dify 企业版后台左侧目录的 License 栏，轻点右上角的激活按钮，激活类型选择 `Online`，输入 `License ID` 完成激活。
 
-    2. Set License Mode to `offline`
-        ```yaml
-        enterprise:
-            licenseMode: "offline"
-        ```
-![](/images/license-offline.png)
+<Tip>
+请联系 Dify 商务团队以获取 `License ID`。
+</Tip>
+
+![](https://assets-docs.dify.ai/2024/11/c0920f262a70f4fd07abffbc75a9799e.png)
+
+## 离线激活
+
+- 点击 Dify 企业版后台左侧目录的 License 栏，轻点右上角的激活按钮，激活类型选择 `Offline`。
+
+    复制 `Cluster ID` 并发送至您的 Dify 商务团队以获取 `Offline Code`。
+
+![](https://assets-docs.dify.ai/2024/11/3b5198ceff1db9bab8e614b7ef39e699.png)
+
+- 在激活许可证之前，需要将 `values.yaml` 文件中的 `licenseMode` 值改为 `offline`。
+
+   1. 显示 Helm Chart 配置
+
+       ```
+       helm show values dify/dify
+       ```
+
+   2. 将许可证模式设置为 `offline`
+
+       ```yaml
+       enterprise:
+           licenseMode: "offline"
+       ```
+
+修改完成后，回到 License 激活窗口，输入 `Offline Code` 完成激活。
+
+![](https://assets-docs.dify.ai/2024/11/beac33066670e291dbafa1c71c2bf58c.png)

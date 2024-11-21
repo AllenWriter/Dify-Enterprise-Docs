@@ -20,20 +20,9 @@ Difyエンタプライス版をインストールする前に、Dockerイメー�
 
 `values.yaml`を編集して永続化タイプを設定する必要があります。
 
-サポートされているストレージタイプ: s3, azure-blob, aliyun-oss, google-storage.
+さらに詳しい情報については、[永続化ストレージ](/deployment/advanced-configuration/persistent-storage) を参照してください。
 
 > <a href="/assets/values.yaml" download="values.yaml">ここをクリック</a>して `values.yaml` ファイルをダウンロードしてください。
-
-```
-persistence:
-  type: "s3"
-  s3:
-    endpoint: "https://xxx.r2.cloudflarestorage.com"
-    accessKey: "#REPLACE_ME#"
-    secretKey: "#REPLACE_ME#"
-    region: "us-east-1"
-    bucketName: "your-bucket-name"
-```
 
 ### Difyエンタプライス版のインストール
 Difyエンタプライス版はHelmを使用してデプロイされます。

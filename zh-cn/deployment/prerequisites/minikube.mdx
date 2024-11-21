@@ -18,24 +18,13 @@ minikube start --driver=docker --cpus=4 --memory=16384
 
 ### 设置 Docker 镜像拉取密钥
 在安装 Dify Enterprise 之前，您需要设置 Docker 镜像拉取密钥。
-- [如何设置 Docker 镜像拉取密钥](/deployment/advanced-configuration/docker/docker-image-pull-secret)
+- [如何设置 Docker 镜像拉取密钥](/zh-cn/deployment/advanced-configuration/docker/docker-image-pull-secret)
 
 ### 持久化配置
 
-您需要编辑 `values.yaml` 并设置持久化类型。这是为了在拉取镜像后进行配置做准备。
-支持的存储类型：s3、azure-blob、aliyun-oss、google-storage。
+您需要编辑 `values.yaml` 并设置持久化类型。有关更多信息，请参阅[持久化存储](/zh-cn/deployment/advanced-configuration/persistent-storage)。
 
 > <a href="/assets/values.yaml" download="values.yaml">点击此处</a>下载 `values.yaml` 文件。
-```
-persistence:
-  type: "s3"
-  s3:
-    endpoint: "https://xxx.r2.cloudflarestorage.com"
-    accessKey: "#REPLACE_ME#"
-    secretKey: "#REPLACE_ME#"
-    region: "us-east-1"
-    bucketName: "your-bucket-name"
-```
 
 ### 安装 Dify Enterprise
 Dify Enterprise 使用 Helm 进行部署。
@@ -47,7 +36,7 @@ helm repo update
 helm upgrade -i dify -f values.yaml dify/dify
 ```
 
-更多信息，请参考 [Dify Helm Chart](/deployment/advanced-configuration/dify-helm-chart)。
+更多信息，请参考 [Dify Helm Chart](/zh-cn/deployment/advanced-configuration/dify-helm-chart)。
 
 ### 设置 Ingress 控制器
 您可以执行以下命令在 minikube 集群上启用 Ingress 控制器：

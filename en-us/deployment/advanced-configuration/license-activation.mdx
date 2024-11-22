@@ -1,0 +1,45 @@
+---
+title: License Activation
+Version: 'English'
+---
+
+After installing Dify Enterprise, you need to activate the license to use the services.
+
+## Active Type
+
+- Online (Default)
+- Offline
+
+## Online Activation
+
+Click on the License tab in the left menu of the Dify Enterprise dashboard, then click the activation button in the upper right corner. Select `Online` as the activation type, enter the `License ID`, and complete the activation process.
+
+<Tip>
+Please contact the Dify business team to get the `License ID`.
+</Tip>
+
+![](https://assets-docs.dify.ai/2024/11/c0920f262a70f4fd07abffbc75a9799e.png)
+
+## Offline Activation
+
+- Click on the License tab in the left menu of the Dify Enterprise dashboard, then click the activation button in the upper right corner. Select `Offline` as the activation type.
+
+    Copy the `Cluster ID` and send it to your Dify business team to obtain the `Offline Code`.
+
+![](https://assets-docs.dify.ai/2024/11/3b5198ceff1db9bab8e614b7ef39e699.png)
+
+- Before activating the license, you need to change the `licenseMode` value in the `values.yaml` file to `offline`.
+
+    1. Display Helm Chart Values
+        ```
+        helm show values dify/dify
+        ```
+
+    2. Set License Mode to `offline`
+        ```yaml
+        enterprise:
+            licenseMode: "offline"
+        ```
+After making the changes, return to the License activation tab, enter the `Offline Code`, and complete the activation process.
+
+![](https://assets-docs.dify.ai/2024/11/beac33066670e291dbafa1c71c2bf58c.png)

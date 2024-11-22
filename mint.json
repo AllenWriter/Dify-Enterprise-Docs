@@ -72,6 +72,7 @@
       {
         "group": "Advanced Configuration",
         "pages": [
+          "en-us/deployment/advanced-configuration/license-activation",
           "en-us/deployment/advanced-configuration/persistent-storage",
           "en-us/deployment/advanced-configuration/postgresql-database",
           {
@@ -93,7 +94,6 @@
         {
           "group": "Docker",
           "pages": [
-            "en-us/deployment/advanced-configuration/docker/docker-image-pull-secret",
             "en-us/deployment/advanced-configuration/docker/docker-registry"
         ]
       }
@@ -138,6 +138,7 @@
       {
         "group": "高级配置",
         "pages": [
+          "zh-cn/deployment/advanced-configuration/license-activation",
           "zh-cn/deployment/advanced-configuration/persistent-storage",
           "zh-cn/deployment/advanced-configuration/postgresql-database",
           {
@@ -159,7 +160,6 @@
         {
           "group": "Docker",
           "pages": [
-            "zh-cn/deployment/advanced-configuration/docker/docker-image-pull-secret",
             "zh-cn/deployment/advanced-configuration/docker/docker-registry"
         ]
       }
@@ -204,6 +204,7 @@
       {
         "group": "高度な設定",
         "pages": [
+          "ja-jp/deployment/advanced-configuration/license-activation",
           "ja-jp/deployment/advanced-configuration/persistent-storage",
           "ja-jp/deployment/advanced-configuration/postgresql-database",
           {
@@ -225,7 +226,6 @@
           {
             "group": "Docker",
             "pages": [
-              "ja-jp/deployment/advanced-configuration/docker/docker-image-pull-secret",
               "ja-jp/deployment/advanced-configuration/docker/docker-registry"
           ]
         }

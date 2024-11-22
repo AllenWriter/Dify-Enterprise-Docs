@@ -1,30 +1,46 @@
 ---
-title: License Activation
-Version: 'English'
+title: ライセンス アクティベーション
+Version: '日本語'
 ---
 
-After you have installed Dify Enterprise, you need to activate the license to use the services.
+Difyエンタプライス版をインストールした後、サービスを利用するためにはライセンスのアクティベーションが必要です。
 
-## Active Type
-- Online (Default)
-- Offline
+## アクティベーション方法
 
-## Online Activation
-- Please contact Dify business team to get the `License ID`.
-![](/images/license-online.png)
+- オンライン（デフォルト）
+- オフライン
 
+## オンラインアクティベーション
 
-## Offline Activation
-- Copy the `Cluster ID` to the Dify business team to get the `Offline Code`.
-- Before you activate the license, you need to set the `licenseMode` to `offline` in the `values.yaml` file.
-    1. Display Helm Chart Values
+Difyエンタプライス版のダッシュボードにアクセスし、左側のメニューから「ライセンス」タブを選択します。次に、右上隅にある「アクティブ」ボタンをクリックします。アクティベーションの方法として「オンライン」を選び、「ライセンスID」を入力してアクティベーションを完了させてください。
+
+<Tip>
+`ライセンスID`を取得するには、Difyのビジネスチームにお問い合わせください。
+</Tip>
+
+![](https://assets-docs.dify.ai/2024/11/c0920f262a70f4fd07abffbc75a9799e.png)
+
+## オフラインアクティベーション
+
+- Difyエンタプライス版のダッシュボードで、左側のメニューから「ライセンス」タブを選択し、右上の「アクティブ」ボタンをクリックします。次に、アクティベーションの方法として「オフライン」を選びます。
+    
+    表示された「クラスタID」をコピーし、Difyのビジネスチームに送信して「オフラインコード」を取得します。
+
+![](https://assets-docs.dify.ai/2024/11/3b5198ceff1db9bab8e614b7ef39e699.png)
+
+- ライセンスをアクティベーションする前に、`values.yaml`ファイル内の`licenseMode`の値を`offline`に変更する必要があります。
+
+    1. Helm Chartの値を表示するコマンド：
         ```
         helm show values dify/dify
         ```
 
-    2. Set License Mode to `offline`
+    2. ライセンスモードを`offline`に設定します：
         ```yaml
-        enterprise:
+       エンタプライス版:
             licenseMode: "offline"
         ```
-![](/images/license-offline.png)
+
+設定を変更したら、「ライセンスアクティベーション」タブに戻り、「オフラインコード」を入力してアクティベーションを完了させてください。
+
+![](https://assets-docs.dify.ai/2024/11/beac33066670e291dbafa1c71c2bf58c.png)

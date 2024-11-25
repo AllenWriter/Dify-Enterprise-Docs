@@ -3,16 +3,25 @@ title: 验证 Dify 服务状态
 version: '简体中文'
 ---
 
-## Dify 控制台
-- 访问 `http://console.dify.local`。
-- 初始化电子邮件和密码，进入工作区。
-- 创建一个 `知识库` 并上传一个文件。
-- 创建一个 `基础聊天机器人`，并选择您在 `知识库` 中创建的 `上下文`。
-- 向聊天机器人提问并验证回复。
+**警告**：你需要先初始化 Dify 控制台 `http://console.dify.local`，然后才能登录 Dify 企业版仪表板 `http://enterprise.dify.local`。
 
-## Dify 企业仪表板
+## 1. 初始化 Dify 控制台
+- 访问 `http://console.dify.local`。
+- 初始化电子邮件和密码。
+- 初始化完成后，您将被重定向到登录页面，并等待许可证激活。
+![](/images/license-inactive.png)
+
+## 2. 初始化 Dify 企业版仪表板以激活许可证
 - 访问 `http://enterprise.dify.local`。
-- 使用默认的电子邮件和密码登录。登录后可以更改密码。
-    - 电子邮件：`dashboard@dify.ai`
-    - 密码：`difyai123456`
-- 创建一个新的工作区。
+- 使用默认的电子邮件和密码登录。您可以在登录后更改密码。
+    - 电子邮件： `dashboard@dify.ai`
+    - 密码： `difyai123456`
+- 许可证激活：登录后，将弹出对话框以激活许可证。
+    > 有关更多信息，请参阅 [许可证激活](/en-us/deployment/advanced-configuration/license-activation)。
+- 激活许可证后，访问 `http://enterprise.dify.local/dashboard/workspaces` 并创建一个工作区。
+
+## 3. 验证 Dify 控制台
+- 访问 `http://console.dify.local`。
+- 创建一个 `知识` 并上传一个文件。
+- 创建一个 `基本聊天机器人`，并选择您在 `知识` 中创建的 `上下文`。
+- 向聊天机器人提问并验证响应。

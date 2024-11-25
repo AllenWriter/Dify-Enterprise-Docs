@@ -12,9 +12,6 @@ version: '日本語'
 - Kubectl
 
 ## インストール
-### Dockerイメージプルシークレットの設定
-Difyエンタプライス版をインストールする前に、Dockerイメージプルシークレットを設定する必要があります。
-- [Dockerイメージプルシークレットの設定方法](/deployment/advanced-configuration/docker-image-pull-secret)
 
 ### 永続化設定
 
@@ -56,10 +53,19 @@ kubectl get svc -n ingress-nginx
 4.152.1.216 enterprise.dify.local
 ```
 
-### インストールの確認
-- Difyコンソール: `http://console.dify.local`にアクセスしてインストールを完了します。
-- エンタープライズダッシュボード: `http://enterprise.dify.local`にアクセスし、デフォルトのメールアドレスとパスワードでログインします。ログイン後にパスワードを変更できます。
-  ```
-  电子邮件：dashboard@dify.ai
-  密码：difyai123456
-  ```
+### インストールの検証
+**警告**：まず、Difyコンソールを`http://console.dify.local`で初期設定する必要があります。次、Difyエンタープライズ版ダッシュボード`http://enterprise.dify.local`にログインできます。
+
+#### 1. Difyコンソールの初期設定
+- `http://console.dify.local`にアクセスします。
+- メールアドレスとパスワードを入力します。
+- 初期設定が完了すると、ログインページにリダイレクトされ、ライセンスのアクティブ化を待ちます。
+![](/images/license-inactive.png)
+
+#### 2. ライセンスをアクティブ化するために、Difyエンタープライズ版ダッシュボードを設定します。
+- `http://enterprise.dify.local`にアクセスします。
+- デフォルトのメールアドレスとパスワードでログインします。ログイン後、パスワードを変更できます。
+    - メールアドレス：`dashboard@dify.ai`
+    - パスワード：`difyai123456`
+- ライセンスのアクティブ化：ログイン後、ライセンスをアクティブ化するためのダイアログボックスが表示されます。
+  > 詳細については、[ライセンスのアクティブ化](/ja-jp/deployment/advanced-configuration/license-activation)を参照してください。

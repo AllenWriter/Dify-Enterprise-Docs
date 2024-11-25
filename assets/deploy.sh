@@ -2,6 +2,10 @@
 
 echo "开始部署流程..."
 
+# 删除未使用的镜像
+echo "删除未使用的镜像"
+docker image prune -a -f
+
 # 构建 Docker 镜像
 echo "第一步：构建 Docker 镜像"
 docker build -t dify-enterprise-docs-demo .
@@ -9,10 +13,6 @@ docker build -t dify-enterprise-docs-demo .
 # 删除旧容器
 echo "第二步：删除旧容器"
 docker rm -f dify-docs-demo || true
-
-# 删除未使用的镜像
-echo "删除未使用的镜像"
-docker image prune -a -f
 
 # 运行新容器
 echo "第三步：运行新容器"

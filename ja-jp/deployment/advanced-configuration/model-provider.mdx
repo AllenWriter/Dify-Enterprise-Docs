@@ -1,0 +1,43 @@
+---
+title: Model Provider
+version: 'English'
+---
+
+## Find the Model Provider configuration in the Helm Chart Values
+### Display Helm Chart Values
+```bash
+helm show values dify/dify
+```
+
+This is an example of the model provider configuration in the Helm chart values.
+```yaml
+api:
+  positionProvider:
+    pins: ""
+    includes: ""
+    excludes: ""
+  ... ...
+```
+
+## Model Provider Configuration
+Model provider supports the following configuration options, the model provider name is the folder name in the `api/core/model_runtime/model_providers` directory.
+- `pins`
+  - If is not empty, it will pin the given model providers to the top of the list.
+- `includes`
+  - If is empty, it will display all the model providers.
+  - If is not empty, it will only display the given model providers.
+- `excludes`
+  - If is not empty, it will exclude the given model providers.
+
+The following example will display the `ollama` model provider at the top of the list, and only display the `sagemaker` and `ollama`.
+```yaml
+api:
+  positionProvider:
+    pins: "ollama"
+    includes: "openai,sagemaker,ollama"
+    excludes: "openai"
+```
+
+> For more information, please refer to the [model providers](https://github.com/langgenius/dify/tree/main/api/core/model_runtime/model_providers)
+
+

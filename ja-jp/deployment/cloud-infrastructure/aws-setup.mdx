@@ -10,7 +10,7 @@ title: AWS CDK デプロイガイド
 
 ### テストデプロイ
 
-| **コンポーネント**  | **Helm Chart 設定** | **数量** | **vCPU** | **メモリ (GB)** | **ストレージ (GB)** | **メモ** |
+| **コンポーネント**  | **Helmチャート 設定** | **数量** | **vCPU** | **メモリ (GB)** | **ストレージ (GB)** | **メモ** |
 | ------------------ | -------------------- | -------- | -------- | --------------- | ------------------- | -------- |
 | S3                 | persistence          | 1        |          |                 |                     |          |
 | Redis DB           | externalRedis        | 1        | 2        | 6.38            |                     |          |
@@ -20,7 +20,7 @@ title: AWS CDK デプロイガイド
 
 ### 本番デプロイ
 
-| **コンポーネント**  | **Helm Chart 設定** | **数量** | **vCPU** | **メモリ (GB)** | **ストレージ (GB)** | **メモ** |
+| **コンポーネント**  | **Helmチャート 設定** | **数量** | **vCPU** | **メモリ (GB)** | **ストレージ (GB)** | **メモ** |
 | ------------------ | -------------------- | -------- | -------- | --------------- | ------------------- | -------- |
 | S3                 | persistence          | 1        |          |                 |                     |          |
 | Redis DB           | externalRedis        | 1        | 2        | 12.93           |                     |          |
@@ -91,7 +91,7 @@ title: AWS CDK デプロイガイド
      - `OPENSEARCH_ADMINNAME`：OpenSearch ドメイン管理者名。
      - `OPENSEARCH_PASSWORD`：OpenSearch ドメイン管理者パスワード。
 
-   - `AWS_EKS_CHART_REPO_URL`：（AWS 中国リージョンのみ）AWS EKS Helm chart リポジトリ URL。
+   - `AWS_EKS_CHART_REPO_URL`：（AWS 中国リージョンのみ）AWS EKS Helmチャート リポジトリ URL。
 
    - `RDS_PUBLIC_ACCESSIBLE`：RDS を公開アクセス可能にする場合は `true` に設定します（推奨されません）。
 
@@ -233,7 +233,7 @@ title: AWS CDK デプロイガイド
 
     #### 本番の場合：
 
-    AWS `ACM` に移動して、Helm chart 設定ファイル `values.yaml` で宣言されたドメイン名の証明書を申請します。
+    AWS `ACM` に移動して、Helmチャート 設定ファイル `values.yaml` で宣言されたドメイン名の証明書を申請します。
 
     ```yaml
       consoleApiDomain: "console.xxxx.com"

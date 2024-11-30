@@ -1,15 +1,15 @@
 ---
-title: Model Provider
+title: モデルプロバイダ
 version: '日本語'
 ---
 
-## Find the Model Provider configuration in the Helm Chart Values
-### Display Helm Chart Values
+## Helmチャートの値にあるモデルプロバイダの見つける方法
+### Helmチャートの値を表示するコマンド
 ```bash
 helm show values dify/dify
 ```
 
-This is an example of the model provider configuration in the Helm chart values.
+以下の例では、Helmチャートの値にあるモデルプロバイダの設定です。
 ```yaml
 api:
   positionProvider:
@@ -19,17 +19,17 @@ api:
   ... ...
 ```
 
-## Model Provider Configuration
-Model provider supports the following configuration options, the model provider name is the folder name in the `api/core/model_runtime/model_providers` directory.
+## モデルプロバイダの詳細設定
+モデルプロバイダを設定する際には、以下の設定項目が利用可能です。なお、モデルプロバイダの名称は、`api/core/model_runtime/model_providers`ディレクトリにあるフォルダ名に基づいています。
 - `pins`
-  - If is not empty, it will pin the given model providers to the top of the list.
+  - 指定がある場合、リストの最初に来るように特定のモデルプロバイダを固定します。
 - `includes`
-  - If is empty, it will display all the model providers.
-  - If is not empty, it will only display the given model providers.
+  - 指定がない場合、すべてのモデルプロバイダが表示されます。
+  - 指定がある場合、リストにはそのモデルプロバイダのみが表示されます。
 - `excludes`
-  - If is not empty, it will exclude the given model providers.
+  - 指定がある場合、特定のモデルプロバイダをリストから除外します。
 
-The following example will display the `ollama` model provider at the top of the list, and only display the `sagemaker` and `ollama`.
+以下の例では、`ollama`をリストの最初に表示し、`sagemaker`と`ollama`のみがリストに表示されるように設定されています。
 ```yaml
 api:
   positionProvider:
@@ -38,6 +38,4 @@ api:
     excludes: "openai"
 ```
 
-> For more information, please refer to the [model providers](https://github.com/langgenius/dify/tree/main/api/core/model_runtime/model_providers)
-
-
+> 更なる詳細は、[モデルプロバイダ](https://github.com/langgenius/dify/tree/main/api/core/model_runtime/model_providers)をご覧ください。

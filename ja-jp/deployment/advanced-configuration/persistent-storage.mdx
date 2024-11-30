@@ -2,15 +2,15 @@
 title: 永続ストレージ
 ---
 
-## Helm Chartの値で永続ストレージの設定を見つける
+## Helmチャートの値で永続ストレージの設定を見つける
 
-#### Helm Chartの値を表示
+#### Helmチャートの値を表示
 ```bash
 helm show values dify/dify
 ```
 
-## Helm Chartの値で永続ストレージの設定を見つける
-これはHelm Chartの値における永続ストレージ設定の例です。
+## Helmチャートの値で永続ストレージの設定を見つける
+これはHelmチャートの値における永続ストレージ設定の例です。
 ```yaml
 persistence
   type: "s3"
@@ -33,7 +33,7 @@ persistence
 - tencent-cos
 
 ## IAMロールを使用してAmazon S3ストレージを構成する方法
-AWS IAMロールを使用してS3バケットにアクセスする場合は、Helm Chartの値で`useAwsManagedIam`フィールドを`true`に設定できます。`region`および`bucketName`フィールドは必須です。
+AWS IAMロールを使用してS3バケットにアクセスする場合は、Helmチャートの値で`useAwsManagedIam`フィールドを`true`に設定できます。`region`および`bucketName`フィールドは必須です。
 ```yaml
 persistence:
   type: "s3"

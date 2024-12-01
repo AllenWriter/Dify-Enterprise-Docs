@@ -1,0 +1,41 @@
+---
+title: Tools
+version: 'English'
+---
+
+## Find the Tools configuration in the Helm Chart Values
+### Display Helm Chart Values
+```bash
+helm show values dify/dify
+```
+
+This is an example of the tools configuration in the Helm chart values.
+```yaml
+api:
+  positionTool:
+    pins: ""
+    includes: ""
+    excludes: ""
+  ... ...
+```
+
+## Tools Configuration
+Tools supports the following configuration options. The tool name is the folder name in the `api/core/tools/provider/builtin` directory.
+- `pins`
+  - If is not empty, it will pin the given tools to the top of the list.
+- `includes`
+    - If is empty, it will display all the tools.
+    - If is not empty, it will only display the given tools.
+- `excludes`
+    - If is not empty, it will exclude the given tools.
+
+The following example will display the `dalle` tool at the top of the list, and only display the `bing` and `dalle`.
+```yaml
+api:
+  positionTool:
+    pins: "dalle"
+    includes: "google,bing,dalle"
+    excludes: "google"
+```
+
+> For more information, please refer to the [tools](https://github.com/langgenius/dify/tree/main/api/core/tools/provider/builtin)

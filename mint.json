@@ -68,11 +68,11 @@
         "en-us/deployment/test-production/production-deployment"
     ]
   },
+      "en-us/deployment/license-activation",
       "en-us/deployment/verify-services-status",
       {
         "group": "Advanced Configuration",
         "pages": [
-          "en-us/deployment/advanced-configuration/license-activation",
           "en-us/deployment/advanced-configuration/persistent-storage",
           "en-us/deployment/advanced-configuration/postgresql-database",
           {
@@ -130,17 +130,17 @@
       ]
     },
     {
-      "group": "环境隔离",
+      "group": "测试/生产环境部署",
       "pages": [
         "zh-cn/deployment/test-production/testing-deployment",
         "zh-cn/deployment/test-production/production-deployment"
     ]
   },
+      "zh-cn/deployment/license-activation",
       "zh-cn/deployment/verify-services-status",
       {
         "group": "高级配置",
         "pages": [
-          "zh-cn/deployment/advanced-configuration/license-activation",
           "zh-cn/deployment/advanced-configuration/persistent-storage",
           "zh-cn/deployment/advanced-configuration/postgresql-database",
           {
@@ -204,11 +204,11 @@
           "ja-jp/deployment/test-production/production-deployment"
         ]
       },
+      "ja-jp/deployment/license-activation",
       "ja-jp/deployment/verify-services-status",
       {
         "group": "高度な設定",
         "pages": [
-          "ja-jp/deployment/advanced-configuration/license-activation",
           "ja-jp/deployment/advanced-configuration/persistent-storage",
           "ja-jp/deployment/advanced-configuration/postgresql-database",
           {

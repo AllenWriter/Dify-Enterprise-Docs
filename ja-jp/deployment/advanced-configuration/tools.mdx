@@ -1,0 +1,78 @@
+---
+title: Tools
+version: '日本語'
+---
+
+## Find the Tools configuration in the Helmチャート Values
+### Display Helmチャート Values
+```bash
+helm show values dify/dify
+```
+
+This is an example of the tools configuration in the Helmチャート values.
+```yaml
+api:
+  positionTool:
+    pins: ""
+    includes: ""
+    excludes: ""
+  ... ...
+```
+
+## Tools Configuration
+Tools supports the following configuration options, the tool name is the folder name in the `api/core/tools/provider/builtin` directory.
+- `pins`
+  - If is not empty, it will pin the given tools to the top of the list.
+- `includes`
+    - If is empty, it will display all the tools.
+    - If is not empty, it will only display the given tools.
+- `excludes`
+    - If is not empty, it will exclude the given tools.
+
+The following example will display the `dalle` tool at the top of the list, and only display the `bing` and `dalle`.
+```yaml
+api:
+  positionTool:
+    pins: "dalle"
+    includes: "google,bing,dalle"
+    excludes: "google"
+```
+
+> For more information, please refer to the [tools](https://github.com/langgenius/dify/tree/main/api/core/tools/provider/builtin)
+
+## Helmチャートの値にあるモデルプロバイダの見つける方法
+### Helmチャートの値を表示するコマンド
+```bash
+helm show values dify/dify
+```
+
+以下の例では、Helmチャートの値にあるモデルプロバイダの設定です。
+```yaml
+api:
+  positionProvider:
+    pins: ""
+    includes: ""
+    excludes: ""
+  ... ...
+```
+
+## モデルプロバイダの詳細設定
+モデルプロバイダを設定する際には、以下の設定項目が利用可能です。なお、モデルプロバイダの名称は、`api/core/model_runtime/model_providers`ディレクトリにあるフォルダ名に基づいています。
+- `pins`
+  - 指定がある場合、リストの最初に来るように特定のモデルプロバイダを固定します。
+- `includes`
+  - 指定がない場合、すべてのモデルプロバイダが表示されます。
+  - 指定がある場合、リストにはそのモデルプロバイダのみが表示されます。
+- `excludes`
+  - 指定がある場合、特定のモデルプロバイダをリストから除外します。
+
+以下の例では、`dalle`をリストの最初に表示し、`bing`と`dalle`のみがリストに表示されるように設定されています。
+```yaml
+api:
+  positionTool:
+    pins: "dalle"
+    includes: "google,bing,dalle"
+    excludes: "google"
+```
+
+> 更なる詳細は、[モデルプロバイダ](https://github.com/langgenius/dify/tree/main/api/core/model_runtime/model_providers)をご覧ください。

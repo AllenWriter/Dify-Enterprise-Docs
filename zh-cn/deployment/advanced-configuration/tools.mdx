@@ -1,0 +1,47 @@
+---
+title: 工具
+version: '简体中文'
+---
+
+## 在 Helm Chart Values 中查找工具配置
+
+### 显示 Helm Chart Values
+
+```bash
+helm show values dify/dify
+```
+
+以下是 Helm chart values 中工具配置的示例代码：
+
+```yaml
+api:
+  positionTool:
+    pins: ""
+    includes: ""
+    excludes: ""
+  ... ...
+```
+
+## 工具配置
+
+工具支持以下配置选项，工具名称由 `api/core/tools/provider/builtin` 目录中的文件夹名称所定义。
+
+- `pins`
+  - 如果不为空，它会将指定的工具固定在列表顶部。
+- `includes`
+  - 如果为空，它将显示所有工具。
+  - 如果不为空，它将仅显示指定的工具。
+- `excludes`
+  - 如果不为空，它将排除指定的工具。
+
+以下示例将 `dalle` 工具显示在列表顶部，并且仅显示 `bing` 和 `dalle`。
+
+```yaml
+api:
+  positionTool:
+    pins: "dalle"
+    includes: "google,bing,dalle"
+    excludes: "google"
+```
+
+> 更多信息，请参考 [工具代码](https://github.com/langgenius/dify/tree/main/api/core/tools/provider/builtin)。

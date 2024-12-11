@@ -1,0 +1,41 @@
+---
+title: モデルプロバイダ
+version: '日本語'
+---
+
+## Helmチャートの値にあるモデルプロバイダの見つける方法
+### Helmチャートの値を表示するコマンド
+```bash
+helm show values dify/dify
+```
+
+以下の例では、Helmチャートの値にあるモデルプロバイダの設定です。
+```yaml
+api:
+  positionProvider:
+    pins: ""
+    includes: ""
+    excludes: ""
+  ... ...
+```
+
+## モデルプロバイダの詳細設定
+モデルプロバイダを設定する際には、以下の設定項目が利用可能です。なお、モデルプロバイダの名称は、`api/core/model_runtime/model_providers`ディレクトリにあるフォルダ名に基づいています。
+- `pins`
+  - 指定がある場合、リストの最初に来るように特定のモデルプロバイダを固定します。
+- `includes`
+  - 指定がない場合、すべてのモデルプロバイダが表示されます。
+  - 指定がある場合、リストにはそのモデルプロバイダのみが表示されます。
+- `excludes`
+  - 指定がある場合、特定のモデルプロバイダをリストから除外します。
+
+以下の例では、`ollama`をリストの最初に表示し、`sagemaker`と`ollama`のみがリストに表示されるように設定されています。
+```yaml
+api:
+  positionProvider:
+    pins: "ollama"
+    includes: "openai,sagemaker,ollama"
+    excludes: "openai"
+```
+
+> 更なる詳細は、[モデルプロバイダ](https://github.com/langgenius/dify/tree/main/api/core/model_runtime/model_providers)をご覧ください。

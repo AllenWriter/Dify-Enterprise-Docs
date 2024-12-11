@@ -19,7 +19,7 @@ version: '日本語'
 
 さらに詳しい情報については、[永続化ストレージ](/deployment/advanced-configuration/persistent-storage) を参照してください。
 
-> <a href="/assets/values.yaml" download="values.yaml">ここをクリック</a>して `values.yaml` ファイルをダウンロードしてください。
+> <a href="https://assets-docs.dify.ai/2024/12/bcc57aedb6d9a419fb24403e62388416.yaml" download="values.yaml">ここをクリック</a>して `values.yaml` ファイルをダウンロードしてください。
 
 ### Difyエンタプライス版のインストール
 Difyエンタプライス版はHelmを使用してデプロイされます。
@@ -31,10 +31,10 @@ helm repo update
 helm upgrade -i dify -f values.yaml dify/dify
 ```
 
-詳細については、[Dify Helm Chart](/deployment/prerequisites/dify-helm-chart)を参照してください。
+詳細については、[Dify Helmチャート](/deployment/prerequisites/dify-helm-chart)を参照してください。
 
 ### Ingressコントローラーの設定
-Helm ChartにはデフォルトのIngressコントローラーが含まれていません。自分でIngressコントローラーを設定する必要があります。
+HelmチャートにはデフォルトのIngressコントローラーが含まれていません。自分でIngressコントローラーを設定する必要があります。
 クイックスタートには`Nginx Ingress Controller`を使用します。
 - [Nginx Ingress Controllerの設定方法](/deployment/advanced-configuration/ingress-nginx-controller)
 
@@ -68,4 +68,4 @@ kubectl get svc -n ingress-nginx
     - メールアドレス：`dashboard@dify.ai`
     - パスワード：`difyai123456`
 - ライセンスのアクティブ化：ログイン後、ライセンスをアクティブ化するためのダイアログボックスが表示されます。
-  > 詳細については、[ライセンスのアクティブ化](/ja-jp/deployment/advanced-configuration/license-activation)を参照してください。
+  > 詳細については、[ライセンスのアクティブ化](/ja-jp/deployment/license-activation)を参照してください。

@@ -22,7 +22,7 @@ minikube start --driver=docker --cpus=4 --memory=16384
 
 さらに詳しい情報については、[永続化ストレージ](/deployment/advanced-configuration/persistent-storage) を参照してください。
 
-> <a href="/assets/values.yaml" download="values.yaml">ここをクリック</a>して `values.yaml` ファイルをダウンロードしてください。
+> <a href="https://assets-docs.dify.ai/2024/12/bcc57aedb6d9a419fb24403e62388416.yaml" download="values.yaml">ここをクリック</a>して `values.yaml` ファイルをダウンロードしてください。
 
 ### Difyエンタプライス版のインストール
 Difyエンタプライス版はHelmを使用してデプロイされます。
@@ -34,7 +34,7 @@ helm repo update
 helm upgrade -i dify -f values.yaml dify/dify
 ```
 
-詳細については、[Dify Helm Chart](/deployment/prerequisites/dify-helm-chart)を参照してください。
+詳細については、[Dify Helmチャート](/deployment/prerequisites/dify-helm-chart)を参照してください。
 
 ### Ingressコントローラーの設定
 以下のコマンドを実行して、MinikubeクラスターでIngressコントローラーを有効にできます:
@@ -72,4 +72,4 @@ Ingressコントローラーが有効になった後、ローカルの`/etc/host
     - メールアドレス：`dashboard@dify.ai`
     - パスワード：`difyai123456`
 - ライセンスのアクティブ化：ログイン後、ライセンスをアクティブ化するためのダイアログボックスが表示されます。
-  > 詳細については、[ライセンスのアクティブ化](/ja-jp/deployment/advanced-configuration/license-activation)を参照してください。
+  > 詳細については、[ライセンスのアクティブ化](/ja-jp/deployment/license-activation)を参照してください。

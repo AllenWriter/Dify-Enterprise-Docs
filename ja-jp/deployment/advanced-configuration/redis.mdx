@@ -3,14 +3,14 @@ title: Redis
 version: '日本語'
 ---
 
-## Find the Redis Configuration in the Helm Chart Values
+## Helm Chart内でRedis設定の探し方
 
-### Display Helm Chart Values
+### Helm Chartの設定値を表示する
 ```bash
 helm show values dify/dify
 ```
 
-This is an example of the Redis configuration in the Helm chart values.
+これはHelm Chartの設定ファイルにおけるRedis設定の一例です。
 ```yaml
 externalRedis:
   enabled: true
@@ -21,6 +21,6 @@ externalRedis:
   useSSL: false
 ```
 
-## Redis SSL Configuration
-- To enable Redis with SSL, set the `useSSL` field to `true`.
-- The `port` field should be set to `6379` for non-SSL connections and `6380` for SSL connections.
+## RedisのSSL設定について
+- SSL対応のRedisを利用するには、`useSSL` 項目を `true` に設定してください。
+- `port` 項目については、SSL非対応時は `6379` を、SSL対応時は `6380` を指定します。

@@ -2,6 +2,33 @@
 title: PostgreSQLデータベース
 ---
 
+## Helm Chartを用いたPostgresqlデータベース設定の確認方法
+
+### Helm Chartの設定値を確認する方法
+
+```bash
+helm show values dify/dify
+```
+
+以下に示すのは、Helm Chartの設定値からPostgresqlデータベースを設定する際の一例です。
+```yaml
+externalPostgres:
+  enabled: true
+  address: localhost
+  port: 5432
+  credentials:
+    dify:
+      database: "dify"
+      username: "postgres"
+      password: "#REPLACE_ME#"
+      sslmode: "require"
+    enterprise:
+      database: "enterprise"
+      username: "postgres"
+      password: "#REPLACE_ME#"
+      sslmode: "require"
+```
+
 ## `max_connections` 設定
 
 - エラーメッセージ `FATAL: remaining connection slots are reserved for non-replication superuser connections`（致命的なエラー：残りの接続スロットは非レプリケーションスーパーユーザー接続用に予約されています）に遭遇した場合、PostgreSQLデータベースの `max_connections` 設定を増やす必要があります。

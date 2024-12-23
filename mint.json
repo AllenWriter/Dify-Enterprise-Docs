@@ -75,6 +75,7 @@
         "pages": [
           "en-us/deployment/advanced-configuration/persistent-storage",
           "en-us/deployment/advanced-configuration/postgresql-database",
+          "en-us/deployment/advanced-configuration/redis",
           {
             "group": "Vector Database",
             "pages": [
@@ -143,6 +144,7 @@
         "pages": [
           "zh-cn/deployment/advanced-configuration/persistent-storage",
           "zh-cn/deployment/advanced-configuration/postgresql-database",
+          "zh-cn/deployment/advanced-configuration/redis",
           {
             "group": "向量数据库",
             "pages": [
@@ -211,6 +213,7 @@
         "pages": [
           "ja-jp/deployment/advanced-configuration/persistent-storage",
           "ja-jp/deployment/advanced-configuration/postgresql-database",
+          "ja-jp/deployment/advanced-configuration/redis",
           {
             "group": "ベクトルデータベース",
             "pages": [

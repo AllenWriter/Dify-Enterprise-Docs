@@ -8,7 +8,13 @@ title: リソース仕様
 - Kubernetes 1.24+
 - Helm 3.14+
 
-- `警告`: 制限された環境を使用している場合は、ポッドが `root` として実行できるようにしてください（OpenShiftなど）。
+<Warning>
+    1. `注意点` [ライセンスをアクティベート](/ja-jp/deployment/license-activation)の際して、必要な権限を確実に取得するために、必ずITチームと連絡してください。
+        - ServiceAccount（必須）
+        - ClusterRole / ClusterRoleBinding（推奨）
+        - Role / RoleBinding（オプショナル）
+    2. `警告` 制限された環境で作業を行う場合、Podが `root` として実行できるようにしてください（OpenShiftなど）。
+</Warning>
 
 ## 2. ドメイン
 Difyエンタプライス版には5つのドメインを設定する必要があります。ドメインは以下の通りです：

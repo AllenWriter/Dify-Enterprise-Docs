@@ -80,6 +80,7 @@ enterprise:
   enabled: true
   replicas: 3
   appSecretKey: "dify123456"
+  adminAPIsSecretKeySalt: "dify123456"
   innerApi:
     enabled: true
     apiKey: "dify123456"

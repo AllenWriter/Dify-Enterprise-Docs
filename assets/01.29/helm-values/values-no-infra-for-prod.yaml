@@ -34,38 +34,93 @@ ingress:
 
 api:
   enabled: true
-  replicas: 1
+  replicas: 3
   innerApi:
     enabled: true
     apiKey: "dify123456"
-  serverWorkerAmount: 1
+  resources:
+    limits:
+      cpu: 4000m
+      memory: 10240Mi
+    requests:
+      cpu: 1000m
+      memory: 1536Mi
 worker:
   enabled: true
-  replicas: 1
-  celeryWorkerAmount: 1
+  replicas: 3
+  resources:
+    limits:
+      cpu: 3000m
+      memory: 10240Mi
+    requests:
+      cpu: 1000m
+      memory: 1536Mi
 web:
   enabled: true
-  replicas: 1
+  replicas: 3
+  resources:
+    limits:
+      cpu: 2000m
+      memory: 8192Mi
+    requests:
+      cpu: 1000m
+      memory: 1536Mi
 sandbox:
   enabled: true
-  replicas: 1
+  replicas: 3
   apiKey: "dify123456"
+  resources:
+    limits:
+      cpu: 1000m
+      memory: 4096Mi
+    requests:
+      cpu: 500m
+      memory: 1024Mi
 enterprise:
   enabled: true
-  replicas: 1
+  replicas: 3
   appSecretKey: "dify123456"
+  adminAPIsSecretKeySalt: "dify123456"
   innerApi:
     enabled: true
     apiKey: "dify123456"
+  resources:
+    limits:
+      cpu: 1000m
+      memory: 4096Mi
+    requests:
+      cpu: 500m
+      memory: 1024Mi
 enterpriseFrontend:
   enabled: true
-  replicas: 1
+  replicas: 3
+  resources:
+    limits:
+      cpu: 1000m
+      memory: 4096Mi
+    requests:
+      cpu: 500m
+      memory: 1024Mi
 ssrfProxy:
   enabled: true
-  replicas: 1
+  replicas: 3
+  resources:
+    limits:
+      cpu: 1000m
+      memory: 4096Mi
+    requests:
+      cpu: 500m
+      memory: 1024Mi
 unstructured:
   enabled: true
-  replicas: 1
+  replicas: 3
+  resources:
+    limits:
+      cpu: 1000m
+      memory: 4096Mi
+    requests:
+      cpu: 500m
+      memory: 1024Mi
 
 ###################################
 # Persistence Configration
@@ -78,7 +133,6 @@ persistence:
     secretKey: "#REPLACE_ME#"
     region: "us-east-1"
     bucketName: "your-bucket-name"
-    addressType: ""
     useAwsManagedIam: false
 
 ###################################
@@ -101,57 +155,44 @@ mail:
     useTLS: false
 
 ###################################
-# postgres
+# External postgres
 ###################################
-postgresql:
-  enabled: true
-  name: postgres
-  global:
-    storageClass: ""
-    postgresql:
-      auth:
-        postgresPassword: "dify123456"
-        database: "dify"
-#        username: ""
-#        password: ""
 externalPostgres:
-  enabled: false
-
-###################################
-# Redis
-###################################
-redis:
   enabled: true
-  global:
-    redis:
+  address: "your-postgres-url.example"
+  port: 5432
+  credentials:
+    dify:
+      database: "dify"
+      username: "postgres"
       password: "dify123456"
-externalRedis:
-  enabled: false
+      sslmode: "disable"
+    enterprise:
+      database: "enterprise"
+      username: "postgres"
+      password: "dify123456"
+      sslmode: "disable"
 
 ###################################
-# vectorDB
+# External Redis
 ###################################
-qdrant:
+externalRedis:
   enabled: true
-  replicaCount: 1
-  image:
-    repository: langgenius/qdrant
-    pullPolicy: IfNotPresent
-    tag: "v1.7.3"
-  apiKey: "dify123456"
-  persistence:
-    accessModes: [ "ReadWriteOnce" ]
-    size: 10Gi
-  resources: { }
-    # limits:
-    #   cpu: 100m
-    #   memory: 128Mi
-    # requests:
-    #   cpu: 100m
-    #   memory: 128Mi
-  nodeSelector: {}
+  host: "redis.example"
+  port: 6379
+  username: ""
+  password: "dify123456"
+  useSSL: false
+
+###################################
+# External Qdrant
+###################################
 vectorDB:
-  useExternal: false
+  useExternal: true
+  externalType: "qdrant"
+  externalQdrant:
+    endpoint: "http://your-qdrant-cluster-url.qdrant.tech/"
+    apiKey: "#REPLACE_ME#"
 
 imagePullSecrets:
   - name: dify-artifacts-token

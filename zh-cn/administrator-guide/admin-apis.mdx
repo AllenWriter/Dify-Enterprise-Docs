@@ -5,16 +5,16 @@ description: 版本号需 ≥ v2.2.0
 
 企业级 APIs 遵循 REST API 规范，帮助你在 Dify 企业版平台内实现高效的自动化管理。支持对以下资源的信息查询和更改：
 
-- **Workspaces**，获取、创建和管理工作空间。
-- **Members**，获取、创建和管理团队成员。
-- **Workspace Members**，获取、创建和管理工作空间内的成员。
+- **Workspaces**，全局工作空间管理，支持获取工作空间信息、创建和管理操作。
+- **Members**，全局团队成员管理，支持获取团队成员信息，添加和管理团队成员。
+- **Workspace Member**，工作空间成员管理，支持获取某个工作空间内的成员信息、管理成员等操作。
 
 > 随着版本迭代，将支持更多功能。
 
 <Note>
 Dify 平台内存在不同层级的 API 服务，为避免使用误导，现作出以下区分：
 
-- 由应用内所提供的 API（即通过接口调用应用）称为 **Web App API**。
+- 由应用内所提供的 API（即通过接口调用应用）称为 **Workspace API**。
 - 针对 Dify 平台的管理操作的 API 统称为**企业级 APIs（Admin APIs）**。
 </Note>
 
@@ -44,12 +44,18 @@ https://your-domain/admin-api/v1
 
 访问企业版管理后台，轻点 **Admin APIs** 页右上角的 **Add** 按钮，按照提示输入名称完成创建。
 
-### 2. 导入 API 文件并使用
+### 2. 导入 API 文件并修改环境变量
 
 轻点页面上提供的 **Postman Collection** 下载链接。
 
 ![](https://assets-docs.dify.ai/2025/02/5aa925f58ec5bb12a2838704f1444525.png)
 
-将配置文件导入至 Postman 内，替换端点 URL 和 Secret Key 并发送请求，获取响应。
+将配置文件导入至 Postman 内，替换 Variables 中的 `base_url` 和 `secret_key`。
+
+![](https://assets-docs.dify.ai/2025/02/786336845c4d67117fdede872eb7883b.png)
+
+### 3. 发送请求
+
+发送请求，获取响应。
 
 ![](https://assets-docs.dify.ai/2025/02/bd4d300b08ceed74c17c3b428329fa19.png)

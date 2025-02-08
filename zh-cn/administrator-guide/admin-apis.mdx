@@ -1,0 +1,55 @@
+---
+title: 企业级 APIs
+description: 版本号需 ≥ v2.2.0
+---
+
+企业级 APIs 遵循 REST API 规范，帮助你在 Dify 企业版平台内实现高效的自动化管理。支持对以下资源的信息查询和更改：
+
+- **Workspaces**，获取、创建和管理工作空间。
+- **Members**，获取、创建和管理团队成员。
+- **Workspace Members**，获取、创建和管理工作空间内的成员。
+
+> 随着版本迭代，将支持更多功能。
+
+<Note>
+Dify 平台内存在不同层级的 API 服务，为避免使用误导，现作出以下区分：
+
+- 由应用内所提供的 API（即通过接口调用应用）称为 **Web App API**。
+- 针对 Dify 平台的管理操作的 API 统称为**企业级 APIs（Admin APIs）**。
+</Note>
+
+## 端点 URL
+
+企业级 APIs 使用以下端点地址。实际调用 API 时，请将 `your-domain` 替换为你的 Dify 企业版平台域名，并在后缀添加各个请求的路径以形成完整的 API 端点。
+
+```bash
+https://your-domain/admin-api/v1
+```
+
+## 认证
+
+请求 API 时要求输入鉴权 Secret Key，前往 Dify 企业版管理后台中的 **Admin APIs** 页创建 Key。
+
+<Warning>
+调用企业级 API 进行更改时可能会影响企业内部的生产数据，请谨慎操作。
+</Warning>
+
+![](https://assets-docs.dify.ai/2025/02/0431242649acccbcbcf23fa8e4268ce8.png)
+
+## 使用示例
+
+为了便于理解，将以查看当前工作空间列表（List Workspaces）为例，演示如何使用企业级 APIs。
+
+### 1. 创建 API Key
+
+访问企业版管理后台，轻点 **Admin APIs** 页右上角的 **Add** 按钮，按照提示输入名称完成创建。
+
+### 2. 导入 API 文件并使用
+
+轻点页面上提供的 **Postman Collection** 下载链接。
+
+![](https://assets-docs.dify.ai/2025/02/5aa925f58ec5bb12a2838704f1444525.png)
+
+将配置文件导入至 Postman 内，替换端点 URL 和 Secret Key 并发送请求，获取响应。
+
+![](https://assets-docs.dify.ai/2025/02/bd4d300b08ceed74c17c3b428329fa19.png)

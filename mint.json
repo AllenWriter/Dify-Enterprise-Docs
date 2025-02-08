@@ -87,7 +87,7 @@
         "en-us/deployment/advanced-configuration/rag",
         "en-us/deployment/advanced-configuration/email-provider",
         "en-us/deployment/advanced-configuration/file-upload",
-        "en-us/deployment/advanced-configuration/nginx/ingress-nginx-controller",
+        "en-us/deployment/advanced-configuration/nginx-ingress-nginx-controller",
         "en-us/deployment/advanced-configuration/domain-and-ssl-certificate",
         "en-us/deployment/advanced-configuration/dify-system-logo",
         "en-us/deployment/advanced-configuration/model-provider",
@@ -156,7 +156,7 @@
         "zh-cn/deployment/advanced-configuration/rag",
         "zh-cn/deployment/advanced-configuration/email-provider",
         "zh-cn/deployment/advanced-configuration/file-upload",
-        "zh-cn/deployment/advanced-configuration/nginx/ingress-nginx-controller",
+        "zh-cn/deployment/advanced-configuration/nginx-ingress-nginx-controller",
         "zh-cn/deployment/advanced-configuration/domain-and-ssl-certificate",
         "zh-cn/deployment/advanced-configuration/dify-system-logo",
         "zh-cn/deployment/advanced-configuration/model-provider",
@@ -225,7 +225,7 @@
           "ja-jp/deployment/advanced-configuration/rag",
           "ja-jp/deployment/advanced-configuration/email-provider",
           "ja-jp/deployment/advanced-configuration/file-upload",
-          "ja-jp/deployment/advanced-configuration/nginx/ingress-nginx-controller",
+          "ja-jp/deployment/advanced-configuration/nginx-ingress-nginx-controller",
           "ja-jp/deployment/advanced-configuration/domain-and-ssl-certificate",
           "ja-jp/deployment/advanced-configuration/dify-system-logo",
           "ja-jp/deployment/advanced-configuration/model-provider",
@@ -321,6 +321,7 @@
             }
           ]
         },
+        "zh-cn/administrator-guide/admin-apis",
         "zh-cn/administrator-guide/system-settings",
         "zh-cn/administrator-guide/faq"
       ]

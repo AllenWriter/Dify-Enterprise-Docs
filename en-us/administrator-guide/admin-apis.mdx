@@ -1,23 +1,23 @@
 ---
 title: Admin APIs
 version: 'English'
-description: Version Required ≥ v2.2.0
+description: Requires Dify Enterprise version ≥ v2.2.0
 ---
 
 Admin APIs adhere to REST API standards, enabling efficient automation and management within the Dify Enterprise platform. These APIs support querying and modifying information for the following resources:
 
-- **Workspaces**: Global workspace management, including retrieving workspace information, creating workspaces, and performing management operations.
-- **Members**: Global team member management, including fetching team member details, adding members, and managing member accounts.
-- **Workspace Member**: Member management within a specific workspace, including retrieving member information and managing member.
+- **Workspaces**: Global workspace management, including querying workspace information and performing management operations.
+- **Members**: Global team member management, including querying team member details and managing accounts.
+- **Workspace Member**: Management of members within a specific workspace, including querying member information and managing members.
 
-> More features will be supported with future version updates.
+> More features will be supported with future version updates, including enhanced operations and resource management.
 
 ---
 
 <Note>
 To avoid confusion, Dify distinguishes between different levels of API services:
 
-- APIs provided by applications (accessed via interface calls) are referred to as **Workspace APIs**.
+- APIs provided by applications are referred to as **Workspace APIs**.
 - APIs for managing platform-level operations are collectively called **Admin APIs**.
 </Note>
 
@@ -35,10 +35,10 @@ https://your-domain/admin-api/v1
 
 ## Authentication
 
-API requests require a Secret Key for authentication. To obtain one, navigate to the **Admin APIs** page in the Dify Enterprise admin dashboard and create a key.
+API requests require a Secret Key for authentication. To obtain one, navigate to the **Admin APIs** page in the Dify Enterprise admin dashboard to generate and configure the Key.
 
 <Warning>
-Modifying data via Admin APIs may impact production data within your organization. Exercise caution when performing such operations.
+Modifying data via Admin APIs may impact production data within your organization. Please proceed with caution.
 </Warning>
 
 ---

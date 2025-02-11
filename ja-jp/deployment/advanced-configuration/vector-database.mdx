@@ -25,14 +25,20 @@ helm show values dify/dify
 
 ## `ベクトルデータベース.externalType` フィールドのオプション
 ### 企業サポートされているタイプ
-- qdrant
-- weaviate
-- elasticsearch
+Difyエンタープライズ版では、以下のベクトルデータベースを公式にサポートしております。
+
+- qdrant（推奨）
+- weaviate（オプション）
+- elasticsearch（オプション）
 
 ### コミュニティサポートされているタイプ
+Difyコミュニティ版でも以下のベクトルデータベースをご利用いただけます。エンタープライズ版でも同様に利用可能ですが、公式サポートの対象外となりますのでご了承ください。
+
 - milvus
 - relyt
-- pgvecto_rs
-- tcvectordb
+- pgvecto-rs
+- tencent
+- analyticdb
 - opensearch
 
+> 詳細につきましては、[Dify Vector Type](https://github.com/langgenius/dify/blob/main/api/core/rag/datasource/vdb/vector_type.py)のドキュメントをご参照ください。

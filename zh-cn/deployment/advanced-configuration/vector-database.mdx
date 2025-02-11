@@ -28,14 +28,20 @@ vectorDB:
 
 ## `vectorDB.externalType` 字段的选项
 ### 企业支持的类型
-- qdrant
-- weaviate
-- elasticsearch
+Dify 企业版官方支持以下向量数据库。
+
+- qdrant（建议）
+- weaviate（可选）
+- elasticsearch（可选）
 
 ### 社区支持的类型
+Dify 社区版提供以下向量数据库支持。如果您想使用这些向量数据库，Dify 企业版也支持它们，但它们不是官方支持的。
+
 - milvus
 - relyt
-- pgvecto_rs
-- tcvectordb
+- pgvecto-rs
+- tencent
+- analyticdb
 - opensearch
 
+> 有关更多详细信息，请参阅文档：[Dify Vector Type](https://github.com/langgenius/dify/blob/main/api/core/rag/datasource/vdb/vector_type.py)

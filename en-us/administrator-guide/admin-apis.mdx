@@ -1,25 +1,25 @@
 ---
 title: Admin APIs
 version: 'English'
-description: Version Required ≥ v2.2.0
+description: Requires Dify Enterprise version ≥ v2.2.0
 ---
 
 Admin APIs adhere to REST API standards, enabling efficient automation and management within the Dify Enterprise platform. These APIs support querying and modifying information for the following resources:
 
-- **Workspaces**: Global workspace management, including retrieving workspace information, creating workspaces, and performing management operations.
-- **Members**: Global team member management, including fetching team member details, adding members, and managing member accounts.
-- **Workspace Member**: Member management within a specific workspace, including retrieving member information and managing member.
+- **Workspaces**: Global workspace management, including querying workspace information and performing management operations.
+- **Members**: Global team member management, including querying team member details and managing accounts.
+- **Workspace Member**: Management of members within a specific workspace, including querying member information and managing members.
 
-> More features will be supported with future version updates.
+> More features will be supported with future version updates, including enhanced operations and resource management.
 
 ---
 
-<Note>
+## API Types
+
 To avoid confusion, Dify distinguishes between different levels of API services:
 
-- APIs provided by applications (accessed via interface calls) are referred to as **Workspace APIs**.
+- APIs provided by applications are referred to as **Workspace APIs**.
 - APIs for managing platform-level operations are collectively called **Admin APIs**.
-</Note>
 
 ---
 
@@ -35,10 +35,10 @@ https://your-domain/admin-api/v1
 
 ## Authentication
 
-API requests require a Secret Key for authentication. To obtain one, navigate to the **Admin APIs** page in the Dify Enterprise admin dashboard and create a key.
+API requests require a Secret Key for authentication. To obtain one, navigate to the **Admin APIs** page in the Dify Enterprise admin dashboard to generate and configure the Key.
 
 <Warning>
-Modifying data via Admin APIs may impact production data within your organization. Exercise caution when performing such operations.
+Modifying data via Admin APIs may impact production data within your organization. Please proceed with caution.
 </Warning>
 
 ---
@@ -73,6 +73,31 @@ Import the configuration file into Postman. Replace the `base_url` and `secret_k
 
 ### 3. Send the Request
 
-Send the request and check the response.
+Send the request and receive the response. You can view the complete list of workspaces and their corresponding information within the current enterprise version in the response.
+
+```json
+{
+    "data": [
+        {
+            "id": "a7145b74-****--****---****",     # Workspace ID
+            "name": "Workspace A Name",             # Workspace Name
+            "status": "normal",                     # Workspace Status
+            "created_at": "2025-02-08T02:45:33Z",   # The Create Time of Workspace
+            "updated_at": "2025-02-08T02:45:33Z"    # The Update Time of Workspace
+        },
+        {
+            "id": "bbffbfdf-****--****---****",
+            "name": "Dify's Workspace",
+            "status": "normal",
+            "created_at": "2025-02-07T16:55:59Z",
+            "updated_at": "2025-02-07T16:55:59Z"
+        },
+    ],
+    "has_more": true,
+    "limit": 10,
+    "page": 1,
+    "total": 491
+}
+```
 
 ![API Request and Response](https://assets-docs.dify.ai/2025/02/bd4d300b08ceed74c17c3b428329fa19.png)

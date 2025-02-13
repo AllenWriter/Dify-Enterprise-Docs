@@ -22,13 +22,20 @@ vectorDB:
 
 ## The options for the `vectorDB.externalType` field
 ### The enterprise supported type
-- qdrant
-- weaviate
-- elasticsearch
+Dify Enterprise supports the following vector databases officially.
+
+- qdrant (Suggested)
+- weaviate (Optional)
+- elasticsearch (Optional)
 
 ### The community supported type
+Dify Community supports the following vector databases. If you want to use these vector databases, Dify Enterprise also supports them, but they are not officially supported.
+
 - milvus
 - relyt
-- pgvecto_rs
-- tcvectordb
+- pgvecto-rs
+- tencent
+- analyticdb
 - opensearch
+
+> For more details, please refer to the documentation: [Dify Vector Type](https://github.com/langgenius/dify/blob/main/api/core/rag/datasource/vdb/vector_type.py)

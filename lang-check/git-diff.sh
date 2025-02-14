@@ -135,8 +135,20 @@ fi
 # 检查 curl 是否成功
 if [ $? -ne 0 ]; then
     echo "错误：API 请求超时或失败"
+    # 清理临时文件
+    rm -f "$log_file"
     exit 1
 fi
 
 # 只输出 API 响应
 echo "$response"
+
+# 清理临时文件
+rm -f "$log_file"
+
+# 检查响应中是否包含错误标记
+if echo "$response" | grep -q "❌"; then
+    exit 1
+else
+    exit 0
+fi

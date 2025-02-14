@@ -55,7 +55,7 @@ if [ "$debug_mode" = true ]; then
 fi
 
 # 设置 API 密钥和其他常量
-api_key="app-jlPYjfHIRLXbSoy9gw3ZOyXw"
+api_key="${DIFY_API_KEY}"
 user=$(git config user.name)  # 获取 Git 配置中的用户名
 
 # 如果获取失败，使用默认值

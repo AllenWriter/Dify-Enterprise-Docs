@@ -1,5 +1,16 @@
 #!/bin/bash
 
+# 加载 .env 文件
+if [ -f "$(dirname "$0")/.env" ]; then
+    source "$(dirname "$0")/.env"
+fi
+
+# 检查环境变量是否存在
+if [ -z "${DIFY_API_KEY}" ]; then
+    echo "错误：未设置 DIFY_API_KEY 环境变量"
+    exit 1
+fi
+
 # 初始化调试模式标志
 debug_mode=false
 

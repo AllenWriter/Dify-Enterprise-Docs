@@ -2,10 +2,14 @@ name: Language Check
 
 on:
   pull_request:
-    types: [opened, synchronize]
+    types: [opened, synchronize, reopened]
     paths:
       - '**.md'
       - '**.mdx'
+      - '.github/workflows/lang-check.yml'
+      - 'lang-check/**'
+
+  workflow_dispatch:
 
 jobs:
   lang-check:
@@ -15,7 +19,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # 获取完整的 git 历史，以便进行 diff 比较
+          fetch-depth: 0
 
       - name: Setup Git
         run: |
@@ -28,18 +32,33 @@ jobs:
           sudo apt-get install -y jq curl
 
       - name: Run language check script
+        id: lang-check
         env:
           DIFY_API_KEY: ${{ secrets.DIFY_API_KEY }}
         run: |
           chmod +x ./lang-check/git-diff.sh
           output=$(./lang-check/git-diff.sh)
-          echo "$output"  # 显示检查结果
+          echo "$output"
           
-          # 检查输出中是否包含 ❌ 符号
           if echo "$output" | grep -q "❌"; then
             echo "检查发现问题，PR 不予通过"
-            exit 1  # 非零退出码会导致 Action 失败
+            echo "::set-output name=result::检查发现问题，PR 不予通过"
+            exit 1
           else
             echo "检查通过"
-            exit 0  # 零退出码表示 Action 成功
+            echo "::set-output name=result::检查通过"
+            exit 0
           fi
+
+      - name: Comment on PR
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const output = core.getInput('result');
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `Language Check Result:\n\n${output}`
+            })

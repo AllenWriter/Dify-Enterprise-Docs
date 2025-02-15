@@ -4,7 +4,8 @@ on:
   pull_request:
     types: [opened, synchronize]
     paths:
-      - '**.md'  # 只在 markdown 文件变更时触发
+      - '**.md'
+      - '**.mdx'
 
 jobs:
   lang-check:

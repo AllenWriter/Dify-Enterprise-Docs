@@ -47,8 +47,8 @@ changed_files=$(git diff --name-only origin/main...HEAD)
 # 遍历每个变动文件
 for file in $changed_files
 do
-    # 检查文件是否存在并且是否为 .md 文件
-    if [ -f "$repo_root/$file" ] && [[ "$file" == *.md ]]; then
+    # 检查文件是否存在并且是否为 .md 或 .mdx 文件
+    if [ -f "$repo_root/$file" ] && ([[ "$file" == *.md ]] || [[ "$file" == *.mdx ]]); then
         # 输出开始标签
         echo "<start---lang-check/$file---start>" >> "$log_file"
         

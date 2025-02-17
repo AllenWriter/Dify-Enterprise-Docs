@@ -16,6 +16,6 @@ docker rm -f dify-docs-demo || true
 
 # 运行新容器
 echo "第三步：运行新容器"
-docker run -d --restart unless-stopped --name dify-docs-demo -p 3005:3005 -e PORT=3005 dify-enterprise-docs-demo
+docker run -d --restart unless-stopped --name dify-enterprise-docs-demo -p 3005:3005 -e PORT=3005 dify-enterprise-docs-demo
 
 echo "部署完成！"

@@ -128,7 +128,8 @@
         "group": "安装指引",
         "pages": [
           "zh-cn/deployment/prerequisites/kubernetes",
-          "zh-cn/deployment/prerequisites/minikube"
+          "zh-cn/deployment/prerequisites/minikube",
+          "zh-cn/deployment/prerequisites/docker-compose"
       ]
     },
     {
@@ -197,7 +198,8 @@
         "group": "インストールガイド",
         "pages": [
           "ja-jp/deployment/prerequisites/kubernetes",
-          "ja-jp/deployment/prerequisites/minikube"
+          "ja-jp/deployment/prerequisites/minikube",
+          "ja-jp/deployment/prerequisites/docker-compose"
         ]
       },
       {

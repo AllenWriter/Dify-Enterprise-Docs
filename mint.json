@@ -58,7 +58,8 @@
         "group": "Quick Start for POC",
         "pages": [
           "en-us/deployment/prerequisites/kubernetes",
-          "en-us/deployment/prerequisites/minikube"
+          "en-us/deployment/prerequisites/minikube",
+          "en-us/deployment/prerequisites/docker-compose"
       ]
     },
     {

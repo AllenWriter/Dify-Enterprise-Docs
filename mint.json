@@ -100,7 +100,13 @@
           "pages": [
             "en-us/deployment/advanced-configuration/docker/docker-registry"
         ]
-      }
+      },
+      {
+        "group": "Docker Compose",
+        "pages": [
+          "en-us/deployment/advanced-configuration/docker-compose/icon-customization"
+      ]
+    }
       ]
     },
     {
@@ -170,7 +176,13 @@
           "pages": [
             "zh-cn/deployment/advanced-configuration/docker/docker-registry"
         ]
-      }
+      },
+      {
+        "group": "Docker Compose",
+        "pages": [
+          "zh-cn/deployment/advanced-configuration/docker-compose/icon-customization"
+      ]
+    }
       ]
     },
     {
@@ -240,7 +252,13 @@
             "pages": [
               "ja-jp/deployment/advanced-configuration/docker/docker-registry"
           ]
-        }
+        },
+        {
+          "group": "アイコンのカスタマイズ",
+          "pages": [
+            "ja-jp/deployment/advanced-configuration/docker-compose/icon-customization"
+        ]
+      }
       ]
     },
     {

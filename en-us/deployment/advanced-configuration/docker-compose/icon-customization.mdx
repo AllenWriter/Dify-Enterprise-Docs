@@ -1,0 +1,48 @@
+---
+title: Icon Customization
+version: 'English'
+---
+
+Customize the web interface by replacing default assets with your own. This guide shows you how to replace key visual elements and run the application with your customizations.
+
+## Prerequisites
+
+- Docker and Docker Compose installed
+- Custom asset files ready for replacement
+
+## Customization Steps
+
+1. **Replace Asset Files**
+   Add the following files in the `web_assets` directory with your customized versions:
+   - `logo-site.png` Main navigation logo
+   - `favicon.ico` Browser tab icon
+
+2. **Launch with Custom Assets**
+   Start the application with both base and web assets configurations:
+
+   ```bash
+   docker compose -f docker-compose.yaml -f docker-compose.with-web-assets.yaml up -d
+   ```
+
+## File Specifications
+
+| File            | Purpose                  | Recommended Specifications |
+| --------------- | ------------------------ | -------------------------- |
+| `logo-site.png` | Top-left navigation logo | PNG format                 |
+| `favicon.ico`   | Browser tab icon         | ICO format, 48×48 pixels   |
+
+## Important Notes
+
+- 🔄 **Restart Required**: After modifying assets, restart your containers to see changes.
+- 🖼️ **Asset Requirements**: Maintain exact file names and formats for proper recognition.
+
+## Example Structure
+
+```bash
+project/
+├── web_assets/
+│   ├── logo-site.png    # Your custom logo
+│   └── favicon.ico      # Your custom favicon
+├── docker-compose.yaml
+└── docker-compose.with-web-assets.yaml
+```

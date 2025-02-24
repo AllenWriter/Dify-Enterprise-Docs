@@ -1,0 +1,80 @@
+---
+title: Configure OAuth2 with GitHub
+version: 'English'
+---
+
+This document demonstrates how to enable OAuth2 authentication for Dify Enterprise using GitHub as the SSO identity provider.
+
+## 1. Create OAuth App in GitHub
+
+1. Visit GitHub admin console page, navigate to **Settings**, select **OAuth Apps** and create a new OAuth application.
+
+![](https://assets-docs.dify.ai/2025/02/5d51e9ba8b3018f1a02a87aa3832acb2.png)
+
+2. Follow the page to fill in the following content and complete the application creation:
+
+- Application name (required): Application name, can be customized.
+- Homepage URL (required): Homepage link, recommended to use Dify Enterprise platform URL.
+- Application description (optional): Application description.
+- Authorization Callback URL (required): Callback link, see [below](#2-get-callback-url) for how to obtain it.
+
+> For more information about creating GitHub OAuth2 applications, please refer to the [GitHub documentation](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app).
+
+## 2. Get Callback URL
+
+The Callback URL **varies depending on the SSO scope** needed. System administrators need to enter Dify Enterprise's Callback URL into the corresponding GitHub OAuth2 application to complete the setup process.
+
+<Tabs>
+  <Tab title="Workspace">
+   Click Authentication page in Dify Enterprise, click **"+ New Identity Provider → New OAuth2 Provider"** in the Workspace Settings area, and view the Callback URL at the bottom.
+
+   ![](https://assets-docs.dify.ai/2025/02/cfb6498477ea20ce9db649a5c21f519d.png)
+
+   It typically follows this format:
+
+   ```bash
+   https://[your-dify-enterprise-url]/console/api/enterprise/sso/oauth2/callback
+   ```
+  </Tab>
+  <Tab title="WebApp">
+   Click Authentication page in Dify Enterprise, click **"+ New Identity Provider → New OAuth2 Provider"** in the WebApp Settings area, and view the Callback URL at the bottom.
+
+   ![](https://assets-docs.dify.ai/2025/02/cc523f2ccc7ba7daf7df7065624bb9e5.png)
+
+   It typically follows this format:
+
+   ```bash
+   https://[your-app-url]/api/enterprise/sso/oauth2/callback
+   ```
+  </Tab>
+</Tabs>
+
+
+2. Paste it into the **Authorization callback URL** field in the OAuth2 App.
+
+## 3. Enable OAuth2 Authentication
+
+Visit Dify Enterprise Authentication page, click **"+ New Identity Provider → New OAuth2 Provider"**, and follow the page to fill in the information and complete the configuration.
+
+Go to the OAuth application and obtain the following information:
+
+- Client ID
+- Client Secrets
+
+The basic information varies among different OAuth2 providers. Please refer to each provider's official documentation for specific details. The following information is for reference only and can be adjusted according to actual needs.
+
+- Authorization Endpoint: `https://github.com/login/oauth/authorize`
+- Token Endpoint: `https://github.com/login/oauth/access_token`
+- User Info Endpoint: `https://api.github.com/user`
+- Scopes: `openid,profile,email`
+
+## 4. Enable SSO Enforcement (Optional)
+
+System administrators can enable mandatory authentication through the SSO Enforcement option for the following two scenarios:
+
+- **Workspace**: Require authorization when logging into Dify Enterprise Workspace.
+- **WebApp**: Require verification when using applications created by the current Dify Enterprise.
+
+Once enabled, accessing the corresponding scenario will prompt for authorization access.
+
+<img src="https://assets-docs.dify.ai/2025/02/28a707cfe144c090d0379834bc41ad7e.png" width="400" />

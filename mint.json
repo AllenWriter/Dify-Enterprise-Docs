@@ -302,7 +302,13 @@
                 "pages": [
                   "en-us/administrator-guide/sso/azure/saml"
               ]
-            }
+            },
+            {
+              "group": "GitHub",
+              "pages": [
+                "en-us/administrator-guide/sso/github/oauth2"
+            ]
+          }            
               ]
             }
           ]
@@ -344,7 +350,7 @@
               "pages": [
                 "zh-cn/administrator-guide/sso/github/oauth2"
             ]
-          }            
+          }
               ]
             }
           ]

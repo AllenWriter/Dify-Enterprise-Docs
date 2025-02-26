@@ -294,7 +294,8 @@
                   "group": "Okta",
                   "pages": [
                     "en-us/administrator-guide/sso/okta/oidc",
-                    "en-us/administrator-guide/sso/okta/saml"
+                    "en-us/administrator-guide/sso/okta/saml",
+                    "en-us/administrator-guide/sso/okta/oauth2"
                 ]
               },
               {
@@ -302,7 +303,13 @@
                 "pages": [
                   "en-us/administrator-guide/sso/azure/saml"
               ]
-            }
+            },
+            {
+              "group": "GitHub",
+              "pages": [
+                "en-us/administrator-guide/sso/github/oauth2"
+            ]
+          }            
               ]
             }
           ]
@@ -330,7 +337,8 @@
                   "group": "Okta",
                   "pages": [
                     "zh-cn/administrator-guide/sso/okta/oidc",
-                    "zh-cn/administrator-guide/sso/okta/saml"
+                    "zh-cn/administrator-guide/sso/okta/saml",
+                    "zh-cn/administrator-guide/sso/okta/oauth2"
                 ]
               },
               {
@@ -338,7 +346,13 @@
                 "pages": [
                   "zh-cn/administrator-guide/sso/azure/saml"
               ]
-            }
+            },
+            {
+              "group": "GitHub",
+              "pages": [
+                "zh-cn/administrator-guide/sso/github/oauth2"
+            ]
+          }
               ]
             }
           ]
@@ -365,7 +379,8 @@
                   "group": "Okta",
                   "pages": [
                     "ja-jp/administrator-guide/sso/okta/oidc",
-                    "ja-jp/administrator-guide/sso/okta/saml"
+                    "ja-jp/administrator-guide/sso/okta/saml",
+                    "ja-jp/administrator-guide/sso/okta/oauth2"
                 ]
               },
               {
@@ -373,7 +388,13 @@
                 "pages": [
                   "ja-jp/administrator-guide/sso/azure/saml"
               ]
-            }
+            },
+            {
+              "group": "GitHub",
+              "pages": [
+                "ja-jp/administrator-guide/sso/github/oauth2"
+            ]
+          }            
               ]
             }
           ]

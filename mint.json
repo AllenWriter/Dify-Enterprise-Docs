@@ -294,7 +294,8 @@
                   "group": "Okta",
                   "pages": [
                     "en-us/administrator-guide/sso/okta/oidc",
-                    "en-us/administrator-guide/sso/okta/saml"
+                    "en-us/administrator-guide/sso/okta/saml",
+                    "en-us/administrator-guide/sso/okta/oauth2"
                 ]
               },
               {
@@ -336,7 +337,8 @@
                   "group": "Okta",
                   "pages": [
                     "zh-cn/administrator-guide/sso/okta/oidc",
-                    "zh-cn/administrator-guide/sso/okta/saml"
+                    "zh-cn/administrator-guide/sso/okta/saml",
+                    "zh-cn/administrator-guide/sso/okta/oauth2"
                 ]
               },
               {

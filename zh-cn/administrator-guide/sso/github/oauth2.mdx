@@ -3,7 +3,7 @@ title: 使用 GitHub 配置 OAuth2
 version: '简体中文'
 ---
 
-本篇文档将以 GitHub 作为 SSO 身份提供商为例，演示如何为 Dify 企业版开启 OAuth2 验证。
+本篇文档将以 GitHub 作为 SSO 身份提供商为例，演示如何为 Dify 企业版开启 OAuth2 授权协议。通过启用此功能，企业版登录页将使用统一的身份认证入口以增强安全性。对于企业内部用户而言，无需输入复杂密码，使用组织账号登录即可通过验证，简化登录流程。
 
 ## 1. 在 GitHub 中创建 OAuth App
 
@@ -22,7 +22,7 @@ version: '简体中文'
 
 ## 2. 获取 Callback URL
 
-根据所需要开启的 SSO 范围，**Callback URL 有所差异**。系统管理员需要将 Dify 企业版的 Callback URL 填写至对应的 GitHUb OAuth2 应用程序内以完成创建流程。
+根据所需要开启的 SSO 范围，**Callback URL 有所差异**。系统管理员需要将 Dify 企业版的 Callback URL 填写至对应的 GitHub OAuth2 应用程序内以完成创建流程。
 
 <Tabs>
   <Tab title="Workspace">
@@ -50,7 +50,7 @@ version: '简体中文'
 </Tabs>
 
 
-2. 将其粘贴至 OAuth2 App 内的 **Authorization callback UR**L 字段内。
+2. 将其粘贴至 OAuth2 App 内的 **Authorization callback URL** 字段内。
 
 ## 3. 开启 OAuth2 认证
 
@@ -70,7 +70,7 @@ version: '简体中文'
 
 ## 4. 开启 SSO 强制认证（可选）
 
-系统管理员可通过 SSO Enforcement 选项为以下两种场景开启强制认证：
+系统管理员打开以下两种场景的 SSO Enforcement 选项，开启强制认证：
 
 - **Workspace**，登录 Dify 企业版 Workspace 时要求通过授权。
 - **WebApp**， 使用由当前 Dify 企业版所创建的应用时，要求通过验证。

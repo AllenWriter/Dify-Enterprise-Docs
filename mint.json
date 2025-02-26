@@ -379,7 +379,8 @@
                   "group": "Okta",
                   "pages": [
                     "ja-jp/administrator-guide/sso/okta/oidc",
-                    "ja-jp/administrator-guide/sso/okta/saml"
+                    "ja-jp/administrator-guide/sso/okta/saml",
+                    "ja-jp/administrator-guide/sso/okta/oauth2"
                 ]
               },
               {
@@ -387,7 +388,13 @@
                 "pages": [
                   "ja-jp/administrator-guide/sso/azure/saml"
               ]
-            }
+            },
+            {
+              "group": "GitHub",
+              "pages": [
+                "ja-jp/administrator-guide/sso/github/oauth2"
+            ]
+          }            
               ]
             }
           ]

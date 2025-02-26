@@ -17,7 +17,7 @@ By enabling this feature, the login page in Enterprise Edition will utilize a un
 
 ## 2. Obtain the Callback URL
 
-Depending on the SSO scope you intend to enable, **the Callback URL may vary**. The system administrator needs to paste the Dify Enterprise Callback URL into the corresponding Okta OAuth2 application to finalize the setup.
+Depending on the SSO scope you intend to enable, **the Callback URL may vary**. The system administrator needs to paste the Dify Enterprise Callback URL into the corresponding Okta application to finalize the setup.
 
 <Tabs>
   <Tab title="Workspace">
@@ -46,7 +46,7 @@ Depending on the SSO scope you intend to enable, **the Callback URL may vary**. 
 
 2. Paste this URL into the **Sign-in redirect URIs** field of your Okta OAuth2 app.
 
-## 3. Complete the Configuration in Dify
+## 3. Enable OAuth2 Authentication
 
 1. In the **General** tab of the Okta application, copy the following fields to use in later configuration steps:
    - **Client ID**
@@ -54,15 +54,11 @@ Depending on the SSO scope you intend to enable, **the Callback URL may vary**. 
 
    ![](/zh-cn/images/okta-oidc-5.png)
 
-2. Switch to the **Sign On** tab and locate the **Issuer** field. Change the **Issuer URL** to a fixed link.
+2. Switch to the **Sign On** tab and locate the **Issuer** field. Change the **Issuer** to a fixed link.
 
    ![](https://assets-docs.dify.ai/2025/02/0cf3c5b1c3b662e48d65827ae3b34ca4.png)
 
-## 4. Enable OAuth2 Authentication
-
-Go to **Authentication** in Dify Enterprise, click **+ New Identity Provider → New OAuth2 Provider**, and fill in the information as prompted to complete the configuration.
-
-Obtain the following details from your OAuth application:
+Go to **Authentication** in Dify Enterprise, click **+ New Identity Provider → New OAuth2 Provider**, and fill in the information as prompted to complete the configuration:
 
 - **Client ID**
 - **Client Secret**
@@ -74,7 +70,7 @@ The basic information may vary among different OAuth2 providers; refer to their 
 - **User Info Endpoint**: `https://your-okta-issuer-url/oauth2/v1/userinfo`
 - **Scopes**: `openid, profile, email`
 
-> The method to obtain `your-okta-issuer-url`: As mentioned above, set the Issuer URL in the Okta OAuth2 App to a fixed link and copy that information. If you need to gather more fields from the Okta App, refer to [Use of the Issuer](https://support.okta.com/help/s/article/What-is-theIssuerlocated-under-the-OpenID-Connect-ID-Token-app-settings-used-for?language=en_US).
+> The method to obtain `your-okta-issuer-url`: As mentioned above, set the Issuer URL in the Okta App to a fixed link and copy that information. If you need to gather more fields from the Okta App, refer to [Use of the Issuer](https://support.okta.com/help/s/article/What-is-theIssuerlocated-under-the-OpenID-Connect-ID-Token-app-settings-used-for?language=en_US).
 
 ## 5. Enable SSO Enforcement (Optional)
 

@@ -1,0 +1,1324 @@
+2025-03-10 14:07:33,138 - INFO - 开始处理根目录下的Markdown文档: /Users/allen/Desktop/Dify-Enterprise-Docs
+2025-03-10 14:07:33,139 - INFO - 排除目录: ['/Users/allen/Desktop/Dify-Enterprise-Docs/scripts']
+2025-03-10 14:07:33,139 - INFO - 图片格式设置: original
+2025-03-10 14:07:33,182 - INFO - 文件无需修改: README.md
+2025-03-10 14:07:33,183 - INFO - 文件无需修改: introduction.mdx
+2025-03-10 14:07:33,184 - INFO - 文件无需修改: quickstart.mdx
+2025-03-10 14:07:33,185 - INFO - 文件无需修改: node_modules/semver/README.md
+2025-03-10 14:07:33,186 - INFO - 文件无需修改: ja-jp/introduction.mdx
+2025-03-10 14:07:33,186 - ERROR - 转换图片失败: /ja-jp/images/workspace-management-1.png, 错误: [Errno 2] No such file or directory: '/ja-jp/images/workspace-management-1.png'
+2025-03-10 14:07:33,186 - WARNING - 处理失败，保持原文件不变: ja-jp/administrator-guide/workspace-management.mdx
+2025-03-10 14:07:33,186 - ERROR - 转换图片失败: /ja-jp/img/b40afe0926bfa2ce4fb3beef91928647.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/b40afe0926bfa2ce4fb3beef91928647.png'
+2025-03-10 14:07:33,187 - WARNING - 处理失败，保持原文件不变: ja-jp/administrator-guide/authentication.mdx
+2025-03-10 14:07:33,187 - INFO - 文件无需修改: ja-jp/administrator-guide/email.mdx
+2025-03-10 14:07:33,189 - INFO - 文件无需修改: ja-jp/administrator-guide/admin-apis.mdx
+2025-03-10 14:07:33,189 - ERROR - 转换图片失败: /ja-jp/img/83116e9cc6c367e59ce712d001860d23.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/83116e9cc6c367e59ce712d001860d23.png'
+2025-03-10 14:07:33,189 - WARNING - 处理失败，保持原文件不变: ja-jp/administrator-guide/faq.mdx
+2025-03-10 14:07:33,189 - ERROR - 转换图片失败: /ja-jp/img/cb2bad848e40760140e7aa6e25eb2a42.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/cb2bad848e40760140e7aa6e25eb2a42.png'
+2025-03-10 14:07:33,189 - WARNING - 处理失败，保持原文件不变: ja-jp/administrator-guide/system-settings.mdx
+2025-03-10 14:07:33,190 - ERROR - 转换图片失败: /ja-jp/images/members-management-1.png, 错误: [Errno 2] No such file or directory: '/ja-jp/images/members-management-1.png'
+2025-03-10 14:07:33,190 - WARNING - 处理失败，保持原文件不变: ja-jp/administrator-guide/members-management.mdx
+2025-03-10 14:07:33,190 - ERROR - 转换图片失败: /ja-jp/img/1c7db1aa112a2eb395559e0d18ad26ee.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/1c7db1aa112a2eb395559e0d18ad26ee.png'
+2025-03-10 14:07:33,190 - WARNING - 处理失败，保持原文件不变: ja-jp/administrator-guide/sso/introduction.mdx
+2025-03-10 14:07:33,192 - INFO - 文件无需修改: ja-jp/administrator-guide/sso/azure/saml.mdx
+2025-03-10 14:07:33,194 - INFO - 文件无需修改: ja-jp/administrator-guide/sso/github/oauth2.mdx
+2025-03-10 14:07:33,194 - ERROR - 转换图片失败: /zh-cn/images/okta-oidc-1.png, 错误: [Errno 2] No such file or directory: '/zh-cn/images/okta-oidc-1.png'
+2025-03-10 14:07:33,194 - WARNING - 处理失败，保持原文件不变: ja-jp/administrator-guide/sso/okta/oidc.mdx
+2025-03-10 14:07:33,194 - INFO - 跳过远程图片: https://r2.xmsex.net/2024/10/eac08a1d4b7aa615d1108081b5e99731.png
+2025-03-10 14:07:33,194 - INFO - 跳过远程图片: https://r2.xmsex.net/2024/10/409f64e068449c2f9dc9c3e471a36946.png
+2025-03-10 14:07:33,194 - ERROR - 转换图片失败: /ja-jp/img/f66303a3902d7fff58c76228f6485386.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/f66303a3902d7fff58c76228f6485386.png'
+2025-03-10 14:07:33,194 - WARNING - 处理失败，保持原文件不变: ja-jp/administrator-guide/sso/okta/saml.mdx
+2025-03-10 14:07:33,195 - ERROR - 转换图片失败: /zh-cn/images/okta-oidc-5.png, 错误: [Errno 2] No such file or directory: '/zh-cn/images/okta-oidc-5.png'
+2025-03-10 14:07:33,195 - WARNING - 处理失败，保持原文件不变: ja-jp/administrator-guide/sso/okta/oauth2.mdx
+2025-03-10 14:07:33,196 - INFO - 文件无需修改: ja-jp/user-guide/welcome.mdx
+2025-03-10 14:07:33,196 - ERROR - 转换图片失败: /ja-jp/img/Feb 4, 2024.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/Feb 4, 2024.png'
+2025-03-10 14:07:33,196 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/tools/quick-tool-integration.mdx
+2025-03-10 14:07:33,196 - ERROR - 转换图片失败: /ja-jp/img/first-party-tools.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/first-party-tools.png'
+2025-03-10 14:07:33,196 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/tools/introduction.mdx
+2025-03-10 14:07:33,198 - INFO - 文件无需修改: ja-jp/user-guide/tools/advanced-tool-integration.mdx
+2025-03-10 14:07:33,199 - ERROR - 转换图片失败: /ja-jp/user-guide/.gitbook/assets/api_based.png, 错误: [Errno 2] No such file or directory: '/ja-jp/user-guide/.gitbook/assets/api_based.png'
+2025-03-10 14:07:33,199 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/tools/extensions/code-based/external-data-tool.mdx
+2025-03-10 14:07:33,202 - INFO - 文件无需修改: ja-jp/user-guide/tools/extensions/code-based/moderation.mdx
+2025-03-10 14:07:33,202 - ERROR - 转换图片失败: /ja-jp/img/api_extension_edit.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/api_extension_edit.png'
+2025-03-10 14:07:33,202 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/tools/extensions/api-based/cloudflare-workers.mdx
+2025-03-10 14:07:33,205 - INFO - 文件无需修改: ja-jp/user-guide/tools/extensions/api-based/external-data-tool.mdx
+2025-03-10 14:07:33,206 - INFO - 文件无需修改: ja-jp/user-guide/tools/extensions/api-based/moderation.mdx
+2025-03-10 14:07:33,206 - ERROR - 转换图片失败: /ja-jp/user-guide/.gitbook/assets/download.png, 错误: [Errno 2] No such file or directory: '/ja-jp/user-guide/.gitbook/assets/download.png'
+2025-03-10 14:07:33,206 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/tools/extensions/api-based/api-based-extension.mdx
+2025-03-10 14:07:33,207 - INFO - 文件无需修改: ja-jp/user-guide/tools/community/searxng.mdx
+2025-03-10 14:07:33,208 - ERROR - 转换图片失败: /ja-jp/img/tool-searchapi.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/tool-searchapi.png'
+2025-03-10 14:07:33,208 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/tools/community/searchapi.mdx
+2025-03-10 14:07:33,208 - ERROR - 转换图片失败: /ja-jp/img/截屏2024-09-27 13.04.16.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/截屏2024-09-27 13.04.16.png'
+2025-03-10 14:07:33,208 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/tools/community/siliconflow.mdx
+2025-03-10 14:07:33,210 - INFO - 文件无需修改: ja-jp/user-guide/tools/community/alphavantage.mdx
+2025-03-10 14:07:33,210 - ERROR - 转换图片失败: /ja-jp/img/0503c5838f163b54884ca58240281f3f.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/0503c5838f163b54884ca58240281f3f.png'
+2025-03-10 14:07:33,210 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/tools/community/comfyui.mdx
+2025-03-10 14:07:33,210 - ERROR - 转换图片失败: /ja-jp/img/tool-serper.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/tool-serper.png'
+2025-03-10 14:07:33,210 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/tools/community/serper.mdx
+2025-03-10 14:07:33,210 - ERROR - 转换图片失败: /ja-jp/img/tools-dalle.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/tools-dalle.png'
+2025-03-10 14:07:33,210 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/tools/dify/dall-e.mdx
+2025-03-10 14:07:33,212 - INFO - 文件无需修改: ja-jp/user-guide/tools/dify/stable-diffusion.mdx
+2025-03-10 14:07:33,212 - ERROR - 转换图片失败: /ja-jp/img/tools-bing.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/tools-bing.png'
+2025-03-10 14:07:33,212 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/tools/dify/bing.mdx
+2025-03-10 14:07:33,212 - ERROR - 转换图片失败: /ja-jp/img/tools-google.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/tools-google.png'
+2025-03-10 14:07:33,212 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/tools/dify/google.mdx
+2025-03-10 14:07:33,212 - ERROR - 转换图片失败: /ja-jp/img/tools-perplexity.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/tools-perplexity.png'
+2025-03-10 14:07:33,212 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/tools/dify/perplexity.mdx
+2025-03-10 14:07:33,215 - INFO - 文件无需修改: ja-jp/user-guide/faq/feature-using.mdx
+2025-03-10 14:07:33,215 - ERROR - 转换图片失败: /ja-jp/img/en-faq-remove-header.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/en-faq-remove-header.png'
+2025-03-10 14:07:33,215 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/faq/llm-using.mdx
+2025-03-10 14:07:33,215 - ERROR - 转换图片失败: /ja-jp/img/37a012ebb30449ccebcb29f3ee01d62f.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/37a012ebb30449ccebcb29f3ee01d62f.png'
+2025-03-10 14:07:33,215 - ERROR - 转换图片失败: /ja-jp/img/image (92).png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/image (92).png'
+2025-03-10 14:07:33,215 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/management/app-management.mdx
+2025-03-10 14:07:33,216 - ERROR - 转换图片失败: /ja-jp/img/team-members-management-01.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/team-members-management-01.png'
+2025-03-10 14:07:33,216 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/management/team-members-management.mdx
+2025-03-10 14:07:33,216 - ERROR - 转换图片失败: /ja-jp/img/image (1).png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/image (1).png'
+2025-03-10 14:07:33,216 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/management/personal-account-management.mdx
+2025-03-10 14:07:33,216 - ERROR - 转换图片失败: /ja-jp/img/jp-model-configuration-1.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/jp-model-configuration-1.png'
+2025-03-10 14:07:33,216 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/models/model-configuration.mdx
+2025-03-10 14:07:33,217 - ERROR - 转换图片失败: /ja-jp/img/image (24).png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/image (24).png'
+2025-03-10 14:07:33,217 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/models/customizable-model.mdx
+2025-03-10 14:07:33,219 - INFO - 文件无需修改: ja-jp/user-guide/models/predefined-model.mdx
+2025-03-10 14:07:33,221 - INFO - 文件无需修改: ja-jp/user-guide/models/new-provider.mdx
+2025-03-10 14:07:33,223 - INFO - 文件无需修改: ja-jp/user-guide/models/interfaces.mdx
+2025-03-10 14:07:33,223 - ERROR - 转换图片失败: /ja-jp/img/jp-load_balancing_1.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/jp-load_balancing_1.png'
+2025-03-10 14:07:33,223 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/models/load-balancing.mdx
+2025-03-10 14:07:33,224 - INFO - 文件无需修改: ja-jp/user-guide/models/schema.mdx
+2025-03-10 14:07:33,227 - INFO - 文件无需修改: ja-jp/user-guide/api-documentation/text-generator.mdx
+2025-03-10 14:07:33,228 - ERROR - 转换图片失败: /images/assets/knowledge-base-api-token.png, 错误: [Errno 2] No such file or directory: '/images/assets/knowledge-base-api-token.png'
+2025-03-10 14:07:33,228 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/api-documentation/knowledge-base.mdx
+2025-03-10 14:07:33,230 - INFO - 文件无需修改: ja-jp/user-guide/api-documentation/chatbot.mdx
+2025-03-10 14:07:33,231 - INFO - 文件无需修改: ja-jp/user-guide/api-documentation/workflow.mdx
+2025-03-10 14:07:33,233 - INFO - 文件无需修改: ja-jp/user-guide/api-documentation/external-knowledge-api-documentation.mdx
+2025-03-10 14:07:33,234 - ERROR - 转换图片失败: /img/94275017d6f0477fcd32323e52915fd6.png, 错误: [Errno 2] No such file or directory: '/img/94275017d6f0477fcd32323e52915fd6.png'
+2025-03-10 14:07:33,234 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/text-generator.mdx
+2025-03-10 14:07:33,234 - ERROR - 转换图片失败: /ja-jp/img/agent-dalle3.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/agent-dalle3.png'
+2025-03-10 14:07:33,234 - ERROR - 转换图片失败: /ja-jp/img/jp-agent-1.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/jp-agent-1.png'
+2025-03-10 14:07:33,234 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/agent.mdx
+2025-03-10 14:07:33,234 - ERROR - 转换图片失败: /ja-jp/img/jp-conversation-options.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/jp-conversation-options.png'
+2025-03-10 14:07:33,234 - ERROR - 转换图片失败: /ja-jp/img/jp-create-chatbox.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/jp-create-chatbox.png'
+2025-03-10 14:07:33,234 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/chatbot.mdx
+2025-03-10 14:07:33,235 - ERROR - 转换图片失败: /ja-jp/img/jp_create_chatflow.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/jp_create_chatflow.png'
+2025-03-10 14:07:33,235 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/flow-app/create-flow-app.mdx
+2025-03-10 14:07:33,235 - ERROR - 转换图片失败: /en-us/img/c405efa31fd5708542fdc3bd7c0cb708.png, 错误: [Errno 2] No such file or directory: '/en-us/img/c405efa31fd5708542fdc3bd7c0cb708.png'
+2025-03-10 14:07:33,235 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/flow-app/variables.mdx
+2025-03-10 14:07:33,235 - ERROR - 转换图片失败: /ja-jp/user-guide/.gitbook/assets/image (7).png, 错误: [Errno 2] No such file or directory: '/ja-jp/user-guide/.gitbook/assets/image (7).png'
+2025-03-10 14:07:33,235 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/flow-app/additional-feature.mdx
+2025-03-10 14:07:33,235 - ERROR - 转换图片失败: /ja-jp/img/orchestrate-node.jpeg, 错误: [Errno 2] No such file or directory: '/ja-jp/img/orchestrate-node.jpeg'
+2025-03-10 14:07:33,235 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/flow-app/orchestrate-node.mdx
+2025-03-10 14:07:33,237 - INFO - 文件无需修改: ja-jp/user-guide/build-app/flow-app/concepts.mdx
+2025-03-10 14:07:33,239 - INFO - 文件无需修改: ja-jp/user-guide/build-app/flow-app/publish.mdx
+2025-03-10 14:07:33,239 - ERROR - 转换图片失败: /ja-jp/user-guide/.gitbook/assets/image (379).png, 错误: [Errno 2] No such file or directory: '/ja-jp/user-guide/.gitbook/assets/image (379).png'
+2025-03-10 14:07:33,239 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/flow-app/file-upload.mdx
+2025-03-10 14:07:33,239 - INFO - 跳过远程图片: https://docs.dify.ai/~gitbook/image?url=https%3A%2F%2F3866086014-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FRncMhlfeYTrpujwzDIqw%252Fuploads%252Fgit-blob-9d99907b12419fb3b7c1ab4082a147af3ffb6221%252Fend-answer.png%3Falt%3Dmedia&width=768&dpr=2&quality=100&sign=66745000&sv=1
+2025-03-10 14:07:33,240 - ERROR - 转换图片失败: /ja-jp/img/463291f9ab3d62ff3b4094e97d8ea543.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/463291f9ab3d62ff3b4094e97d8ea543.png'
+2025-03-10 14:07:33,240 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/flow-app/nodes/end.mdx
+2025-03-10 14:07:33,240 - INFO - 跳过远程图片: https://r2.xmsex.net/2024/10/43ab9a37624bdba10ff37a5b9004db7f.png
+2025-03-10 14:07:33,240 - INFO - 跳过远程图片: https://r2.xmsex.net/2024/10/faaffe7d19591aeb9983629b94f53a66.png
+2025-03-10 14:07:33,240 - ERROR - 转换图片失败: /ja-jp/img/1eb561e0c60741f668a93533ed98bfb5.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/1eb561e0c60741f668a93533ed98bfb5.png'
+2025-03-10 14:07:33,240 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/flow-app/nodes/list-operator.mdx
+2025-03-10 14:07:33,240 - ERROR - 转换图片失败: /ja-jp/img/jp-tool-list.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/jp-tool-list.png'
+2025-03-10 14:07:33,240 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/flow-app/nodes/tools.mdx
+2025-03-10 14:07:33,240 - ERROR - 转换图片失败: /ja-jp/img/jp-parameter-extractor1.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/jp-parameter-extractor1.png'
+2025-03-10 14:07:33,240 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/flow-app/nodes/parameter-extractor.mdx
+2025-03-10 14:07:33,240 - ERROR - 转换图片失败: /ja-jp/img/jp-http-request.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/jp-http-request.png'
+2025-03-10 14:07:33,240 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/flow-app/nodes/http-request.mdx
+2025-03-10 14:07:33,241 - ERROR - 转换图片失败: /ja-jp/img/image (227).png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/image (227).png'
+2025-03-10 14:07:33,241 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/flow-app/nodes/variable-aggregation.mdx
+2025-03-10 14:07:33,241 - ERROR - 转换图片失败: /ja-jp/img/0cbfd9c1d9d56e6a528b134bd07662ec.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/0cbfd9c1d9d56e6a528b134bd07662ec.png'
+2025-03-10 14:07:33,241 - ERROR - 转换图片失败: /ja-jp/img/0ae3f13cf725cb2c52c72cc354e592ee.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/0ae3f13cf725cb2c52c72cc354e592ee.png'
+2025-03-10 14:07:33,241 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/flow-app/nodes/doc-extractor.mdx
+2025-03-10 14:07:33,241 - ERROR - 转换图片失败: /ja-jp/img/904eeba8ee23e89c189497c5fd90f499.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/904eeba8ee23e89c189497c5fd90f499.png'
+2025-03-10 14:07:33,241 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/flow-app/nodes/code.mdx
+2025-03-10 14:07:33,242 - ERROR - 转换图片失败: /ja-jp/user-guide/.gitbook/assets/iteration-story-generator.png, 错误: [Errno 2] No such file or directory: '/ja-jp/user-guide/.gitbook/assets/iteration-story-generator.png'
+2025-03-10 14:07:33,242 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/flow-app/nodes/iteration.mdx
+2025-03-10 14:07:33,242 - INFO - 跳过远程图片: https://r2.xmsex.net/2024/10/cb39be409f0037549d45f4b7d05aa9ce.png
+2025-03-10 14:07:33,242 - ERROR - 转换图片失败: /ja-jp/img/233efef6802ae700489f3ab3478bca6b.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/233efef6802ae700489f3ab3478bca6b.png'
+2025-03-10 14:07:33,242 - ERROR - 转换图片失败: /ja-jp/img/jp-start-setup.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/jp-start-setup.png'
+2025-03-10 14:07:33,243 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/flow-app/nodes/start.mdx
+2025-03-10 14:07:33,245 - INFO - 文件无需修改: ja-jp/user-guide/build-app/flow-app/nodes/README.mdx
+2025-03-10 14:07:33,245 - INFO - 跳过远程图片: https://docs.dify.ai/~gitbook/image?url=https%3A%2F%2F3244742310-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FBl3K6n12AeCkG3icHwfh%252Fuploads%252Fgit-blob-782166177f09bc9c035cc63349758bcc1856c26f%252Fjp-llm-with-histories.png%3Falt%3Dmedia&width=768&dpr=2&quality=100&sign=18c08ac7&sv=1
+2025-03-10 14:07:33,245 - ERROR - 转换图片失败: /ja-jp/img/jp-llm-detail.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/jp-llm-detail.png'
+2025-03-10 14:07:33,245 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/flow-app/nodes/llm.mdx
+2025-03-10 14:07:33,245 - ERROR - 转换图片失败: /ja-jp/img/jp-template.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/jp-template.png'
+2025-03-10 14:07:33,245 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/flow-app/nodes/template.mdx
+2025-03-10 14:07:33,247 - INFO - 文件无需修改: ja-jp/user-guide/build-app/flow-app/nodes/answer.mdx
+2025-03-10 14:07:33,247 - ERROR - 转换图片失败: /ja-jp/img/jp-question.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/jp-question.png'
+2025-03-10 14:07:33,247 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/flow-app/nodes/question-classifier.mdx
+2025-03-10 14:07:33,248 - ERROR - 转换图片失败: /ja-jp/img/jp-knowledge-retrieval.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/jp-knowledge-retrieval.png'
+2025-03-10 14:07:33,248 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/flow-app/nodes/knowledge-retrieval.mdx
+2025-03-10 14:07:33,248 - ERROR - 转换图片失败: /ja-jp/user-guide/.gitbook/assets/variable-assigner.png, 错误: [Errno 2] No such file or directory: '/ja-jp/user-guide/.gitbook/assets/variable-assigner.png'
+2025-03-10 14:07:33,248 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/flow-app/nodes/variable-assigner.mdx
+2025-03-10 14:07:33,248 - ERROR - 转换图片失败: /ja-jp/img/jp-ifelse.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/jp-ifelse.png'
+2025-03-10 14:07:33,248 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/build-app/flow-app/nodes/ifelse.mdx
+2025-03-10 14:07:33,248 - ERROR - 转换图片失败: /ja-jp/img/rerank-flow-chart.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/rerank-flow-chart.png'
+2025-03-10 14:07:33,248 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/knowledge-base/integrate-knowledge-within-application.mdx
+2025-03-10 14:07:33,248 - ERROR - 转换图片失败: /ja-jp/img/knowledge-settings-01.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/knowledge-settings-01.png'
+2025-03-10 14:07:33,248 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/knowledge-base/knowledge-and-documents-maintenance.mdx
+2025-03-10 14:07:33,251 - INFO - 文件无需修改: ja-jp/user-guide/knowledge-base/faq.mdx
+2025-03-10 14:07:33,251 - ERROR - 转换图片失败: /ja-jp/img/Retrieval-testing.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/Retrieval-testing.png'
+2025-03-10 14:07:33,251 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/knowledge-base/retrieval-test-and-citation.mdx
+2025-03-10 14:07:33,251 - ERROR - 转换图片失败: /ja-jp/images/en-upload-files-1.png, 错误: [Errno 2] No such file or directory: '/ja-jp/images/en-upload-files-1.png'
+2025-03-10 14:07:33,252 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/knowledge-base/knowledge-base-creation/upload-documents.mdx
+2025-03-10 14:07:33,252 - ERROR - 转换图片失败: /ja-jp/img/binding-notion (1).png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/binding-notion (1).png'
+2025-03-10 14:07:33,252 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/knowledge-base/knowledge-base-creation/sync-from-notion.mdx
+2025-03-10 14:07:33,252 - ERROR - 转换图片失败: /images/sync-from-firecrawl.png, 错误: [Errno 2] No such file or directory: '/images/sync-from-firecrawl.png'
+2025-03-10 14:07:33,252 - ERROR - 转换图片失败: /ja-jp/img/image (6) (2).png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/image (6) (2).png'
+2025-03-10 14:07:33,252 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/knowledge-base/knowledge-base-creation/sync-from-website.mdx
+2025-03-10 14:07:33,253 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (1) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (1) (1).png'
+2025-03-10 14:07:33,253 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/knowledge-base/knowledge-base-creation/connect-external-knowledge-base.mdx
+2025-03-10 14:07:33,253 - ERROR - 转换图片失败: /ja-jp/img/knowledge-base-api-token.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/knowledge-base-api-token.png'
+2025-03-10 14:07:33,253 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/knowledge-base/api-connection/maintain-dataset-via-api.mdx
+2025-03-10 14:07:33,256 - INFO - 文件无需修改: ja-jp/user-guide/knowledge-base/api-connection/external-knowledge-api-documentation.mdx
+2025-03-10 14:07:33,256 - ERROR - 转换图片失败: /ja-jp/img/jp-n-to-1.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/jp-n-to-1.png'
+2025-03-10 14:07:33,256 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/knowledge-base/indexing-and-retrieval/retrieval.mdx
+2025-03-10 14:07:33,256 - ERROR - 转换图片失败: /ja-jp/img/image (128).png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/image (128).png'
+2025-03-10 14:07:33,256 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/knowledge-base/indexing-and-retrieval/rerank.mdx
+2025-03-10 14:07:33,256 - ERROR - 转换图片失败: /ja-jp/img/image (129).png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/image (129).png'
+2025-03-10 14:07:33,256 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/knowledge-base/indexing-and-retrieval/retrieval-augment.mdx
+2025-03-10 14:07:33,257 - ERROR - 转换图片失败: /ja-jp/img/image (127).png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/image (127).png'
+2025-03-10 14:07:33,257 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/knowledge-base/indexing-and-retrieval/hybrid-search.mdx
+2025-03-10 14:07:33,257 - ERROR - 转换图片失败: /ja-jp/img/API Access.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/API Access.png'
+2025-03-10 14:07:33,257 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/application-publishing/developing-with-apis.mdx
+2025-03-10 14:07:33,259 - INFO - 文件无需修改: ja-jp/user-guide/application-publishing/based-on-frontend-templates.mdx
+2025-03-10 14:07:33,259 - ERROR - 转换图片失败: /ja-jp/user-guide/.gitbook/assets/image (69) (1).png, 错误: [Errno 2] No such file or directory: '/ja-jp/user-guide/.gitbook/assets/image (69) (1).png'
+2025-03-10 14:07:33,259 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/application-publishing/embedding-in-websites.mdx
+2025-03-10 14:07:33,260 - ERROR - 转换图片失败: /images/assets/text-generator.png, 错误: [Errno 2] No such file or directory: '/images/assets/text-generator.png'
+2025-03-10 14:07:33,260 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/application-publishing/launch-your-webapp-quickly/text-generator.mdx
+2025-03-10 14:07:33,261 - ERROR - 转换图片失败: /ja-jp/img/conversation-chatbot.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/conversation-chatbot.png'
+2025-03-10 14:07:33,261 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/application-publishing/launch-your-webapp-quickly/conversation-application.mdx
+2025-03-10 14:07:33,263 - INFO - 文件无需修改: ja-jp/user-guide/application-publishing/launch-your-webapp-quickly/web-app-settings.mdx
+2025-03-10 14:07:33,264 - ERROR - 转换图片失败: /ja-jp/user-guide/.gitbook/assets/output (4) (3).png, 错误: [Errno 2] No such file or directory: '/ja-jp/user-guide/.gitbook/assets/output (4) (3).png'
+2025-03-10 14:07:33,264 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/application-publishing/launch-your-webapp-quickly/flow-app.mdx
+2025-03-10 14:07:33,266 - INFO - 文件无需修改: ja-jp/user-guide/debug-app/text-generator.mdx
+2025-03-10 14:07:33,269 - INFO - 文件无需修改: ja-jp/user-guide/debug-app/agent.mdx
+2025-03-10 14:07:33,272 - INFO - 文件无需修改: ja-jp/user-guide/debug-app/chatbot.mdx
+2025-03-10 14:07:33,272 - ERROR - 转换图片失败: /ja-jp/user-guide/.gitbook/assets/output (3) (3).png, 错误: [Errno 2] No such file or directory: '/ja-jp/user-guide/.gitbook/assets/output (3) (3).png'
+2025-03-10 14:07:33,272 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/debug-app/chatflow-and-workflow/step-run.mdx
+2025-03-10 14:07:33,272 - ERROR - 转换图片失败: /ja-jp/img/output (2) (4).png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/output (2) (4).png'
+2025-03-10 14:07:33,272 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/debug-app/chatflow-and-workflow/checklist.mdx
+2025-03-10 14:07:33,276 - INFO - 文件无需修改: ja-jp/user-guide/debug-app/chatflow-and-workflow/api.mdx
+2025-03-10 14:07:33,276 - ERROR - 转换图片失败: /ja-jp/img/conversation-logs.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/conversation-logs.png'
+2025-03-10 14:07:33,276 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/debug-app/chatflow-and-workflow/log.mdx
+2025-03-10 14:07:33,277 - ERROR - 转换图片失败: /ja-jp/user-guide/.gitbook/assets/output (7).png, 错误: [Errno 2] No such file or directory: '/ja-jp/user-guide/.gitbook/assets/output (7).png'
+2025-03-10 14:07:33,277 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/debug-app/chatflow-and-workflow/preview-and-run.mdx
+2025-03-10 14:07:33,277 - ERROR - 转换图片失败: /images/assets/logs-history.png, 错误: [Errno 2] No such file or directory: '/images/assets/logs-history.png'
+2025-03-10 14:07:33,277 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/debug-app/chatflow-and-workflow/history.mdx
+2025-03-10 14:07:33,277 - ERROR - 转换图片失败: /ja-jp/img/app-logs-ann.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/app-logs-ann.png'
+2025-03-10 14:07:33,277 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/monitoring/logs.mdx
+2025-03-10 14:07:33,277 - ERROR - 转换图片失败: /ja-jp/img/image (130).png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/image (130).png'
+2025-03-10 14:07:33,277 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/monitoring/annotation-reply.mdx
+2025-03-10 14:07:33,277 - ERROR - 转换图片失败: /ja-jp/img/jp-data-analysis-1.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/jp-data-analysis-1.png'
+2025-03-10 14:07:33,277 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/monitoring/analysis.mdx
+2025-03-10 14:07:33,277 - ERROR - 转换图片失败: /ja-jp/img/image (249).png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/image (249).png'
+2025-03-10 14:07:33,277 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/monitoring/integrate-external-ops-tools/integrate-langfuse.mdx
+2025-03-10 14:07:33,278 - ERROR - 转换图片失败: /ja-jp/img/image (3) (1) (1) (1).png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/image (3) (1) (1) (1).png'
+2025-03-10 14:07:33,278 - WARNING - 处理失败，保持原文件不变: ja-jp/user-guide/monitoring/integrate-external-ops-tools/integrate-langsmith.mdx
+2025-03-10 14:07:33,280 - INFO - 文件无需修改: ja-jp/deployment/license-activation.mdx
+2025-03-10 14:07:33,282 - ERROR - 转换图片失败: /images/license-inactive.png, 错误: [Errno 2] No such file or directory: '/images/license-inactive.png'
+2025-03-10 14:07:33,282 - WARNING - 处理失败，保持原文件不变: ja-jp/deployment/verify-services-status.mdx
+2025-03-10 14:07:33,285 - INFO - 文件无需修改: ja-jp/deployment/resources-checklist.mdx
+2025-03-10 14:07:33,288 - INFO - 文件无需修改: ja-jp/deployment/checklist.mdx
+2025-03-10 14:07:33,288 - ERROR - 转换图片失败: /images/license-inactive.png, 错误: [Errno 2] No such file or directory: '/images/license-inactive.png'
+2025-03-10 14:07:33,288 - WARNING - 处理失败，保持原文件不变: ja-jp/deployment/prerequisites/minikube.mdx
+2025-03-10 14:07:33,289 - ERROR - 转换图片失败: /images/license-inactive.png, 错误: [Errno 2] No such file or directory: '/images/license-inactive.png'
+2025-03-10 14:07:33,289 - WARNING - 处理失败，保持原文件不变: ja-jp/deployment/prerequisites/kubernetes.mdx
+2025-03-10 14:07:33,292 - INFO - 文件无需修改: ja-jp/deployment/prerequisites/docker-compose.mdx
+2025-03-10 14:07:33,295 - INFO - 文件无需修改: ja-jp/deployment/faq/deploying.mdx
+2025-03-10 14:07:33,298 - INFO - 文件无需修改: ja-jp/deployment/faq/service-abnormal.mdx
+2025-03-10 14:07:33,301 - INFO - 文件无需修改: ja-jp/deployment/cloud-infrastructure/azure-poc-infra-setup.mdx
+2025-03-10 14:07:33,302 - ERROR - 转换图片失败: /ja-jp/img/aws-cdk-1.png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/aws-cdk-1.png'
+2025-03-10 14:07:33,302 - WARNING - 处理失败，保持原文件不变: ja-jp/deployment/cloud-infrastructure/aws-setup.mdx
+2025-03-10 14:07:33,305 - INFO - 文件无需修改: ja-jp/deployment/test-production/verify-services-status.mdx
+2025-03-10 14:07:33,308 - INFO - 文件无需修改: ja-jp/deployment/test-production/testing-deployment.mdx
+2025-03-10 14:07:33,311 - INFO - 文件无需修改: ja-jp/deployment/test-production/production-deployment.mdx
+2025-03-10 14:07:33,315 - INFO - 文件无需修改: ja-jp/deployment/advanced-configuration/tools.mdx
+2025-03-10 14:07:33,318 - INFO - 文件无需修改: ja-jp/deployment/advanced-configuration/rag.mdx
+2025-03-10 14:07:33,321 - INFO - 文件无需修改: ja-jp/deployment/advanced-configuration/email-provider.mdx
+2025-03-10 14:07:33,325 - INFO - 文件无需修改: ja-jp/deployment/advanced-configuration/nginx-ingress-controller.mdx
+2025-03-10 14:07:33,328 - INFO - 文件无需修改: ja-jp/deployment/advanced-configuration/dify-helm-chart.mdx
+2025-03-10 14:07:33,332 - INFO - 文件无需修改: ja-jp/deployment/advanced-configuration/environment-variables.mdx
+2025-03-10 14:07:33,336 - INFO - 文件无需修改: ja-jp/deployment/advanced-configuration/postgresql-database.mdx
+2025-03-10 14:07:33,339 - INFO - 文件无需修改: ja-jp/deployment/advanced-configuration/persistent-storage.mdx
+2025-03-10 14:07:33,344 - INFO - 文件无需修改: ja-jp/deployment/advanced-configuration/redis.mdx
+2025-03-10 14:07:33,347 - INFO - 文件无需修改: ja-jp/deployment/advanced-configuration/dify-system-logo.mdx
+2025-03-10 14:07:33,351 - INFO - 文件无需修改: ja-jp/deployment/advanced-configuration/file-upload.mdx
+2025-03-10 14:07:33,355 - INFO - 文件无需修改: ja-jp/deployment/advanced-configuration/vector-database.mdx
+2025-03-10 14:07:33,359 - INFO - 文件无需修改: ja-jp/deployment/advanced-configuration/domain-and-ssl-certificate.mdx
+2025-03-10 14:07:33,363 - INFO - 文件无需修改: ja-jp/deployment/advanced-configuration/model-provider.mdx
+2025-03-10 14:07:33,367 - INFO - 文件无需修改: ja-jp/deployment/advanced-configuration/docker/docker-registry.mdx
+2025-03-10 14:07:33,371 - INFO - 文件无需修改: ja-jp/deployment/advanced-configuration/qdrant/single-node.mdx
+2025-03-10 14:07:33,376 - INFO - 文件无需修改: ja-jp/deployment/advanced-configuration/qdrant/qdrant-cluster.mdx
+2025-03-10 14:07:33,380 - INFO - 文件无需修改: ja-jp/deployment/advanced-configuration/docker-compose/icon-customization.mdx
+2025-03-10 14:07:33,384 - INFO - 文件无需修改: zh-cn/introduction.mdx
+2025-03-10 14:07:33,385 - ERROR - 转换图片失败: /zh-cn/images/workspace-management-1.png, 错误: [Errno 2] No such file or directory: '/zh-cn/images/workspace-management-1.png'
+2025-03-10 14:07:33,385 - WARNING - 处理失败，保持原文件不变: zh-cn/administrator-guide/workspace-management.mdx
+2025-03-10 14:07:33,385 - ERROR - 转换图片失败: /zh-cn/img/b40afe0926bfa2ce4fb3beef91928647.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/b40afe0926bfa2ce4fb3beef91928647.png'
+2025-03-10 14:07:33,385 - ERROR - 转换图片失败: /en-us/img/auth-1-1.png, 错误: [Errno 2] No such file or directory: '/en-us/img/auth-1-1.png'
+2025-03-10 14:07:33,385 - WARNING - 处理失败，保持原文件不变: zh-cn/administrator-guide/authentication.mdx
+2025-03-10 14:07:33,389 - INFO - 文件无需修改: zh-cn/administrator-guide/email.mdx
+2025-03-10 14:07:33,394 - INFO - 文件无需修改: zh-cn/administrator-guide/admin-apis.mdx
+2025-03-10 14:07:33,394 - ERROR - 转换图片失败: /zh-cn/img/83116e9cc6c367e59ce712d001860d23.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/83116e9cc6c367e59ce712d001860d23.png'
+2025-03-10 14:07:33,394 - WARNING - 处理失败，保持原文件不变: zh-cn/administrator-guide/faq.mdx
+2025-03-10 14:07:33,394 - ERROR - 转换图片失败: /zh-cn/img/cb2bad848e40760140e7aa6e25eb2a42.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/cb2bad848e40760140e7aa6e25eb2a42.png'
+2025-03-10 14:07:33,394 - WARNING - 处理失败，保持原文件不变: zh-cn/administrator-guide/system-settings.mdx
+2025-03-10 14:07:33,395 - ERROR - 转换图片失败: /zh-cn/images/members-management-1.png, 错误: [Errno 2] No such file or directory: '/zh-cn/images/members-management-1.png'
+2025-03-10 14:07:33,395 - WARNING - 处理失败，保持原文件不变: zh-cn/administrator-guide/members-management.mdx
+2025-03-10 14:07:33,399 - INFO - 文件无需修改: zh-cn/administrator-guide/sso/introduction.mdx
+2025-03-10 14:07:33,404 - INFO - 文件无需修改: zh-cn/administrator-guide/sso/azure/saml.mdx
+2025-03-10 14:07:33,408 - INFO - 文件无需修改: zh-cn/administrator-guide/sso/github/oauth2.mdx
+2025-03-10 14:07:33,408 - ERROR - 转换图片失败: /zh-cn/images/okta-oidc-1.png, 错误: [Errno 2] No such file or directory: '/zh-cn/images/okta-oidc-1.png'
+2025-03-10 14:07:33,408 - WARNING - 处理失败，保持原文件不变: zh-cn/administrator-guide/sso/okta/oidc.mdx
+2025-03-10 14:07:33,408 - ERROR - 转换图片失败: /zh-cn/img/eac08a1d4b7aa615d1108081b5e99731.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/eac08a1d4b7aa615d1108081b5e99731.png'
+2025-03-10 14:07:33,408 - WARNING - 处理失败，保持原文件不变: zh-cn/administrator-guide/sso/okta/saml.mdx
+2025-03-10 14:07:33,408 - ERROR - 转换图片失败: /zh-cn/images/okta-oidc-5.png, 错误: [Errno 2] No such file or directory: '/zh-cn/images/okta-oidc-5.png'
+2025-03-10 14:07:33,408 - WARNING - 处理失败，保持原文件不变: zh-cn/administrator-guide/sso/okta/oauth2.mdx
+2025-03-10 14:07:33,413 - INFO - 文件无需修改: zh-cn/user-guide/welcome.mdx
+2025-03-10 14:07:33,414 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/Feb 4, 2024.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/Feb 4, 2024.png'
+2025-03-10 14:07:33,414 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/quick-tool-integration.mdx
+2025-03-10 14:07:33,414 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (182).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (182).png'
+2025-03-10 14:07:33,414 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/introduction.mdx
+2025-03-10 14:07:33,419 - INFO - 文件无需修改: zh-cn/user-guide/tools/advanced-tool-integration.mdx
+2025-03-10 14:07:33,419 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/api_based.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/api_based.png'
+2025-03-10 14:07:33,419 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/extensions/code-based/external-data-tool.mdx
+2025-03-10 14:07:33,424 - INFO - 文件无需修改: zh-cn/user-guide/tools/extensions/code-based/moderation.mdx
+2025-03-10 14:07:33,424 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/api_extension_edit.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/api_extension_edit.png'
+2025-03-10 14:07:33,424 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/extensions/api-based/cloudflare-workers.mdx
+2025-03-10 14:07:33,429 - INFO - 文件无需修改: zh-cn/user-guide/tools/extensions/api-based/external-data-tool.mdx
+2025-03-10 14:07:33,434 - INFO - 文件无需修改: zh-cn/user-guide/tools/extensions/api-based/moderation.mdx
+2025-03-10 14:07:33,435 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/api_based_01.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/api_based_01.png'
+2025-03-10 14:07:33,435 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/extensions/api-based/api-based-extension.mdx
+2025-03-10 14:07:33,439 - INFO - 文件无需修改: zh-cn/user-guide/tools/community/searxng.mdx
+2025-03-10 14:07:33,440 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-tool-searchapi.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-tool-searchapi.png'
+2025-03-10 14:07:33,440 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/community/searchapi.mdx
+2025-03-10 14:07:33,440 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/截屏2024-09-26 23.12.01.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/截屏2024-09-26 23.12.01.png'
+2025-03-10 14:07:33,440 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/community/siliconflow.mdx
+2025-03-10 14:07:33,445 - INFO - 文件无需修改: zh-cn/user-guide/tools/community/alphavantage.mdx
+2025-03-10 14:07:33,446 - ERROR - 转换图片失败: /zh-cn/img/0503c5838f163b54884ca58240281f3f.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/0503c5838f163b54884ca58240281f3f.png'
+2025-03-10 14:07:33,446 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/community/comfyui.mdx
+2025-03-10 14:07:33,446 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-tool-serper.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-tool-serper.png'
+2025-03-10 14:07:33,446 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/community/serper.mdx
+2025-03-10 14:07:33,446 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-tools-dalle.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-tools-dalle.png'
+2025-03-10 14:07:33,446 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/dify/dall-e.mdx
+2025-03-10 14:07:33,452 - INFO - 文件无需修改: zh-cn/user-guide/tools/dify/stable-diffusion.mdx
+2025-03-10 14:07:33,452 - ERROR - 转换图片失败: /zh-cn/img/5e8f18c29c50f14c5c83d7b45c546725.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/5e8f18c29c50f14c5c83d7b45c546725.png'
+2025-03-10 14:07:33,452 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/dify/bing.mdx
+2025-03-10 14:07:33,452 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-tools-google.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-tools-google.png'
+2025-03-10 14:07:33,452 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/dify/google.mdx
+2025-03-10 14:07:33,452 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-tools-perplexity.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-tools-perplexity.png'
+2025-03-10 14:07:33,452 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/dify/perplexity.mdx
+2025-03-10 14:07:33,458 - INFO - 文件无需修改: zh-cn/user-guide/faq/feature-using.mdx
+2025-03-10 14:07:33,458 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (135).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (135).png'
+2025-03-10 14:07:33,458 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/faq/llm-using.mdx
+2025-03-10 14:07:33,458 - ERROR - 转换图片失败: /zh-cn/img/493d7ed37931d11ebb973e6c376c6e95.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/493d7ed37931d11ebb973e6c376c6e95.png'
+2025-03-10 14:07:33,458 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/management/app-management.mdx
+2025-03-10 14:07:33,458 - ERROR - 转换图片失败: /zh-cn/img/4cc19d40803e1be0017ce00e4aa160de.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/4cc19d40803e1be0017ce00e4aa160de.png'
+2025-03-10 14:07:33,458 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/management/team-members-management.mdx
+2025-03-10 14:07:33,459 - ERROR - 转换图片失败: /zh-cn/img/6cb4f24598fe8b40d4ff1881d8257c76.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/6cb4f24598fe8b40d4ff1881d8257c76.png'
+2025-03-10 14:07:33,459 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/management/personal-account-management.mdx
+2025-03-10 14:07:33,460 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (216).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (216).png'
+2025-03-10 14:07:33,460 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/models/model-configuration.mdx
+2025-03-10 14:07:33,460 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/customizable-model.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/customizable-model.png'
+2025-03-10 14:07:33,460 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/models/customizable-model.mdx
+2025-03-10 14:07:33,465 - INFO - 文件无需修改: zh-cn/user-guide/models/predefined-model.mdx
+2025-03-10 14:07:33,470 - INFO - 文件无需修改: zh-cn/user-guide/models/new-provider.mdx
+2025-03-10 14:07:33,476 - INFO - 文件无需修改: zh-cn/user-guide/models/interfaces.mdx
+2025-03-10 14:07:33,476 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/load-balancing.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/load-balancing.png'
+2025-03-10 14:07:33,476 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/models/load-balancing.mdx
+2025-03-10 14:07:33,481 - INFO - 文件无需修改: zh-cn/user-guide/models/schema.mdx
+2025-03-10 14:07:33,487 - INFO - 文件无需修改: zh-cn/user-guide/api-documentation/text-generator.mdx
+2025-03-10 14:07:33,487 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/dataset-api-token.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/dataset-api-token.png'
+2025-03-10 14:07:33,487 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/api-documentation/knowledge-base.mdx
+2025-03-10 14:07:33,493 - INFO - 文件无需修改: zh-cn/user-guide/api-documentation/chatbot.mdx
+2025-03-10 14:07:33,498 - INFO - 文件无需修改: zh-cn/user-guide/api-documentation/workflow.mdx
+2025-03-10 14:07:33,503 - INFO - 文件无需修改: zh-cn/user-guide/api-documentation/external-knowledge-api-documentation.mdx
+2025-03-10 14:07:33,504 - ERROR - 转换图片失败: /zh-cn/img/ed7368f117afa02ca5359472ea1167e8.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/ed7368f117afa02ca5359472ea1167e8.png'
+2025-03-10 14:07:33,504 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/text-generator.mdx
+2025-03-10 14:07:33,504 - ERROR - 转换图片失败: /zh-cn/img/40d3342c49dc56350356eade970454c3.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/40d3342c49dc56350356eade970454c3.png'
+2025-03-10 14:07:33,504 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/agent.mdx
+2025-03-10 14:07:33,504 - ERROR - 转换图片失败: /zh-cn/img/5d9711956466aa6b5237d0c3b6e97f81.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/5d9711956466aa6b5237d0c3b6e97f81.png'
+2025-03-10 14:07:33,504 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/chatbot.mdx
+2025-03-10 14:07:33,505 - ERROR - 转换图片失败: /zh-cn/img/8eb5a12939c298bc7cb9a778d10d42db.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/8eb5a12939c298bc7cb9a778d10d42db.png'
+2025-03-10 14:07:33,505 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/create-flow-app.mdx
+2025-03-10 14:07:33,505 - ERROR - 转换图片失败: /zh-cn/img/c405efa31fd5708542fdc3bd7c0cb708.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/c405efa31fd5708542fdc3bd7c0cb708.png'
+2025-03-10 14:07:33,505 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/variables.mdx
+2025-03-10 14:07:33,505 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (7).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (7).png'
+2025-03-10 14:07:33,505 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/additional-feature.mdx
+2025-03-10 14:07:33,506 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (336).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (336).png'
+2025-03-10 14:07:33,506 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/orchestrate-node.mdx
+2025-03-10 14:07:33,512 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/concepts.mdx
+2025-03-10 14:07:33,518 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/publish.mdx
+2025-03-10 14:07:33,519 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (379).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (379).png'
+2025-03-10 14:07:33,519 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/file-upload.mdx
+2025-03-10 14:07:33,519 - ERROR - 转换图片失败: /zh-cn/img/a686f00a80c78f84d88e01712f880386.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/a686f00a80c78f84d88e01712f880386.png'
+2025-03-10 14:07:33,519 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/end.mdx
+2025-03-10 14:07:33,519 - ERROR - 转换图片失败: /zh-cn/img/43ab9a37624bdba10ff37a5b9004db7f.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/43ab9a37624bdba10ff37a5b9004db7f.png'
+2025-03-10 14:07:33,519 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/list-operator.mdx
+2025-03-10 14:07:33,519 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (282).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (282).png'
+2025-03-10 14:07:33,519 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/tools.mdx
+2025-03-10 14:07:33,519 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (66).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (66).png'
+2025-03-10 14:07:33,519 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/parameter-extractor.mdx
+2025-03-10 14:07:33,520 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (52).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (52).png'
+2025-03-10 14:07:33,520 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/http-request.mdx
+2025-03-10 14:07:33,520 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (278).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (278).png'
+2025-03-10 14:07:33,520 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/variable-aggregation.mdx
+2025-03-10 14:07:33,521 - ERROR - 转换图片失败: /zh-cn/img/0cbfd9c1d9d56e6a528b134bd07662ec.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/0cbfd9c1d9d56e6a528b134bd07662ec.png'
+2025-03-10 14:07:33,521 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/doc-extractor.mdx
+2025-03-10 14:07:33,521 - ERROR - 转换图片失败: /zh-cn/img/904eeba8ee23e89c189497c5fd90f499.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/904eeba8ee23e89c189497c5fd90f499.png'
+2025-03-10 14:07:33,521 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/code.mdx
+2025-03-10 14:07:33,521 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/iteration-story-generator.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/iteration-story-generator.png'
+2025-03-10 14:07:33,521 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/iteration.mdx
+2025-03-10 14:07:33,521 - ERROR - 转换图片失败: /zh-cn/img/ddca497c976020d9b8466ae1db553fd0.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/ddca497c976020d9b8466ae1db553fd0.png'
+2025-03-10 14:07:33,521 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/start.mdx
+2025-03-10 14:07:33,527 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/README.mdx
+2025-03-10 14:07:33,528 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (71).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (71).png'
+2025-03-10 14:07:33,528 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/llm.mdx
+2025-03-10 14:07:33,528 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (209).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (209).png'
+2025-03-10 14:07:33,528 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/template.mdx
+2025-03-10 14:07:33,534 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/answer.mdx
+2025-03-10 14:07:33,534 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (80).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (80).png'
+2025-03-10 14:07:33,534 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/question-classifier.mdx
+2025-03-10 14:07:33,534 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (244).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (244).png'
+2025-03-10 14:07:33,534 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/knowledge-retrieval.mdx
+2025-03-10 14:07:33,534 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-conversation-variable.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-conversation-variable.png'
+2025-03-10 14:07:33,534 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/variable-assigner.mdx
+2025-03-10 14:07:33,534 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-if-else-elif.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-if-else-elif.png'
+2025-03-10 14:07:33,534 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/ifelse.mdx
+2025-03-10 14:07:33,534 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/rerank-flow-chart.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/rerank-flow-chart.png'
+2025-03-10 14:07:33,534 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/integrate-knowledge-within-application.mdx
+2025-03-10 14:07:33,535 - ERROR - 转换图片失败: /Users/allen/Desktop/Dify-Enterprise-Docs/zh-cn/user-guide/knowledge-base/</zh-cn/user-guide/.gitbook/assets/image (7, 错误: [Errno 2] No such file or directory: '/Users/allen/Desktop/Dify-Enterprise-Docs/zh-cn/user-guide/knowledge-base/</zh-cn/user-guide/.gitbook/assets/image (7'
+2025-03-10 14:07:33,535 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (8).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (8).png'
+2025-03-10 14:07:33,535 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/knowledge-and-documents-maintenance.mdx
+2025-03-10 14:07:33,541 - INFO - 文件无需修改: zh-cn/user-guide/knowledge-base/faq.mdx
+2025-03-10 14:07:33,541 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (86).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (86).png'
+2025-03-10 14:07:33,541 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/retrieval-test-and-citation.mdx
+2025-03-10 14:07:33,541 - ERROR - 转换图片失败: /zh-cn/images/en-upload-files-1.png, 错误: [Errno 2] No such file or directory: '/zh-cn/images/en-upload-files-1.png'
+2025-03-10 14:07:33,541 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/knowledge-base-creation/upload-documents.mdx
+2025-03-10 14:07:33,542 - ERROR - 转换图片失败: /zh-cn/img/56dc0cac00f2da808378c82c1791b30a.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/56dc0cac00f2da808378c82c1791b30a.png'
+2025-03-10 14:07:33,542 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/knowledge-base-creation/sync-from-notion.mdx
+2025-03-10 14:07:33,542 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/dataset-creation-step1(firecrawl).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/dataset-creation-step1(firecrawl).png'
+2025-03-10 14:07:33,542 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/knowledge-base-creation/sync-from-website.mdx
+2025-03-10 14:07:33,542 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (1) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (1) (1).png'
+2025-03-10 14:07:33,542 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/knowledge-base-creation/connect-external-knowledge-base.mdx
+2025-03-10 14:07:33,542 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-rag-multiple.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-rag-multiple.png'
+2025-03-10 14:07:33,542 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/indexing-and-retrieval/retrieval.mdx
+2025-03-10 14:07:33,543 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (179).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (179).png'
+2025-03-10 14:07:33,543 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/indexing-and-retrieval/rerank.mdx
+2025-03-10 14:07:33,543 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (180).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (180).png'
+2025-03-10 14:07:33,543 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/indexing-and-retrieval/retrieval-augment.mdx
+2025-03-10 14:07:33,543 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (178).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (178).png'
+2025-03-10 14:07:33,543 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/indexing-and-retrieval/hybrid-search.mdx
+2025-03-10 14:07:33,543 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/dataset-api-token.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/dataset-api-token.png'
+2025-03-10 14:07:33,543 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/api-documentation/maintain-dataset-via-api.mdx
+2025-03-10 14:07:33,549 - INFO - 文件无需修改: zh-cn/user-guide/knowledge-base/api-documentation/external-knowledge-api-documentation.mdx
+2025-03-10 14:07:33,550 - ERROR - 转换图片失败: /zh-cn/img/c36232e3c4502f94be27748a52bc5b92.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/c36232e3c4502f94be27748a52bc5b92.png'
+2025-03-10 14:07:33,550 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/application-publishing/developing-with-apis.mdx
+2025-03-10 14:07:33,556 - INFO - 文件无需修改: zh-cn/user-guide/application-publishing/based-on-frontend-templates.mdx
+2025-03-10 14:07:33,556 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (69) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (69) (1).png'
+2025-03-10 14:07:33,556 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/application-publishing/embedding-in-websites.mdx
+2025-03-10 14:07:33,556 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (58) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (58) (1).png'
+2025-03-10 14:07:33,556 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/application-publishing/launch-your-webapp-quickly/text-generator.mdx
+2025-03-10 14:07:33,556 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (63) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (63) (1).png'
+2025-03-10 14:07:33,556 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/application-publishing/launch-your-webapp-quickly/conversation-application.mdx
+2025-03-10 14:07:33,563 - INFO - 文件无需修改: zh-cn/user-guide/application-publishing/launch-your-webapp-quickly/web-app-settings.mdx
+2025-03-10 14:07:33,563 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/output (4) (3).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/output (4) (3).png'
+2025-03-10 14:07:33,563 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/application-publishing/launch-your-webapp-quickly/flow-app.mdx
+2025-03-10 14:07:33,569 - INFO - 文件无需修改: zh-cn/user-guide/debug-app/agent.mdx
+2025-03-10 14:07:33,576 - INFO - 文件无需修改: zh-cn/user-guide/debug-app/chatbot.mdx
+2025-03-10 14:07:33,576 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/output (3) (3).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/output (3) (3).png'
+2025-03-10 14:07:33,576 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/debug-app/chatflow-and-workflow/step-run.mdx
+2025-03-10 14:07:33,576 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/output (2) (4).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/output (2) (4).png'
+2025-03-10 14:07:33,576 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/debug-app/chatflow-and-workflow/checklist.mdx
+2025-03-10 14:07:33,583 - INFO - 文件无需修改: zh-cn/user-guide/debug-app/chatflow-and-workflow/api.mdx
+2025-03-10 14:07:33,584 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/output (8).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/output (8).png'
+2025-03-10 14:07:33,584 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/debug-app/chatflow-and-workflow/log.mdx
+2025-03-10 14:07:33,584 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/output (1) (5).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/output (1) (5).png'
+2025-03-10 14:07:33,584 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/debug-app/chatflow-and-workflow/preview-and-run.mdx
+2025-03-10 14:07:33,584 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/output (3) (4).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/output (3) (4).png'
+2025-03-10 14:07:33,584 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/debug-app/chatflow-and-workflow/history.mdx
+2025-03-10 14:07:33,584 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/app-log.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/app-log.png'
+2025-03-10 14:07:33,584 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/monitoring/logs.mdx
+2025-03-10 14:07:33,585 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (181).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (181).png'
+2025-03-10 14:07:33,585 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/monitoring/annotation-reply.mdx
+2025-03-10 14:07:33,585 - ERROR - 转换图片失败: /zh-cn/img/44847ddbf9994ddc45f5cc0b31432dfb.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/44847ddbf9994ddc45f5cc0b31432dfb.png'
+2025-03-10 14:07:33,585 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/monitoring/analysis.mdx
+2025-03-10 14:07:33,585 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/app-log.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/app-log.png'
+2025-03-10 14:07:33,585 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/monitoring/logs copy.mdx
+2025-03-10 14:07:33,585 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (300).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (300).png'
+2025-03-10 14:07:33,585 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/monitoring/integrate-external-ops-tools/integrate-langfuse.mdx
+2025-03-10 14:07:33,585 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (29).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (29).png'
+2025-03-10 14:07:33,585 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/monitoring/integrate-external-ops-tools/integrate-langsmith.mdx
+2025-03-10 14:07:33,592 - INFO - 文件无需修改: zh-cn/deployment/license-activation.mdx
+2025-03-10 14:07:33,593 - ERROR - 转换图片失败: /images/license-inactive.png, 错误: [Errno 2] No such file or directory: '/images/license-inactive.png'
+2025-03-10 14:07:33,593 - WARNING - 处理失败，保持原文件不变: zh-cn/deployment/verify-services-status.mdx
+2025-03-10 14:07:33,600 - INFO - 文件无需修改: zh-cn/deployment/resources-checklist.mdx
+2025-03-10 14:07:33,607 - INFO - 文件无需修改: zh-cn/deployment/checklist.mdx
+2025-03-10 14:07:33,607 - ERROR - 转换图片失败: /images/license-inactive.png, 错误: [Errno 2] No such file or directory: '/images/license-inactive.png'
+2025-03-10 14:07:33,608 - WARNING - 处理失败，保持原文件不变: zh-cn/deployment/prerequisites/minikube.mdx
+2025-03-10 14:07:33,608 - ERROR - 转换图片失败: /images/license-inactive.png, 错误: [Errno 2] No such file or directory: '/images/license-inactive.png'
+2025-03-10 14:07:33,608 - WARNING - 处理失败，保持原文件不变: zh-cn/deployment/prerequisites/kubernetes.mdx
+2025-03-10 14:07:33,615 - INFO - 文件无需修改: zh-cn/deployment/prerequisites/docker-compose.mdx
+2025-03-10 14:07:33,622 - INFO - 文件无需修改: zh-cn/deployment/faq/deploying.mdx
+2025-03-10 14:07:33,629 - INFO - 文件无需修改: zh-cn/deployment/faq/service-abnormal.mdx
+2025-03-10 14:07:33,636 - INFO - 文件无需修改: zh-cn/deployment/cloud-infrastructure/azure-poc-infra-setup.mdx
+2025-03-10 14:07:33,636 - ERROR - 转换图片失败: /zh-cn/img/aws-cdk-1.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/aws-cdk-1.png'
+2025-03-10 14:07:33,636 - WARNING - 处理失败，保持原文件不变: zh-cn/deployment/cloud-infrastructure/aws-setup.mdx
+2025-03-10 14:07:33,643 - INFO - 文件无需修改: zh-cn/deployment/test-production/testing-deployment.mdx
+2025-03-10 14:07:33,651 - INFO - 文件无需修改: zh-cn/deployment/test-production/production-deployment.mdx
+2025-03-10 14:07:33,658 - INFO - 文件无需修改: zh-cn/deployment/advanced-configuration/tools.mdx
+2025-03-10 14:07:33,665 - INFO - 文件无需修改: zh-cn/deployment/advanced-configuration/rag.mdx
+2025-03-10 14:07:33,673 - INFO - 文件无需修改: zh-cn/deployment/advanced-configuration/email-provider.mdx
+2025-03-10 14:07:33,680 - INFO - 文件无需修改: zh-cn/deployment/advanced-configuration/nginx-ingress-controller.mdx
+2025-03-10 14:07:33,688 - INFO - 文件无需修改: zh-cn/deployment/advanced-configuration/dify-helm-chart.mdx
+2025-03-10 14:07:33,695 - INFO - 文件无需修改: zh-cn/deployment/advanced-configuration/environment-variables.mdx
+2025-03-10 14:07:33,703 - INFO - 文件无需修改: zh-cn/deployment/advanced-configuration/postgresql-database.mdx
+2025-03-10 14:07:33,710 - INFO - 文件无需修改: zh-cn/deployment/advanced-configuration/persistent-storage.mdx
+2025-03-10 14:07:33,718 - INFO - 文件无需修改: zh-cn/deployment/advanced-configuration/redis.mdx
+2025-03-10 14:07:33,725 - INFO - 文件无需修改: zh-cn/deployment/advanced-configuration/dify-system-logo.mdx
+2025-03-10 14:07:33,734 - INFO - 文件无需修改: zh-cn/deployment/advanced-configuration/file-upload.mdx
+2025-03-10 14:07:33,742 - INFO - 文件无需修改: zh-cn/deployment/advanced-configuration/vector-database.mdx
+2025-03-10 14:07:33,750 - INFO - 文件无需修改: zh-cn/deployment/advanced-configuration/domain-and-ssl-certificate.mdx
+2025-03-10 14:07:33,758 - INFO - 文件无需修改: zh-cn/deployment/advanced-configuration/model-provider.mdx
+2025-03-10 14:07:33,766 - INFO - 文件无需修改: zh-cn/deployment/advanced-configuration/docker/docker-registry.mdx
+2025-03-10 14:07:33,774 - INFO - 文件无需修改: zh-cn/deployment/advanced-configuration/qdrant/single-node.mdx
+2025-03-10 14:07:33,783 - INFO - 文件无需修改: zh-cn/deployment/advanced-configuration/qdrant/qdrant-cluster.mdx
+2025-03-10 14:07:33,791 - INFO - 文件无需修改: zh-cn/deployment/advanced-configuration/docker-compose/icon-customization.mdx
+2025-03-10 14:07:33,792 - ERROR - 转换图片失败: /images/workspace-management-1.png, 错误: [Errno 2] No such file or directory: '/images/workspace-management-1.png'
+2025-03-10 14:07:33,792 - WARNING - 处理失败，保持原文件不变: en-us/administrator-guide/workspace-management.mdx
+2025-03-10 14:07:33,792 - ERROR - 转换图片失败: /en-us/img/b40afe0926bfa2ce4fb3beef91928647.png, 错误: [Errno 2] No such file or directory: '/en-us/img/b40afe0926bfa2ce4fb3beef91928647.png'
+2025-03-10 14:07:33,792 - ERROR - 转换图片失败: /en-us/img/auth-1-1.png, 错误: [Errno 2] No such file or directory: '/en-us/img/auth-1-1.png'
+2025-03-10 14:07:33,792 - WARNING - 处理失败，保持原文件不变: en-us/administrator-guide/authentication.mdx
+2025-03-10 14:07:33,801 - INFO - 文件无需修改: en-us/administrator-guide/admin-apis.mdx
+2025-03-10 14:07:33,801 - ERROR - 转换图片失败: /en-us/img/chat-app-api.png, 错误: [Errno 2] No such file or directory: '/en-us/img/chat-app-api.png'
+2025-03-10 14:07:33,801 - WARNING - 处理失败，保持原文件不变: en-us/administrator-guide/faq.mdx
+2025-03-10 14:07:33,802 - ERROR - 转换图片失败: /images/system-settings-1.png, 错误: [Errno 2] No such file or directory: '/images/system-settings-1.png'
+2025-03-10 14:07:33,802 - WARNING - 处理失败，保持原文件不变: en-us/administrator-guide/system-settings.mdx
+2025-03-10 14:07:33,802 - ERROR - 转换图片失败: /images/members-management-1.png, 错误: [Errno 2] No such file or directory: '/images/members-management-1.png'
+2025-03-10 14:07:33,802 - WARNING - 处理失败，保持原文件不变: en-us/administrator-guide/members-management.mdx
+2025-03-10 14:07:33,802 - ERROR - 转换图片失败: /en-us/img/1c7db1aa112a2eb395559e0d18ad26ee.png, 错误: [Errno 2] No such file or directory: '/en-us/img/1c7db1aa112a2eb395559e0d18ad26ee.png'
+2025-03-10 14:07:33,802 - WARNING - 处理失败，保持原文件不变: en-us/administrator-guide/sso/introduction.mdx
+2025-03-10 14:07:33,802 - INFO - 跳过远程图片: https://r2.xmsex.net/2024/10/4f52715ff661e6c9430af09b4b2a4736.png
+2025-03-10 14:07:33,802 - INFO - 跳过远程图片: https://r2.xmsex.net/2024/10/b823ecfaa94d18ba0ac794cc0290dc7f.png
+2025-03-10 14:07:33,802 - INFO - 跳过远程图片: https://r2.xmsex.net/2024/10/ed3c6f5de21c75e2261bf05d055ffb9e.png
+2025-03-10 14:07:33,802 - INFO - 跳过远程图片: https://r2.xmsex.net/2024/10/7a5f653e751bf20c01c7eb53cc79ddde.png
+2025-03-10 14:07:33,802 - INFO - 跳过远程图片: https://r2.xmsex.net/2024/10/969f69f97c35609e7aead84b1a19aa93.png
+2025-03-10 14:07:33,802 - INFO - 跳过远程图片: https://r2.xmsex.net/2024/10/f66303a3902d7fff58c76228f6485386.png
+2025-03-10 14:07:33,802 - INFO - 跳过远程图片: https://r2.xmsex.net/2024/10/ab7e3bd7067858ec4627d1d863244e81.png
+2025-03-10 14:07:33,802 - INFO - 跳过远程图片: https://r2.xmsex.net/2024/10/f54bfe3ad7baf5fe9027c0a1f46142dd.png
+2025-03-10 14:07:33,802 - INFO - 跳过远程图片: https://r2.xmsex.net/2024/10/bbd0bed66d165b0d4bf209c2a414783f.png
+2025-03-10 14:07:33,802 - INFO - 跳过远程图片: https://r2.xmsex.net/2024/10/556e3d68efbc742711e4313534a2e95c.png
+2025-03-10 14:07:33,811 - INFO - 文件无需修改: en-us/administrator-guide/sso/azure/saml.mdx
+2025-03-10 14:07:33,820 - INFO - 文件无需修改: en-us/administrator-guide/sso/github/oauth2.mdx
+2025-03-10 14:07:33,820 - ERROR - 转换图片失败: /zh-cn/images/okta-oidc-1.png, 错误: [Errno 2] No such file or directory: '/zh-cn/images/okta-oidc-1.png'
+2025-03-10 14:07:33,820 - WARNING - 处理失败，保持原文件不变: en-us/administrator-guide/sso/okta/oidc.mdx
+2025-03-10 14:07:33,820 - ERROR - 转换图片失败: /images/okta-saml-1.png, 错误: [Errno 2] No such file or directory: '/images/okta-saml-1.png'
+2025-03-10 14:07:33,820 - WARNING - 处理失败，保持原文件不变: en-us/administrator-guide/sso/okta/saml.mdx
+2025-03-10 14:07:33,821 - ERROR - 转换图片失败: /zh-cn/images/okta-oidc-5.png, 错误: [Errno 2] No such file or directory: '/zh-cn/images/okta-oidc-5.png'
+2025-03-10 14:07:33,821 - WARNING - 处理失败，保持原文件不变: en-us/administrator-guide/sso/okta/oauth2.mdx
+2025-03-10 14:07:33,831 - INFO - 文件无需修改: en-us/user-guide/welcome.mdx
+2025-03-10 14:07:33,832 - ERROR - 转换图片失败: /images/assets/Feb 4, 2024 (1).png, 错误: [Errno 2] No such file or directory: '/images/assets/Feb 4, 2024 (1).png'
+2025-03-10 14:07:33,832 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/tools/quick-tool-integration.mdx
+2025-03-10 14:07:33,842 - INFO - 文件无需修改: en-us/user-guide/tools/introduction.mdx
+2025-03-10 14:07:33,852 - INFO - 文件无需修改: en-us/user-guide/tools/advanced-tool-integration.mdx
+2025-03-10 14:07:33,852 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/api_based_01.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/api_based_01.png'
+2025-03-10 14:07:33,852 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/tools/api-based-extension.mdx
+2025-03-10 14:07:33,861 - INFO - 文件无需修改: en-us/user-guide/tools/api-documentation/text-generator.mdx
+2025-03-10 14:07:33,870 - INFO - 文件无需修改: en-us/user-guide/tools/community/searxng.mdx
+2025-03-10 14:07:33,870 - ERROR - 转换图片失败: /images/assets/tool-searchapi.png, 错误: [Errno 2] No such file or directory: '/images/assets/tool-searchapi.png'
+2025-03-10 14:07:33,870 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/tools/community/searchapi.mdx
+2025-03-10 14:07:33,870 - ERROR - 转换图片失败: /images/assets/截屏2024-09-27 13.04.16.png, 错误: [Errno 2] No such file or directory: '/images/assets/截屏2024-09-27 13.04.16.png'
+2025-03-10 14:07:33,871 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/tools/community/siliconflow.mdx
+2025-03-10 14:07:33,879 - INFO - 文件无需修改: en-us/user-guide/tools/community/alphavantage.mdx
+2025-03-10 14:07:33,879 - ERROR - 转换图片失败: /images/assets/guides/tools/comfyui.png, 错误: [Errno 2] No such file or directory: '/images/assets/guides/tools/comfyui.png'
+2025-03-10 14:07:33,879 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/tools/community/comfyui.mdx
+2025-03-10 14:07:33,879 - ERROR - 转换图片失败: /images/assets/tool-serper.png, 错误: [Errno 2] No such file or directory: '/images/assets/tool-serper.png'
+2025-03-10 14:07:33,880 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/tools/community/serper.mdx
+2025-03-10 14:07:33,888 - INFO - 文件无需修改: en-us/user-guide/tools/dify/stable-diffusion.mdx
+2025-03-10 14:07:33,888 - ERROR - 转换图片失败: /images/assets/tools-bing.png, 错误: [Errno 2] No such file or directory: '/images/assets/tools-bing.png'
+2025-03-10 14:07:33,888 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/tools/dify/bing.mdx
+2025-03-10 14:07:33,888 - ERROR - 转换图片失败: /images/assets/tools-google.png, 错误: [Errno 2] No such file or directory: '/images/assets/tools-google.png'
+2025-03-10 14:07:33,888 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/tools/dify/google.mdx
+2025-03-10 14:07:33,889 - ERROR - 转换图片失败: /images/assets/tools-perplexity.png, 错误: [Errno 2] No such file or directory: '/images/assets/tools-perplexity.png'
+2025-03-10 14:07:33,889 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/tools/dify/perplexity.mdx
+2025-03-10 14:07:33,889 - ERROR - 转换图片失败: /images/assets/subscription-management-01.png, 错误: [Errno 2] No such file or directory: '/images/assets/subscription-management-01.png'
+2025-03-10 14:07:33,889 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/management/subscription-management.mdx
+2025-03-10 14:07:33,889 - ERROR - 转换图片失败: /images/assets/image-(92, 错误: [Errno 2] No such file or directory: '/images/assets/image-(92'
+2025-03-10 14:07:33,889 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/management/app-management.mdx
+2025-03-10 14:07:33,897 - INFO - 文件无需修改: en-us/user-guide/management/README.md
+2025-03-10 14:07:33,898 - ERROR - 转换图片失败: /images/assets/team-members-management-01.png, 错误: [Errno 2] No such file or directory: '/images/assets/team-members-management-01.png'
+2025-03-10 14:07:33,898 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/management/team-members-management.mdx
+2025-03-10 14:07:33,898 - ERROR - 转换图片失败: /images/assets/image (1).png, 错误: [Errno 2] No such file or directory: '/images/assets/image (1).png'
+2025-03-10 14:07:33,898 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/management/personal-account-management.mdx
+2025-03-10 14:07:33,898 - ERROR - 转换图片失败: /images/assets/image (1) (1).png, 错误: [Errno 2] No such file or directory: '/images/assets/image (1) (1).png'
+2025-03-10 14:07:33,898 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/models/model-configuration.mdx
+2025-03-10 14:07:33,898 - ERROR - 转换图片失败: /en-us/img/customizable-model.png, 错误: [Errno 2] No such file or directory: '/en-us/img/customizable-model.png'
+2025-03-10 14:07:33,898 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/models/customizable-model.mdx
+2025-03-10 14:07:33,907 - INFO - 文件无需修改: en-us/user-guide/models/predefined-model.mdx
+2025-03-10 14:07:33,916 - INFO - 文件无需修改: en-us/user-guide/models/new-provider.mdx
+2025-03-10 14:07:33,925 - INFO - 文件无需修改: en-us/user-guide/models/interfaces.mdx
+2025-03-10 14:07:33,926 - ERROR - 转换图片失败: /images/assets/load-balancing.png, 错误: [Errno 2] No such file or directory: '/images/assets/load-balancing.png'
+2025-03-10 14:07:33,926 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/models/load-balancing.mdx
+2025-03-10 14:07:33,935 - INFO - 文件无需修改: en-us/user-guide/models/schema.mdx
+2025-03-10 14:07:33,944 - INFO - 文件无需修改: en-us/user-guide/api-documentation/text-generator.mdx
+2025-03-10 14:07:33,944 - ERROR - 转换图片失败: /images/assets/knowledge-base-api-token.png, 错误: [Errno 2] No such file or directory: '/images/assets/knowledge-base-api-token.png'
+2025-03-10 14:07:33,945 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/api-documentation/maintain-dataset-via-api.mdx
+2025-03-10 14:07:33,954 - INFO - 文件无需修改: en-us/user-guide/api-documentation/chatbot.mdx
+2025-03-10 14:07:33,963 - INFO - 文件无需修改: en-us/user-guide/api-documentation/workflow.mdx
+2025-03-10 14:07:33,972 - INFO - 文件无需修改: en-us/user-guide/api-documentation/external-knowledge-api.mdx
+2025-03-10 14:07:33,982 - INFO - 文件无需修改: en-us/user-guide/api-documentation/external-knowledge-api-documentation.mdx
+2025-03-10 14:07:33,982 - ERROR - 转换图片失败: /en-us/img/94275017d6f0477fcd32323e52915fd6.png, 错误: [Errno 2] No such file or directory: '/en-us/img/94275017d6f0477fcd32323e52915fd6.png'
+2025-03-10 14:07:33,982 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/text-generator.mdx
+2025-03-10 14:07:33,982 - ERROR - 转换图片失败: /en-us/images/assets/docs-1.png, 错误: [Errno 2] No such file or directory: '/en-us/images/assets/docs-1.png'
+2025-03-10 14:07:33,982 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/agent.mdx
+2025-03-10 14:07:33,982 - ERROR - 转换图片失败: /en-us/img/chat-app.png, 错误: [Errno 2] No such file or directory: '/en-us/img/chat-app.png'
+2025-03-10 14:07:33,982 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/chatbot.mdx
+2025-03-10 14:07:33,982 - ERROR - 转换图片失败: /en-us/img/8eb5a12939c298bc7cb9a778d10d42db.png, 错误: [Errno 2] No such file or directory: '/en-us/img/8eb5a12939c298bc7cb9a778d10d42db.png'
+2025-03-10 14:07:33,982 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/create-flow-app.mdx
+2025-03-10 14:07:33,983 - ERROR - 转换图片失败: /en-us/img/c405efa31fd5708542fdc3bd7c0cb708.png, 错误: [Errno 2] No such file or directory: '/en-us/img/c405efa31fd5708542fdc3bd7c0cb708.png'
+2025-03-10 14:07:33,983 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/variables.mdx
+2025-03-10 14:07:33,983 - ERROR - 转换图片失败: /ja-jp/user-guide/.gitbook/assets/image (7).png, 错误: [Errno 2] No such file or directory: '/ja-jp/user-guide/.gitbook/assets/image (7).png'
+2025-03-10 14:07:33,983 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/additional-features.mdx
+2025-03-10 14:07:33,983 - ERROR - 转换图片失败: /images/assets/orchestrate-node.jpeg, 错误: [Errno 2] No such file or directory: '/images/assets/orchestrate-node.jpeg'
+2025-03-10 14:07:33,983 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/orchestrate-node.mdx
+2025-03-10 14:07:33,983 - ERROR - 转换图片失败: /en-us/images/assets/chatflow.png, 错误: [Errno 2] No such file or directory: '/en-us/images/assets/chatflow.png'
+2025-03-10 14:07:33,983 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/concepts.mdx
+2025-03-10 14:07:33,984 - ERROR - 转换图片失败: /images/assets/image-1-3.png, 错误: [Errno 2] No such file or directory: '/images/assets/image-1-3.png'
+2025-03-10 14:07:33,984 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/file-upload.mdx
+2025-03-10 14:07:33,994 - INFO - 文件无需修改: en-us/user-guide/build-app/flow-app/shotcut-key.mdx
+2025-03-10 14:07:33,994 - ERROR - 转换图片失败: /images/assets/end-answer.png, 错误: [Errno 2] No such file or directory: '/images/assets/end-answer.png'
+2025-03-10 14:07:33,994 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/nodes/end.mdx
+2025-03-10 14:07:33,994 - ERROR - 转换图片失败: /images/assets/image-(123, 错误: [Errno 2] No such file or directory: '/images/assets/image-(123'
+2025-03-10 14:07:33,994 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/nodes/list-operator.mdx
+2025-03-10 14:07:33,995 - ERROR - 转换图片失败: /images/assets/workflow-tool.png, 错误: [Errno 2] No such file or directory: '/images/assets/workflow-tool.png'
+2025-03-10 14:07:33,995 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/nodes/tools.mdx
+2025-03-10 14:07:33,995 - ERROR - 转换图片失败: /en-us/images/assets/image-(227, 错误: [Errno 2] No such file or directory: '/en-us/images/assets/image-(227'
+2025-03-10 14:07:33,995 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/nodes/variable-aggregator.mdx
+2025-03-10 14:07:33,995 - ERROR - 转换图片失败: /images/assets/precise-query.png, 错误: [Errno 2] No such file or directory: '/images/assets/precise-query.png'
+2025-03-10 14:07:33,995 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/nodes/parameter-extractor.mdx
+2025-03-10 14:07:33,995 - ERROR - 转换图片失败: /images/assets/workflow-http-request-node.png, 错误: [Errno 2] No such file or directory: '/images/assets/workflow-http-request-node.png'
+2025-03-10 14:07:33,995 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/nodes/http-request.mdx
+2025-03-10 14:07:33,995 - ERROR - 转换图片失败: /en-us/images/assets/image-(11, 错误: [Errno 2] No such file or directory: '/en-us/images/assets/image-(11'
+2025-03-10 14:07:33,995 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/nodes/doc-extractor.mdx
+2025-03-10 14:07:33,995 - ERROR - 转换图片失败: /en-us/images/assets/image-(157, 错误: [Errno 2] No such file or directory: '/en-us/images/assets/image-(157'
+2025-03-10 14:07:33,995 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/nodes/code.mdx
+2025-03-10 14:07:33,995 - ERROR - 转换图片失败: /images/assets/long-article-iteration-generator.png, 错误: [Errno 2] No such file or directory: '/images/assets/long-article-iteration-generator.png'
+2025-03-10 14:07:33,995 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/nodes/iteration.mdx
+2025-03-10 14:07:34,007 - INFO - 文件无需修改: en-us/user-guide/build-app/flow-app/nodes/README.md
+2025-03-10 14:07:34,007 - ERROR - 转换图片失败: /images/assets/chatflow-workflow.png, 错误: [Errno 2] No such file or directory: '/images/assets/chatflow-workflow.png'
+2025-03-10 14:07:34,007 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/nodes/start.mdx
+2025-03-10 14:07:34,007 - ERROR - 转换图片失败: /images/assets/llm-node-1.png, 错误: [Errno 2] No such file or directory: '/images/assets/llm-node-1.png'
+2025-03-10 14:07:34,007 - ERROR - 转换图片失败: /images/assets/image (204).png, 错误: [Errno 2] No such file or directory: '/images/assets/image (204).png'
+2025-03-10 14:07:34,007 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/nodes/llm.mdx
+2025-03-10 14:07:34,007 - ERROR - 转换图片失败: /en-us/images/assets/image-(158, 错误: [Errno 2] No such file or directory: '/en-us/images/assets/image-(158'
+2025-03-10 14:07:34,007 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/nodes/template.mdx
+2025-03-10 14:07:34,008 - ERROR - 转换图片失败: /images/assets/answer-plain-text.png, 错误: [Errno 2] No such file or directory: '/images/assets/answer-plain-text.png'
+2025-03-10 14:07:34,008 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/nodes/answer.mdx
+2025-03-10 14:07:34,008 - ERROR - 转换图片失败: /images/assets/question-classifier-scenarios.png, 错误: [Errno 2] No such file or directory: '/images/assets/question-classifier-scenarios.png'
+2025-03-10 14:07:34,008 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/nodes/question-classifier.mdx
+2025-03-10 14:07:34,008 - ERROR - 转换图片失败: /images/assets/knowledge-retrieval.png, 错误: [Errno 2] No such file or directory: '/images/assets/knowledge-retrieval.png'
+2025-03-10 14:07:34,008 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/nodes/knowledge-retrieval.mdx
+2025-03-10 14:07:34,008 - ERROR - 转换图片失败: /images/assets/variable-assigner.png, 错误: [Errno 2] No such file or directory: '/images/assets/variable-assigner.png'
+2025-03-10 14:07:34,008 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/nodes/variable-assigner.mdx
+2025-03-10 14:07:34,009 - ERROR - 转换图片失败: /images/assets/if-else-elif.png, 错误: [Errno 2] No such file or directory: '/images/assets/if-else-elif.png'
+2025-03-10 14:07:34,009 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/build-app/flow-app/nodes/ifelse.mdx
+2025-03-10 14:07:34,009 - ERROR - 转换图片失败: /images/assets/rerank-flow-chart.png, 错误: [Errno 2] No such file or directory: '/images/assets/rerank-flow-chart.png'
+2025-03-10 14:07:34,009 - ERROR - 转换图片失败: /images/assets/image (101).png, 错误: [Errno 2] No such file or directory: '/images/assets/image (101).png'
+2025-03-10 14:07:34,009 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/knowledge-base/integrate-knowledge-within-application.mdx
+2025-03-10 14:07:34,009 - ERROR - 转换图片失败: /images/assets/knowledge-settings-01.png, 错误: [Errno 2] No such file or directory: '/images/assets/knowledge-settings-01.png'
+2025-03-10 14:07:34,009 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/knowledge-base/knowledge-and-documents-maintenance.mdx
+2025-03-10 14:07:34,021 - INFO - 文件无需修改: en-us/user-guide/knowledge-base/faq.mdx
+2025-03-10 14:07:34,021 - ERROR - 转换图片失败: /images/assets/Retrieval-testing.png, 错误: [Errno 2] No such file or directory: '/images/assets/Retrieval-testing.png'
+2025-03-10 14:07:34,021 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/knowledge-base/retrieval-test-and-citation.mdx
+2025-03-10 14:07:34,021 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (1) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (1) (1).png'
+2025-03-10 14:07:34,021 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/knowledge-base/knowledge-base-creation/connect-external-knowledge.mdx
+2025-03-10 14:07:34,022 - ERROR - 转换图片失败: /zh-cn/images/en-upload-files-1.png, 错误: [Errno 2] No such file or directory: '/zh-cn/images/en-upload-files-1.png'
+2025-03-10 14:07:34,022 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/knowledge-base/knowledge-base-creation/upload-documents.mdx
+2025-03-10 14:07:34,022 - ERROR - 转换图片失败: /images/assets/binding-notion (1).png, 错误: [Errno 2] No such file or directory: '/images/assets/binding-notion (1).png'
+2025-03-10 14:07:34,022 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/knowledge-base/knowledge-base-creation/sync-from-notion.mdx
+2025-03-10 14:07:34,033 - INFO - 文件无需修改: en-us/user-guide/knowledge-base/knowledge-base-creation/external-knowledge-api.mdx
+2025-03-10 14:07:34,033 - ERROR - 转换图片失败: /images/sync-from-firecrawl.png, 错误: [Errno 2] No such file or directory: '/images/sync-from-firecrawl.png'
+2025-03-10 14:07:34,033 - ERROR - 转换图片失败: /ja-jp/img/image (6) (2).png, 错误: [Errno 2] No such file or directory: '/ja-jp/img/image (6) (2).png'
+2025-03-10 14:07:34,033 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/knowledge-base/knowledge-base-creation/sync-from-website.mdx
+2025-03-10 14:07:34,034 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-rag-multiple.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-rag-multiple.png'
+2025-03-10 14:07:34,034 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/knowledge-base/indexing-and-retrieval/retrieval.mdx
+2025-03-10 14:07:34,034 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (179).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (179).png'
+2025-03-10 14:07:34,034 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/knowledge-base/indexing-and-retrieval/rerank.mdx
+2025-03-10 14:07:34,035 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (180).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (180).png'
+2025-03-10 14:07:34,035 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/knowledge-base/indexing-and-retrieval/retrieval-augment.mdx
+2025-03-10 14:07:34,035 - ERROR - 转换图片失败: /images/assets/image (127).png, 错误: [Errno 2] No such file or directory: '/images/assets/image (127).png'
+2025-03-10 14:07:34,035 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/knowledge-base/indexing-and-retrieval/hybrid-search.mdx
+2025-03-10 14:07:34,046 - INFO - 文件无需修改: en-us/user-guide/knowledge-base/api-documentation/external-knowledge-api.mdx
+2025-03-10 14:07:34,062 - INFO - 文件无需修改: en-us/user-guide/knowledge-base/api-documentation/external-knowledge-api-documentation.mdx
+2025-03-10 14:07:34,062 - ERROR - 转换图片失败: /images/assets/api-access.png, 错误: [Errno 2] No such file or directory: '/images/assets/api-access.png'
+2025-03-10 14:07:34,062 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/application-publishing/developing-with-apis.mdx
+2025-03-10 14:07:34,073 - INFO - 文件无需修改: en-us/user-guide/application-publishing/based-on-frontend-templates.mdx
+2025-03-10 14:07:34,082 - INFO - 文件无需修改: en-us/user-guide/application-publishing/embedding-in-websites.mdx
+2025-03-10 14:07:34,083 - ERROR - 转换图片失败: /images/assets/text-generator.png, 错误: [Errno 2] No such file or directory: '/images/assets/text-generator.png'
+2025-03-10 14:07:34,083 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/application-publishing/launch-your-webapp-quickly/text-generator.mdx
+2025-03-10 14:07:34,083 - ERROR - 转换图片失败: /images/assets/conversation-chatbot.png, 错误: [Errno 2] No such file or directory: '/images/assets/conversation-chatbot.png'
+2025-03-10 14:07:34,083 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/application-publishing/launch-your-webapp-quickly/conversation-application.mdx
+2025-03-10 14:07:34,093 - INFO - 文件无需修改: en-us/user-guide/application-publishing/launch-your-webapp-quickly/web-app-settings.mdx
+2025-03-10 14:07:34,103 - INFO - 文件无需修改: en-us/user-guide/debug-app/README.md
+2025-03-10 14:07:34,104 - ERROR - 转换图片失败: /images/assets/output-(3, 错误: [Errno 2] No such file or directory: '/images/assets/output-(3'
+2025-03-10 14:07:34,104 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/debug-app/chatflow-and-workflow/step-run.mdx
+2025-03-10 14:07:34,104 - ERROR - 转换图片失败: /images/assets/checklist.png, 错误: [Errno 2] No such file or directory: '/images/assets/checklist.png'
+2025-03-10 14:07:34,104 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/debug-app/chatflow-and-workflow/checklist.mdx
+2025-03-10 14:07:34,104 - ERROR - 转换图片失败: /images/assets/conversation-logs.png, 错误: [Errno 2] No such file or directory: '/images/assets/conversation-logs.png'
+2025-03-10 14:07:34,104 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/debug-app/chatflow-and-workflow/log.mdx
+2025-03-10 14:07:34,104 - ERROR - 转换图片失败: /images/assets/output-7.png, 错误: [Errno 2] No such file or directory: '/images/assets/output-7.png'
+2025-03-10 14:07:34,104 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/debug-app/chatflow-and-workflow/preview-and-run.mdx
+2025-03-10 14:07:34,104 - ERROR - 转换图片失败: /images/assets/logs-history.png, 错误: [Errno 2] No such file or directory: '/images/assets/logs-history.png'
+2025-03-10 14:07:34,104 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/debug-app/chatflow-and-workflow/history.mdx
+2025-03-10 14:07:34,104 - ERROR - 转换图片失败: /images/assets/app-logs-ann.png, 错误: [Errno 2] No such file or directory: '/images/assets/app-logs-ann.png'
+2025-03-10 14:07:34,104 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/monitoring/logs.mdx
+2025-03-10 14:07:34,104 - ERROR - 转换图片失败: /images/assets/image-(130).png, 错误: [Errno 2] No such file or directory: '/images/assets/image-(130).png'
+2025-03-10 14:07:34,104 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/monitoring/annotation-reply.mdx
+2025-03-10 14:07:34,104 - ERROR - 转换图片失败: /images/assets/overview-data-analysis.png, 错误: [Errno 2] No such file or directory: '/images/assets/overview-data-analysis.png'
+2025-03-10 14:07:34,104 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/monitoring/analysis.mdx
+2025-03-10 14:07:34,105 - ERROR - 转换图片失败: /images/assets/image (249) (1).png, 错误: [Errno 2] No such file or directory: '/images/assets/image (249) (1).png'
+2025-03-10 14:07:34,105 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/monitoring/integrate-external-ops-tools/integrate-langfuse.mdx
+2025-03-10 14:07:34,105 - ERROR - 转换图片失败: /images/assets/image (3) (1) (1) (1).png, 错误: [Errno 2] No such file or directory: '/images/assets/image (3) (1) (1) (1).png'
+2025-03-10 14:07:34,105 - WARNING - 处理失败，保持原文件不变: en-us/user-guide/monitoring/integrate-external-ops-tools/integrate-langsmith.mdx
+2025-03-10 14:07:34,115 - INFO - 文件无需修改: en-us/faq/llm-using.mdx
+2025-03-10 14:07:34,126 - INFO - 文件无需修改: en-us/deployment/license-activation.mdx
+2025-03-10 14:07:34,126 - ERROR - 转换图片失败: /images/license-inactive.png, 错误: [Errno 2] No such file or directory: '/images/license-inactive.png'
+2025-03-10 14:07:34,126 - WARNING - 处理失败，保持原文件不变: en-us/deployment/verify-services-status.mdx
+2025-03-10 14:07:34,137 - INFO - 文件无需修改: en-us/deployment/resources-checklist.mdx
+2025-03-10 14:07:34,147 - INFO - 文件无需修改: en-us/deployment/checklist.mdx
+2025-03-10 14:07:34,147 - ERROR - 转换图片失败: /images/license-inactive.png, 错误: [Errno 2] No such file or directory: '/images/license-inactive.png'
+2025-03-10 14:07:34,147 - WARNING - 处理失败，保持原文件不变: en-us/deployment/prerequisites/minikube.mdx
+2025-03-10 14:07:34,147 - ERROR - 转换图片失败: /images/license-inactive.png, 错误: [Errno 2] No such file or directory: '/images/license-inactive.png'
+2025-03-10 14:07:34,147 - WARNING - 处理失败，保持原文件不变: en-us/deployment/prerequisites/kubernetes.mdx
+2025-03-10 14:07:34,158 - INFO - 文件无需修改: en-us/deployment/prerequisites/docker-compose.mdx
+2025-03-10 14:07:34,169 - INFO - 文件无需修改: en-us/deployment/faq/deploying.mdx
+2025-03-10 14:07:34,180 - INFO - 文件无需修改: en-us/deployment/faq/service-abnormal.mdx
+2025-03-10 14:07:34,190 - INFO - 文件无需修改: en-us/deployment/cloud-infrastructure/azure-poc-infra-setup.mdx
+2025-03-10 14:07:34,190 - ERROR - 转换图片失败: /en-us/img/aws-cdk-1.png, 错误: [Errno 2] No such file or directory: '/en-us/img/aws-cdk-1.png'
+2025-03-10 14:07:34,190 - WARNING - 处理失败，保持原文件不变: en-us/deployment/cloud-infrastructure/aws-setup.mdx
+2025-03-10 14:07:34,201 - INFO - 文件无需修改: en-us/deployment/test-production/testing-deployment.mdx
+2025-03-10 14:07:34,211 - INFO - 文件无需修改: en-us/deployment/test-production/production-deployment.mdx
+2025-03-10 14:07:34,221 - INFO - 文件无需修改: en-us/deployment/advanced-configuration/tools.mdx
+2025-03-10 14:07:34,231 - INFO - 文件无需修改: en-us/deployment/advanced-configuration/rag.mdx
+2025-03-10 14:07:34,242 - INFO - 文件无需修改: en-us/deployment/advanced-configuration/email-provider.mdx
+2025-03-10 14:07:34,253 - INFO - 文件无需修改: en-us/deployment/advanced-configuration/nginx-ingress-controller.mdx
+2025-03-10 14:07:34,263 - INFO - 文件无需修改: en-us/deployment/advanced-configuration/dify-helm-chart.mdx
+2025-03-10 14:07:34,274 - INFO - 文件无需修改: en-us/deployment/advanced-configuration/environment-variables.mdx
+2025-03-10 14:07:34,284 - INFO - 文件无需修改: en-us/deployment/advanced-configuration/postgresql-database.mdx
+2025-03-10 14:07:34,295 - INFO - 文件无需修改: en-us/deployment/advanced-configuration/persistent-storage.mdx
+2025-03-10 14:07:34,306 - INFO - 文件无需修改: en-us/deployment/advanced-configuration/redis.mdx
+2025-03-10 14:07:34,317 - INFO - 文件无需修改: en-us/deployment/advanced-configuration/dify-system-logo.mdx
+2025-03-10 14:07:34,328 - INFO - 文件无需修改: en-us/deployment/advanced-configuration/file-upload.mdx
+2025-03-10 14:07:34,338 - INFO - 文件无需修改: en-us/deployment/advanced-configuration/vector-database.mdx
+2025-03-10 14:07:34,349 - INFO - 文件无需修改: en-us/deployment/advanced-configuration/domain-and-ssl-certificate.mdx
+2025-03-10 14:07:34,360 - INFO - 文件无需修改: en-us/deployment/advanced-configuration/model-provider.mdx
+2025-03-10 14:07:34,372 - INFO - 文件无需修改: en-us/deployment/advanced-configuration/docker/docker-registry.mdx
+2025-03-10 14:07:34,383 - INFO - 文件无需修改: en-us/deployment/advanced-configuration/qdrant/single-node.mdx
+2025-03-10 14:07:34,394 - INFO - 文件无需修改: en-us/deployment/advanced-configuration/qdrant/qdrant-cluster.mdx
+2025-03-10 14:07:34,405 - INFO - 文件无需修改: en-us/deployment/advanced-configuration/docker-compose/icon-customization.mdx
+2025-03-10 14:07:34,416 - INFO - 文件无需修改: assets/README.md
+2025-03-10 14:07:34,428 - INFO - 文件无需修改: essentials/settings.mdx
+2025-03-10 14:07:34,439 - INFO - 文件无需修改: essentials/markdown.mdx
+2025-03-10 14:07:34,451 - INFO - 文件无需修改: essentials/code.mdx
+2025-03-10 14:07:34,462 - INFO - 文件无需修改: essentials/navigation.mdx
+2025-03-10 14:07:34,462 - ERROR - 转换图片失败: /path/image.jpg, 错误: [Errno 2] No such file or directory: '/path/image.jpg'
+2025-03-10 14:07:34,462 - INFO - 跳过远程图片: https://mintlify-assets.b-cdn.net/bigbend.jpg
+2025-03-10 14:07:34,462 - ERROR - 转换图片失败: /path/image.jpg, 错误: [Errno 2] No such file or directory: '/path/image.jpg'
+2025-03-10 14:07:34,462 - WARNING - 处理失败，保持原文件不变: essentials/images.mdx
+2025-03-10 14:07:34,473 - INFO - 文件无需修改: essentials/reusable-snippets.mdx
+2025-03-10 14:07:34,474 - INFO - 完成处理所有Markdown文档
+2025-03-10 14:12:05,184 - INFO - 开始处理目录: zh-cn/user-guide
+2025-03-10 14:12:05,186 - INFO - 已备份进度文件到: conversion_progress.yaml.bak.1741587125
+2025-03-10 14:12:05,207 - INFO - 文件无需修改: zh-cn/user-guide/welcome.mdx
+2025-03-10 14:12:05,208 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/Feb 4, 2024.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/Feb 4, 2024.png'
+2025-03-10 14:12:05,208 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/quick-tool-integration.mdx
+2025-03-10 14:12:05,208 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (182).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (182).png'
+2025-03-10 14:12:05,208 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/introduction.mdx
+2025-03-10 14:12:05,209 - INFO - 文件无需修改: zh-cn/user-guide/tools/advanced-tool-integration.mdx
+2025-03-10 14:12:05,209 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/api_based.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/api_based.png'
+2025-03-10 14:12:05,209 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/extensions/code-based/external-data-tool.mdx
+2025-03-10 14:12:05,211 - INFO - 文件无需修改: zh-cn/user-guide/tools/extensions/code-based/moderation.mdx
+2025-03-10 14:12:05,211 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/api_extension_edit.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/api_extension_edit.png'
+2025-03-10 14:12:05,211 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/extensions/api-based/cloudflare-workers.mdx
+2025-03-10 14:12:05,212 - INFO - 文件无需修改: zh-cn/user-guide/tools/extensions/api-based/external-data-tool.mdx
+2025-03-10 14:12:05,213 - INFO - 文件无需修改: zh-cn/user-guide/tools/extensions/api-based/moderation.mdx
+2025-03-10 14:12:05,214 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/api_based_01.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/api_based_01.png'
+2025-03-10 14:12:05,214 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/extensions/api-based/api-based-extension.mdx
+2025-03-10 14:12:05,215 - INFO - 文件无需修改: zh-cn/user-guide/tools/community/searxng.mdx
+2025-03-10 14:12:05,215 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-tool-searchapi.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-tool-searchapi.png'
+2025-03-10 14:12:05,215 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/community/searchapi.mdx
+2025-03-10 14:12:05,215 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/截屏2024-09-26 23.12.01.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/截屏2024-09-26 23.12.01.png'
+2025-03-10 14:12:05,215 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/community/siliconflow.mdx
+2025-03-10 14:12:05,217 - INFO - 文件无需修改: zh-cn/user-guide/tools/community/alphavantage.mdx
+2025-03-10 14:12:05,217 - ERROR - 转换图片失败: /zh-cn/img/0503c5838f163b54884ca58240281f3f.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/0503c5838f163b54884ca58240281f3f.png'
+2025-03-10 14:12:05,217 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/community/comfyui.mdx
+2025-03-10 14:12:05,217 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-tool-serper.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-tool-serper.png'
+2025-03-10 14:12:05,217 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/community/serper.mdx
+2025-03-10 14:12:05,217 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-tools-dalle.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-tools-dalle.png'
+2025-03-10 14:12:05,217 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/dify/dall-e.mdx
+2025-03-10 14:12:05,219 - INFO - 文件无需修改: zh-cn/user-guide/tools/dify/stable-diffusion.mdx
+2025-03-10 14:12:05,219 - ERROR - 转换图片失败: /zh-cn/img/5e8f18c29c50f14c5c83d7b45c546725.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/5e8f18c29c50f14c5c83d7b45c546725.png'
+2025-03-10 14:12:05,219 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/dify/bing.mdx
+2025-03-10 14:12:05,220 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-tools-google.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-tools-google.png'
+2025-03-10 14:12:05,220 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/dify/google.mdx
+2025-03-10 14:12:05,220 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-tools-perplexity.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-tools-perplexity.png'
+2025-03-10 14:12:05,220 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/tools/dify/perplexity.mdx
+2025-03-10 14:12:05,222 - INFO - 文件无需修改: zh-cn/user-guide/faq/feature-using.mdx
+2025-03-10 14:12:05,222 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (135).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (135).png'
+2025-03-10 14:12:05,222 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/faq/llm-using.mdx
+2025-03-10 14:12:05,222 - ERROR - 转换图片失败: /zh-cn/img/493d7ed37931d11ebb973e6c376c6e95.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/493d7ed37931d11ebb973e6c376c6e95.png'
+2025-03-10 14:12:05,222 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/management/app-management.mdx
+2025-03-10 14:12:05,222 - ERROR - 转换图片失败: /zh-cn/img/4cc19d40803e1be0017ce00e4aa160de.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/4cc19d40803e1be0017ce00e4aa160de.png'
+2025-03-10 14:12:05,222 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/management/team-members-management.mdx
+2025-03-10 14:12:05,223 - ERROR - 转换图片失败: /zh-cn/img/6cb4f24598fe8b40d4ff1881d8257c76.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/6cb4f24598fe8b40d4ff1881d8257c76.png'
+2025-03-10 14:12:05,223 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/management/personal-account-management.mdx
+2025-03-10 14:12:05,224 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (216).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (216).png'
+2025-03-10 14:12:05,224 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/models/model-configuration.mdx
+2025-03-10 14:12:05,224 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/customizable-model.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/customizable-model.png'
+2025-03-10 14:12:05,224 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/models/customizable-model.mdx
+2025-03-10 14:12:05,225 - INFO - 文件无需修改: zh-cn/user-guide/models/predefined-model.mdx
+2025-03-10 14:12:05,227 - INFO - 文件无需修改: zh-cn/user-guide/models/new-provider.mdx
+2025-03-10 14:12:05,229 - INFO - 文件无需修改: zh-cn/user-guide/models/interfaces.mdx
+2025-03-10 14:12:05,229 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/load-balancing.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/load-balancing.png'
+2025-03-10 14:12:05,229 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/models/load-balancing.mdx
+2025-03-10 14:12:05,270 - INFO - 文件无需修改: zh-cn/user-guide/models/schema.mdx
+2025-03-10 14:12:05,272 - INFO - 文件无需修改: zh-cn/user-guide/api-documentation/text-generator.mdx
+2025-03-10 14:12:05,273 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/dataset-api-token.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/dataset-api-token.png'
+2025-03-10 14:12:05,273 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/api-documentation/knowledge-base.mdx
+2025-03-10 14:12:05,274 - INFO - 文件无需修改: zh-cn/user-guide/api-documentation/chatbot.mdx
+2025-03-10 14:12:05,275 - INFO - 文件无需修改: zh-cn/user-guide/api-documentation/workflow.mdx
+2025-03-10 14:12:05,286 - INFO - 文件无需修改: zh-cn/user-guide/api-documentation/external-knowledge-api-documentation.mdx
+2025-03-10 14:12:05,287 - ERROR - 转换图片失败: /zh-cn/img/ed7368f117afa02ca5359472ea1167e8.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/ed7368f117afa02ca5359472ea1167e8.png'
+2025-03-10 14:12:05,287 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/text-generator.mdx
+2025-03-10 14:12:05,287 - ERROR - 转换图片失败: /zh-cn/img/40d3342c49dc56350356eade970454c3.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/40d3342c49dc56350356eade970454c3.png'
+2025-03-10 14:12:05,287 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/agent.mdx
+2025-03-10 14:12:05,287 - ERROR - 转换图片失败: /zh-cn/img/5d9711956466aa6b5237d0c3b6e97f81.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/5d9711956466aa6b5237d0c3b6e97f81.png'
+2025-03-10 14:12:05,287 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/chatbot.mdx
+2025-03-10 14:12:05,288 - ERROR - 转换图片失败: /zh-cn/img/8eb5a12939c298bc7cb9a778d10d42db.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/8eb5a12939c298bc7cb9a778d10d42db.png'
+2025-03-10 14:12:05,288 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/create-flow-app.mdx
+2025-03-10 14:12:05,288 - ERROR - 转换图片失败: /zh-cn/img/c405efa31fd5708542fdc3bd7c0cb708.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/c405efa31fd5708542fdc3bd7c0cb708.png'
+2025-03-10 14:12:05,288 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/variables.mdx
+2025-03-10 14:12:05,289 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (7).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (7).png'
+2025-03-10 14:12:05,289 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/additional-feature.mdx
+2025-03-10 14:12:05,289 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (336).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (336).png'
+2025-03-10 14:12:05,289 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/orchestrate-node.mdx
+2025-03-10 14:12:05,291 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/concepts.mdx
+2025-03-10 14:12:05,293 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/publish.mdx
+2025-03-10 14:12:05,294 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (379).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (379).png'
+2025-03-10 14:12:05,294 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/file-upload.mdx
+2025-03-10 14:12:05,294 - ERROR - 转换图片失败: /zh-cn/img/a686f00a80c78f84d88e01712f880386.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/a686f00a80c78f84d88e01712f880386.png'
+2025-03-10 14:12:05,294 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/end.mdx
+2025-03-10 14:12:05,294 - ERROR - 转换图片失败: /zh-cn/img/43ab9a37624bdba10ff37a5b9004db7f.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/43ab9a37624bdba10ff37a5b9004db7f.png'
+2025-03-10 14:12:05,294 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/list-operator.mdx
+2025-03-10 14:12:05,295 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (282).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (282).png'
+2025-03-10 14:12:05,295 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/tools.mdx
+2025-03-10 14:12:05,295 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (66).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (66).png'
+2025-03-10 14:12:05,296 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/parameter-extractor.mdx
+2025-03-10 14:12:05,296 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (52).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (52).png'
+2025-03-10 14:12:05,296 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/http-request.mdx
+2025-03-10 14:12:05,297 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (278).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (278).png'
+2025-03-10 14:12:05,297 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/variable-aggregation.mdx
+2025-03-10 14:12:05,297 - ERROR - 转换图片失败: /zh-cn/img/0cbfd9c1d9d56e6a528b134bd07662ec.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/0cbfd9c1d9d56e6a528b134bd07662ec.png'
+2025-03-10 14:12:05,298 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/doc-extractor.mdx
+2025-03-10 14:12:05,298 - ERROR - 转换图片失败: /zh-cn/img/904eeba8ee23e89c189497c5fd90f499.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/904eeba8ee23e89c189497c5fd90f499.png'
+2025-03-10 14:12:05,298 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/code.mdx
+2025-03-10 14:12:05,298 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/iteration-story-generator.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/iteration-story-generator.png'
+2025-03-10 14:12:05,298 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/iteration.mdx
+2025-03-10 14:12:05,298 - ERROR - 转换图片失败: /zh-cn/img/ddca497c976020d9b8466ae1db553fd0.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/ddca497c976020d9b8466ae1db553fd0.png'
+2025-03-10 14:12:05,299 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/start.mdx
+2025-03-10 14:12:05,301 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/README.mdx
+2025-03-10 14:12:05,301 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (71).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (71).png'
+2025-03-10 14:12:05,301 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/llm.mdx
+2025-03-10 14:12:05,302 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (209).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (209).png'
+2025-03-10 14:12:05,302 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/template.mdx
+2025-03-10 14:12:05,304 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/answer.mdx
+2025-03-10 14:12:05,304 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (80).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (80).png'
+2025-03-10 14:12:05,304 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/question-classifier.mdx
+2025-03-10 14:12:05,305 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (244).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (244).png'
+2025-03-10 14:12:05,305 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/knowledge-retrieval.mdx
+2025-03-10 14:12:05,305 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-conversation-variable.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-conversation-variable.png'
+2025-03-10 14:12:05,305 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/variable-assigner.mdx
+2025-03-10 14:12:05,305 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-if-else-elif.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-if-else-elif.png'
+2025-03-10 14:12:05,305 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/build-app/flow-app/nodes/ifelse.mdx
+2025-03-10 14:12:05,306 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/rerank-flow-chart.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/rerank-flow-chart.png'
+2025-03-10 14:12:05,306 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/integrate-knowledge-within-application.mdx
+2025-03-10 14:12:05,306 - ERROR - 转换图片失败: /Users/allen/Desktop/Dify-Enterprise-Docs/zh-cn/user-guide/knowledge-base/</zh-cn/user-guide/.gitbook/assets/image (7, 错误: [Errno 2] No such file or directory: '/Users/allen/Desktop/Dify-Enterprise-Docs/zh-cn/user-guide/knowledge-base/</zh-cn/user-guide/.gitbook/assets/image (7'
+2025-03-10 14:12:05,306 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (8).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (8).png'
+2025-03-10 14:12:05,306 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/knowledge-and-documents-maintenance.mdx
+2025-03-10 14:12:05,308 - INFO - 文件无需修改: zh-cn/user-guide/knowledge-base/faq.mdx
+2025-03-10 14:12:05,309 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (86).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (86).png'
+2025-03-10 14:12:05,309 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/retrieval-test-and-citation.mdx
+2025-03-10 14:12:05,309 - ERROR - 转换图片失败: /zh-cn/images/en-upload-files-1.png, 错误: [Errno 2] No such file or directory: '/zh-cn/images/en-upload-files-1.png'
+2025-03-10 14:12:05,309 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/knowledge-base-creation/upload-documents.mdx
+2025-03-10 14:12:05,310 - ERROR - 转换图片失败: /zh-cn/img/56dc0cac00f2da808378c82c1791b30a.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/56dc0cac00f2da808378c82c1791b30a.png'
+2025-03-10 14:12:05,310 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/knowledge-base-creation/sync-from-notion.mdx
+2025-03-10 14:12:05,311 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/dataset-creation-step1(firecrawl).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/dataset-creation-step1(firecrawl).png'
+2025-03-10 14:12:05,311 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/knowledge-base-creation/sync-from-website.mdx
+2025-03-10 14:12:05,311 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (1) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (1) (1).png'
+2025-03-10 14:12:05,311 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/knowledge-base-creation/connect-external-knowledge-base.mdx
+2025-03-10 14:12:05,311 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-rag-multiple.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-rag-multiple.png'
+2025-03-10 14:12:05,311 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/indexing-and-retrieval/retrieval.mdx
+2025-03-10 14:12:05,312 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (179).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (179).png'
+2025-03-10 14:12:05,312 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/indexing-and-retrieval/rerank.mdx
+2025-03-10 14:12:05,312 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (180).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (180).png'
+2025-03-10 14:12:05,312 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/indexing-and-retrieval/retrieval-augment.mdx
+2025-03-10 14:12:05,312 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (178).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (178).png'
+2025-03-10 14:12:05,312 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/indexing-and-retrieval/hybrid-search.mdx
+2025-03-10 14:12:05,312 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/dataset-api-token.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/dataset-api-token.png'
+2025-03-10 14:12:05,312 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/knowledge-base/api-documentation/maintain-dataset-via-api.mdx
+2025-03-10 14:12:05,316 - INFO - 文件无需修改: zh-cn/user-guide/knowledge-base/api-documentation/external-knowledge-api-documentation.mdx
+2025-03-10 14:12:05,316 - ERROR - 转换图片失败: /zh-cn/img/c36232e3c4502f94be27748a52bc5b92.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/c36232e3c4502f94be27748a52bc5b92.png'
+2025-03-10 14:12:05,316 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/application-publishing/developing-with-apis.mdx
+2025-03-10 14:12:05,318 - INFO - 文件无需修改: zh-cn/user-guide/application-publishing/based-on-frontend-templates.mdx
+2025-03-10 14:12:05,318 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (69) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (69) (1).png'
+2025-03-10 14:12:05,318 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/application-publishing/embedding-in-websites.mdx
+2025-03-10 14:12:05,318 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (58) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (58) (1).png'
+2025-03-10 14:12:05,318 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/application-publishing/launch-your-webapp-quickly/text-generator.mdx
+2025-03-10 14:12:05,318 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (63) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (63) (1).png'
+2025-03-10 14:12:05,318 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/application-publishing/launch-your-webapp-quickly/conversation-application.mdx
+2025-03-10 14:12:05,322 - INFO - 文件无需修改: zh-cn/user-guide/application-publishing/launch-your-webapp-quickly/web-app-settings.mdx
+2025-03-10 14:12:05,322 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/output (4) (3).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/output (4) (3).png'
+2025-03-10 14:12:05,322 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/application-publishing/launch-your-webapp-quickly/flow-app.mdx
+2025-03-10 14:12:05,324 - INFO - 文件无需修改: zh-cn/user-guide/debug-app/agent.mdx
+2025-03-10 14:12:05,326 - INFO - 文件无需修改: zh-cn/user-guide/debug-app/chatbot.mdx
+2025-03-10 14:12:05,326 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/output (3) (3).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/output (3) (3).png'
+2025-03-10 14:12:05,326 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/debug-app/chatflow-and-workflow/step-run.mdx
+2025-03-10 14:12:05,326 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/output (2) (4).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/output (2) (4).png'
+2025-03-10 14:12:05,326 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/debug-app/chatflow-and-workflow/checklist.mdx
+2025-03-10 14:12:05,331 - INFO - 文件无需修改: zh-cn/user-guide/debug-app/chatflow-and-workflow/api.mdx
+2025-03-10 14:12:05,331 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/output (8).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/output (8).png'
+2025-03-10 14:12:05,331 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/debug-app/chatflow-and-workflow/log.mdx
+2025-03-10 14:12:05,332 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/output (1) (5).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/output (1) (5).png'
+2025-03-10 14:12:05,332 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/debug-app/chatflow-and-workflow/preview-and-run.mdx
+2025-03-10 14:12:05,332 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/output (3) (4).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/output (3) (4).png'
+2025-03-10 14:12:05,332 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/debug-app/chatflow-and-workflow/history.mdx
+2025-03-10 14:12:05,332 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/app-log.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/app-log.png'
+2025-03-10 14:12:05,332 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/monitoring/logs.mdx
+2025-03-10 14:12:05,332 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (181).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (181).png'
+2025-03-10 14:12:05,332 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/monitoring/annotation-reply.mdx
+2025-03-10 14:12:05,333 - ERROR - 转换图片失败: /zh-cn/img/44847ddbf9994ddc45f5cc0b31432dfb.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/44847ddbf9994ddc45f5cc0b31432dfb.png'
+2025-03-10 14:12:05,333 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/monitoring/analysis.mdx
+2025-03-10 14:12:05,333 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/app-log.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/app-log.png'
+2025-03-10 14:12:05,333 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/monitoring/logs copy.mdx
+2025-03-10 14:12:05,333 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (300).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (300).png'
+2025-03-10 14:12:05,334 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/monitoring/integrate-external-ops-tools/integrate-langfuse.mdx
+2025-03-10 14:12:05,334 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (29).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (29).png'
+2025-03-10 14:12:05,334 - WARNING - 处理失败，保持原文件不变: zh-cn/user-guide/monitoring/integrate-external-ops-tools/integrate-langsmith.mdx
+2025-03-10 14:12:05,334 - INFO - 图片格式设置: original
+2025-03-10 14:12:05,334 - INFO - 处理完成
+2025-03-10 14:21:51,687 - INFO - 开始处理目录: zh-cn/user-guide
+2025-03-10 14:21:51,689 - INFO - 已备份原有进度文件到: conversion_progress.yaml.bak
+2025-03-10 14:21:51,709 - INFO - 文件无需修改: zh-cn/user-guide/welcome.mdx
+2025-03-10 14:21:51,710 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/Feb 4, 2024.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/Feb 4, 2024.png'
+2025-03-10 14:21:51,711 - INFO - 文件无需修改: zh-cn/user-guide/tools/quick-tool-integration.mdx
+2025-03-10 14:21:51,712 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (182).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (182).png'
+2025-03-10 14:21:51,712 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (185).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (185).png'
+2025-03-10 14:21:51,713 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (187).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (187).png'
+2025-03-10 14:21:51,713 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (198).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (198).png'
+2025-03-10 14:21:51,713 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (199).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (199).png'
+2025-03-10 14:21:51,713 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (201).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (201).png'
+2025-03-10 14:21:51,713 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (190).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (190).png'
+2025-03-10 14:21:51,714 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (195).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (195).png'
+2025-03-10 14:21:51,714 - INFO - 文件无需修改: zh-cn/user-guide/tools/introduction.mdx
+2025-03-10 14:21:51,715 - INFO - 文件无需修改: zh-cn/user-guide/tools/advanced-tool-integration.mdx
+2025-03-10 14:21:51,716 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/api_based.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/api_based.png'
+2025-03-10 14:21:51,716 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/weather inquiry.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/weather inquiry.png'
+2025-03-10 14:21:51,716 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/api_based_extension1.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/api_based_extension1.png'
+2025-03-10 14:21:51,716 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/Weather_search_tool.jpeg, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/Weather_search_tool.jpeg'
+2025-03-10 14:21:51,716 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/log.jpeg, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/log.jpeg'
+2025-03-10 14:21:51,716 - INFO - 文件无需修改: zh-cn/user-guide/tools/extensions/code-based/external-data-tool.mdx
+2025-03-10 14:21:51,717 - INFO - 文件无需修改: zh-cn/user-guide/tools/extensions/code-based/moderation.mdx
+2025-03-10 14:21:51,718 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/api_extension_edit.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/api_extension_edit.png'
+2025-03-10 14:21:51,718 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/app_tools_edit.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/app_tools_edit.png'
+2025-03-10 14:21:51,720 - INFO - 文件无需修改: zh-cn/user-guide/tools/extensions/api-based/cloudflare-workers.mdx
+2025-03-10 14:21:51,722 - INFO - 文件无需修改: zh-cn/user-guide/tools/extensions/api-based/external-data-tool.mdx
+2025-03-10 14:21:51,723 - INFO - 文件无需修改: zh-cn/user-guide/tools/extensions/api-based/moderation.mdx
+2025-03-10 14:21:51,724 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/api_based_01.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/api_based_01.png'
+2025-03-10 14:21:51,724 - INFO - 跳过远程图片: https://github.com/langgenius/dify-docs/raw/main/zh_CN/.gitbook/assets/api_based_01.png
+2025-03-10 14:21:51,724 - INFO - 跳过远程图片: https://github.com/langgenius/dify-docs/raw/main/zh_CN/.gitbook/assets/api_based_02.png
+2025-03-10 14:21:51,724 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/download.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/download.png'
+2025-03-10 14:21:51,724 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/8000.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/8000.png'
+2025-03-10 14:21:51,725 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/ngrock.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/ngrock.png'
+2025-03-10 14:21:51,726 - INFO - 文件无需修改: zh-cn/user-guide/tools/extensions/api-based/api-based-extension.mdx
+2025-03-10 14:21:51,728 - INFO - 文件无需修改: zh-cn/user-guide/tools/community/searxng.mdx
+2025-03-10 14:21:51,730 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-tool-searchapi.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-tool-searchapi.png'
+2025-03-10 14:21:51,730 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-tool-searchapi-flow.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-tool-searchapi-flow.png'
+2025-03-10 14:21:51,732 - INFO - 文件无需修改: zh-cn/user-guide/tools/community/searchapi.mdx
+2025-03-10 14:21:51,733 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/截屏2024-09-26 23.12.01.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/截屏2024-09-26 23.12.01.png'
+2025-03-10 14:21:51,733 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/截屏2024-09-27 10.09.34.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/截屏2024-09-27 10.09.34.png'
+2025-03-10 14:21:51,733 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/截屏2024-09-27 10.18.54.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/截屏2024-09-27 10.18.54.png'
+2025-03-10 14:21:51,733 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/截屏2024-09-27 10.23.52.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/截屏2024-09-27 10.23.52.png'
+2025-03-10 14:21:51,734 - INFO - 文件无需修改: zh-cn/user-guide/tools/community/siliconflow.mdx
+2025-03-10 14:21:51,736 - INFO - 文件无需修改: zh-cn/user-guide/tools/community/alphavantage.mdx
+2025-03-10 14:21:51,737 - ERROR - 转换图片失败: /zh-cn/img/0503c5838f163b54884ca58240281f3f.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/0503c5838f163b54884ca58240281f3f.png'
+2025-03-10 14:21:51,739 - INFO - 文件无需修改: zh-cn/user-guide/tools/community/comfyui.mdx
+2025-03-10 14:21:51,739 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-tool-serper.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-tool-serper.png'
+2025-03-10 14:21:51,741 - INFO - 文件无需修改: zh-cn/user-guide/tools/community/serper.mdx
+2025-03-10 14:21:51,741 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-tools-dalle.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-tools-dalle.png'
+2025-03-10 14:21:51,741 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-dalle3-node.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-dalle3-node.png'
+2025-03-10 14:21:51,742 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-agent-dalle3.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-agent-dalle3.png'
+2025-03-10 14:21:51,743 - INFO - 文件无需修改: zh-cn/user-guide/tools/dify/dall-e.mdx
+2025-03-10 14:21:51,746 - INFO - 文件无需修改: zh-cn/user-guide/tools/dify/stable-diffusion.mdx
+2025-03-10 14:21:51,746 - ERROR - 转换图片失败: /zh-cn/img/5e8f18c29c50f14c5c83d7b45c546725.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/5e8f18c29c50f14c5c83d7b45c546725.png'
+2025-03-10 14:21:51,748 - INFO - 文件无需修改: zh-cn/user-guide/tools/dify/bing.mdx
+2025-03-10 14:21:51,748 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-tools-google.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-tools-google.png'
+2025-03-10 14:21:51,750 - INFO - 文件无需修改: zh-cn/user-guide/tools/dify/google.mdx
+2025-03-10 14:21:51,751 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-tools-perplexity.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-tools-perplexity.png'
+2025-03-10 14:21:51,751 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-tools-chatflow-perplexity.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-tools-chatflow-perplexity.png'
+2025-03-10 14:21:51,751 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-tools-agent-perplexity.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-tools-agent-perplexity.png'
+2025-03-10 14:21:51,752 - INFO - 文件无需修改: zh-cn/user-guide/tools/dify/perplexity.mdx
+2025-03-10 14:21:51,755 - INFO - 文件无需修改: zh-cn/user-guide/faq/feature-using.mdx
+2025-03-10 14:21:51,756 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (135).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (135).png'
+2025-03-10 14:21:51,757 - INFO - 文件无需修改: zh-cn/user-guide/faq/llm-using.mdx
+2025-03-10 14:21:51,758 - ERROR - 转换图片失败: /zh-cn/img/493d7ed37931d11ebb973e6c376c6e95.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/493d7ed37931d11ebb973e6c376c6e95.png'
+2025-03-10 14:21:51,758 - ERROR - 转换图片失败: /zh-cn/img/37a012ebb30449ccebcb29f3ee01d62f.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/37a012ebb30449ccebcb29f3ee01d62f.png'
+2025-03-10 14:21:51,758 - ERROR - 转换图片失败: /zh-cn/img/9d2b1f92367982fa4416e07c5b5669cc.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/9d2b1f92367982fa4416e07c5b5669cc.png'
+2025-03-10 14:21:51,760 - INFO - 文件无需修改: zh-cn/user-guide/management/app-management.mdx
+2025-03-10 14:21:51,760 - ERROR - 转换图片失败: /zh-cn/img/4cc19d40803e1be0017ce00e4aa160de.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/4cc19d40803e1be0017ce00e4aa160de.png'
+2025-03-10 14:21:51,760 - ERROR - 转换图片失败: /zh-cn/img/bdc84fc19ababab441c3f98b72f134e2.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/bdc84fc19ababab441c3f98b72f134e2.png'
+2025-03-10 14:21:51,762 - INFO - 文件无需修改: zh-cn/user-guide/management/team-members-management.mdx
+2025-03-10 14:21:51,762 - ERROR - 转换图片失败: /zh-cn/img/6cb4f24598fe8b40d4ff1881d8257c76.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/6cb4f24598fe8b40d4ff1881d8257c76.png'
+2025-03-10 14:21:51,764 - INFO - 文件无需修改: zh-cn/user-guide/management/personal-account-management.mdx
+2025-03-10 14:21:51,764 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (216).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (216).png'
+2025-03-10 14:21:51,764 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (113).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (113).png'
+2025-03-10 14:21:51,764 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image-20231210143654461 (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image-20231210143654461 (1).png'
+2025-03-10 14:21:51,764 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (217).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (217).png'
+2025-03-10 14:21:51,766 - INFO - 文件无需修改: zh-cn/user-guide/models/model-configuration.mdx
+2025-03-10 14:21:51,767 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/customizable-model.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/customizable-model.png'
+2025-03-10 14:21:51,769 - INFO - 文件无需修改: zh-cn/user-guide/models/customizable-model.mdx
+2025-03-10 14:21:51,771 - INFO - 文件无需修改: zh-cn/user-guide/models/predefined-model.mdx
+2025-03-10 14:21:51,773 - INFO - 文件无需修改: zh-cn/user-guide/models/new-provider.mdx
+2025-03-10 14:21:51,777 - INFO - 文件无需修改: zh-cn/user-guide/models/interfaces.mdx
+2025-03-10 14:21:51,777 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/load-balancing.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/load-balancing.png'
+2025-03-10 14:21:51,777 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/load-balancing-1.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/load-balancing-1.png'
+2025-03-10 14:21:51,777 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/load-balancing-3.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/load-balancing-3.png'
+2025-03-10 14:21:51,777 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/load-balancing-4.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/load-balancing-4.png'
+2025-03-10 14:21:51,777 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/load-balancing-5.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/load-balancing-5.png'
+2025-03-10 14:21:51,780 - INFO - 文件无需修改: zh-cn/user-guide/models/load-balancing.mdx
+2025-03-10 14:21:51,782 - INFO - 文件无需修改: zh-cn/user-guide/models/schema.mdx
+2025-03-10 14:21:51,785 - INFO - 文件无需修改: zh-cn/user-guide/api-documentation/text-generator.mdx
+2025-03-10 14:21:51,785 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/dataset-api-token.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/dataset-api-token.png'
+2025-03-10 14:21:51,787 - INFO - 文件无需修改: zh-cn/user-guide/api-documentation/knowledge-base.mdx
+2025-03-10 14:21:51,790 - INFO - 文件无需修改: zh-cn/user-guide/api-documentation/chatbot.mdx
+2025-03-10 14:21:51,792 - INFO - 文件无需修改: zh-cn/user-guide/api-documentation/workflow.mdx
+2025-03-10 14:21:51,795 - INFO - 文件无需修改: zh-cn/user-guide/api-documentation/external-knowledge-api-documentation.mdx
+2025-03-10 14:21:51,795 - ERROR - 转换图片失败: /zh-cn/img/ed7368f117afa02ca5359472ea1167e8.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/ed7368f117afa02ca5359472ea1167e8.png'
+2025-03-10 14:21:51,796 - ERROR - 转换图片失败: /zh-cn/img/592adde305ffe7a9b2f538b20a14483e.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/592adde305ffe7a9b2f538b20a14483e.png'
+2025-03-10 14:21:51,796 - ERROR - 转换图片失败: /zh-cn/img/302d73e248bc80a357e83ab3d65dcf32.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/302d73e248bc80a357e83ab3d65dcf32.png'
+2025-03-10 14:21:51,796 - ERROR - 转换图片失败: /zh-cn/img/241e9bd270b26a8b9658a784ecf9bf13.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/241e9bd270b26a8b9658a784ecf9bf13.png'
+2025-03-10 14:21:51,796 - ERROR - 转换图片失败: /zh-cn/img/5a6cff31c1fa94912ee39306739a2d6e.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/5a6cff31c1fa94912ee39306739a2d6e.png'
+2025-03-10 14:21:51,796 - ERROR - 转换图片失败: /zh-cn/img/60109394134b665cb856505503f4d975.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/60109394134b665cb856505503f4d975.png'
+2025-03-10 14:21:51,798 - INFO - 文件无需修改: zh-cn/user-guide/build-app/text-generator.mdx
+2025-03-10 14:21:51,799 - ERROR - 转换图片失败: /zh-cn/img/40d3342c49dc56350356eade970454c3.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/40d3342c49dc56350356eade970454c3.png'
+2025-03-10 14:21:51,799 - ERROR - 转换图片失败: /zh-cn/img/6c538b11885e24394906e3b7e5c19b17.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/6c538b11885e24394906e3b7e5c19b17.png'
+2025-03-10 14:21:51,799 - ERROR - 转换图片失败: /zh-cn/img/a04ab941483c2d50633011a6ad5b69fb.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/a04ab941483c2d50633011a6ad5b69fb.png'
+2025-03-10 14:21:51,799 - ERROR - 转换图片失败: /zh-cn/img/e5cfc25900fd8b2ca8e9c88402affd72.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/e5cfc25900fd8b2ca8e9c88402affd72.png'
+2025-03-10 14:21:51,799 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-agent-dalle3.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-agent-dalle3.png'
+2025-03-10 14:21:51,800 - ERROR - 转换图片失败: /zh-cn/img/85526d52781ea5b45c8e54679af90c03.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/85526d52781ea5b45c8e54679af90c03.png'
+2025-03-10 14:21:51,800 - ERROR - 转换图片失败: /zh-cn/img/876dfa7271d17166f160638ca43eeb21.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/876dfa7271d17166f160638ca43eeb21.png'
+2025-03-10 14:21:51,800 - ERROR - 转换图片失败: /zh-cn/img/d4adbbfb1c6a6d020e06972713ad7c7c.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/d4adbbfb1c6a6d020e06972713ad7c7c.png'
+2025-03-10 14:21:51,800 - ERROR - 转换图片失败: /zh-cn/img/651df066bc2dc78deffed189b718b8b4.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/651df066bc2dc78deffed189b718b8b4.png'
+2025-03-10 14:21:51,800 - ERROR - 转换图片失败: /zh-cn/img/1eb90b9b3d0905e525010ad3376cb626.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/1eb90b9b3d0905e525010ad3376cb626.png'
+2025-03-10 14:21:51,803 - INFO - 文件无需修改: zh-cn/user-guide/build-app/agent.mdx
+2025-03-10 14:21:51,804 - ERROR - 转换图片失败: /zh-cn/img/5d9711956466aa6b5237d0c3b6e97f81.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/5d9711956466aa6b5237d0c3b6e97f81.png'
+2025-03-10 14:21:51,804 - ERROR - 转换图片失败: /zh-cn/img/e008292270ae03d31b83bba99253f3a4.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/e008292270ae03d31b83bba99253f3a4.png'
+2025-03-10 14:21:51,804 - ERROR - 转换图片失败: /zh-cn/img/e3b94de2caed9bfc57362effa1b86de5.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/e3b94de2caed9bfc57362effa1b86de5.png'
+2025-03-10 14:21:51,804 - ERROR - 转换图片失败: /zh-cn/img/4bf2bc75b3ce6b328efc461682a6ec78.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/4bf2bc75b3ce6b328efc461682a6ec78.png'
+2025-03-10 14:21:51,804 - ERROR - 转换图片失败: /zh-cn/img/2698f7edc53d7886007c6c78faba698e.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/2698f7edc53d7886007c6c78faba698e.png'
+2025-03-10 14:21:51,804 - ERROR - 转换图片失败: /zh-cn/img/f99d63b2c6ab6c5bd20d036374cd803c.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/f99d63b2c6ab6c5bd20d036374cd803c.png'
+2025-03-10 14:21:51,804 - ERROR - 转换图片失败: /zh-cn/img/87c80411733a228aadbf3ba0a4fdacb1.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/87c80411733a228aadbf3ba0a4fdacb1.png'
+2025-03-10 14:21:51,804 - ERROR - 转换图片失败: /zh-cn/img/c56f9168146fe003847e5551d41c5023.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/c56f9168146fe003847e5551d41c5023.png'
+2025-03-10 14:21:51,804 - ERROR - 转换图片失败: /zh-cn/img/ce4d5b43f6fc051cb6544c9560fc73dc.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/ce4d5b43f6fc051cb6544c9560fc73dc.png'
+2025-03-10 14:21:51,804 - ERROR - 转换图片失败: /zh-cn/img/f533501fa1e8d07701825cdf7dd024c7.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/f533501fa1e8d07701825cdf7dd024c7.png'
+2025-03-10 14:21:51,807 - INFO - 文件无需修改: zh-cn/user-guide/build-app/chatbot.mdx
+2025-03-10 14:21:51,808 - ERROR - 转换图片失败: /zh-cn/img/8eb5a12939c298bc7cb9a778d10d42db.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/8eb5a12939c298bc7cb9a778d10d42db.png'
+2025-03-10 14:21:51,808 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/workflow.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/workflow.png'
+2025-03-10 14:21:51,811 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/create-flow-app.mdx
+2025-03-10 14:21:51,811 - ERROR - 转换图片失败: /zh-cn/img/c405efa31fd5708542fdc3bd7c0cb708.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/c405efa31fd5708542fdc3bd7c0cb708.png'
+2025-03-10 14:21:51,811 - ERROR - 转换图片失败: /zh-cn/img/e387366fe2643688d57e6b9a69eacb1b.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/e387366fe2643688d57e6b9a69eacb1b.png'
+2025-03-10 14:21:51,811 - ERROR - 转换图片失败: /zh-cn/img/d27ebecdc87e630212fb0ed866bf8e9e.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/d27ebecdc87e630212fb0ed866bf8e9e.png'
+2025-03-10 14:21:51,811 - ERROR - 转换图片失败: /zh-cn/img/338f93f401142fea4936a67a615eba32.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/338f93f401142fea4936a67a615eba32.png'
+2025-03-10 14:21:51,814 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/variables.mdx
+2025-03-10 14:21:51,815 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (7).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (7).png'
+2025-03-10 14:21:51,815 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (8).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (8).png'
+2025-03-10 14:21:51,815 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (9).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (9).png'
+2025-03-10 14:21:51,815 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (372).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (372).png'
+2025-03-10 14:21:51,815 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (3) (2).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (3) (2).png'
+2025-03-10 14:21:51,815 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (16).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (16).png'
+2025-03-10 14:21:51,818 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/additional-feature.mdx
+2025-03-10 14:21:51,818 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (336).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (336).png'
+2025-03-10 14:21:51,818 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (337).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (337).png'
+2025-03-10 14:21:51,818 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (339).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (339).png'
+2025-03-10 14:21:51,818 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (335).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (335).png'
+2025-03-10 14:21:51,818 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (340).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (340).png'
+2025-03-10 14:21:51,818 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (341).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (341).png'
+2025-03-10 14:21:51,818 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (342).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (342).png'
+2025-03-10 14:21:51,818 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (343).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (343).png'
+2025-03-10 14:21:51,818 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (344).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (344).png'
+2025-03-10 14:21:51,819 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (345).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (345).png'
+2025-03-10 14:21:51,819 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (349).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (349).png'
+2025-03-10 14:21:51,819 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (333).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (333).png'
+2025-03-10 14:21:51,819 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (350).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (350).png'
+2025-03-10 14:21:51,819 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (351).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (351).png'
+2025-03-10 14:21:51,822 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/orchestrate-node.mdx
+2025-03-10 14:21:51,825 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/concepts.mdx
+2025-03-10 14:21:51,828 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/publish.mdx
+2025-03-10 14:21:51,829 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (379).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (379).png'
+2025-03-10 14:21:51,829 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (380).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (380).png'
+2025-03-10 14:21:51,829 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (381).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (381).png'
+2025-03-10 14:21:51,829 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/截屏2024-10-12 15.45.45.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/截屏2024-10-12 15.45.45.png'
+2025-03-10 14:21:51,829 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (376).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (376).png'
+2025-03-10 14:21:51,829 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (5) (2).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (5) (2).png'
+2025-03-10 14:21:51,829 - ERROR - 转换图片失败: /Users/allen/Desktop/Dify-Enterprise-Docs/zh-cn/user-guide/build-app/flow-app/img/file-upload-qs-1.avif, 错误: [Errno 2] No such file or directory: '/Users/allen/Desktop/Dify-Enterprise-Docs/zh-cn/user-guide/build-app/flow-app/img/file-upload-qs-1.avif'
+2025-03-10 14:21:51,829 - ERROR - 转换图片失败: /Users/allen/Desktop/Dify-Enterprise-Docs/zh-cn/user-guide/build-app/flow-app/img/file-upload-qs-2.avif, 错误: [Errno 2] No such file or directory: '/Users/allen/Desktop/Dify-Enterprise-Docs/zh-cn/user-guide/build-app/flow-app/img/file-upload-qs-2.avif'
+2025-03-10 14:21:51,829 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (3).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (3).png'
+2025-03-10 14:21:51,832 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/file-upload.mdx
+2025-03-10 14:21:51,832 - ERROR - 转换图片失败: /zh-cn/img/a686f00a80c78f84d88e01712f880386.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/a686f00a80c78f84d88e01712f880386.png'
+2025-03-10 14:21:51,832 - ERROR - 转换图片失败: /zh-cn/img/463291f9ab3d62ff3b4094e97d8ea543.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/463291f9ab3d62ff3b4094e97d8ea543.png'
+2025-03-10 14:21:51,833 - ERROR - 转换图片失败: /zh-cn/img/6dfcb4a8e25ae2132c663299eef596ea.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/6dfcb4a8e25ae2132c663299eef596ea.png'
+2025-03-10 14:21:51,835 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/end.mdx
+2025-03-10 14:21:51,836 - ERROR - 转换图片失败: /zh-cn/img/43ab9a37624bdba10ff37a5b9004db7f.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/43ab9a37624bdba10ff37a5b9004db7f.png'
+2025-03-10 14:21:51,836 - ERROR - 转换图片失败: /zh-cn/img/faaffe7d19591aeb9983629b94f53a66.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/faaffe7d19591aeb9983629b94f53a66.png'
+2025-03-10 14:21:51,836 - ERROR - 转换图片失败: /zh-cn/img/1eb561e0c60741f668a93533ed98bfb5.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/1eb561e0c60741f668a93533ed98bfb5.png'
+2025-03-10 14:21:51,839 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/list-operator.mdx
+2025-03-10 14:21:51,840 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (282).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (282).png'
+2025-03-10 14:21:51,840 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (283).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (283).png'
+2025-03-10 14:21:51,843 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/tools.mdx
+2025-03-10 14:21:51,843 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (66).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (66).png'
+2025-03-10 14:21:51,843 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (67).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (67).png'
+2025-03-10 14:21:51,843 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (69).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (69).png'
+2025-03-10 14:21:51,848 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/parameter-extractor.mdx
+2025-03-10 14:21:51,848 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (52).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (52).png'
+2025-03-10 14:21:51,848 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (50).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (50).png'
+2025-03-10 14:21:51,851 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/http-request.mdx
+2025-03-10 14:21:51,852 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (278).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (278).png'
+2025-03-10 14:21:51,852 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (276).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (276).png'
+2025-03-10 14:21:51,852 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (277).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (277).png'
+2025-03-10 14:21:51,855 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/variable-aggregation.mdx
+2025-03-10 14:21:51,856 - ERROR - 转换图片失败: /zh-cn/img/0cbfd9c1d9d56e6a528b134bd07662ec.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/0cbfd9c1d9d56e6a528b134bd07662ec.png'
+2025-03-10 14:21:51,856 - ERROR - 转换图片失败: /zh-cn/img/46a1f939088176a76e843422360ea948.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/46a1f939088176a76e843422360ea948.png'
+2025-03-10 14:21:51,856 - ERROR - 转换图片失败: /zh-cn/img/4f307d5ece35155a24eac7013766f9ee.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/4f307d5ece35155a24eac7013766f9ee.png'
+2025-03-10 14:21:51,856 - ERROR - 转换图片失败: /zh-cn/img/0ae3f13cf725cb2c52c72cc354e592ee.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/0ae3f13cf725cb2c52c72cc354e592ee.png'
+2025-03-10 14:21:51,859 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/doc-extractor.mdx
+2025-03-10 14:21:51,860 - ERROR - 转换图片失败: /zh-cn/img/904eeba8ee23e89c189497c5fd90f499.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/904eeba8ee23e89c189497c5fd90f499.png'
+2025-03-10 14:21:51,860 - ERROR - 转换图片失败: /zh-cn/img/7d29e700be8e5b6dfb91ff1263624368.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/7d29e700be8e5b6dfb91ff1263624368.png'
+2025-03-10 14:21:51,864 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/code.mdx
+2025-03-10 14:21:51,865 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/iteration-story-generator.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/iteration-story-generator.png'
+2025-03-10 14:21:51,865 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (262).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (262).png'
+2025-03-10 14:21:51,865 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/iteration-llm-node.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/iteration-llm-node.png'
+2025-03-10 14:21:51,865 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-iteration-extract-node.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-iteration-extract-node.png'
+2025-03-10 14:21:51,865 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (271).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (271).png'
+2025-03-10 14:21:51,865 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (272).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (272).png'
+2025-03-10 14:21:51,865 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (274).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (274).png'
+2025-03-10 14:21:51,865 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (273).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (273).png'
+2025-03-10 14:21:51,865 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (55).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (55).png'
+2025-03-10 14:21:51,865 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (264).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (264).png'
+2025-03-10 14:21:51,865 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (265).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (265).png'
+2025-03-10 14:21:51,865 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (54).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (54).png'
+2025-03-10 14:21:51,865 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (56).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (56).png'
+2025-03-10 14:21:51,869 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/iteration.mdx
+2025-03-10 14:21:51,870 - ERROR - 转换图片失败: /zh-cn/img/ddca497c976020d9b8466ae1db553fd0.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/ddca497c976020d9b8466ae1db553fd0.png'
+2025-03-10 14:21:51,870 - ERROR - 转换图片失败: /zh-cn/img/b6ead0b90a97e0a79075a57798b883cc.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/b6ead0b90a97e0a79075a57798b883cc.png'
+2025-03-10 14:21:51,870 - ERROR - 转换图片失败: /zh-cn/img/cb39be409f0037549d45f4b7d05aa9ce.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/cb39be409f0037549d45f4b7d05aa9ce.png'
+2025-03-10 14:21:51,870 - ERROR - 转换图片失败: /zh-cn/img/233efef6802ae700489f3ab3478bca6b.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/233efef6802ae700489f3ab3478bca6b.png'
+2025-03-10 14:21:51,874 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/start.mdx
+2025-03-10 14:21:51,878 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/README.mdx
+2025-03-10 14:21:51,879 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (71).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (71).png'
+2025-03-10 14:21:51,879 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (251).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (251).png'
+2025-03-10 14:21:51,879 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-node-llm.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-node-llm.png'
+2025-03-10 14:21:51,879 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-node-llm-prompt-generator.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-node-llm-prompt-generator.png'
+2025-03-10 14:21:51,879 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (253).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (253).png'
+2025-03-10 14:21:51,879 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (371).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (371).png'
+2025-03-10 14:21:51,879 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (255).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (255).png'
+2025-03-10 14:21:51,879 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/截屏2024-10-18 10.45.17.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/截屏2024-10-18 10.45.17.png'
+2025-03-10 14:21:51,879 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/截屏2024-10-18 11.08.59.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/截屏2024-10-18 11.08.59.png'
+2025-03-10 14:21:51,879 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (256).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (256).png'
+2025-03-10 14:21:51,879 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (2) (2).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (2) (2).png'
+2025-03-10 14:21:51,883 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/llm.mdx
+2025-03-10 14:21:51,883 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (209).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (209).png'
+2025-03-10 14:21:51,883 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (210).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (210).png'
+2025-03-10 14:21:51,888 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/template.mdx
+2025-03-10 14:21:51,893 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/answer.mdx
+2025-03-10 14:21:51,893 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (80).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (80).png'
+2025-03-10 14:21:51,893 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (81).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (81).png'
+2025-03-10 14:21:51,897 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/question-classifier.mdx
+2025-03-10 14:21:51,897 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (244).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (244).png'
+2025-03-10 14:21:51,897 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (74).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (74).png'
+2025-03-10 14:21:51,897 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (250).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (250).png'
+2025-03-10 14:21:51,897 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (77).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (77).png'
+2025-03-10 14:21:51,905 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/knowledge-retrieval.mdx
+2025-03-10 14:21:51,905 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-conversation-variable.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-conversation-variable.png'
+2025-03-10 14:21:51,905 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/中文.jpeg, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/中文.jpeg'
+2025-03-10 14:21:51,905 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-conversation-var-scenario-1.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-conversation-var-scenario-1.png'
+2025-03-10 14:21:51,905 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/conversation-var-scenario-2-1.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/conversation-var-scenario-2-1.png'
+2025-03-10 14:21:51,905 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-language-variable-assigner.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-language-variable-assigner.png'
+2025-03-10 14:21:51,909 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/variable-assigner.mdx
+2025-03-10 14:21:51,910 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-if-else-elif.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-if-else-elif.png'
+2025-03-10 14:21:51,910 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (73).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (73).png'
+2025-03-10 14:21:51,915 - INFO - 文件无需修改: zh-cn/user-guide/build-app/flow-app/nodes/ifelse.mdx
+2025-03-10 14:21:51,916 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/rerank-flow-chart.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/rerank-flow-chart.png'
+2025-03-10 14:21:51,916 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-rag-multiple.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-rag-multiple.png'
+2025-03-10 14:21:51,916 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-rerank-model-api.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-rerank-model-api.png'
+2025-03-10 14:21:51,916 - ERROR - 转换图片失败: /zh-cn/images/zh-integrate-knowledge-within-app.png, 错误: [Errno 2] No such file or directory: '/zh-cn/images/zh-integrate-knowledge-within-app.png'
+2025-03-10 14:21:51,922 - INFO - 文件无需修改: zh-cn/user-guide/knowledge-base/integrate-knowledge-within-application.mdx
+2025-03-10 14:21:51,922 - ERROR - 转换图片失败: /Users/allen/Desktop/Dify-Enterprise-Docs/zh-cn/user-guide/knowledge-base/</zh-cn/user-guide/.gitbook/assets/image (7, 错误: [Errno 2] No such file or directory: '/Users/allen/Desktop/Dify-Enterprise-Docs/zh-cn/user-guide/knowledge-base/</zh-cn/user-guide/.gitbook/assets/image (7'
+2025-03-10 14:21:51,922 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (8).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (8).png'
+2025-03-10 14:21:51,922 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (231).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (231).png'
+2025-03-10 14:21:51,922 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (10).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (10).png'
+2025-03-10 14:21:51,923 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (88).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (88).png'
+2025-03-10 14:21:51,923 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (234).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (234).png'
+2025-03-10 14:21:51,923 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (237).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (237).png'
+2025-03-10 14:21:51,923 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (236).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (236).png'
+2025-03-10 14:21:51,923 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (90).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (90).png'
+2025-03-10 14:21:51,923 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (92).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (92).png'
+2025-03-10 14:21:51,923 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (93).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (93).png'
+2025-03-10 14:21:51,923 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (230).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (230).png'
+2025-03-10 14:21:51,927 - INFO - 文件无需修改: zh-cn/user-guide/knowledge-base/knowledge-and-documents-maintenance.mdx
+2025-03-10 14:21:51,932 - INFO - 文件无需修改: zh-cn/user-guide/knowledge-base/faq.mdx
+2025-03-10 14:21:51,933 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (86).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (86).png'
+2025-03-10 14:21:51,933 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (87).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (87).png'
+2025-03-10 14:21:51,933 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/citation-and-attribution.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/citation-and-attribution.png'
+2025-03-10 14:21:51,933 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (84).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (84).png'
+2025-03-10 14:21:51,937 - INFO - 文件无需修改: zh-cn/user-guide/knowledge-base/retrieval-test-and-citation.mdx
+2025-03-10 14:21:51,938 - ERROR - 转换图片失败: /zh-cn/images/en-upload-files-1.png, 错误: [Errno 2] No such file or directory: '/zh-cn/images/en-upload-files-1.png'
+2025-03-10 14:21:51,938 - ERROR - 转换图片失败: /zh-cn/images/en-upload-files-2.avif, 错误: [Errno 2] No such file or directory: '/zh-cn/images/en-upload-files-2.avif'
+2025-03-10 14:21:51,938 - ERROR - 转换图片失败: /zh-cn/images/en-upload-files-3.webp, 错误: [Errno 2] No such file or directory: '/zh-cn/images/en-upload-files-3.webp'
+2025-03-10 14:21:51,938 - ERROR - 转换图片失败: /zh-cn/images/en-upload-files-4.webp, 错误: [Errno 2] No such file or directory: '/zh-cn/images/en-upload-files-4.webp'
+2025-03-10 14:21:51,939 - ERROR - 转换图片失败: /zh-cn/images/en-upload-files-5.webp, 错误: [Errno 2] No such file or directory: '/zh-cn/images/en-upload-files-5.webp'
+2025-03-10 14:21:51,939 - ERROR - 转换图片失败: /zh-cn/images/en-upload-files-8.png, 错误: [Errno 2] No such file or directory: '/zh-cn/images/en-upload-files-8.png'
+2025-03-10 14:21:51,939 - ERROR - 转换图片失败: /zh-cn/images/en-upload-files-9.png, 错误: [Errno 2] No such file or directory: '/zh-cn/images/en-upload-files-9.png'
+2025-03-10 14:21:51,939 - ERROR - 转换图片失败: /zh-cn/images/en-upload-files-10.png, 错误: [Errno 2] No such file or directory: '/zh-cn/images/en-upload-files-10.png'
+2025-03-10 14:21:51,939 - ERROR - 转换图片失败: /zh-cn/images/en-upload-files-8.png, 错误: [Errno 2] No such file or directory: '/zh-cn/images/en-upload-files-8.png'
+2025-03-10 14:21:51,943 - INFO - 文件无需修改: zh-cn/user-guide/knowledge-base/knowledge-base-creation/upload-documents.mdx
+2025-03-10 14:21:51,943 - ERROR - 转换图片失败: /zh-cn/img/56dc0cac00f2da808378c82c1791b30a.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/56dc0cac00f2da808378c82c1791b30a.png'
+2025-03-10 14:21:51,943 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/sync-notion.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/sync-notion.png'
+2025-03-10 14:21:51,943 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (137).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (137).png'
+2025-03-10 14:21:51,944 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (138).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (138).png'
+2025-03-10 14:21:51,944 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (139).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (139).png'
+2025-03-10 14:21:51,944 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (140).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (140).png'
+2025-03-10 14:21:51,948 - INFO - 文件无需修改: zh-cn/user-guide/knowledge-base/knowledge-base-creation/sync-from-notion.mdx
+2025-03-10 14:21:51,949 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/dataset-creation-step1(firecrawl).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/dataset-creation-step1(firecrawl).png'
+2025-03-10 14:21:51,949 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (7) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (7) (1).png'
+2025-03-10 14:21:51,949 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/dataset-creation-step3(firecrawl).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/dataset-creation-step3(firecrawl).png'
+2025-03-10 14:21:51,949 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (2) (1) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (2) (1) (1).png'
+2025-03-10 14:21:51,949 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (5) (1) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (5) (1) (1).png'
+2025-03-10 14:21:51,949 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/dataset-creation-step1(jina).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/dataset-creation-step1(jina).png'
+2025-03-10 14:21:51,949 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/dataset-creation-step2(jina).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/dataset-creation-step2(jina).png'
+2025-03-10 14:21:51,949 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/dataset-creation-step3(jina).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/dataset-creation-step3(jina).png'
+2025-03-10 14:21:51,949 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/dataset-creation-step4(jina).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/dataset-creation-step4(jina).png'
+2025-03-10 14:21:51,949 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/dataset-creation-step5(jina).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/dataset-creation-step5(jina).png'
+2025-03-10 14:21:51,954 - INFO - 文件无需修改: zh-cn/user-guide/knowledge-base/knowledge-base-creation/sync-from-website.mdx
+2025-03-10 14:21:51,954 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (1) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (1) (1).png'
+2025-03-10 14:21:51,955 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (353).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (353).png'
+2025-03-10 14:21:51,955 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (354).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (354).png'
+2025-03-10 14:21:51,955 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (355).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (355).png'
+2025-03-10 14:21:51,955 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (356).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (356).png'
+2025-03-10 14:21:51,955 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (357).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (357).png'
+2025-03-10 14:21:51,955 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (358).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (358).png'
+2025-03-10 14:21:51,960 - INFO - 文件无需修改: zh-cn/user-guide/knowledge-base/knowledge-base-creation/connect-external-knowledge-base.mdx
+2025-03-10 14:21:51,960 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/zh-rag-multiple.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/zh-rag-multiple.png'
+2025-03-10 14:21:51,960 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (134).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (134).png'
+2025-03-10 14:21:51,966 - INFO - 文件无需修改: zh-cn/user-guide/knowledge-base/indexing-and-retrieval/retrieval.mdx
+2025-03-10 14:21:51,966 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (179).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (179).png'
+2025-03-10 14:21:51,966 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (163).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (163).png'
+2025-03-10 14:21:51,966 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (132).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (132).png'
+2025-03-10 14:21:51,966 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (133).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (133).png'
+2025-03-10 14:21:51,971 - INFO - 文件无需修改: zh-cn/user-guide/knowledge-base/indexing-and-retrieval/rerank.mdx
+2025-03-10 14:21:51,972 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (180).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (180).png'
+2025-03-10 14:21:51,977 - INFO - 文件无需修改: zh-cn/user-guide/knowledge-base/indexing-and-retrieval/retrieval-augment.mdx
+2025-03-10 14:21:51,978 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (178).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (178).png'
+2025-03-10 14:21:51,978 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (167).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (167).png'
+2025-03-10 14:21:51,978 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (173).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (173).png'
+2025-03-10 14:21:51,978 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (169).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (169).png'
+2025-03-10 14:21:51,979 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (170).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (170).png'
+2025-03-10 14:21:51,979 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (171).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (171).png'
+2025-03-10 14:21:51,979 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (172).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (172).png'
+2025-03-10 14:21:51,984 - INFO - 文件无需修改: zh-cn/user-guide/knowledge-base/indexing-and-retrieval/hybrid-search.mdx
+2025-03-10 14:21:51,984 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/dataset-api-token.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/dataset-api-token.png'
+2025-03-10 14:21:51,990 - INFO - 文件无需修改: zh-cn/user-guide/knowledge-base/api-documentation/maintain-dataset-via-api.mdx
+2025-03-10 14:21:51,995 - INFO - 文件无需修改: zh-cn/user-guide/knowledge-base/api-documentation/external-knowledge-api-documentation.mdx
+2025-03-10 14:21:51,996 - ERROR - 转换图片失败: /zh-cn/img/c36232e3c4502f94be27748a52bc5b92.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/c36232e3c4502f94be27748a52bc5b92.png'
+2025-03-10 14:21:52,001 - INFO - 文件无需修改: zh-cn/user-guide/application-publishing/developing-with-apis.mdx
+2025-03-10 14:21:52,006 - INFO - 文件无需修改: zh-cn/user-guide/application-publishing/based-on-frontend-templates.mdx
+2025-03-10 14:21:52,007 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (69) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (69) (1).png'
+2025-03-10 14:21:52,007 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (40) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (40) (1).png'
+2025-03-10 14:21:52,012 - INFO - 文件无需修改: zh-cn/user-guide/application-publishing/embedding-in-websites.mdx
+2025-03-10 14:21:52,013 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (58) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (58) (1).png'
+2025-03-10 14:21:52,013 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (73) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (73) (1).png'
+2025-03-10 14:21:52,013 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (36) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (36) (1).png'
+2025-03-10 14:21:52,013 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (70) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (70) (1).png'
+2025-03-10 14:21:52,013 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (57) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (57) (1).png'
+2025-03-10 14:21:52,013 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (39) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (39) (1).png'
+2025-03-10 14:21:52,018 - INFO - 文件无需修改: zh-cn/user-guide/application-publishing/launch-your-webapp-quickly/text-generator.mdx
+2025-03-10 14:21:52,019 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (63) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (63) (1).png'
+2025-03-10 14:21:52,019 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (94) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (94) (1).png'
+2025-03-10 14:21:52,019 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (26) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (26) (1).png'
+2025-03-10 14:21:52,019 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (47) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (47) (1).png'
+2025-03-10 14:21:52,019 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (51) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (51) (1).png'
+2025-03-10 14:21:52,019 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (77) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (77) (1).png'
+2025-03-10 14:21:52,019 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (79) (1).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (79) (1).png'
+2025-03-10 14:21:52,025 - INFO - 文件无需修改: zh-cn/user-guide/application-publishing/launch-your-webapp-quickly/conversation-application.mdx
+2025-03-10 14:21:52,030 - INFO - 文件无需修改: zh-cn/user-guide/application-publishing/launch-your-webapp-quickly/web-app-settings.mdx
+2025-03-10 14:21:52,031 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/output (4) (3).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/output (4) (3).png'
+2025-03-10 14:21:52,036 - INFO - 文件无需修改: zh-cn/user-guide/application-publishing/launch-your-webapp-quickly/flow-app.mdx
+2025-03-10 14:21:52,042 - INFO - 文件无需修改: zh-cn/user-guide/debug-app/agent.mdx
+2025-03-10 14:21:52,049 - INFO - 文件无需修改: zh-cn/user-guide/debug-app/chatbot.mdx
+2025-03-10 14:21:52,050 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/output (3) (3).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/output (3) (3).png'
+2025-03-10 14:21:52,050 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/output (4) (2).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/output (4) (2).png'
+2025-03-10 14:21:52,057 - INFO - 文件无需修改: zh-cn/user-guide/debug-app/chatflow-and-workflow/step-run.mdx
+2025-03-10 14:21:52,058 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/output (2) (4).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/output (2) (4).png'
+2025-03-10 14:21:52,064 - INFO - 文件无需修改: zh-cn/user-guide/debug-app/chatflow-and-workflow/checklist.mdx
+2025-03-10 14:21:52,073 - INFO - 文件无需修改: zh-cn/user-guide/debug-app/chatflow-and-workflow/api.mdx
+2025-03-10 14:21:52,073 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/output (8).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/output (8).png'
+2025-03-10 14:21:52,073 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/output (1) (6).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/output (1) (6).png'
+2025-03-10 14:21:52,080 - INFO - 文件无需修改: zh-cn/user-guide/debug-app/chatflow-and-workflow/log.mdx
+2025-03-10 14:21:52,081 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/output (1) (5).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/output (1) (5).png'
+2025-03-10 14:21:52,081 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/output (2) (3).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/output (2) (3).png'
+2025-03-10 14:21:52,088 - INFO - 文件无需修改: zh-cn/user-guide/debug-app/chatflow-and-workflow/preview-and-run.mdx
+2025-03-10 14:21:52,088 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/output (3) (4).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/output (3) (4).png'
+2025-03-10 14:21:52,095 - INFO - 文件无需修改: zh-cn/user-guide/debug-app/chatflow-and-workflow/history.mdx
+2025-03-10 14:21:52,096 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/app-log.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/app-log.png'
+2025-03-10 14:21:52,103 - INFO - 文件无需修改: zh-cn/user-guide/monitoring/logs.mdx
+2025-03-10 14:21:52,104 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (181).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (181).png'
+2025-03-10 14:21:52,104 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (124).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (124).png'
+2025-03-10 14:21:52,104 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (126).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (126).png'
+2025-03-10 14:21:52,104 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (128).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (128).png'
+2025-03-10 14:21:52,104 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (129).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (129).png'
+2025-03-10 14:21:52,104 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (130).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (130).png'
+2025-03-10 14:21:52,104 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (118).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (118).png'
+2025-03-10 14:21:52,104 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (119).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (119).png'
+2025-03-10 14:21:52,104 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (120).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (120).png'
+2025-03-10 14:21:52,104 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (121).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (121).png'
+2025-03-10 14:21:52,104 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (123).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (123).png'
+2025-03-10 14:21:52,111 - INFO - 文件无需修改: zh-cn/user-guide/monitoring/annotation-reply.mdx
+2025-03-10 14:21:52,111 - ERROR - 转换图片失败: /zh-cn/img/44847ddbf9994ddc45f5cc0b31432dfb.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/44847ddbf9994ddc45f5cc0b31432dfb.png'
+2025-03-10 14:21:52,111 - ERROR - 转换图片失败: /zh-cn/img/f0c771cd4079d9ebf637ac56243769ee.png, 错误: [Errno 2] No such file or directory: '/zh-cn/img/f0c771cd4079d9ebf637ac56243769ee.png'
+2025-03-10 14:21:52,118 - INFO - 文件无需修改: zh-cn/user-guide/monitoring/analysis.mdx
+2025-03-10 14:21:52,119 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/app-log.png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/app-log.png'
+2025-03-10 14:21:52,132 - INFO - 文件无需修改: zh-cn/user-guide/monitoring/logs copy.mdx
+2025-03-10 14:21:52,133 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (300).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (300).png'
+2025-03-10 14:21:52,133 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (302).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (302).png'
+2025-03-10 14:21:52,133 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (304).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (304).png'
+2025-03-10 14:21:52,133 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (303).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (303).png'
+2025-03-10 14:21:52,133 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (305).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (305).png'
+2025-03-10 14:21:52,133 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (306).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (306).png'
+2025-03-10 14:21:52,133 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (307).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (307).png'
+2025-03-10 14:21:52,133 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (308).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (308).png'
+2025-03-10 14:21:52,133 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (310).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (310).png'
+2025-03-10 14:21:52,134 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (309).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (309).png'
+2025-03-10 14:21:52,134 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (26).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (26).png'
+2025-03-10 14:21:52,141 - INFO - 文件无需修改: zh-cn/user-guide/monitoring/integrate-external-ops-tools/integrate-langfuse.mdx
+2025-03-10 14:21:52,142 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (29).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (29).png'
+2025-03-10 14:21:52,142 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (36).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (36).png'
+2025-03-10 14:21:52,142 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (37).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (37).png'
+2025-03-10 14:21:52,142 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (32).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (32).png'
+2025-03-10 14:21:52,142 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (34).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (34).png'
+2025-03-10 14:21:52,142 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (38).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (38).png'
+2025-03-10 14:21:52,142 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (40).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (40).png'
+2025-03-10 14:21:52,142 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (41).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (41).png'
+2025-03-10 14:21:52,142 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (44).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (44).png'
+2025-03-10 14:21:52,142 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (46).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (46).png'
+2025-03-10 14:21:52,142 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (28).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (28).png'
+2025-03-10 14:21:52,142 - ERROR - 转换图片失败: /zh-cn/user-guide/.gitbook/assets/image (47).png, 错误: [Errno 2] No such file or directory: '/zh-cn/user-guide/.gitbook/assets/image (47).png'
+2025-03-10 14:21:52,152 - INFO - 文件无需修改: zh-cn/user-guide/monitoring/integrate-external-ops-tools/integrate-langsmith.mdx
+2025-03-10 14:21:52,153 - INFO - 图片格式设置: original
+2025-03-10 14:21:52,153 - INFO - 处理完成

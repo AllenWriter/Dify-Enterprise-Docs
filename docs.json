@@ -8,13 +8,18 @@
     "dark": "#346DDB"
   },
   "favicon": "/dify-logo.png",
+  "logo": {
+    "light": "/logo/dify-logo.svg",
+    "dark": "/logo/dify-logo.svg"
+  },
   "navigation": {
-    "versions": [
+    "languages": [
       {
-        "version": "English",
+        "language": "en",
+        "href": "/en-us/introduction",
         "groups": [
           {
-            "group": "",
+            "group": "Introduction",
             "pages": [
               "introduction"
             ]
@@ -134,48 +139,6 @@
               "en-us/administrator-guide/admin-apis",
               "en-us/administrator-guide/system-settings",
               "en-us/administrator-guide/faq"
-            ]
-          },
-          {
-            "group": "管理人ガイド",
-            "pages": [
-              "ja-jp/administrator-guide/workspace-management",
-              "ja-jp/administrator-guide/members-management",
-              {
-                "group": "認証",
-                "pages": [
-                  "ja-jp/administrator-guide/authentication",
-                  {
-                    "group": "エンタープライズ SSO",
-                    "pages": [
-                      "ja-jp/administrator-guide/sso/introduction",
-                      {
-                        "group": "Okta",
-                        "pages": [
-                          "ja-jp/administrator-guide/sso/okta/oidc",
-                          "ja-jp/administrator-guide/sso/okta/saml",
-                          "ja-jp/administrator-guide/sso/okta/oauth2"
-                        ]
-                      },
-                      {
-                        "group": "Azure",
-                        "pages": [
-                          "ja-jp/administrator-guide/sso/azure/saml"
-                        ]
-                      },
-                      {
-                        "group": "GitHub",
-                        "pages": [
-                          "ja-jp/administrator-guide/sso/github/oauth2"
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              "ja-jp/administrator-guide/admin-apis",
-              "ja-jp/administrator-guide/system-settings",
-              "ja-jp/administrator-guide/faq"
             ]
           },
           {
@@ -358,220 +321,15 @@
                 ]
               }
             ]
-          },
-          {
-            "group": "ユーザーマニュアル",
-            "pages": [
-              "ja-jp/user-guide/welcome",
-              {
-                "group": "モデルの接続",
-                "pages": [
-                  "ja-jp/user-guide/models/model-configuration",
-                  "ja-jp/user-guide/models/new-provider",
-                  "ja-jp/user-guide/models/predefined-model",
-                  "ja-jp/user-guide/models/customizable-model",
-                  "ja-jp/user-guide/models/interfaces",
-                  "ja-jp/user-guide/models/schema",
-                  "ja-jp/user-guide/models/load-balancing"
-                ]
-              },
-              {
-                "group": "アプリの構築",
-                "pages": [
-                  "ja-jp/user-guide/build-app/chatbot",
-                  "ja-jp/user-guide/build-app/text-generator",
-                  "ja-jp/user-guide/build-app/agent",
-                  {
-                    "group": "チャットフロー & ワークフロー",
-                    "pages": [
-                      "ja-jp/user-guide/build-app/flow-app/concepts",
-                      "ja-jp/user-guide/build-app/flow-app/create-flow-app",
-                      "ja-jp/user-guide/build-app/flow-app/variables",
-                      {
-                        "group": "ノードの説明",
-                        "pages": [
-                          "ja-jp/user-guide/build-app/flow-app/nodes/start",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/end",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/answer",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/llm",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/knowledge-retrieval",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/question-classifier",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/ifelse",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/code",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/template",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/doc-extractor",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/list-operator",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/variable-aggregation",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/variable-assigner",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/iteration",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/parameter-extractor",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/http-request",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/tools"
-                        ]
-                      },
-                      "ja-jp/user-guide/build-app/flow-app/orchestrate-node",
-                      "ja-jp/user-guide/build-app/flow-app/file-upload",
-                      "ja-jp/user-guide/build-app/flow-app/additional-feature"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "アプリのデバッグ",
-                "pages": [
-                  {
-                    "group": "チャットフロー & ワークフロー",
-                    "pages": [
-                      "ja-jp/user-guide/debug-app/chatflow-and-workflow/preview-and-run",
-                      "ja-jp/user-guide/debug-app/chatflow-and-workflow/step-run",
-                      "ja-jp/user-guide/debug-app/chatflow-and-workflow/log",
-                      "ja-jp/user-guide/debug-app/chatflow-and-workflow/checklist",
-                      "ja-jp/user-guide/debug-app/chatflow-and-workflow/history"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "アプリの発表",
-                "pages": [
-                  {
-                    "group": "公開Webアプリとしてのリリース",
-                    "pages": [
-                      "ja-jp/user-guide/application-publishing/launch-your-webapp-quickly/web-app-settings",
-                      "ja-jp/user-guide/application-publishing/launch-your-webapp-quickly/text-generator",
-                      "ja-jp/user-guide/application-publishing/launch-your-webapp-quickly/conversation-application"
-                    ]
-                  },
-                  "ja-jp/user-guide/application-publishing/embedding-in-websites",
-                  "ja-jp/user-guide/application-publishing/developing-with-apis",
-                  "ja-jp/user-guide/application-publishing/based-on-frontend-templates"
-                ]
-              },
-              {
-                "group": "管理",
-                "pages": [
-                  "ja-jp/user-guide/management/app-management",
-                  "ja-jp/user-guide/management/team-members-management",
-                  "ja-jp/user-guide/management/personal-account-management"
-                ]
-              },
-              {
-                "group": "アプリのモニタリング",
-                "pages": [
-                  "ja-jp/user-guide/monitoring/analysis",
-                  "ja-jp/user-guide/monitoring/logs",
-                  "ja-jp/user-guide/monitoring/annotation-reply",
-                  {
-                    "group": "外部ツールとOpsツールの統合",
-                    "pages": [
-                      "ja-jp/user-guide/monitoring/integrate-external-ops-tools/integrate-langfuse",
-                      "ja-jp/user-guide/monitoring/integrate-external-ops-tools/integrate-langsmith"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "ナレッジベース",
-                "pages": [
-                  {
-                    "group": "ナレッジベースの作成",
-                    "pages": [
-                      "ja-jp/user-guide/knowledge-base/knowledge-base-creation/upload-documents",
-                      "ja-jp/user-guide/knowledge-base/knowledge-base-creation/sync-from-notion",
-                      "ja-jp/user-guide/knowledge-base/knowledge-base-creation/sync-from-website",
-                      "ja-jp/user-guide/knowledge-base/knowledge-base-creation/connect-external-knowledge-base"
-                    ]
-                  },
-                  {
-                    "group": "インデックスと検索",
-                    "pages": [
-                      "ja-jp/user-guide/knowledge-base/indexing-and-retrieval/retrieval-augment",
-                      "ja-jp/user-guide/knowledge-base/indexing-and-retrieval/hybrid-search",
-                      "ja-jp/user-guide/knowledge-base/indexing-and-retrieval/rerank",
-                      "ja-jp/user-guide/knowledge-base/indexing-and-retrieval/retrieval"
-                    ]
-                  },
-                  "ja-jp/user-guide/knowledge-base/retrieval-test-and-citation",
-                  "ja-jp/user-guide/knowledge-base/knowledge-and-documents-maintenance",
-                  "ja-jp/user-guide/knowledge-base/integrate-knowledge-within-application",
-                  "ja-jp/user-guide/knowledge-base/faq"
-                ]
-              },
-              {
-                "group": "ツール拡張",
-                "pages": [
-                  "ja-jp/user-guide/tools/introduction",
-                  {
-                    "group": "ツールの構成",
-                    "pages": [
-                      {
-                        "group": "Difyオフィシャルツール",
-                        "pages": [
-                          "ja-jp/user-guide/tools/dify/google",
-                          "ja-jp/user-guide/tools/dify/bing",
-                          "ja-jp/user-guide/tools/dify/dall-e",
-                          "ja-jp/user-guide/tools/dify/perplexity",
-                          "ja-jp/user-guide/tools/dify/stable-diffusion"
-                        ]
-                      },
-                      {
-                        "group": "コミュニティツール",
-                        "pages": [
-                          "ja-jp/user-guide/tools/community/searchapi",
-                          "ja-jp/user-guide/tools/community/alphavantage",
-                          "ja-jp/user-guide/tools/community/comfyui",
-                          "ja-jp/user-guide/tools/community/searxng",
-                          "ja-jp/user-guide/tools/community/serper",
-                          "ja-jp/user-guide/tools/community/siliconflow"
-                        ]
-                      }
-                    ]
-                  },
-                  "ja-jp/user-guide/tools/quick-tool-integration",
-                  "ja-jp/user-guide/tools/advanced-tool-integration",
-                  {
-                    "group": "API 拡張子",
-                    "pages": [
-                      "ja-jp/user-guide/tools/extensions/api-based/api-based-extension",
-                      "ja-jp/user-guide/tools/extensions/api-based/external-data-tool",
-                      "ja-jp/user-guide/tools/extensions/api-based/cloudflare-workers",
-                      "ja-jp/user-guide/tools/extensions/api-based/moderation"
-                    ]
-                  },
-                  {
-                    "group": "コード拡張子",
-                    "pages": [
-                      "ja-jp/user-guide/tools/extensions/code-based/external-data-tool",
-                      "ja-jp/user-guide/tools/extensions/code-based/moderation"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "API ドキュメント",
-                "pages": [
-                  "ja-jp/user-guide/api-documentation/text-generator",
-                  "ja-jp/user-guide/api-documentation/chatbot",
-                  "ja-jp/user-guide/api-documentation/workflow",
-                  "ja-jp/user-guide/api-documentation/knowledge-base",
-                  "ja-jp/user-guide/api-documentation/external-knowledge-api-documentation"
-                ]
-              },
-              {
-                "group": "FAQ",
-                "pages": [
-                  "ja-jp/user-guide/faq/llm-using"
-                ]
-              }
-            ]
           }
         ]
       },
       {
-        "version": "简体中文",
+        "language": "cn",
+        "href": "/zh-cn/introduction",
         "groups": [
           {
-            "group": "",
+            "group": "简介",
             "pages": [
               "zh-cn/introduction"
             ]
@@ -691,48 +449,6 @@
               "zh-cn/administrator-guide/admin-apis",
               "zh-cn/administrator-guide/system-settings",
               "zh-cn/administrator-guide/faq"
-            ]
-          },
-          {
-            "group": "管理人ガイド",
-            "pages": [
-              "ja-jp/administrator-guide/workspace-management",
-              "ja-jp/administrator-guide/members-management",
-              {
-                "group": "認証",
-                "pages": [
-                  "ja-jp/administrator-guide/authentication",
-                  {
-                    "group": "エンタープライズ SSO",
-                    "pages": [
-                      "ja-jp/administrator-guide/sso/introduction",
-                      {
-                        "group": "Okta",
-                        "pages": [
-                          "ja-jp/administrator-guide/sso/okta/oidc",
-                          "ja-jp/administrator-guide/sso/okta/saml",
-                          "ja-jp/administrator-guide/sso/okta/oauth2"
-                        ]
-                      },
-                      {
-                        "group": "Azure",
-                        "pages": [
-                          "ja-jp/administrator-guide/sso/azure/saml"
-                        ]
-                      },
-                      {
-                        "group": "GitHub",
-                        "pages": [
-                          "ja-jp/administrator-guide/sso/github/oauth2"
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              "ja-jp/administrator-guide/admin-apis",
-              "ja-jp/administrator-guide/system-settings",
-              "ja-jp/administrator-guide/faq"
             ]
           },
           {
@@ -939,220 +655,15 @@
                 ]
               }
             ]
-          },
-          {
-            "group": "ユーザーマニュアル",
-            "pages": [
-              "ja-jp/user-guide/welcome",
-              {
-                "group": "モデルの接続",
-                "pages": [
-                  "ja-jp/user-guide/models/model-configuration",
-                  "ja-jp/user-guide/models/new-provider",
-                  "ja-jp/user-guide/models/predefined-model",
-                  "ja-jp/user-guide/models/customizable-model",
-                  "ja-jp/user-guide/models/interfaces",
-                  "ja-jp/user-guide/models/schema",
-                  "ja-jp/user-guide/models/load-balancing"
-                ]
-              },
-              {
-                "group": "アプリの構築",
-                "pages": [
-                  "ja-jp/user-guide/build-app/chatbot",
-                  "ja-jp/user-guide/build-app/text-generator",
-                  "ja-jp/user-guide/build-app/agent",
-                  {
-                    "group": "チャットフロー & ワークフロー",
-                    "pages": [
-                      "ja-jp/user-guide/build-app/flow-app/concepts",
-                      "ja-jp/user-guide/build-app/flow-app/create-flow-app",
-                      "ja-jp/user-guide/build-app/flow-app/variables",
-                      {
-                        "group": "ノードの説明",
-                        "pages": [
-                          "ja-jp/user-guide/build-app/flow-app/nodes/start",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/end",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/answer",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/llm",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/knowledge-retrieval",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/question-classifier",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/ifelse",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/code",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/template",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/doc-extractor",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/list-operator",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/variable-aggregation",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/variable-assigner",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/iteration",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/parameter-extractor",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/http-request",
-                          "ja-jp/user-guide/build-app/flow-app/nodes/tools"
-                        ]
-                      },
-                      "ja-jp/user-guide/build-app/flow-app/orchestrate-node",
-                      "ja-jp/user-guide/build-app/flow-app/file-upload",
-                      "ja-jp/user-guide/build-app/flow-app/additional-feature"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "アプリのデバッグ",
-                "pages": [
-                  {
-                    "group": "チャットフロー & ワークフロー",
-                    "pages": [
-                      "ja-jp/user-guide/debug-app/chatflow-and-workflow/preview-and-run",
-                      "ja-jp/user-guide/debug-app/chatflow-and-workflow/step-run",
-                      "ja-jp/user-guide/debug-app/chatflow-and-workflow/log",
-                      "ja-jp/user-guide/debug-app/chatflow-and-workflow/checklist",
-                      "ja-jp/user-guide/debug-app/chatflow-and-workflow/history"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "アプリの発表",
-                "pages": [
-                  {
-                    "group": "公開Webアプリとしてのリリース",
-                    "pages": [
-                      "ja-jp/user-guide/application-publishing/launch-your-webapp-quickly/web-app-settings",
-                      "ja-jp/user-guide/application-publishing/launch-your-webapp-quickly/text-generator",
-                      "ja-jp/user-guide/application-publishing/launch-your-webapp-quickly/conversation-application"
-                    ]
-                  },
-                  "ja-jp/user-guide/application-publishing/embedding-in-websites",
-                  "ja-jp/user-guide/application-publishing/developing-with-apis",
-                  "ja-jp/user-guide/application-publishing/based-on-frontend-templates"
-                ]
-              },
-              {
-                "group": "管理",
-                "pages": [
-                  "ja-jp/user-guide/management/app-management",
-                  "ja-jp/user-guide/management/team-members-management",
-                  "ja-jp/user-guide/management/personal-account-management"
-                ]
-              },
-              {
-                "group": "アプリのモニタリング",
-                "pages": [
-                  "ja-jp/user-guide/monitoring/analysis",
-                  "ja-jp/user-guide/monitoring/logs",
-                  "ja-jp/user-guide/monitoring/annotation-reply",
-                  {
-                    "group": "外部ツールとOpsツールの統合",
-                    "pages": [
-                      "ja-jp/user-guide/monitoring/integrate-external-ops-tools/integrate-langfuse",
-                      "ja-jp/user-guide/monitoring/integrate-external-ops-tools/integrate-langsmith"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "ナレッジベース",
-                "pages": [
-                  {
-                    "group": "ナレッジベースの作成",
-                    "pages": [
-                      "ja-jp/user-guide/knowledge-base/knowledge-base-creation/upload-documents",
-                      "ja-jp/user-guide/knowledge-base/knowledge-base-creation/sync-from-notion",
-                      "ja-jp/user-guide/knowledge-base/knowledge-base-creation/sync-from-website",
-                      "ja-jp/user-guide/knowledge-base/knowledge-base-creation/connect-external-knowledge-base"
-                    ]
-                  },
-                  {
-                    "group": "インデックスと検索",
-                    "pages": [
-                      "ja-jp/user-guide/knowledge-base/indexing-and-retrieval/retrieval-augment",
-                      "ja-jp/user-guide/knowledge-base/indexing-and-retrieval/hybrid-search",
-                      "ja-jp/user-guide/knowledge-base/indexing-and-retrieval/rerank",
-                      "ja-jp/user-guide/knowledge-base/indexing-and-retrieval/retrieval"
-                    ]
-                  },
-                  "ja-jp/user-guide/knowledge-base/retrieval-test-and-citation",
-                  "ja-jp/user-guide/knowledge-base/knowledge-and-documents-maintenance",
-                  "ja-jp/user-guide/knowledge-base/integrate-knowledge-within-application",
-                  "ja-jp/user-guide/knowledge-base/faq"
-                ]
-              },
-              {
-                "group": "ツール拡張",
-                "pages": [
-                  "ja-jp/user-guide/tools/introduction",
-                  {
-                    "group": "ツールの構成",
-                    "pages": [
-                      {
-                        "group": "Difyオフィシャルツール",
-                        "pages": [
-                          "ja-jp/user-guide/tools/dify/google",
-                          "ja-jp/user-guide/tools/dify/bing",
-                          "ja-jp/user-guide/tools/dify/dall-e",
-                          "ja-jp/user-guide/tools/dify/perplexity",
-                          "ja-jp/user-guide/tools/dify/stable-diffusion"
-                        ]
-                      },
-                      {
-                        "group": "コミュニティツール",
-                        "pages": [
-                          "ja-jp/user-guide/tools/community/searchapi",
-                          "ja-jp/user-guide/tools/community/alphavantage",
-                          "ja-jp/user-guide/tools/community/comfyui",
-                          "ja-jp/user-guide/tools/community/searxng",
-                          "ja-jp/user-guide/tools/community/serper",
-                          "ja-jp/user-guide/tools/community/siliconflow"
-                        ]
-                      }
-                    ]
-                  },
-                  "ja-jp/user-guide/tools/quick-tool-integration",
-                  "ja-jp/user-guide/tools/advanced-tool-integration",
-                  {
-                    "group": "API 拡張子",
-                    "pages": [
-                      "ja-jp/user-guide/tools/extensions/api-based/api-based-extension",
-                      "ja-jp/user-guide/tools/extensions/api-based/external-data-tool",
-                      "ja-jp/user-guide/tools/extensions/api-based/cloudflare-workers",
-                      "ja-jp/user-guide/tools/extensions/api-based/moderation"
-                    ]
-                  },
-                  {
-                    "group": "コード拡張子",
-                    "pages": [
-                      "ja-jp/user-guide/tools/extensions/code-based/external-data-tool",
-                      "ja-jp/user-guide/tools/extensions/code-based/moderation"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "API ドキュメント",
-                "pages": [
-                  "ja-jp/user-guide/api-documentation/text-generator",
-                  "ja-jp/user-guide/api-documentation/chatbot",
-                  "ja-jp/user-guide/api-documentation/workflow",
-                  "ja-jp/user-guide/api-documentation/knowledge-base",
-                  "ja-jp/user-guide/api-documentation/external-knowledge-api-documentation"
-                ]
-              },
-              {
-                "group": "FAQ",
-                "pages": [
-                  "ja-jp/user-guide/faq/llm-using"
-                ]
-              }
-            ]
           }
         ]
       },
       {
-        "version": "日本語",
+        "language": "ja",
+        "href": "/ja-jp/introduction",
         "groups": [
           {
-            "group": "",
+            "group": "はじめに",
             "pages": [
               "ja-jp/introduction"
             ]
@@ -1483,10 +994,6 @@
         ]
       }
     ]
-  },
-  "logo": {
-    "light": "/logo/dify-logo.svg",
-    "dark": "/logo/dify-logo.svg"
   },
   "navbar": {
     "links": [

@@ -29,3 +29,4 @@ Version numbers corresponding to each configuration file:
 - `values-no-infra-for-prod.yaml` → <https://assets-docs.dify.ai/2025/01/309efe405120571ee99b961d02341ab8.yaml >
 - `values-no-infra-for-testing.yaml` → <https://assets-docs.dify.ai/2025/01/cf9ebbdd263fae8d7a6dc558afae0e66.yaml >
 - `ingress-nginx-controller-v1.10.1.yaml` → <https://assets-docs.dify.ai/2024/12/88d4cee27ae27fb0f0e31ad3d5165290.yaml >
+- `ingress-nginx-controller-v1.12.1.yaml` → <https://assets-docs.dify.ai/2025/03/7dbf0f8a76522c80b306c68a70adbfce.yaml >

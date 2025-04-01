@@ -443,7 +443,8 @@
                         ]
                       }
                     ]
-                  }
+                  },
+                  "zh-cn/administrator-guide/2fa"
                 ]
               },
               "zh-cn/administrator-guide/admin-apis",
@@ -1002,6 +1003,11 @@
         "href": "mailto:support@dify.ai"
       }
     ]
+  },
+  "seo": {
+    "metatags": {
+      "robots": "noindex"
+    }
   },
   "footer": {
     "socials": {

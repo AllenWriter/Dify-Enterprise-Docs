@@ -138,6 +138,7 @@
               },
               "en-us/administrator-guide/admin-apis",
               "en-us/administrator-guide/system-settings",
+              "en-us/administrator-guide/security-guide",
               "en-us/administrator-guide/faq"
             ]
           },
@@ -448,6 +449,7 @@
               },
               "zh-cn/administrator-guide/admin-apis",
               "zh-cn/administrator-guide/system-settings",
+              "zh-cn/administrator-guide/security-guide",
               "zh-cn/administrator-guide/faq"
             ]
           },
@@ -782,6 +784,7 @@
               },
               "ja-jp/administrator-guide/admin-apis",
               "ja-jp/administrator-guide/system-settings",
+              "ja-jp/administrator-guide/security-guide",
               "ja-jp/administrator-guide/faq"
             ]
           },

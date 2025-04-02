@@ -995,6 +995,11 @@
       }
     ]
   },
+  "seo": {
+    "metatags": {
+      "robots": "noindex"
+    }
+  },
   "navbar": {
     "links": [
       {

@@ -15,7 +15,7 @@
   "navigation": {
     "versions": [
       {
-        "version": "≤2.4.0",
+        "version": "2.4.x",
         "languages": [
           {
             "language": "en",
@@ -384,6 +384,7 @@
                     ]
                   },
                   "zh-cn/administrator-guide/admin-apis",
+                  "zh-cn/administrator-guide/branding",
                   "zh-cn/administrator-guide/system-settings",
                   "zh-cn/administrator-guide/faq"
                 ]

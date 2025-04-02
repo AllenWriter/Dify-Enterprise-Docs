@@ -1,5 +1,5 @@
 ---
-title: 认证方式
+title: 身份认证
 ---
 
 ## 用户身份认证方式
@@ -14,7 +14,7 @@ title: 认证方式
   <Tab title="企业后台">
     企业后台指的是管理 Dify 企业版内所有工作空间和用户的平台。有权限访问该平台的用户统称为“系统管理员”，提供以下两种身份认证方式：
     1. 邮箱 + 密码
-    2. 两步身份验证（建议强制开启）
+    2. 两步身份验证（建议全局开启）
     <Info>
     如需在企业版内开启两步身份验证（2FA）功能，请将版本号升级至 v2.4.0。
     </Info>
@@ -27,16 +27,14 @@ title: 认证方式
 
 ### 1.1 邮箱与密码
 
-点击“认证方式 -> 工作空间设置”区域中的“邮箱与密码”栏右侧的开关按钮，即可开启“邮箱与密码”认证。
-
-开启后，组织成员可以使用“邮箱与密码”登录 Dify 企业版平台的工作空间。
+点击”身份认证“ -> ”工作空间“页中的“邮箱与密码”栏右侧的开关按钮。开启后，企业成员可以使用“邮箱与密码”登录 Dify 企业版平台的工作空间。
 
 <div style={{ display: 'flex', gap: '20px' }}>
   <Frame caption="企业管理后台开启身份认证 —— 邮箱与密码">
-    <img src="/en-us/img/auth-1-1.png" alt="Enterprise admin panel authentication settings" />
+    <img src="https://assets-docs.dify.ai/2025/04/dd1fd01ea68af39e7ebbc2da79132ab6.png" alt="Enterprise admin panel authentication settings" />
   </Frame>
   <Frame caption="组织成员进入 Dify 企业版平台的登录页">
-    <img src="/en-us/img/auth-2.png" alt="Dify enterprise login page" />
+    <img src="https://assets-docs.dify.ai/2025/04/14e603662ca00daf80762f57a228e57c.png" alt="Dify enterprise login page" />
   </Frame>
 </div>
 
@@ -45,15 +43,14 @@ title: 认证方式
 
 **开启认证**
 
-点击“认证方式 -> 工作空间设置”区域中的“邮箱与验证码”栏右侧的开关按钮，即可开启“邮箱与验证码”认证。
-开启后，组织成员可以使用“邮箱与验证码”登录 Dify 企业版平台的工作空间。
+点击”身份认证“ -> ”工作空间“页中的“邮箱与验证码”栏右侧的开关按钮。开启后，组织成员可以使用“邮箱与验证码”登录 Dify 企业版平台的工作空间。
 
 <div style={{ display: 'flex', gap: '20px' }}>
   <Frame caption="企业管理后台开启身份认证 —— 邮箱与验证码">
-    <img src="https://assets-docs.dify.ai/2024/11/8e51484bf2d38b50b725868a43bd1c52.png" alt="Enterprise admin panel email verification settings" />
+    <img src="https://assets-docs.dify.ai/2025/04/b9f1d41a483a1fa0396ad95bae35078b.png" alt="Enterprise admin panel email verification settings" />
   </Frame>
   <Frame caption="组织成员进入 Dify 企业版平台的登录页">
-    <img src="https://assets-docs.dify.ai/2024/11/359eb47e0368dc8ca97dfdaeb7ee9970.png" alt="Dify enterprise login page" />
+    <img src="https://assets-docs.dify.ai/2025/04/2572a20174e7b9fa85817dca02bba937.png" alt="Dify enterprise login page" />
   </Frame>
 </div>
 
@@ -65,51 +62,45 @@ title: 认证方式
 
 <div style={{ display: 'flex', gap: '20px' }}>
   <Frame caption="企业管理后台开启身份认证 - 单点登录（SSO）">
-    <img src="https://assets-docs.dify.ai/2024/11/35d364d60e5b6d55052c17de0eed16a8.png" alt="Enterprise admin panel SSO settings" />
+    <img src="https://assets-docs.dify.ai/2025/04/3dd02c5e4d64fa789fd66b5cff3ed4dc.png" alt="Enterprise admin panel SSO settings" />
   </Frame>
   <Frame caption="组织成员进入 Dify 企业版平台的登录页">
-    <img src="https://assets-docs.dify.ai/2024/11/4fff675c15a98602ed6b5db15bca44ac.png" alt="Dify enterprise login page" />
+    <img src="https://assets-docs.dify.ai/2025/04/32db3fc352c7ba40eb4343fd5f6229e5.png" alt="Dify enterprise login page" />
   </Frame>
 </div>
 
 ⚠️ 若系统管理员未开启上述任意一种身份认证方式时，登录页面将出现 `Authentication method not configured` 报错提示，组织成员将无法登录。
 
-### 1.4  两步身份验证（2FA）
+### 1.4  两步身份验证
 
-> 两步身份验证（2FA） 面向系统管理员用户。
+> 两步身份验证面向系统管理员用户。
 
 两步身份验证是一层额外的登录验证机制，它要求用户在通过基础的验证后（例如输入邮箱或密码），在第三方 TOTP App 上中获取实时更新的密钥。详细说明请参考[两步身份验证](/zh-cn/administrator-guide/2fa)。
 
-## 企业版成员账号创建方式
+## 企业版用户账号创建方式
 
-Dify 企业版为系统管理员提供以下两种灵活的账户创建方式，旨在减轻用户管理负担，提升组织成员账户的接入效率，确保组织成员顺畅协作与平台使用。
+Dify 企业版提供以下灵活的用户账号创建方式，旨在减轻用户管理负担，提升组织成员账号的接入效率。
 
 ### 2.1 允许用户自行创建账户
 
-点击“认证方式 -> 工作空间设置”区域中的“允许用户自行创建账户”栏右侧的开关按钮，即允许用户自行创建账户。
+点击“身份认证” -> ”工作空间”页中的“允许用户自行注册账户”栏右侧的开关按钮，即允许用户登录企业版后自行创建账户。
 
-### 2.2 允许系统自动创建个人空间
+### 2.2 允许系统为新用户自动创建个人空间
 
-点击“认证方式 -> 工作空间设置”区域中的“允许系统自动创建个人空间”栏右侧的开关按钮，即允许用户创建账户后，系统自动为该用户创建个人空间。
-开启后，用户需要被系统管理员邀请加入企业后，才能使用 Dify 企业版平台，同时系统会自动为该用户创建个人空间。
-
-![](/zh-cn/img/bb00878740a4edff77dada76c92b328f.png)
+点击“认证方式 -> 工作空间设置”页中的“允许系统自动创建个人空间”栏右侧的开关按钮。用户创建账户登录企业版后，系统将自动为该用户创建个人空间。
+在该模式下，用户需要被系统管理员邀请加入企业后，才能使用 Dify 企业版平台；同时系统会自动为该用户创建个人空间。
 
 ### 2.3 灵活组合配置
 
 - **两者同时启用**: 组织成员允许自行注册账户。注册后，系统会自动为其创建个人空间，成员无需等待管理员邀请即可立即开始使用 Dify 企业版平台。
 
-![](/zh-cn/img/5b06691518202ae5905f466d74c8a0ac.png)
-
 - **仅启用“系统自动创建个人空间”**：即使启用了“系统自动创建个人空间”，组织成员仍需系统管理员邀请才能注册并激活账户，无法自行注册并登录 Dify 企业版平台。
-
-![](/zh-cn/img/9c905e586b9c02a5d8422ff29b08d53d.png)
 
 ## WebApp 配置
 
-WebApp 仅支持通过 [SSO](/zh-cn/administrator-guide/sso/introduction) 进行权限控制，配置完成后在 WebApp 设置内开启。
+WebApp 仅支持通过 [SSO](/zh-cn/administrator-guide/sso/introduction) 进行权限控制。点击 ”认证方式“ -> ”WebApp“页并配置 SSO 配置。
 
-![](/zh-cn/img/6af05694158155999566a39df86ad4c6.png)
+![](https://assets-docs.dify.ai/2025/04/831d009275ab85bc3cea62d2eae1d268.png)
 
 ## 常见问题
 

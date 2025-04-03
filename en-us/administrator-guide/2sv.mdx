@@ -1,23 +1,22 @@
 ---
 title: Two-Step Verification
-description: For system administrators, Dify Enterprise Edition version ≥v2.4.0 required.
 ---
 
 ## Introduction
 
-The enterprise admin panel contains a large amount of sensitive user information. Two-step verification provides enhanced security protection for Dify Enterprise Edition system administrator accounts. Once enabled, even if the original password is accidentally leaked, unauthorized access can still be prevented, ensuring the security of administrator accounts and data in the enterprise system.
+The enterprise admin dashboard contains sensitive user data. Two-step verification adds an extra layer of security for Dify EE system administrator accounts. Once enabled, even if the password is compromised, unauthorized access can be prevented, ensuring the safety of both system administrator accounts and enterprise data.
 
-Two-Step Verification is a security mechanism that requires users to enter a verification code generated in real-time by an authenticator app after entering the correct password to complete the login process. This "two-factor" authentication significantly improves account security.
+This mechanism requires users to enter a time-based verification code from an authenticator app after entering the correct password—enhancing account protection through two-factor authentication.
 
 ## Implementation Prerequisites
 
 Before configuring two-step verification, please ensure you meet the following requirements:
 
-1. **System administrator privileges** - Only system administrators can configure two-step verification
-2. **Authenticator app** - A compatible authenticator app installed on your mobile device
+1. **System administrator permission** - Only system administrators can configure two-step verification.
+2. **Authenticator app** - A compatible authenticator app installed on your mobile device.
 
 <Info>
-Authenticator apps (such as [Google Authenticator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2)) are based on the TOTP (Time-based One-Time Password) standard, generating a new verification code every 30 seconds. Other supported apps include Microsoft Authenticator, Authy, and 1Password.
+Authenticator apps (such as [Google Authenticator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2)) are based on the TOTP (Time-based One-Time Password) standard, generating a new verification code every 30 seconds.
 </Info>
 
 ## Enabling Two-Step Verification
@@ -29,32 +28,32 @@ Before enabling global two-step verification for your team, you must first confi
 Steps to configure personal two-step verification:
 
 <Steps>
-  <Step title="Access Admin Panel">
-    Log in to the Dify Enterprise Edition admin panel.
+  <Step title="Access Admin Dashboard">
+    Log in to the Dify EE admin dashboard.
   </Step>
-  <Step title="Open Two-Step Verification Settings">
-    Click the "Two-Step Verification" option in the sidebar menu.
+  <Step title="Open 2-Step Verification Settings">
+    Click "2-Step Verification" in the sidebar.
   </Step>
   <Step title="Configure Authenticator">
-    Find the authenticator section and click the "Configure" button on the right.
+    Click "Configure" under the Authenticator section.
   </Step>
   <Step title="Scan QR Code">
-    Use your authenticator app to scan the displayed QR code.
+    Scan the QR code using your authenticator app.
   </Step>
   <Step title="Enter Verification Code">
-    Enter the six-digit verification code displayed in your authenticator app to complete the setup.
+    Enter the six-digit code displayed in the app to complete setup.
   </Step>
 </Steps>
 
-If you cannot scan the QR code, hover over the Setup Key to view the key text. Enter this key into your authenticator app to generate a six-digit verification code, then enter this code in the verification field.
+If you cannot scan the QR code, hover over the **Setup Key** to view the key text. Enter this key into your authenticator app to generate a six-digit verification code, then enter this code in the verification field.
 
 ![](https://assets-docs.dify.ai/2025/04/fd6b474384081f4079aa453c45c07562.png)
 
-After enabling two-step verification, backup codes will be generated. To avoid being unable to access your account if you lose your device with the authenticator app, we recommend manually copying or printing these backup codes and storing them in a secure location.
+After enabling two-step verification, backup codes will be generated. To avoid being unable to access your account if you lose your device with the authenticator app, it's recommend copying or printing these backup codes and storing them in a secure location.
 
 ![](https://assets-docs.dify.ai/2025/04/2c88c1492bf9a079df9ad4a25e1923ac.png)
 
-Backup codes are one-time use only; once used, they become invalid. If you need more backup codes, click "Regenerate."
+Backup codes are one-time use only; once used, it become invalid. If you need more backup codes, click "Regenerate."
 
 ![](https://assets-docs.dify.ai/2025/04/8313cf497c66cfef7dee2a4ae816c32b.png)
 
@@ -62,13 +61,13 @@ Backup codes are one-time use only; once used, they become invalid. If you need 
 
 > All system administrators have the authority to enable global two-step verification for the enterprise; however, global verification can only be enabled after personal two-step verification has been configured.
 
-Go to **Settings** → **Authentication** to enable global two-step verification for the enterprise. Once enabled, every system administrator will be required to provide an additional verification code when logging into the enterprise admin panel. If there are system administrators who haven't set up two-step verification yet, please refer to the [FAQ](#how-do-administrators-who-havent-enabled-personal-account-two-step-verification-log-in-after-global-enforcement).
+Go to **Settings** → **Authentication** to enable global two-step verification for the enterprise. Once enabled, every system administrator will be required to provide an additional verification code when logging into the enterprise admin dashboard. If there are system administrators who haven't set up two-step verification yet, please refer to the [FAQ](#how-do-system-administrators-who-haven’t-enabled-personal-account-two-step-verification-log-in-after-global-enforcement%3F).
 
 ![](https://assets-docs.dify.ai/2025/04/1271b3b0e39558465dbb79b17d1a9721.png)
 
 ## Modifying Two-Step Verification
 
-Access the enterprise admin panel, click "Two-Step Verification," and click the "Edit" button in the menu options to the right of the authenticator. In the verification page that appears, enter the new six-digit verification code displayed by your authenticator to confirm your identity and complete the modification.
+Access the enterprise admin dashboard, click "2-Step Verification," and click the "Edit" button in the menu options to the right of the authenticator. In the verification page that appears, enter the new six-digit verification code displayed by your authenticator to confirm your identity and complete the modification.
 
 ## Disabling Two-Step Verification
 
@@ -80,11 +79,11 @@ Disabling two-step verification removes an additional security layer, leaving ac
 
 > If the enterprise has enabled global mandatory two-step verification, you cannot disable two-step verification for your personal account.
 
-Access the enterprise admin panel, click "Two-Step Verification" → "Disable Two-Step Verification."
+Access the enterprise admin dashboard, click "2-Step Verification" → "Disable Two-Step Verification."
 
 ### Enterprise Global Setting
 
-Access the enterprise admin panel, click **"Settings" → "Authentication"** and turn off the two-step verification toggle.
+Access the enterprise admin dashboard, click **"Settings" → "Authentication"** and turn off the two-step verification toggle.
 
 <Note>
     System administrators will receive corresponding notifications in their email when two-step verification is enabled, modified, or disabled.
@@ -117,20 +116,20 @@ There are two methods to migrate your authenticator:
    - Reference [Modifying Two-Step Verification](#modifying-two-step-verification), go to your personal two-step verification settings page, and click "Edit."
    - Complete verification using the code generated by your new device.
 
-### How do administrators who haven't enabled personal account two-step verification log in after global enforcement?
+### How do system administrators who haven't enabled personal account two-step verification log in after global enforcement?
 
-When global two-step verification is enforced, the login process for administrators who haven't enabled two-step verification is as follows:
+When global two-step verification is enforced, the login process for system administrators who haven't enabled two-step verification is as follows:
 
-1. The administrator logs in using their email and password (or SSO).
-2. The system automatically detects that the administrator hasn't configured two-step verification and provides setup instructions on the enterprise login page.
-3. The administrator needs to download an authenticator app and complete the two-step verification setup according to the on-screen instructions.
-4. After setup is complete, entering the six-digit verification code will allow the administrator to continue logging into the enterprise admin panel.
+1. The system administrator logs in using their email and password (or SSO).
+2. The system automatically detects that the system administrator hasn't configured two-step verification and provides setup instructions on the enterprise login page.
+3. The system administrator needs to download an authenticator app and complete the two-step verification setup according to the on-screen instructions.
+4. After setup is complete, entering the six-digit verification code will allow the system administrator to continue logging into the enterprise admin dashboard.
 
 ### Is two-step verification still necessary if the enterprise uses SSO login?
 
-Yes, even if your enterprise uses an SSO (Single Sign-On) system, we still recommend enabling two-step verification. This provides dual protection:
+Yes, even if your enterprise uses an SSO (Single Sign-On) system, it's still recommend enabling two-step verification. This provides dual protection:
 
 1. SSO ensures unified authentication of user identity across enterprise applications.
-2. Two-step verification provides an additional security layer for the enterprise admin panel, preventing unauthorized access in case SSO credentials are compromised.
+2. Two-step verification provides an additional security layer for the enterprise admin dashboard, preventing unauthorized access in case SSO credentials are compromised.
 
 This multi-layered security strategy (also known as "defense in depth") is a best practice for enterprise information security.

@@ -1,23 +1,22 @@
 ---
 title: 两步验证
-description: 面向系统管理员，Dify 企业版本号需 ≥v2.4.0。
 ---
 
 ## 介绍
 
 企业后台包含着大量用户敏感信息，两步验证能够为 Dify 企业版系统管理员的账号提供更加深入的安全保障。启用功能后，即使原始的密码意外泄露，仍能避免未经授权的访问操作，确保系统管理员账户和企业后台的数据安全。
 
-两步验证（2-Step Verification）是一种安全机制，要求用户在输入正确的密码后，再输入身份验证器应用生成的实时验证码才能完成登录。这种"双因素"验证显著提高了账户安全性。
+该机制要求用户在输入正确的密码后，再输入身份验证器应用生成的实时验证码才能完成登录。这种"双因素"验证显著提高了账户安全性。
 
 ## 实施前提
 
 在配置两步验证前，请确保满足以下条件：
 
-1. **系统管理员权限** - 仅系统管理员可配置两步验证
-2. **身份验证器应用** - 在移动设备上安装兼容的身份验证器应用
+1. **系统管理员权限** - 仅系统管理员可配置两步验证。
+2. **身份验证器应用** - 在移动设备上安装兼容的身份验证器应用。
 
 <Info>
-身份验证器应用（如 [Google Authenticator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2)）基于 TOTP（基于时间的一次性密码）标准，每30秒生成一个新的验证码。其他支持的应用还包括 Microsoft Authenticator、Authy 和 1Password 等。
+身份验证器应用（如 [Google Authenticator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2)）基于 TOTP（基于时间的一次性密码）标准，每 30 秒生成一个新的验证码。
 </Info>
 
 ## 开启两步验证
@@ -46,7 +45,7 @@ description: 面向系统管理员，Dify 企业版本号需 ≥v2.4.0。
   </Step>
 </Steps>
 
-如无法扫描二维码，请悬停在 Setup Key 上查看密钥文本。将其输入至身份验证器内生成六位验证码，填写此验证码到验证框中。
+如无法扫描二维码，请悬停在 **Setup Key** 上查看密钥文本。将其输入至身份验证器内生成六位验证码，填写此验证码到验证框中。
 
 ![](https://assets-docs.dify.ai/2025/04/fd6b474384081f4079aa453c45c07562.png)
 

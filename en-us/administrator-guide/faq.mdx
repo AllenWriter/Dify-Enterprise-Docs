@@ -45,3 +45,12 @@ For more information about security restrictions, please read the [Security Meas
 
 1. **Use SSO**: If your organization supports SSO, we recommend configuring and using it. For detailed information, please refer to [Enterprise SSO Authentication](/en-us/administrator-guide/sso/introduction).
 2. **Stay vigilant**: Be careful to protect your login credentials and avoid saving passwords in public places.
+
+## 6. How to resolve issues when using Azure SAML SSO login?
+
+**Issue Details**: After configuring Azure SAML SSO and enabling forced login, you encounter an `account not found` error.
+
+**Solution**: Please refer to [Authentication - User Account Creation Methods](/en-us/administrator-guide/authentication#user-account-creation-methods-in-enterprise-edition) and enable the following two account creation methods:
+
+- Allow users to self-register
+- Allow auto-create personal workspace for new users

@@ -9,49 +9,56 @@ This guide will use Azure Entra ID as the SSO identity provider, connecting to t
 
 Access the Azure admin backend page, navigate to the Applications page, and click on New application.
 
-![](https://r2.xmsex.net/2024/10/4f52715ff661e6c9430af09b4b2a4736.png)
+![](https://assets-docs.dify.ai/2024/11/4f52715ff661e6c9430af09b4b2a4736.png)
 
 Select **Create your own application**, enter an application name such as dify, then choose **Integrate any other application you don't find in the gallery (Non-gallery)**, and click **Create**.
 
-![](https://r2.xmsex.net/2024/10/b823ecfaa94d18ba0ac794cc0290dc7f.png)
+![](https://assets-docs.dify.ai/2024/11/b823ecfaa94d18ba0ac794cc0290dc7f.png)
 
 Next, you need to assign visible members to this application. Only authorized Azure members will be allowed to log in to the Dify Enterprise. Select **Users and groups** on the left side of the application, then click **Add user/group**.
 
-![](https://r2.xmsex.net/2024/10/ed3c6f5de21c75e2261bf05d055ffb9e.png)
+![](https://assets-docs.dify.ai/2024/11/ed3c6f5de21c75e2261bf05d055ffb9e.png)
 
 ## 2. Configure the application
 
 Click on the **Single sign-on** option under **Manage** on the left side of the application, then select the **SAML**.
 
-![](https://r2.xmsex.net/2024/10/7a5f653e751bf20c01c7eb53cc79ddde.png)
+![](https://assets-docs.dify.ai/2024/11/7a5f653e751bf20c01c7eb53cc79ddde.png)
 
 Edit the SAML configuration, fill in the Dify Enterprise's ACS URL in both the Entity ID and Reply URL fields.
 
-![](https://r2.xmsex.net/2024/10/969f69f97c35609e7aead84b1a19aa93.png)
+<div style={{ display: 'flex', gap: '20px' }}>
+  <Frame>
+    <img src="https://assets-docs.dify.ai/2024/11/639bb89e402f8f20078d6c7a14ca0297.png" alt="Image 1" />
+  </Frame>
+  <Frame>
+    <img src="https://assets-docs.dify.ai/2024/11/236a4995e4fe338d12b41993fc237611.png" alt="Image 2" />
+  </Frame>
+</div>
 
 System administrators need to go to the Authentication page of the Dify Enterprise, click "+ New Identity Provider → New SAML Provider", and then obtain the ACS URL.
 
-![](https://r2.xmsex.net/2024/10/f66303a3902d7fff58c76228f6485386.png)
+![](https://assets-docs.dify.ai/2024/11/f66303a3902d7fff58c76228f6485386.png)
 
 It typically follows this format:
 
 ```url
-https://[your-dify-enterprise-url]/console/api/enterprise/sso/oidc/callback
+https://[your-dify-enterprise-url]/console/api/enterprise/sso/saml/acs
 ```
 
 After obtaining the ACS URL, switch back to the Azure application page, download the Certificate from the SAML Certificates tab; also copy the Login URL from the set up page. These two parameters need to be filled in the Dify Enterprise admin backend.
 
-![](https://r2.xmsex.net/2024/10/ab7e3bd7067858ec4627d1d863244e81.png)
+![](https://assets-docs.dify.ai/2024/11/ab7e3bd7067858ec4627d1d863244e81.png)
 
-**Advanced configuration: Edit attributes and claims**
+### Advanced configuration: Edit attributes and claims
 
-1. Click on Unique User Identifier (Name ID) under Required claim
+1. In the application's SSO configuration page, click the **Edit** button next to **Attributes & Claims**.
 
-![](https://r2.xmsex.net/2024/10/f54bfe3ad7baf5fe9027c0a1f46142dd.png)
+![](https://assets-docs.dify.ai/2024/11/97a46bf1b5264ef72ad4b202fdf2a772.png)
 
-2. Change the source attribute to `user.mail`
+2. Click on **Unique User Identifier (Name ID)** and change the source attribute to `user.mail`.
 
-![](https://r2.xmsex.net/2024/10/bbd0bed66d165b0d4bf209c2a414783f.png)
+![](https://assets-docs.dify.ai/2024/11/183dd293f17f87081ac4c2390b583fb0.png)
 
 ## 3. Complete the configuration on Dify
 
@@ -65,7 +72,7 @@ System administrators click on the Authentication page of the Dify Enterprise, c
    -----END CERTIFICATE-----
    ```
 
-![](https://r2.xmsex.net/2024/10/556e3d68efbc742711e4313534a2e95c.png)
+![](https://assets-docs.dify.ai/2024/11/556e3d68efbc742711e4313534a2e95c.png)
 
 ## 4. Enable SSO Enforcement
 

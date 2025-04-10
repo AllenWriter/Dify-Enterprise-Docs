@@ -44,3 +44,9 @@ A: 账户锁定通常有两种情况：
 
 1. **使用 SSO**：如果您的组织支持 SSO，建议配置并使用。详细说明请参考[企业 SSO 认证](/zh-cn/administrator-guide/sso/introduction)。
 2. **保持警惕**：注意保护您的登录凭证，不在公共场所保存密码。
+
+### 6. 使用 Azure SAML SSO 登录方式时出现异常如何处理？
+
+**问题详情**：配置 Azure SAML SSO 并开启强制登录后，出现 `account not found` 异常报错。
+
+**解决办法**：请参考 [Azure - 进阶配置：编辑属性和声明](https://enterprise-docs.dify.ai/zh-cn/administrator-guide/sso/azure/saml#%E8%BF%9B%E9%98%B6%E9%85%8D%E7%BD%AE%EF%BC%9A%E7%BC%96%E8%BE%91%E5%B1%9E%E6%80%A7%E5%92%8C%E5%A3%B0%E6%98%8E)，将**唯一用户标识符(名称 ID)**的**源属性**修改为 `user.mail`。

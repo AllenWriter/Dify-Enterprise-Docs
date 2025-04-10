@@ -44,7 +44,7 @@ version: '简体中文'
 它通常为以下格式：
 
 ```bash
-https://[your-dify-enterprise-url]/console/api/enterprise/sso/oidc/callback
+https://[your-dify-enterprise-url]/console/api/enterprise/sso/saml/acs
 ```
 
 获取 ACS URL 后，切换回 Azure 应用程序页，在 SAML Certificates tab 栏中下载 Certificate；同时复制 set up 页的 Login URL。接下来需要将这两项参数填写至 Dify 企业版管理后台内。
@@ -53,11 +53,11 @@ https://[your-dify-enterprise-url]/console/api/enterprise/sso/oidc/callback
 
 ### 进阶配置：编辑属性和声明
 
-1. 单击 **Required claim** 下的 **Unique User Identifier (Name ID)**。
+1. 在应用程序的 SSO 配置页面中，点击**属性和声明（Attributes & Claims）** 右侧的**编辑**按钮。
 
 ![](https://assets-docs.dify.ai/2024/11/97a46bf1b5264ef72ad4b202fdf2a772.png)
 
-2. 将源属性修改为 `user.mail`。
+2. 点击 **Unique User Identifier (Name ID)**，将源属性修改为 `user.mail`。
 
 ![](https://assets-docs.dify.ai/2024/11/183dd293f17f87081ac4c2390b583fb0.png)
 

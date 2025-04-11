@@ -50,7 +50,11 @@ For more information about security restrictions, please read the [Security Meas
 
 **Issue Details**: After configuring Azure SAML SSO and enabling forced login, you encounter an `account not found` error.
 
-**Solution**: Please refer to [Authentication - User Account Creation Methods](/en-us/administrator-guide/authentication#user-account-creation-methods-in-enterprise-edition) and enable the following two account creation methods:
+**Solution**:
+
+1. Please refer to [Authentication - User Account Creation Methods](/en-us/administrator-guide/authentication#user-account-creation-methods-in-enterprise-edition) and enable the following two account creation methods:
 
 - Allow users to self-register
 - Allow auto-create personal workspace for new users
+
+2. If the above switches are confirmed to be enabled but the error still occurs, please refer to [Edit Attributes and Claims](/en-us/administrator-guide/sso/azure/saml#advanced-configuration%3A-edit-attributes-and-claims) and change the **source attribute** for the **Unique User Identifier (Name ID)** to `user.mail`.

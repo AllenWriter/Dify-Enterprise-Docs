@@ -466,6 +466,7 @@
                   {
                     "group": "发布应用",
                     "pages": [
+                      "zh-cn/user-guide/application-publishing/permission-management",
                       {
                         "group": "发布为公开 Web 站点",
                         "pages": [

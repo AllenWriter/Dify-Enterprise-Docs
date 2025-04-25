@@ -1,19 +1,21 @@
 ---
-title: 发布权限管理
+title: 应用访问权限管理
+description: 该功能要求 Dify EE ≥ v2.6.0
 ---
 
 > 仅 Workspace Owner、Workspace Admin 具备创建和发布应用的权限。关于各成员的权限说明，详细说明请参考[成员权限管理](/zh-cn/administrator-guide/members-management#成员权限管理)。
 
-创建应用后，默认情况下该应用不对任何人开放。为确保数据安全，建议添加访问权限后再开放应用。若未配置应用权限，将无法生成应用的访问链接、获取应用嵌入代码。
+创建应用后，默认情况下该应用不对任何成员开放。为确保数据安全，建议添加访问权限后再发布应用。若未配置应用权限，将无法生成应用的访问链接、获取应用嵌入代码等操作。
 
 本文将介绍如何配置和管理应用的访问权限。
 
 ## 为应用添加访问权限
 
 1. 在应用编辑界面，点击右上角的 **Publish** 按钮。
-2. 在发布页内的 **Who can access web app** 选项中进行权限配置。
+2. 点击发布页内的 **Who can access web app** 下方的选项，为应用分配访问权限。
+3. 默认情况下应用不对任何成员开放使用入口。具备应用创建权限的用户（例如 Owner、Admin、Editor）可以调试应用，并为应用设置不同的访问权限。
 
-![](https://assets-docs.dify.ai/2025/04/620c671984aa3a8c6c874af6d8ddaec7.png)
+![](https://assets-docs.dify.ai/2025/04/6e37a7b80e4c809ce940ace5d73f300a.png)
 
 ## 设置应用访问权限
 

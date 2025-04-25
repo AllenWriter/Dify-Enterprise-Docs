@@ -1,7 +1,10 @@
 ---
 title: 環境変数説明
-version: '日本語'
 ---
+
+<Note>
+  本文の環境変数は参考用です。完全な環境変数リストは[.env.example](https://github.com/langgenius/dify/blob/main/docker/.env.example)を参照してください。エンタープライズ版で環境変数を調整する必要があるが、その変数が`.value.yaml`ファイルに見つからない場合は、[よくある質問](#よくある質問)を参照してください。
+</Note>
 
 ## 公共変数
 
@@ -433,6 +436,10 @@ dockerイメージまたはdocker-composeによる起動時にのみ有効です
 
     例：`http://unstructured:8000/general/v0/general`
 
+*   TOP_K_MAX_VALUE
+
+    RAG の最大の上位 k 値。デフォルトは 10。
+
 ### マルチモーダルモデル設定
 
 *   MULTIMODAL\_SEND\_IMAGE\_FORMAT
@@ -607,7 +614,7 @@ API サービスによってインターフェース ID 検証にのみ使用さ
 
 ## 文書チャンク長の設定
 
-### MAXIMUM_CHUNK_TOKEN_LENGTH 
+### INDEXING_MAX_SEGMENTATION_TOKENS_LENGTH 
 
 文書チャンク長の設定。長文処理時のテキストセグメントサイズを制御するために使用。デフォルト値：500。最大値：4000。
 
@@ -622,3 +629,32 @@ API サービスによってインターフェース ID 検証にのみ使用さ
 **設定の推奨**
 - 大きなチャンク: 文脈依存性が高いタスク（例: 感情分析や長文の要約）に適しています。
 - 小さなチャンク: 詳細な分析が必要なタスク（例: キーワード抽出や段落レベルの内容処理）に適しています。
+
+## よくある質問
+
+### `values.yaml`ファイルに環境変数が見つからないが、その変数は.env.exampleファイルで提供されている場合、その変数をどのように追加または変更すればよいですか？
+
+以下のコードを参考に調整してください。例えば、`values.yaml`ファイルに`ENV_FROM_COMMUNITY1`と`ENV_FROM_COMMUNITY2`変数を追加する場合：
+
+```yaml
+api:
+  extraEnv:
+    - name: ENV_FROM_COMMUNITY1
+      value: "env123"
+    - name: ENV_FROM_COMMUNITY2
+      value: "env123"
+```
+
+### `HTTP_PROXY`と`HTTPS_PROXY`の設定方法は？
+
+セキュリティ上の理由から、Dify `API`サービスに`HTTP_PROXY`と`HTTPS_PROXY`環境変数を設定する必要がある場合があります。
+`values.yaml`ファイルの`extraEnv`フィールドを使用できます。
+
+```yaml
+api:
+  extraEnv:
+    - name: "HTTP_PROXY"
+      value: "http://proxy.example.com:8080"
+    - name: "HTTPS_PROXY"
+      value: "http://proxy.example.com:8080"
+```

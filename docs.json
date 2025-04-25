@@ -106,7 +106,6 @@
                 "group": "Administrator Guide",
                 "pages": [
                   "en-us/administrator-guide/workspace-management",
-                  "en-us/administrator-guide/v2.6.x/members-management",
                   {
                     "group": "Identity Authentication",
                     "pages": [
@@ -351,7 +350,7 @@
                 "group": "管理员手册",
                 "pages": [
                   "zh-cn/administrator-guide/workspace-management",
-                  "zh-cn/administrator-guide/v2.5.x/members-management",
+                  "zh-cn/administrator-guide/v2.6.x/members-management",
                   {
                     "group": "身份认证",
                     "pages": [
@@ -722,9 +721,7 @@
             ]
           }
         ]
-      }
-    ],
-    "versions": [
+      },
       {
         "version": "2.5.x",
         "languages": [
@@ -817,7 +814,6 @@
                 "group": "Administrator Guide",
                 "pages": [
                   "en-us/administrator-guide/workspace-management",
-                  "en-us/administrator-guide/members-management",
                   {
                     "group": "Identity Authentication",
                     "pages": [
@@ -1062,7 +1058,7 @@
                 "group": "管理员手册",
                 "pages": [
                   "zh-cn/administrator-guide/workspace-management",
-                  "zh-cn/administrator-guide/members-management",
+                  "zh-cn/administrator-guide/v2.5.x/members-management",
                   {
                     "group": "身份认证",
                     "pages": [

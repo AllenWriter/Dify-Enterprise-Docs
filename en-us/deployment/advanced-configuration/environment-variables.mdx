@@ -1,7 +1,10 @@
 ---
 title: Environment Variables Explanation
-version: 'English'
 ---
+
+<Note>
+  The variables listed in this document are for reference only. For a full list of environment variables, please refer to the [`.env.example`](https://github.com/langgenius/dify/blob/main/docker/.env.example) file.  If you can't find a specific variable in the `.values.yaml` file, please check the [FAQs](#faqs) for guidance.
+</Note>
 
 ## Common Variables
 
@@ -162,7 +165,6 @@ This Redis configuration is used for caching and for pub/sub during conversation
 - REDIS_SENTINEL_USERNAME: Username for Sentinel
 - REDIS_SENTINEL_PASSWORD: Password for Sentinel
 - REDIS_SENTINEL_SOCKET_TIMEOUT: Sentinel timeout, default value: 0.1, unit: seconds
-
 
 ### Celery Configuration
 
@@ -438,6 +440,10 @@ Used to store uploaded data set files, team/tenant encryption keys, and other fi
 
   For example: `http://unstructured:8000/general/v0/general`
 
+- TOP_K_MAX_VALUE
+  
+  The maximum top-k value of RAG, default 10.
+
 ### Multi-modal Configuration
 
 - MULTIMODAL_SEND_IMAGE_FORMAT
@@ -616,7 +622,7 @@ Used to set the browser policy for session cookies used for identity verificatio
 
 ## Chunk Length Configuration
 
-### MAXIMUM_CHUNK_TOKEN_LENGTH 
+### INDEXING_MAX_SEGMENTATION_TOKENS_LENGTH 
 
 Configuration for document chunk length. It is used to control the size of text segments when processing long documents. Default: 500. Maximum: 4000.
 
@@ -643,20 +649,20 @@ Configuration for document chunk length. It is used to control the size of text 
 > <a href="https://assets-docs.dify.ai/2025/01/e3d53c6c7d979c77d0a1809670fbf211.yaml" download="values.yaml">Click here</a> to download the `values.yaml` file.
 
 
-## FAQ
+## FAQs
 
-### How to configure environment variables not found in `values.yaml`?
+### How to add environment variables that are not found in the `values.yaml` file, but available in the `.env.example` file?
 
-If you want to configure the environment variables not found in `values.yaml`, you can use the `extraEnv` field in the `values.yaml` file. 
+Please add or modify the variable in the `values.yaml` file followed by the example below. For instance, to add `ENV_FROM_COMMUNITY1` and `ENV_FROM_COMMUNITY2` to the `values.yaml` file:
 
 ```yaml
 api:
   extraEnv:
-    - name: "DEMO_ENV_VAR"
-      value: "demo"
+    - name: ENV_FROM_COMMUNITY1
+      value: "env123"
+    - name: ENV_FROM_COMMUNITY2
+      value: "env123"
 ```
-
-For more information, please refer to the [variable documentation](https://docs.dify.ai/getting-started/install-self-hosted/environments).
 
 ### How to configure `HTTP_PROXY` and `HTTPS_PROXY`?
 

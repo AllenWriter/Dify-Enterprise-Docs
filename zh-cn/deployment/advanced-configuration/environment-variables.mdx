@@ -1,7 +1,10 @@
 ---
 title: 环境变量说明
-version: '简体中文'
 ---
+
+<Note>
+  本文中的变量仅供参考。完整的环境变量请参考 [.env.example](https://github.com/langgenius/dify/blob/main/docker/.env.example)。如需在企业版内调整某个环境变量，但该变量未在 `.value.yaml` 文件内找到，请参考[常见问题](#常见问题)。
+</Note>
 
 ## 公共变量
 
@@ -451,6 +454,10 @@ Flask 调试模式，开启可在接口输出 trace 信息，方便调试。
 
   例如：`http://unstructured:8000/general/v0/general`
 
+- TOP_K_MAX_VALUE
+
+    RAG 的最大 top-k 值，默认值为 10。
+
 ### 多模态配置
 
 - MULTIMODAL_SEND_IMAGE_FORMAT
@@ -629,7 +636,7 @@ WebApp URL，用于向前端显示 WebAPP API Base URL。如果为空，则为�
 
 ## 文档分段长度配置
 
-### MAXIMUM_CHUNK_TOKEN_LENGTH 
+### INDEXING_MAX_SEGMENTATION_TOKENS_LENGTH 
 
 文档分段长度配置，用于控制处理长文档时的文本段大小。默认值：500。最大值：4000。
 
@@ -657,18 +664,18 @@ WebApp URL，用于向前端显示 WebAPP API Base URL。如果为空，则为�
 
 ## 常见问题
 
-### 如何配置在 `values.yaml` 中未找到的环境变量？
+### 在 `values.yaml` 文件内未找到某个环境变量，但是该变量在 .env.example 文件内提供，如何添加或修改该变量？
 
-如果你想配置在 `values.yaml` 中未找到的环境变量，可以使用 `values.yaml` 文件中的 `extraEnv` 字段。
+参考以下代码进行调整。例如在 `values.yaml` 文件内添加 `ENV_FROM_COMMUNITY1` 和 `ENV_FROM_COMMUNITY2` 变量。
 
 ```yaml
 api:
   extraEnv:
-    - name: "DEMO_ENV_VAR"
-      value: "demo"
+    - name: ENV_FROM_COMMUNITY1
+      value: "env123"
+    - name: ENV_FROM_COMMUNITY2
+      value: "env123"
 ```
-
-更多信息，请参考[变量文档](https://docs.dify.ai/getting-started/install-self-hosted/environments)。
 
 ### 如何配置 `HTTP_PROXY` 和 `HTTPS_PROXY`？
 

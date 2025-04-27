@@ -221,6 +221,7 @@
                   {
                     "group": "Application Publishing",
                     "pages": [
+                      "en-us/user-guide/application-publishing/permission-management",
                       {
                         "group": "Publish as a Single-page Web App",
                         "pages": [

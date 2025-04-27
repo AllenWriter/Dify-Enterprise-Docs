@@ -106,6 +106,7 @@
                 "group": "Administrator Guide",
                 "pages": [
                   "en-us/administrator-guide/workspace-management",
+                  "en-us/administrator-guide/members-management",
                   {
                     "group": "Identity Authentication",
                     "pages": [
@@ -816,6 +817,7 @@
                 "group": "Administrator Guide",
                 "pages": [
                   "en-us/administrator-guide/workspace-management",
+                  "en-us/administrator-guide/members-management",
                   {
                     "group": "Identity Authentication",
                     "pages": [

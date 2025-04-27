@@ -6,11 +6,66 @@ Administrators can view and manage all members within the enterprise in the **Me
 
 ![](/images/members-management-1.png)
 
+## Members Management
+
+### Adding New Members to the Team
+
+If your team hasn't enabled SSO authentication, you can log in using a username and password.
+
+1. Click the blue Add button in the upper right corner
+2. Fill in the username and email
+3. When adding a member for the first time, the default login password will be displayed only once
+
+To add an administrator to the team, please refer to [System Settings](/en-us/administrator-guide/system-settings).
+
+![](/images/members-management-6.png)
+
+### Adding New Members to a Workspace
+
+If you want to add new members to a specific workspace, please refer to Workspace Management Docs.
+
+### Disabling Members
+
+Compared to directly deleting members, disabling members allows you to deny user access requests while retaining their data. 
+
+To disable a member:
+1. Click the menu button on the right side of the member's entry
+2. Switch their Status to "banned"
+
+![](/images/members-management-7.png)
+
+### Resetting Member Passwords
+
+If a member has lost their password, the system administrator needs to manually send a password reset email. 
+
+1. Click the menu button on the right side of the member's entry
+2. Tap "Reset Password"
+
+![](/images/members-management-8.png)
+
+### Deleting Members
+
+⚠️ **All applications and usage data under the member's name will be deleted. Please handle with caution.**
+
+To delete a member:
+1. Click the menu button on the right side of a member
+2. Tap the "Delete" option
+
+![](/images/members-management-9.png)
+
+**Note**: Once members are added to a workspace, they cannot be removed. Clicking Delete on the Members page will be considered as removing the member from the team.
+
+### Searching for Members
+
+Administrators can query users in the search box using workspace ID and user email, and you can also switch user status for queries.
+
+![](/images/members-management-10.png)
+
 ## Member Permission Management
 
 Each member has permissions at both the team level and Workspace level. System administrators can add team members and invite new system administrators, as well as assign a member's permissions to a Workspace.
 
-![](/images/members-management-2.png)
+![](https://assets-docs.dify.ai/2025/04/60a427910a4f698d4b62e4aa0098ff55.png)
 
 ### Team-level Permissions
 
@@ -55,55 +110,35 @@ Workspaces include three permission groups: Owner, Admin, and Normal.
    - Can only use applications within the workspace but cannot edit or modify them.
    - Cannot access the settings page to add model providers, create API extensions, or perform similar operations.
 
-## Adding New Members to the Team
+4. **Workspace Editor** 
+   - Can create and edit applications in the Workspace
+   - Cannot access the settings page
+   - Cannot add model providers or manage Workspace members
 
-If your team hasn't enabled SSO authentication, you can log in using a username and password.
+5. **Knowledge Admin**
+   - Can only create and edit knowledge bases within the Workspace
+   - Cannot create, edit, or use applications
+   - Cannot access the settings page
+   - Cannot add model providers or create API extensions
 
-1. Click the blue Add button in the upper right corner
-2. Fill in the username and email
-3. When adding a member for the first time, the default login password will be displayed only once
+## Member Group Management
 
-To add an administrator to the team, please refer to [System Settings](/en-us/administrator-guide/system-settings).
+In Dify Enterprise Edition, **Group Management** is a mechanism for controlling member access to different resources within the enterprise. By assigning members to different groups, you can effectively control which users can access which Web Apps, preventing resource misuse or potential data leakage risks, and ensuring enterprise information security.
 
-![](/images/members-management-6.png)
+### Creating Groups
 
-## Adding New Members to a Workspace
+Click **Group Management** in the upper right corner of the **Members** page, enter the group name to complete creation; group names must be unique and cannot be duplicated.
 
-If you want to add new members to a specific workspace, please refer to Workspace Management Docs.
+![](https://assets-docs.dify.ai/2025/04/cb14986e1d2346aff6c5e321ced7cff7.png)
 
-## Disabling Members
+### Editing Groups
 
-Compared to directly deleting members, disabling members allows you to deny user access requests while retaining their data. 
+Groups support renaming and drag-and-drop reordering. Click the **Edit** button to the right of the group name to rename it; the new name must not duplicate any existing group.
 
-To disable a member:
-1. Click the menu button on the right side of the member's entry
-2. Switch their Status to "banned"
+### Assigning Users
 
-![](/images/members-management-7.png)
+Click the **Menu** button to the right of a member → **Edit Groups**, and select the groups to add the user to. Each user can be added to multiple different groups simultaneously.
 
-## Resetting Member Passwords
+![](https://assets-docs.dify.ai/2025/04/2e20d0adc2cbeb1267b6b1639c1ec677.png)
 
-If a member has lost their password, the system administrator needs to manually send a password reset email. 
-
-1. Click the menu button on the right side of the member's entry
-2. Tap "Reset Password"
-
-![](/images/members-management-8.png)
-
-## Deleting Members
-
-⚠️ **All applications and usage data under the member's name will be deleted. Please handle with caution.**
-
-To delete a member:
-1. Click the menu button on the right side of a member
-2. Tap the "Delete" option
-
-![](/images/members-management-9.png)
-
-**Note**: Once members are added to a workspace, they cannot be removed. Clicking Delete on the Members page will be considered as removing the member from the team.
-
-## Searching for Members
-
-Administrators can query users in the search box using workspace ID and user email, and you can also switch user status for queries.
-
-![](/images/members-management-10.png)
+After adding users to groups, please refer to [Application Publishing: Application Access Permission Management](en-us/user-guide/application-publishing/permission-management) to learn how to control Web App access permissions.

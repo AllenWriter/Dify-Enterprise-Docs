@@ -696,6 +696,7 @@
                   {
                     "group": "アプリの発表",
                     "pages": [
+                      "ja-jp/user-guide/application-publishing/permission-management",
                       {
                         "group": "公開Webアプリとしてのリリース",
                         "pages": [

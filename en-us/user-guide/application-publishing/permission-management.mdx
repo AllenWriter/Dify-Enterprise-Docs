@@ -4,10 +4,10 @@ description: Version ≥ v2.6.0
 ---
 
 <Info>
-  Only Workspace Owner, Admin, and Editor have the permissions to create and publish applications. For details on each member's permissions, please refer to [Member Permission Management](/en-us/administrator-guide/v2.6.x/members-management#group-permissions).
+  Only Workspace Owner, Admin, and Editor have the permissions to create and publish applications. For details on each member's permissions, please refer to [Member Permission Management](/en-us/administrator-guide/members-management#group-permissions).
 </Info>
 
-After creating an application, by default, the application is not open to any members. The permission option is initially set to "Specific groups or members" with an empty scope.
+After creating an application, by default, the application is not open to any members. The permission option is initially set to **Specific groups or members** with an empty scope.
 
 This article will introduce how to configure and manage application access permissions.
 
@@ -64,13 +64,17 @@ Selected members will retain access to the application even if they are later re
 
 This option allows anyone with the internet link to access the application, which is usually suitable for public demo applications, customer-facing services, or public resources.
 
+## Accessing Applications
 
+Team members can view and browse all available applications within the enterprise on the **Explorer**. Depending on the application's permission configuration, members may be required to log in via SSO authentication before they can access certain applications.
+
+![](https://assets-docs.dify.ai/2025/04/44a22b6f66f80eae805a307388e5b3e9.png)
 
 ## Other Application Publishing Options
 
 After configuring application permissions, you can also use the following features in the application publishing panel:
 
-<Card title="Embed in Website" icon="link" href="/zh-cn/user-guide/application-publishing/embedding-in-websites">
+<Card title="Embed in Website" icon="link" href="/en-us/user-guide/application-publishing/embedding-in-websites">
   Obtain the embed code to embed the application into other websites.
 </Card>
 
@@ -80,16 +84,16 @@ After configuring application permissions, you can also use the following featur
 
 No. Permission changes take effect immediately and do not require republishing the application. However, please note that members who have already obtained access may not be immediately affected in their current session; the new permission settings may take effect after the session expires.
 
-### How can I ensure that only specific members can access my application?
+### How to ensure that only specific members can access my application?
 
-You can select the "Specific groups or members" option and then add the members you want to grant access to.
+You can select the **Specific groups or members** and then add the members you want to grant access to.
 
-### How can I see who has access to my application?
+### How to check who has access to my application?
 
-You can view the list of groups and members who currently have access to the application under the **Who can access web app** option on the application's publishing page.
+You can view the list of groups and members who currently have access to the application under the **Who can access web app** on the application's publishing page.
 
-### Will adjusting application access permissions affect API calls?
+### Will adjusting application access permissions affect API invocation?
 
 No. The application's API access permissions are independently controlled by the API Key and are unrelated to the web application's access permissions.
 
-As long as the API Key remains valid and is not leaked, you can continue to call the application via API. Changing the web application's access permission settings will not affect the permissions of existing API Keys.
+As long as the API Key remains valid and is not leaked, you can continue to invoke the application via API. Changing the web application's access permission settings will not affect the permissions of existing API Keys.

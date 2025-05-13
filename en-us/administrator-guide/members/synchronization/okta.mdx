@@ -1,78 +1,85 @@
 ---
-title: Configuring SCIM with Okta
-description: Automatically sync organization members through SCIM standard. Version ≥ v2.7.0
+title: Okta
+description: Set up automatic member sync with Okta using SCIM. Version ≥ v2.7.0
 ---
 
-This document demonstrates how to establish a connection with the SCIM service in Dify Enterprise Edition using Okta as an example, enabling automatic member synchronization.
+This guide shows you how to connect Okta to Dify Enterprise Edition's SCIM service for automatic member synchronization.
 
-## Create Application and Assign Users and Groups
+## Create and Configure Your Okta Application
 
-### 1. Access Okta Admin Console
+### 1. Log into Okta Admin Console
 
-Access the Okta admin portal page, navigate to Applications → Create App Integration.
+Go to your Okta admin portal and navigate to **Applications** → **Create App Integration**.
 
 ![](https://assets-docs.dify.ai/2025/05/c5f569eb091dfd55d6cc131fb74192f4.png)
 
-### 2. Create App Integration
+### 2. Create the App Integration
 
-1. Click "Create App Integration"
+1. Click **Create App Integration**
 
-2. Create new application:
-  - Select "Web Application" for platform
-  - Select "SAML 2.0" for sign-on method 
-  - Click "Create"
+2. Configure the app:
+  - Platform: **Web Application**
+  - Sign-on method: **SAML 2.0**
+  - Click **Create**
 
-3. Enable SCIM
-  - In the General tab, App Settings section, click "Edit"
-  - Modify Application label, enable SCIM
-  - Click "save"
+3. Enable SCIM:
+  - In the General tab, find App Settings
+  - Click **Edit**
+  - Update the Application label if needed
+  - Enable SCIM provisioning
+  - Click **Save**
 
 ![](https://assets-docs.dify.ai/2025/05/5e5031051743b7ad391b38030d5a7abd.png)
 
-### 3. Configure Automatic Synchronization
+### 3. Set Up SCIM Connection
 
-1. Click the SAML application configuration menu, navigate to Provisioning.
-2. Click "Configure API Integration"
-3. Enable API integration
-4. Enter SCIM connection details:
-  - SCIM 2.0 base URL: Your SCIM endpoint URL (copied from the previous section)
-  - OAuth Bearer Token: Your SCIM authentication token
-  - Import User and Import Group: Enable accordingly if you want to sync Users and Groups
+1. Go to the **Provisioning** tab
+2. Click **Configure API Integration**
+3. Check **Enable API integration**
+4. Enter your SCIM details:
+  - **SCIM 2.0 base URL**: Your SCIM endpoint URL
+  - **OAuth Bearer Token**: Your SCIM authentication token
+  - Enable **Import User** and **Import Group** based on your needs
 
-5. Click **Test API Credentials** to verify the connection
-6. Click "Save" after successful test
+5. Click **Test API Credentials**
+6. After a successful test, click **Save**
 
 ![](https://assets-docs.dify.ai/2025/05/1dcde7b1f9fc3a26769ef91170f2be58.png)
 
-### 4. Configure Provisioning
+### 4. Configure Provisioning Options
 
-1. In the **Provisioning** tab, go to the "To App" section and click "Edit"
-2. Enable required features:
-  - **Create Users**: Automatically create new users in Dify when new users are assigned in Okta
-  - **Update User Attributes**: Keep user information synchronized
-  - **Deactivate Users**: Automatically deactivate users in Dify Enterprise when unassigned or deactivated in Okta (when deactivated, Dify sets user status to "disabled")
-3. Click "Save"
+1. In the **Provisioning** tab, find the "To App" section and click **Edit**
+2. Enable these features as needed:
+  - **Create Users**: Adds new Dify users when assigned in Okta
+  - **Update User Attributes**: Keeps user info synchronized
+  - **Deactivate Users**: Sets user status to "disabled" in Dify when deactivated in Okta
+3. Click **Save**
 
 ![](https://assets-docs.dify.ai/2025/05/3f660720b6a51f9858e547ffc10e8bde.png)
 
 ### 5. Assign Users and Groups
 
-**Assign Users:**
+**To assign users:**
 
-1. Go to the Assignments page, click Assign and assign the users or groups you need to add to Dify Enterprise.
-2. Click Save
+1. Go to the **Assignments** tab
+2. Click **Assign** and choose users or groups to sync with Dify Enterprise
+3. Click **Save**
 
-**Assign Groups:**
+**To sync groups:**
 
-1. Click Push Groups
-2. Select the Groups in Dify Enterprise that need to be synchronized and click Save.
+1. Click **Push Groups**
+2. Select the groups you want to sync to Dify Enterprise
+3. Click **Save**
 
 ![](https://assets-docs.dify.ai/2025/05/cbc2fdde9886807eed30c1e5d208f8cd.png)
 
-## Enable SCIM Automatic Synchronization
+## Enable SCIM in Dify
 
-After configuring the identity provider, go to the admin dashboard, click **Members** → **Right menu button** → **Automatic synchronization** → **Enable** button.
+Once Okta is configured:
+
+1. Go to the Dify admin dashboard
+2. Navigate to **Members** → click the menu button → **Automatic synchronization** → **Enable**
 
 ![](https://assets-docs.dify.ai/2025/05/08d3b05fc5dfaa1eb0a6b8bd523ea5f9.png)
 
-> After enabling, automatic synchronization is not real-time. The synchronization time depends on the application's automatic execution date within the identity provider. You can check the automatic synchronization history in the identity provider.
+> Sync isn't instant. Okta controls the sync schedule. Check your provisioning logs in Okta for sync history.

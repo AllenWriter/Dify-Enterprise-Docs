@@ -1,59 +1,57 @@
 ---
-title: Configuring SCIM with Azure
-description: Automatically sync organization members through SCIM standard. Version ≥ v2.7.0
+title: Azure
+description: Set up automatic member sync with Azure AD using SCIM. Version ≥ v2.7.0
 ---
 
-This document demonstrates how to establish a connection with the SCIM service in Dify Enterprise Edition using Azure Entra ID as an example, enabling automatic member synchronization.
+This guide shows you how to connect Azure Entra ID to Dify Enterprise Edition's SCIM service for automatic member synchronization.
 
-## Create Application and Assign Users and Groups
+## Set Up Your Azure Application
 
-### 1. Create a New Application in Azure
+### 1. Create a New Application
 
-Access the Azure admin portal page, navigate to the Applications page, and click New application.
+In the Azure admin portal, go to Applications and click **New application**.
 
 ![](https://assets-docs.dify.ai/2024/11/4f52715ff661e6c9430af09b4b2a4736.png)
 
-Select **Create your own application**, enter an application name such as "dify", select **Integrate any other application you don't find in the gallery (Non-gallery)**, and click Create.
+Select **Create your own application**, give it a name (e.g., "dify"), choose **Integrate any other application you don't find in the gallery (Non-gallery)**, then click **Create**.
 
 ![](https://assets-docs.dify.ai/2024/11/b823ecfaa94d18ba0ac794cc0290dc7f.png)
 
-### 2. Add Application Members
+### 2. Assign Users and Groups
 
-Next, you need to add members to this application. Select **Users and groups** from the left side of the application, and click **Add user/group**.
+From the application's left menu, select **Users and groups**, then click **Add user/group**.
 
 ![](https://assets-docs.dify.ai/2024/11/ed3c6f5de21c75e2261bf05d055ffb9e.png)
 
-### 3. Configure Automatic Synchronization
+### 3. Set Up Provisioning
 
-1. In the application's left navigation menu, select **Provision → Get started → Connect your application**.
+1. In the left menu, go to **Provision → Get started → Connect your application**.
 
 ![](https://assets-docs.dify.ai/2025/05/f890065efeb5390dcb43e7e7d1c1f5b8.png)
 
-2. Under Admin credentials, enter the following details:
+2. Under Admin credentials, enter:
 
-  - Tenant URL: SCIM endpoint URL
-  - Secret token: SCIM authentication token
+  - **Tenant URL**: Your SCIM endpoint URL
+  - **Secret token**: Your SCIM authentication token
 
-  > Please refer to [Sync Members](../sync-team-members) for the above information.
+  > Get these values from [Sync Members](../sync-team-members).
 
   ![](https://assets-docs.dify.ai/2025/05/03f1e586bc428538d80b6f5316a293df.png)
 
-4. Click "Test Connection" to verify the credentials.
+3. Click **Test Connection** to verify your setup.
 
-5. If the connection test is successful, click "Save".
+4. If the test passes, click **Save**.
 
-### 4. Configure Attribute Mapping
+### 4. Configure Attribute Mappings
 
-1. On the provisioning page, click "Mappings", and you will see two default mapping values:
+1. On the provisioning page, click **Mappings**. You'll see two default mappings:
 
-  - `Provision Microsoft Entra ID Users` - for user synchronization
-  - `Provision Microsoft Entra ID Groups` - for group synchronization
+  - `Provision Microsoft Entra ID Users` - for syncing users
+  - `Provision Microsoft Entra ID Groups` - for syncing groups
 
-2. Click on the mapping entries and make the following modifications:
+2. Click each mapping and keep only these attributes:
 
-- **Provision Microsoft Entra ID Users**
-
-Keep only the following parameters:
+**For Users:**
 
 | customappsso Attribute | Microsoft Entra ID Attribute |
 |------------------|------------------------|
@@ -61,43 +59,47 @@ Keep only the following parameters:
 | active | Switch([IsSoftDeleted], , "False", "True", "True", "False") |
 | displayName | displayName |
 
-- **Provision Microsoft Entra ID Groups**
-
-Keep only the following parameters:
+**For Groups:**
 
 | customappsso Attribute | Microsoft Entra ID Attribute |
 |------------------|------------------------|
 | displayName | displayName |
 | members | members |
 
-### 5. Start and Manage Configuration
+### 5. Start Provisioning
 
 1. Return to the main **Provisioning** page
 
-2. Under **Settings**:
-  - Set **Scope** to determine which users will be synchronized:
-    - "Sync only assigned users and groups" (recommended for smaller member lists)
-    - "Sync all users and groups" (for organization-wide deployment)
+2. Under **Settings**, choose your sync scope:
+  - "Sync only assigned users and groups" (best for selective sync)
+  - "Sync all users and groups" (for organization-wide sync)
 
   ![](https://assets-docs.dify.ai/2025/05/489e8b8f4091d53ab699ec33199d57a4.png)
 
-3. Click **Save** to apply settings
-4. Click **Start provisioning** to begin the synchronization process
+3. Click **Save**
+4. Click **Start provisioning**
 
 <Note>
-  Initial synchronization may take anywhere from 20 minutes to several hours, depending on the number of users in your directory.
+  First-time sync can take 20 minutes to several hours, depending on your directory size.
 </Note>
 
-### 6. Automatically Sync User Groups
+### 6. Sync User Groups
 
-Create a new group in Azure Entra ID. Go to the application, click add **Users and groups**, select the user groups you wish to include in the automatic synchronization scope, and complete the addition.
+To include groups in the sync:
+
+1. Create a group in Azure Entra ID
+2. In your Dify application, click **Users and groups**
+3. Add the groups you want to sync
 
 ![](https://assets-docs.dify.ai/2025/05/af19820dfd75bd6bc00c602009574a77.png)
 
-## Enable SCIM Automatic Synchronization
+## Enable SCIM in Dify
 
-After configuring the identity provider, go to the admin dashboard, click **Members** → **Right menu button** → **Automatic synchronization** → **Enable** button.
+Once Azure is configured:
+
+1. Go to the Dify admin dashboard
+2. Navigate to **Members** → click the menu button → **Automatic synchronization** → **Enable**
 
 ![](https://assets-docs.dify.ai/2025/05/08d3b05fc5dfaa1eb0a6b8bd523ea5f9.png)
 
-> After enabling, automatic synchronization is not real-time. The synchronization time depends on the application's automatic execution date within the identity provider. You can check the automatic synchronization history in the identity provider.
+> Sync isn't instant. Azure controls the sync schedule. Check your provisioning logs in Azure for sync history.

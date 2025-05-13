@@ -1,103 +1,105 @@
 ---
 title: Sync Members
-description: Automatically sync organization members through SCIM standard. Version ≥ v2.7.0
+description: Automatically sync organization members through SCIM protocol. Version ≥ v2.7.0
 ---
 
 ## Overview
 
-Dify Enterprise Edition supports automatic synchronization of existing department/personnel structures through the [SCIM](https://scim.cloud/) (System for Cross-domain Identity Management) standard protocol, helping enterprise administrators efficiently manage large-scale organizational personnel.
+Dify Enterprise Edition supports automatic synchronization of your organization's existing structure through the [SCIM](https://scim.cloud/) (System for Cross-domain Identity Management) protocol, making it easier for admins to manage large teams efficiently.
 
-- Supports standard SCIM 2.0 protocol
-- Automatically syncs user information and organizational structure
-- Supports integration with multiple mainstream identity providers
-- Online automatic updates for member changes
+- Standard SCIM 2.0 protocol support
+- Automatic user and organization structure sync
+- Works with major identity providers
+- Real-time member updates
 
-## Pre-configuration Preparation
+## Before You Start
 
-Before enabling the automatic synchronization mechanism, you need to prepare:
+To enable automatic synchronization, make sure you have:
 
-1. Obtain system administrator permissions
-2. Understand the type of identity provider your organization is using and have backend management permissions
+1. Dify EE system administrator permissions
+2. Access to your organization's identity provider backend
+3. Understanding of your current identity provider type
 
-## Configuration Steps
+## Setup Guide
 
-### Step One: Obtain SCIM Configuration Information
+### 1. Get Your SCIM Configuration
 
 <Steps>
-  <Step title="Access Sync Settings Page">
-    Navigate to the enterprise management backend, click on the left menu bar **Members** → **Sync Settings**.
+  <Step title="Open Sync Settings">
+    In the enterprise dashboard, go to **Members** → **Sync Settings** from the left sidebar.
 
     <img src="https://assets-docs.dify.ai/2025/05/764e71213cadcaa45c62c56a2dc38cbf.png" alt="Sync Settings Interface" />
   </Step>
 
-  <Step title="Obtain SCIM Endpoint URL">
-    Copy the `SCIM 2.0 Base URL` displayed on the page. This URL will be used for identity provider configuration.
+  <Step title="Copy the SCIM Endpoint">
+    Find and copy the `SCIM 2.0 Base URL` shown on the page. You'll need this for your identity provider setup.
   </Step>
 
-  <Step title="Generate Authentication Token">
-    - Click the "Get Token" button
-    - The system will generate an OAuth Bearer Token
+  <Step title="Create an Authentication Token">
+    - Click **Get Token**
+    - The system generates an OAuth Bearer Token
     
     <Warning>
-      The authentication token is displayed only once. Please copy and save it securely immediately. If lost, you will need to regenerate a new token.
+      This token appears only once. Copy and save it immediately in a secure location. If you lose it, you'll need to generate a new one.
     </Warning>
   </Step>
 
-  <Step title="Save Configuration Information">
-    Properly save the following information for subsequent configuration:
+  <Step title="Save Your Configuration">
+    Keep these items safe for the next steps:
     - SCIM Base URL
     - OAuth Bearer Token
   </Step>
 </Steps>
 
-### Step Two: Configure Identity Provider
+### 2. Connect Your Identity Provider
 
-Choose the appropriate configuration guide based on the identity provider your organization uses:
+Select your identity provider below for specific setup instructions:
 
 <CardGroup cols={2}>
   <Card title="Azure Active Directory" icon="microsoft" href="./azure">
-    Configure member sync between Azure AD and Dify
+    Set up member sync with Azure AD
   </Card>
   <Card title="Okta" icon="key" href="./okta">
-    Configure member sync between Okta and Dify
+    Set up member sync with Okta
   </Card>
 </CardGroup>
 
-## Attribute Mapping Relationships
+## How SCIM Maps to Dify
 
-Attribute mapping between Dify functionality and SCIM fields:
+Here's how SCIM resources work with Dify features:
 
-| SCIM Resource Type | Dify Function | Supported Operations | Additional Notes |
+| SCIM Resource Type | Maps to Dify | What You Can Do | Notes |
 |----------------|------------------|-------------------------------|--------------------------------------------------------------|
-| User           | Member (user email, username, user status) | Create / Update / Deactivate (deactivation does not actually delete user data, only changes member status in Dify Enterprise from `Active` to `Disabled`, user data is retained) |
-| Group          | Group (name, members)        | Create / Update group name / Update members / Delete | Delete operation permanently removes the group and its member relationships |
+| User           | Member (email, username, status) | Create, Update, Deactivate | Deactivating changes user status to "Disabled" but keeps their data |
+| Group          | Group (name, members)        | Create, Update, Delete | Deleting a group removes it permanently along with member relationships |
 
-## Important Notes
+## Key Things to Know
 
 <Info>
-  After enabling SCIM synchronization, to ensure data consistency, the identity provider (IdP) will become the sole authoritative source for user and group management. For detailed information about Admin APIs usage limitations, please refer to the [Enterprise APIs](en-us/administrator-guide/admin-apis) documentation.
+  Once you enable SCIM sync, your identity provider becomes the single source of truth for user and group management. To learn about API limitations, check out the [Admin APIs](en-us/administrator-guide/admin-apis) documentation.
 </Info>
 
-### Functional Limitations
+### What Changes When SCIM is Active
 
-**When SCIM is enabled:**
-- User and group management must be completed through the identity provider
-- Admin APIs support read-only operations only
-- Member self-registration is not supported
+**With SCIM enabled:**
+- All user and group management happens through your identity provider
+- Admin APIs become read-only
+- Self-registration is disabled
 
-**When SCIM is disabled:**
-- Full Admin APIs management permissions are restored
-- All user management operations are supported
+**With SCIM disabled:**
+- Full Admin API access returns
+- All user management features work normally
 
-### Emergency Operations Guide
+### If You Need to Make Manual Changes
 
-If you need to make temporary modifications through Admin APIs:
-1. Temporarily disable SCIM
-2. Perform necessary API operations
-3. Re-enable SCIM and verify sync status
+Sometimes you might need to use Admin APIs directly:
+
+1. Temporarily turn off SCIM
+2. Make your API changes
+3. Turn SCIM back on and check sync status
 
 <Warning>
-  This operation may cause data synchronization conflicts. Please execute with caution.
+  This can cause sync conflicts. Use with caution.
 </Warning>
 
-For more technical details about the interaction between SCIM and Admin APIs, please consult the [Enterprise APIs](/en-us/administrator-guide/admin-apis) documentation.
+For more details about Admin APIs, please check the [Admin APIs](/en-us/administrator-guide/admin-apis) documentation.

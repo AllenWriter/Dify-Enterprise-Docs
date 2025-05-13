@@ -6,7 +6,7 @@ title: 成员管理
 
 ## 成员管理
 
-### 手动管理
+### 手动管理成员
 
 #### 添加新成员至团队
 
@@ -44,7 +44,7 @@ title: 成员管理
 
 ![](/zh-cn/images/members-management-10.png)
 
-### 自动管理
+### 自动同步成员
 
 <Info>
   自动同步成员功能要求 Dify 企业版版本号 ≥v2.7.0。
@@ -52,6 +52,9 @@ title: 成员管理
 
 Dify 企业版支持通过 [SCIM](https://scim.cloud/)（System for Cross-domain Identity Management）标准自动同步现有的部门/人员结构，提升管理员对于大规模组织人员的管理效率。
 
+<Card title="自动同步成员" icon="user" href="/zh-cn/administrator-guide/members/synchronization/sync-team-members">
+  通过 SCIM 标准自动同步组织成员。
+</Card>
 
 ## 成员权限管理
 
@@ -112,7 +115,7 @@ Workspace 的普通成员。每个工作区可以有多位普通成员，仅能�
 
 在 Dify 企业版内，**分组管理** 是控制成员访问企业内不同资源的机制。通过为成员划分不同的分组，可以有效控制不同的用户访问不同的 Web App，避免资源误用或潜在的数据泄露风险，保障企业信息安全。
 
-### 手动管理
+### 手动分组
 
 #### 创建分组
 
@@ -132,13 +135,13 @@ Workspace 的普通成员。每个工作区可以有多位普通成员，仅能�
 
 为用户添加分组后，请参考 [发布应用：应用访问权限管理](/zh-cn/user-guide/application-publishing/permission-management) 了解如何控制 Web App 的访问权限。
 
-### 自动管理
+### 自动同步用户分组
 
 <Info>
   自动管理部门功能要求 Dify 企业版版本号 ≥v2.6.0。
 </Info>
 
-通过 SCIM 标准，Dify 企业版支持自动同步 IDP 内已有的用户成员分组。详细配置说明请参考以下文档：
+通过 SCIM 标准，Dify 企业版支持自动同步身份提供商内已有的用户成员分组。详细配置说明请参考以下文档：
 
 - [Azure](./azure#6-automatically-sync-user-groups)
 - [Okta](./okta#5-assign-users-and-groups)

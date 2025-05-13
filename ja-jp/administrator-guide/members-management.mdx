@@ -54,6 +54,10 @@ SSOを使用していない場合は、ユーザー名とパスワードでロ�
 
 Dify Enterprise Editionは、[SCIM](https://scim.cloud/)（System for Cross-domain Identity Management）標準を通じて、既存の組織構造を自動同期でき、大規模組織の効率的な管理を実現します。
 
+<Card title="メンバーの自動同期" icon="user" href="/ja-jp/administrator-guide/members/synchronization/sync-team-members">
+  SCIM標準を使用して組織メンバーを自動同期します。
+</Card>
+
 ## 権限管理
 
 各メンバーは、チームレベルとワークスペースレベルの2つの権限を持ちます。チーム管理者は、メンバーの追加、新しいシステム管理者の招待、ワークスペース権限の割り当てができます。
@@ -144,5 +148,12 @@ Dify Enterprise Editionの**グループ管理**は、メンバーの企業内�
 
 SCIM標準により、Dify Enterprise EditionはIdP内の既存ユーザーグループの自動同期をサポートします。詳細な設定方法：
 
-- [Azure](./azure#group-sync)
-- [Okta](./okta#group-sync)
+<CardGroup cols={2}>
+  <Card title="Azure" icon="microsoft" href="/ja-jp/administrator-guide/members/synchronization/azure#6-ユーザーグループの自動同期">
+    Azureを使用したユーザーグループの自動同期。
+  </Card>
+
+  <Card title="Okta" icon="key" href="/ja-jp/administrator-guide/members/synchronization/okta#5-ユーザーとグループの割り当て">
+    Oktaを使用したユーザーグループの自動同期。
+  </Card>
+</CardGroup>

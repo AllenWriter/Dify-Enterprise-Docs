@@ -1,0 +1,103 @@
+---
+title: Sync Members
+description: Automatically sync organization members through SCIM standard. Version ≥ v2.7.0
+---
+
+## Overview
+
+Dify Enterprise Edition supports automatic synchronization of existing department/personnel structures through the [SCIM](https://scim.cloud/) (System for Cross-domain Identity Management) standard protocol, helping enterprise administrators efficiently manage large-scale organizational personnel.
+
+- Supports standard SCIM 2.0 protocol
+- Automatically syncs user information and organizational structure
+- Supports integration with multiple mainstream identity providers
+- Online automatic updates for member changes
+
+## Pre-configuration Preparation
+
+Before enabling the automatic synchronization mechanism, you need to prepare:
+
+1. Obtain system administrator permissions
+2. Understand the type of identity provider your organization is using and have backend management permissions
+
+## Configuration Steps
+
+### Step One: Obtain SCIM Configuration Information
+
+<Steps>
+  <Step title="Access Sync Settings Page">
+    Navigate to the enterprise management backend, click on the left menu bar **Members** → **Sync Settings**.
+
+    <img src="https://assets-docs.dify.ai/2025/05/764e71213cadcaa45c62c56a2dc38cbf.png" alt="Sync Settings Interface" />
+  </Step>
+
+  <Step title="Obtain SCIM Endpoint URL">
+    Copy the `SCIM 2.0 Base URL` displayed on the page. This URL will be used for identity provider configuration.
+  </Step>
+
+  <Step title="Generate Authentication Token">
+    - Click the "Get Token" button
+    - The system will generate an OAuth Bearer Token
+    
+    <Warning>
+      The authentication token is displayed only once. Please copy and save it securely immediately. If lost, you will need to regenerate a new token.
+    </Warning>
+  </Step>
+
+  <Step title="Save Configuration Information">
+    Properly save the following information for subsequent configuration:
+    - SCIM Base URL
+    - OAuth Bearer Token
+  </Step>
+</Steps>
+
+### Step Two: Configure Identity Provider
+
+Choose the appropriate configuration guide based on the identity provider your organization uses:
+
+<CardGroup cols={2}>
+  <Card title="Azure Active Directory" icon="microsoft" href="./azure">
+    Configure member sync between Azure AD and Dify
+  </Card>
+  <Card title="Okta" icon="key" href="./okta">
+    Configure member sync between Okta and Dify
+  </Card>
+</CardGroup>
+
+## Attribute Mapping Relationships
+
+Attribute mapping between Dify functionality and SCIM fields:
+
+| SCIM Resource Type | Dify Function | Supported Operations | Additional Notes |
+|----------------|------------------|-------------------------------|--------------------------------------------------------------|
+| User           | Member (user email, username, user status) | Create / Update / Deactivate (deactivation does not actually delete user data, only changes member status in Dify Enterprise from `Active` to `Disabled`, user data is retained) |
+| Group          | Group (name, members)        | Create / Update group name / Update members / Delete | Delete operation permanently removes the group and its member relationships |
+
+## Important Notes
+
+<Info>
+  After enabling SCIM synchronization, to ensure data consistency, the identity provider (IdP) will become the sole authoritative source for user and group management. For detailed information about Admin APIs usage limitations, please refer to the [Enterprise APIs](en-us/administrator-guide/admin-apis) documentation.
+</Info>
+
+### Functional Limitations
+
+**When SCIM is enabled:**
+- User and group management must be completed through the identity provider
+- Admin APIs support read-only operations only
+- Member self-registration is not supported
+
+**When SCIM is disabled:**
+- Full Admin APIs management permissions are restored
+- All user management operations are supported
+
+### Emergency Operations Guide
+
+If you need to make temporary modifications through Admin APIs:
+1. Temporarily disable SCIM
+2. Perform necessary API operations
+3. Re-enable SCIM and verify sync status
+
+<Warning>
+  This operation may cause data synchronization conflicts. Please execute with caution.
+</Warning>
+
+For more technical details about the interaction between SCIM and Admin APIs, please consult the [Enterprise APIs](/en-us/administrator-guide/admin-apis) documentation.

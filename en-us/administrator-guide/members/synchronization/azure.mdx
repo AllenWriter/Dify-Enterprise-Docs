@@ -1,0 +1,103 @@
+---
+title: Configuring SCIM with Azure
+description: Automatically sync organization members through SCIM standard. Version ≥ v2.7.0
+---
+
+This document demonstrates how to establish a connection with the SCIM service in Dify Enterprise Edition using Azure Entra ID as an example, enabling automatic member synchronization.
+
+## Create Application and Assign Users and Groups
+
+### 1. Create a New Application in Azure
+
+Access the Azure admin portal page, navigate to the Applications page, and click New application.
+
+![](https://assets-docs.dify.ai/2024/11/4f52715ff661e6c9430af09b4b2a4736.png)
+
+Select **Create your own application**, enter an application name such as "dify", select **Integrate any other application you don't find in the gallery (Non-gallery)**, and click Create.
+
+![](https://assets-docs.dify.ai/2024/11/b823ecfaa94d18ba0ac794cc0290dc7f.png)
+
+### 2. Add Application Members
+
+Next, you need to add members to this application. Select **Users and groups** from the left side of the application, and click **Add user/group**.
+
+![](https://assets-docs.dify.ai/2024/11/ed3c6f5de21c75e2261bf05d055ffb9e.png)
+
+### 3. Configure Automatic Synchronization
+
+1. In the application's left navigation menu, select **Provision → Get started → Connect your application**.
+
+![](https://assets-docs.dify.ai/2025/05/f890065efeb5390dcb43e7e7d1c1f5b8.png)
+
+2. Under Admin credentials, enter the following details:
+
+  - Tenant URL: SCIM endpoint URL
+  - Secret token: SCIM authentication token
+
+  > Please refer to [Sync Members](../sync-team-members) for the above information.
+
+  ![](https://assets-docs.dify.ai/2025/05/03f1e586bc428538d80b6f5316a293df.png)
+
+4. Click "Test Connection" to verify the credentials.
+
+5. If the connection test is successful, click "Save".
+
+### 4. Configure Attribute Mapping
+
+1. On the provisioning page, click "Mappings", and you will see two default mapping values:
+
+  - `Provision Microsoft Entra ID Users` - for user synchronization
+  - `Provision Microsoft Entra ID Groups` - for group synchronization
+
+2. Click on the mapping entries and make the following modifications:
+
+- **Provision Microsoft Entra ID Users**
+
+Keep only the following parameters:
+
+| customappsso Attribute | Microsoft Entra ID Attribute |
+|------------------|------------------------|
+| userName | userPrincipalName |
+| active | Switch([IsSoftDeleted], , "False", "True", "True", "False") |
+| displayName | displayName |
+
+- **Provision Microsoft Entra ID Groups**
+
+Keep only the following parameters:
+
+| customappsso Attribute | Microsoft Entra ID Attribute |
+|------------------|------------------------|
+| displayName | displayName |
+| members | members |
+
+### 5. Start and Manage Configuration
+
+1. Return to the main **Provisioning** page
+
+2. Under **Settings**:
+  - Set **Scope** to determine which users will be synchronized:
+    - "Sync only assigned users and groups" (recommended for smaller member lists)
+    - "Sync all users and groups" (for organization-wide deployment)
+
+  ![](https://assets-docs.dify.ai/2025/05/489e8b8f4091d53ab699ec33199d57a4.png)
+
+3. Click **Save** to apply settings
+4. Click **Start provisioning** to begin the synchronization process
+
+<Note>
+  Initial synchronization may take anywhere from 20 minutes to several hours, depending on the number of users in your directory.
+</Note>
+
+### 6. Automatically Sync User Groups
+
+Create a new group in Azure Entra ID. Go to the application, click add **Users and groups**, select the user groups you wish to include in the automatic synchronization scope, and complete the addition.
+
+![](https://assets-docs.dify.ai/2025/05/af19820dfd75bd6bc00c602009574a77.png)
+
+## Enable SCIM Automatic Synchronization
+
+After configuring the identity provider, go to the admin dashboard, click **Members** → **Right menu button** → **Automatic synchronization** → **Enable** button.
+
+![](https://assets-docs.dify.ai/2025/05/08d3b05fc5dfaa1eb0a6b8bd523ea5f9.png)
+
+> After enabling, automatic synchronization is not real-time. The synchronization time depends on the application's automatic execution date within the identity provider. You can check the automatic synchronization history in the identity provider.

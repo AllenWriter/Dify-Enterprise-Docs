@@ -106,7 +106,20 @@
                 "group": "Administrator Guide",
                 "pages": [
                   "en-us/administrator-guide/workspace-management",
-                  "en-us/administrator-guide/members-management",
+                  {
+                    "group": "Members Management",
+                    "pages": [
+                      "en-us/administrator-guide/members-management",
+                      {
+                        "group": "Members Synchronization",
+                        "pages": [
+                          "en-us/administrator-guide/members/synchronization/sync-team-members",
+                          "en-us/administrator-guide/members/synchronization/azure",
+                          "en-us/administrator-guide/members/synchronization/okta"
+                        ]
+                      }
+                    ]
+                  },
                   {
                     "group": "Identity Authentication",
                     "pages": [
@@ -595,7 +608,20 @@
                 "group": "管理人ガイド",
                 "pages": [
                   "ja-jp/administrator-guide/workspace-management",
-                  "ja-jp/administrator-guide/members-management",
+                  {
+                    "group": "メンバー管理",
+                    "pages": [
+                      "ja-jp/administrator-guide/members-management",
+                      {
+                        "group": "メンバーの同期",
+                        "pages": [
+                          "ja-jp/administrator-guide/members/synchronization/sync-team-members",
+                          "ja-jp/administrator-guide/members/synchronization/azure",
+                          "ja-jp/administrator-guide/members/synchronization/okta"
+                        ]
+                      }
+                    ]
+                  },
                   {
                     "group": "認証",
                     "pages": [

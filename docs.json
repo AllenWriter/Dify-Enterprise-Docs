@@ -352,16 +352,14 @@
                 "group": "管理员手册",
                 "pages": [
                   "zh-cn/administrator-guide/workspace-management",
-                  "zh-cn/administrator-guide/members-management",
                   {
                     "group": "成员管理",
                     "pages": [
-                      "zh-cn/administrator-guide/members/team-members-management",
-                      "zh-cn/administrator-guide/members/members-management",
+                      "zh-cn/administrator-guide/members-management",
                       {
                         "group": "自动同步成员",
                         "pages": [
-                          "zh-cn/administrator-guide/members/sync-team-members",
+                          "zh-cn/administrator-guide/members/synchronization/sync-team-members",
                           "zh-cn/administrator-guide/members/synchronization/azure",
                           "zh-cn/administrator-guide/members/synchronization/okta"
                         ]

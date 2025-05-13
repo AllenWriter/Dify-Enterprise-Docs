@@ -2,32 +2,34 @@
 title: 成员管理
 ---
 
-系统管理员可以在 Members 页查看并管理当前企业内的所有成员，包括成员的所在组别、在各个 Workspace 的权限角色、成员状态、查看成员的创建日期和上次活跃日期。
+系统管理员可以在 Members 页查看并管理当前企业内的所有成员，包括成员的所在组别、成员在各个 Workspace 内的权限角色、成员状态、查看成员的创建日期和上次活跃日期。
 
 ## 成员管理
 
-### 添加新成员至团队
+### 手动管理
 
-如果你的团队未开启 SSO 认证，则可以使用用户名称和密码进行登录。
-点击右上角的蓝色 Add 按钮，填写用户名称和邮箱。首次添加成员时，将展示默认登录密码。如需为团队添加管理员，请参考[系统管理员设置](/administrator-guide/system-settings#)。
+#### 添加新成员至团队
+
+如果你的团队未开启 SSO 认证，则可以使用用户名称和密码进行登录。点击右上角 Add 按钮，填写用户名称和邮箱。首次添加成员时，将展示默认登录密码。如需为团队添加管理员，请参考[系统管理员设置](/administrator-guide/system-settings#)。
+
 ![](/zh-cn/images/members-management-6.png)
 
-### 添加新成员至工作区
+#### 添加新成员至工作区
 
 如果你想要为某个工作区添加新成员，请参考[工作区管理](/administrator-guide/workspace-management)。
 
-### 禁用成员
+#### 禁用成员
 
 相较于直接删除成员，禁用成员能够在保留数据的同时，拒绝用户的访问请求。点击成员右侧的菜单按钮，将 Status 切换为 banned 状态即可禁用成员。
 ![](/zh-cn/images/members-management-7.png)
 
-### 重置成员密码
+#### 重置成员密码
 
 如果某位成员遗失了密码，需要系统管理员手动发送重置密码邮件。点击成员右侧的菜单按钮，轻点 Reset Password。
 
 ![](/zh-cn/images/members-management-8.png)
 
-### 删除成员
+#### 删除成员
 
 ⚠️ 成员名下的所有应用和使用数据都会被删除，请谨慎处理。
 点击某位成员右侧的菜单按钮，轻点 "Delete" 选项即可删除成员。
@@ -36,11 +38,20 @@ title: 成员管理
 
 工作区的成员一经添加后将无法被移除。点击 Members 页的 Delete 将会被视为在团队内移除成员。
 
-### 搜索成员
+#### 搜索成员
 
 管理员可以通过工作区 ID 和用户邮箱在搜索框内查询用户，也可以切换用户状态进行查询。
 
 ![](/zh-cn/images/members-management-10.png)
+
+### 自动管理
+
+<Info>
+  自动同步成员功能要求 Dify 企业版版本号 ≥v2.7.0。
+</Info>
+
+Dify 企业版支持通过 [SCIM](https://scim.cloud/)（System for Cross-domain Identity Management）标准自动同步现有的部门/人员结构，提升管理员对于大规模组织人员的管理效率。
+
 
 ## 成员权限管理
 
@@ -69,7 +80,7 @@ title: 成员管理
 
 ### Workspace 级权限
 
-Workspace 包含 Owner、Admin、Normal 三种权限组。
+Workspace 包含 Owner、Admin、Normal、Editor、Knowledge Admin 五种权限组。
 
 ![](/zh-cn/images/members-management-5.png)
 
@@ -101,20 +112,33 @@ Workspace 的普通成员。每个工作区可以有多位普通成员，仅能�
 
 在 Dify 企业版内，**分组管理** 是控制成员访问企业内不同资源的机制。通过为成员划分不同的分组，可以有效控制不同的用户访问不同的 Web App，避免资源误用或潜在的数据泄露风险，保障企业信息安全。
 
-### 创建分组
+### 手动管理
+
+#### 创建分组
 
 点击 **成员** 页右上角的 **分组管理**，输入分组名称完成创建；创建或分组名称时不允许重复。
 
 ![](https://assets-docs.dify.ai/2025/04/cb14986e1d2346aff6c5e321ced7cff7.png)
 
-### 编辑分组
+#### 编辑分组
 
 分组支持重命名和拖拽重排序。点击分组名称右侧的 **编辑** 按钮重命名，名称不允许和现有分组重复。
 
-### 分配用户
+#### 分配用户
 
 点击成员右侧 **菜单** 按钮 → **编辑分组**，选择需要加入的组别。每位用户支持同时加入多个不同的组别。
 
 ![](https://assets-docs.dify.ai/2025/04/2e20d0adc2cbeb1267b6b1639c1ec677.png)
 
 为用户添加分组后，请参考 [发布应用：应用访问权限管理](/zh-cn/user-guide/application-publishing/permission-management) 了解如何控制 Web App 的访问权限。
+
+### 自动管理
+
+<Info>
+  自动管理部门功能要求 Dify 企业版版本号 ≥v2.6.0。
+</Info>
+
+通过 SCIM 标准，Dify 企业版支持自动同步 IDP 内已有的用户成员分组。详细配置说明请参考以下文档：
+
+- [Azure](./azure#group-sync)
+- [Okta](./okta#group-sync)

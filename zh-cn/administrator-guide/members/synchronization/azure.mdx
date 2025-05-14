@@ -5,8 +5,6 @@ description: 通过 SCIM 标准自动同步组织成员。版本号 ≥ v2.7.0
 
 本篇文档将以 Azure Entra ID 为例，演示如何与 Dify 企业版内的 SCIM 服务建立连接，启用成员自动同步机制。
 
-## 创建应用程序并分配用户和组
-
 ### 1. 在 Azure 中创建新的应用程序
 
 访问 Azure 管理员后台页，导航到 Applications 页，轻点 New application。
@@ -47,9 +45,9 @@ description: 通过 SCIM 标准自动同步组织成员。版本号 ≥ v2.7.0
 
 2. 对映射条目进行如下修改：
 
-  - **Provision Microsoft Entra ID Users**
+**Provision Microsoft Entra ID Users**
 
-  仅保留以下参数：
+仅保留以下参数：
 
 | customappsso 属性 | Microsoft Entra ID 属性 |
 |------------------|------------------------|
@@ -57,9 +55,9 @@ description: 通过 SCIM 标准自动同步组织成员。版本号 ≥ v2.7.0
 | active | Switch([IsSoftDeleted], , "False", "True", "True", "False") |
 | displayName | displayName |
 
-  - **Provision Microsoft Entra ID Groups**
+**Provision Microsoft Entra ID Groups**
 
-  仅保留以下参数：
+仅保留以下参数：
 
 | customappsso 属性 | Microsoft Entra ID 属性 |
 |------------------|------------------------|

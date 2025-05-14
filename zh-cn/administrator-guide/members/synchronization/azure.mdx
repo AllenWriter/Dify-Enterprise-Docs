@@ -17,13 +17,7 @@ description: 通过 SCIM 标准自动同步组织成员。版本号 ≥ v2.7.0
 
 ![](https://assets-docs.dify.ai/2024/11/b823ecfaa94d18ba0ac794cc0290dc7f.png)
 
-### 2. 添加应用成员
-
-接下来需要将成员添加至该应用程序内。选择应用程序左侧的 **Users and groups**，点击 **Add user/group**。
-
-![](https://assets-docs.dify.ai/2024/11/ed3c6f5de21c75e2261bf05d055ffb9e.png)
-
-### 3. 配置自动同步机制
+### 2. 配置自动同步机制
 
 1. 在应用程序的左侧导航菜单中，选择 **Provision → Get started → Connect your application**。
 
@@ -38,22 +32,24 @@ description: 通过 SCIM 标准自动同步组织成员。版本号 ≥ v2.7.0
 
   ![](https://assets-docs.dify.ai/2025/05/03f1e586bc428538d80b6f5316a293df.png)
 
-4. 点击 **Test Connection** 验证凭据。
+3. 点击 **Test Connection** 验证凭据。
 
-5. 如果连接测试成功，点击"保存"。
+> 测试连接前，请确保已在企业版管理后台内开启自动同步，详细说明请参考[启用自动同步](/zh-cn/administrator-guide/members/synchronization/sync-team-members#3-启用自动同步)。
 
-### 4. 配置属性映射
+4. 如果连接测试成功，点击"保存"。
 
-1. 在预配页面，点击 "Mappings"，你将看到两个默认映射值：
+### 3. 配置属性映射
+
+1. 在 Provision 页，点击 "Mappings"，你将看到两个默认映射值：
 
   - `Provision Microsoft Entra ID Users` - 用于用户同步
   - `Provision Microsoft Entra ID Groups` - 用于组同步
 
-2. 点击映射条目，进行如下修改：
+2. 对映射条目进行如下修改：
 
   - **Provision Microsoft Entra ID Users**
 
-仅保留以下参数：
+  仅保留以下参数：
 
 | customappsso 属性 | Microsoft Entra ID 属性 |
 |------------------|------------------------|
@@ -63,18 +59,25 @@ description: 通过 SCIM 标准自动同步组织成员。版本号 ≥ v2.7.0
 
   - **Provision Microsoft Entra ID Groups**
 
-仅保留以下参数：
+  仅保留以下参数：
 
 | customappsso 属性 | Microsoft Entra ID 属性 |
 |------------------|------------------------|
 | displayName | displayName |
 | members | members |
 
-### 5. 启动和管理配置
+### 4. 添加应用成员
 
-1. 返回 **Provisioning** 页。
+将 Azure 组织内的成员与分组添加该应用程序内。选择应用程序左侧的 **Users and groups**，点击 **Add user/group**。
+
+![](https://assets-docs.dify.ai/2024/11/ed3c6f5de21c75e2261bf05d055ffb9e.png)
+
+### 5. 设置自动同步范围
+
+1. 前往应用的 **Provisioning** 页。
 
 2. 在 **Settings** 页，调整 **Scope** 以确定将同步哪些用户：
+
     - "仅同步已分配的用户和组"（推荐用于更小范围的成员列表）
     - "同步所有用户和组"（用于全组织部署）
 
@@ -84,19 +87,5 @@ description: 通过 SCIM 标准自动同步组织成员。版本号 ≥ v2.7.0
 4. 点击**开始配置**开始同步过程。
 
 <Note>
-  初始同步可能需要 20 分钟到几小时不等，取决于您目录中的用户数量。
+  开启后，自动同步并非实时进行。初始同步可能需要 20 分钟到几小时不等，取决于应用目录中的用户数量。同步时间取决于身份供应商内应用的自动执行日期，你可以前往身份供应商查看自动同步历史记录。
 </Note>
-
-### 6. 自动同步用户组
-
-在 Azure Entra ID 内新建分组。前往应用程序，点击添加 **用户和组**，选择希望被纳入自动同步范围的用户组，完成添加。
-
-![](https://assets-docs.dify.ai/2025/05/af19820dfd75bd6bc00c602009574a77.png)
-
-## 启用 SCIM 自动同步机制
-
-配置完身份供应商后，前往管理后台，点击**成员** → **右侧菜单按钮** → **自动同步** → **启用**按钮。
-
-![](https://assets-docs.dify.ai/2025/05/08d3b05fc5dfaa1eb0a6b8bd523ea5f9.png)
-
-> 开启后，自动同步并非实时进行。同步时间取决于身份供应商内应用的自动执行日期，你可以前往身份供应商查看自动同步历史记录。

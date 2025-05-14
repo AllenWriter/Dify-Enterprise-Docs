@@ -51,7 +51,7 @@ From the application's left menu, select **Users and groups**, then click **Add 
 
 2. Click each mapping and keep only these attributes:
 
-**For Users:**
+  - **Provision Microsoft Entra ID Users**
 
 | customappsso Attribute | Microsoft Entra ID Attribute |
 |------------------|------------------------|
@@ -59,7 +59,7 @@ From the application's left menu, select **Users and groups**, then click **Add 
 | active | Switch([IsSoftDeleted], , "False", "True", "True", "False") |
 | displayName | displayName |
 
-**For Groups:**
+  - **Provision Microsoft Entra ID Groups**
 
 | customappsso Attribute | Microsoft Entra ID Attribute |
 |------------------|------------------------|

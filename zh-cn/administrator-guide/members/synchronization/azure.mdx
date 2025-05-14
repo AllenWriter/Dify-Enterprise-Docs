@@ -38,20 +38,20 @@ description: 通过 SCIM 标准自动同步组织成员。版本号 ≥ v2.7.0
 
   ![](https://assets-docs.dify.ai/2025/05/03f1e586bc428538d80b6f5316a293df.png)
 
-4. 点击"测试连接"验证凭据。
+4. 点击 **Test Connection** 验证凭据。
 
 5. 如果连接测试成功，点击"保存"。
 
 ### 4. 配置属性映射
 
-1. 在预配页面，点击"映射"，你将看到两个默认映射值：
+1. 在预配页面，点击 "Mappings"，你将看到两个默认映射值：
 
   - `Provision Microsoft Entra ID Users` - 用于用户同步
   - `Provision Microsoft Entra ID Groups` - 用于组同步
 
 2. 点击映射条目，进行如下修改：
 
-- **Provision Microsoft Entra ID Users**
+  - **Provision Microsoft Entra ID Users**
 
 仅保留以下参数：
 
@@ -61,7 +61,7 @@ description: 通过 SCIM 标准自动同步组织成员。版本号 ≥ v2.7.0
 | active | Switch([IsSoftDeleted], , "False", "True", "True", "False") |
 | displayName | displayName |
 
-- **Provision Microsoft Entra ID Groups**
+  - **Provision Microsoft Entra ID Groups**
 
 仅保留以下参数：
 
@@ -72,17 +72,16 @@ description: 通过 SCIM 标准自动同步组织成员。版本号 ≥ v2.7.0
 
 ### 5. 启动和管理配置
 
-1. 返回主**预配**页
+1. 返回 **Provisioning** 页。
 
-2. 在**设置**下：
-  - 设置**范围**以确定将同步哪些用户：
+2. 在 **Settings** 页，调整 **Scope** 以确定将同步哪些用户：
     - "仅同步已分配的用户和组"（推荐用于更小范围的成员列表）
     - "同步所有用户和组"（用于全组织部署）
 
   ![](https://assets-docs.dify.ai/2025/05/489e8b8f4091d53ab699ec33199d57a4.png)
 
-3. 点击**保存**应用设置
-4. 点击**开始配置**开始同步过程
+3. 点击**保存**应用设置。
+4. 点击**开始配置**开始同步过程。
 
 <Note>
   初始同步可能需要 20 分钟到几小时不等，取决于您目录中的用户数量。

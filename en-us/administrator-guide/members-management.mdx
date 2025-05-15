@@ -1,146 +1,159 @@
 ---
-title: Members Management
+title: Member Management
 ---
 
-Administrators can view and manage all members within the enterprise in the **Members** page, including members' permission roles in various Workspaces, member status, and view members' creation date and last active date.
+System administrators can view and manage all organization members from the Members page, including their groups, permissions in each workspace, member status, creation date, and last active date.
 
-![](/images/members-management-1.png)
+## Managing Members
 
-## Members Management
+### Manual Management
 
-### Adding New Members to the Team
+#### Add New Members to Your Team
 
-If your team hasn't enabled SSO authentication, you can log in using a username and password.
+If your team doesn't use SSO authentication, members can log in with username and password. Click the **Add** button in the top right corner, then enter the username and email. The system displays the default login password when adding a member for the first time. To add administrators to your team, see [System Administrator Settings](/administrator-guide/system-settings#).
 
-1. Click the blue Add button in the upper right corner
-2. Fill in the username and email
-3. When adding a member for the first time, the default login password will be displayed only once
+![](/zh-cn/images/members-management-6.png)
 
-To add an administrator to the team, please refer to [System Settings](/en-us/administrator-guide/system-settings).
+#### Add New Members to Workspaces
 
-![](/images/members-management-6.png)
+To add members to a specific workspace, check out [Workspace Management](/administrator-guide/workspace-management).
 
-### Adding New Members to a Workspace
+#### Disable Members
 
-If you want to add new members to a specific workspace, please refer to Workspace Management Docs.
+Disabling members is better than deleting them—it preserves their data while denying access. Click the menu button next to a member and switch their **Status** to "banned" to disable them.
 
-### Disabling Members
+![](/zh-cn/images/members-management-7.png)
 
-Compared to directly deleting members, disabling members allows you to deny user access requests while retaining their data. 
+#### Reset Member Passwords
 
-To disable a member:
-1. Click the menu button on the right side of the member's entry
-2. Switch their Status to "banned"
+When members forget their passwords, system administrators need to send password reset emails manually. Click the menu button next to a member and select **Reset Password**.
 
-![](/images/members-management-7.png)
+![](/zh-cn/images/members-management-8.png)
 
-### Resetting Member Passwords
+#### Delete Members
 
-If a member has lost their password, the system administrator needs to manually send a password reset email. 
+⚠️ Warning: Deleting a member removes all their applications and usage data. Be careful with this action.
 
-1. Click the menu button on the right side of the member's entry
-2. Tap "Reset Password"
+Click the menu button next to a member and select **Delete** to remove them.
 
-![](/images/members-management-8.png)
+![](/zh-cn/images/members-management-9.png)
 
-### Deleting Members
+Note: Once added to a workspace, members can't be removed from it. Clicking Delete on the Members page removes them from the entire team.
 
-⚠️ **All applications and usage data under the member's name will be deleted. Please handle with caution.**
+#### Search for Members
 
-To delete a member:
-1. Click the menu button on the right side of a member
-2. Tap the "Delete" option
+Administrators can search for users by workspace ID or email address, and filter by user status.
 
-![](/images/members-management-9.png)
+![](/zh-cn/images/members-management-10.png)
 
-**Note**: Once members are added to a workspace, they cannot be removed. Clicking Delete on the Members page will be considered as removing the member from the team.
+### Automatic Management
 
-### Searching for Members
+<Info>
+  Automatic member sync requires Dify Enterprise Edition version ≥v2.7.0.
+</Info>
 
-Administrators can query users in the search box using workspace ID and user email, and you can also switch user status for queries.
+Dify Enterprise Edition supports automatic synchronization of your existing department and personnel structure through the [SCIM](https://scim.cloud/) (System for Cross-domain Identity Management) standard, making it easier to manage large-scale organizations.
 
-![](/images/members-management-10.png)
+<Card title="Automatic Member Sync" icon="user" href="/en-us/administrator-guide/members/synchronization/sync-team-members">
+  Automatically sync organization members through the SCIM standard.
+</Card>
 
-## Member Permission Management
+## Permission Management
 
-Each member has permissions at both the team level and Workspace level. System administrators can add team members and invite new system administrators, as well as assign a member's permissions to a Workspace.
+Each member has permissions at both the team level and workspace level. Team administrators can add regular members, invite new system administrators, and assign workspace permissions to members.
 
 ![](https://assets-docs.dify.ai/2025/04/60a427910a4f698d4b62e4aa0098ff55.png)
 
-### Team-level Permissions
+### Team-Level Permissions
 
-1. **Regular User**
-   Users added on the Members page have regular user permissions by default.
-   ![](/images/members-management-3.png)
-   Members in this user group can perform the following operations:
-     * Log in and use the Dify enterprise
+- **Team Members**
 
-2. **System Administrator**
-   Users added on the Settings page have system administrator permissions by default. For more operations guides for system administrators, please refer to [System Settings](/en-us/administrator-guide/system-settings). 
-   ![](/images/members-management-4.png)
-   Members in this user group can perform the following operations:
+Users added from the Members page have regular member permissions by default.
 
-     * Log in to the enterprise dashboard
-     * Add / delete / disable team members
-     * Add members to Workspaces and assign permissions
+![](/zh-cn/images/members-management-3.png)
 
-### Workspace-level Permissions
+These members can:
+- Log in and use Dify Enterprise Edition
 
-Workspaces include three permission groups: Owner, Admin, and Normal.
+- **System Administrators**
 
-![](/images/members-management-5.png)
+Users added from the Settings page have system administrator permissions by default. For more about system administrator operations, see [System Settings](/administrator-guide/system-settings).
 
-1. **Owner**
-   - The creator of the Workspace. 
-   - Each workspace has only one Owner.
-   - Has the permission to create and edit all applications within the workspace.
-   - Can enter the settings page to add model providers, create API extensions, and other operations.
+![](/zh-cn/images/members-management-4.png)
 
-2. **Admin**
-   - Workspace administrators. 
-   - Each workspace can have multiple administrators.
-   - Has the permission to create and edit all applications within the workspace.
-   - Can enter the settings page to add model providers, create API extensions, and other operations.
+These members can:
+- Access the enterprise management dashboard
+- Add, delete, or disable team members
+- Add members to workspaces and assign permissions
 
-3. **Normal**
-   - Normal members of the Workspace. 
-   - Each workspace can have multiple regular members.
-   - Can only use applications within the workspace but cannot edit or modify them.
-   - Cannot access the settings page to add model providers, create API extensions, or perform similar operations.
+### Workspace-Level Permissions
 
-4. **Workspace Editor** 
-   - Can create and edit applications in the Workspace
-   - Cannot access the settings page
-   - Cannot add model providers or manage Workspace members
+Workspaces have five permission groups: Owner, Admin, Editor, Normal, and Knowledge Admin.
 
-5. **Knowledge Admin**
-   - Can only create and edit knowledge bases within the Workspace
-   - Cannot create, edit, or use applications
-   - Cannot access the settings page
-   - Cannot add model providers or create API extensions
+![](/zh-cn/images/members-management-5.png)
 
-## Member Group Management
+- **Owner**
+
+The workspace creator. Each workspace has only one Owner who can create and edit all applications in the workspace. They can access settings to add model providers, create API extensions, and more.
+
+- **Admin**
+
+Workspace administrators. Each workspace can have multiple admins who can create and edit all applications in the workspace. They can access settings to add model providers, create API extensions, and more.
+
+- **Editor**
+
+Members who can create and edit applications in the workspace. They cannot access settings to add model providers or manage workspace members.
+
+- **Normal**
+
+Regular workspace members. Each workspace can have multiple normal members who can only use applications within the workspace, not edit or modify them. They cannot access settings to add model providers or create API extensions.
+
+- **Knowledge Admin**
+
+Members who can only create and edit knowledge bases within the workspace. They cannot create, edit, or use applications. They cannot access settings to add model providers or create API extensions.
+
+## Group Management
 
 <Info>
-  Requires Dify Enterprise Edition version ≥v2.6.0.
+  This feature requires Dify Enterprise Edition version ≥v2.6.0.
 </Info>
 
-In Dify Enterprise Edition, **Group Management** is a mechanism for controlling member access to different resources within the enterprise. By assigning members to different groups, you can effectively control which users can access which Web Apps, preventing resource misuse or potential data leakage risks, and ensuring enterprise information security.
+In Dify Enterprise Edition, **group management** controls member access to different resources within your organization. By organizing members into different groups, you can effectively control which users access which Web Apps, preventing resource misuse or potential data leaks while ensuring information security.
 
-### Creating Groups
+### Manual Sync Groups
 
-Click **Group Management** in the upper right corner of the **Members** page, enter the group name to complete creation; group names must be unique and cannot be duplicated.
+#### Create Groups
+
+Click **Group Management** in the top right corner of the Members page, enter a group name to create it. Group names must be unique.
 
 ![](https://assets-docs.dify.ai/2025/04/cb14986e1d2346aff6c5e321ced7cff7.png)
 
-### Editing Groups
+#### Edit Groups
 
-Groups support renaming and drag-and-drop reordering. Click the **Edit** button to the right of the group name to rename it; the new name must not duplicate any existing group.
+Groups support renaming and reordering by dragging. Click the **Edit** button next to a group name to rename it. Names cannot duplicate existing groups.
 
-### Assigning Users
+#### Assign Users to Groups
 
-Click the **Menu** button to the right of a member → **Edit Groups**, and select the groups to add the user to. Each user can be added to multiple different groups simultaneously.
+Click the **menu** button next to a member → **Edit Groups**, then select the groups they should join. Each user can belong to multiple groups.
 
 ![](https://assets-docs.dify.ai/2025/04/2e20d0adc2cbeb1267b6b1639c1ec677.png)
 
-After adding users to groups, please refer to [Application Publishing: Application Access Permission Management](/en-us/user-guide/application-publishing/permission-management) to learn how to control Web App access permissions.
+After assigning users to groups, see [Application Publishing: Access Permission Management](/zh-cn/user-guide/application-publishing/permission-management) to learn how to control Web App access permissions.
+
+### Automatic Sync Group
+
+<Info>
+  Automatic department synchronization requires Dify Enterprise Edition version ≥v2.6.0.
+</Info>
+
+Through the SCIM standard, Dify Enterprise Edition supports automatic synchronization of existing user groups from your IdP. For detailed configuration instructions, see:
+
+<CardGroup cols={2}>
+  <Card title="Azure" icon="microsoft" href="/zh-cn/administrator-guide/members/azure#6-sync-user-groups">
+    Automatically sync user groups through Azure.
+  </Card>
+
+  <Card title="Okta" icon="key" href="/zh-cn/administrator-guide/members/okta#5-assign-users-and-groups">
+    Automatically sync user groups through Okta.
+  </Card>
+</CardGroup>

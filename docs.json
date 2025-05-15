@@ -3,14 +3,14 @@
   "theme": "mint",
   "name": "Dify Enterprise Docs",
   "colors": {
-    "primary": "#346DDB",
+    "primary": "#0034FF",
     "light": "#688FE8",
-    "dark": "#346DDB"
+    "dark": "#0034FF"
   },
-  "favicon": "/dify-logo.png",
+  "favicon": "/logo/dify-logo.png",
   "logo": {
-    "light": "/logo/dify-logo.svg",
-    "dark": "/logo/dify-logo.svg"
+      "light": "https://assets-docs.dify.ai/2025/05/d05cfc6ebe48f725d171dc71c64a5d16.svg",
+      "dark": "https://assets-docs.dify.ai/2025/05/c51f1cda47c1d9a4a162d7736f6e4c53.svg"
   },
   "navigation": {
     "versions": [

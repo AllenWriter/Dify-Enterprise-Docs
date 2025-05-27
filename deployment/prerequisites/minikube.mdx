@@ -1,0 +1,75 @@
+---
+title: 'Minikube'
+version: '简体中文'
+---
+
+## 要求
+- Minikube
+  - 4 CPU 16 GB RAM
+- Helm 3.14+
+- Kubectl
+
+## 安装
+### 启动 minikube
+您可以执行以下命令来启动 minikube：
+```bash
+minikube start --driver=docker --cpus=4 --memory=16384
+```
+
+### 持久化配置
+
+您需要编辑 `values.yaml` 并设置持久化类型。有关更多信息，请参阅[持久化存储](/zh-cn/deployment/advanced-configuration/persistent-storage)。
+
+> <a href="https://assets-docs.dify.ai/2025/01/e3d53c6c7d979c77d0a1809670fbf211.yaml" download="values.yaml">点击此处</a>下载 `values.yaml` 文件。
+
+### 安装 Dify Enterprise
+Dify Enterprise 使用 Helm 进行部署。
+
+```bash
+helm repo add dify https://langgenius.github.io/dify-helm
+helm repo update
+
+helm upgrade -i dify -f values.yaml dify/dify
+```
+
+更多信息，请参考 [Dify Helm Chart](/zh-cn/deployment/advanced-configuration/dify-helm-chart)。
+
+### 设置 Ingress 控制器
+您可以执行以下命令在 minikube 集群上启用 Ingress 控制器：
+```bash
+minikube addons enable ingress
+```
+
+您应该使用 `minikube tunnel` 命令将服务暴露给主机。
+```bash
+minikube tunnel
+```
+
+### 访问 Dify Enterprise
+启用 Ingress 控制器后，您可以在本地 `/etc/hosts` 文件中设置域名。
+```
+127.0.0.1 console.dify.local
+127.0.0.1 app.dify.local
+127.0.0.1 api.dify.local
+127.0.0.1 upload.dify.local
+127.0.0.1 enterprise.dify.local
+```
+
+### 验证安装
+
+**警告**：您需要先初始化 Dify 控制台 `http://console.dify.local`，然后才能登录 Dify 企业版仪表板 `http://enterprise.dify.local`。
+
+#### 1. 初始化 Dify 控制台
+- 访问 `http://console.dify.local`。
+- 初始化电子邮件和密码。
+- 初始化完成后，您将被重定向到登录页面，并等待许可证激活。
+![](/images/license-inactive.png)
+
+#### 2. 初始化 Dify 企业版仪表板以激活许可证
+- 访问 `http://enterprise.dify.local`。
+- 使用默认的电子邮件和密码登录。您可以在登录后更改密码。
+    - 电子邮件： `dashboard@dify.ai`
+    - 密码： `difyai123456`
+- 许可证激活：登录后，将弹出对话框以激活许可证。
+
+  > 有关更多信息，请参阅 [许可证激活](/zh-cn/deployment/license-activation)。

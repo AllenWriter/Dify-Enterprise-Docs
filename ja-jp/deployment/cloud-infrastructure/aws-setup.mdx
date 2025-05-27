@@ -4,9 +4,7 @@ title: AWS CDK デプロイガイド
 
 このガイドでは、AWS CDK を使用して Difyエンタプライス版を AWS 上にデプロイする方法を説明します。
 
-<Frame caption="AWS CDK アーキテクチャ図">
-  <img src="/ja-jp/img/aws-cdk-1.png" alt="AWS CDK アーキテクチャ図" />
-</Frame>
+![](https://assets-docs.dify.ai/2025/05/5c2ae20c1857537c15e0cbf927b3d2b1.png)
 
 ### テストデプロイ
 
@@ -119,14 +117,14 @@ title: AWS CDK デプロイガイド
 7. ### AWS EKS アクセス権の更新：
 
    1. EKS クラスターのパネルに移動し、「アクセス」メニューを選択し、「管理アクセス」をクリックします。
-      <Frame caption="EKS クラスターのアクセス管理">
-        <img src="/ja-jp/img/aws-cdk-2.png" alt="Dify-Testing-DifyStackTest-EKS" />
-      </Frame>
+
+    ![](https://assets-docs.dify.ai/2025/05/03f0972d268e2d73445ad4de2ea19679.png)
+
    2. 「管理アクセス」ダイアログで、「EKS API と ConfigMap」を選択し、「変更を保存」をクリックします。
    3. IAM アクセスエントリパネルで、「アクセスエントリを作成」をクリックします。
-      <Frame caption="IAMアクセスエントリ">
-        <img src="/ja-jp/img/aws-cdk-3.png" alt="IAM access entries" />
-      </Frame>
+
+    ![](https://assets-docs.dify.ai/2025/05/2041171ef0a17527cd41f9deba602433.png)
+
    4. あなたの IAM ユーザーを追加し、以下の権限を割り当てます：
       - `AmazonEKSAdminPolicy`
       - `AmazonEKSAdminViewPolicy`

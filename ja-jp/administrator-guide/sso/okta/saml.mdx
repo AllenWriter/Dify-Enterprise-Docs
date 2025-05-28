@@ -8,9 +8,13 @@ version: '日本語'
 ## 1. Oktaで新しいアプリケーションを作成する
 
 1. Oktaの管理人バックエンドページにアクセスし、Applicationsページに移動してCreate App Integrationボタンをクリックします。
+
 ![](https://r2.xmsex.net/2024/10/eac08a1d4b7aa615d1108081b5e99731.png)
+
 2. 次に "SAML 2.0" アプリケーションタイプを選択します。
+
 ![](https://r2.xmsex.net/2024/10/409f64e068449c2f9dc9c3e471a36946.png)
+
 3. Nextをクリックすると、Configure SAMLページにナビゲートされます。この部分ではいくつかのパラメータを入力する必要があります。少し待って、新しいブラウザタブを開き、以下のガイドに従って必要な情報を取得し、入力を続けてください。
 
 ## 2. Oktaアプリケーションの設定
@@ -19,7 +23,7 @@ version: '日本語'
 
 1. Difyエンタプライス版のAuthenticationページをクリックし、**"+ New Identity Provider → New SAML Provider"**をクリックすると、ACS URLが表示されます。
 
-   ![](/ja-jp/img/f66303a3902d7fff58c76228f6485386.png)
+   ![](https://assets-docs.dify.ai/2025/05/b5f44f58a5737409eff4b6b674ab63ac.png)
 
    通常、以下の形式になります：
 
@@ -29,7 +33,7 @@ version: '日本語'
 
 2. これをConfigure SAMLページのSingle sign-on URLとAudience URI (SP Entity ID)フィールドに貼り付けます。
 
-![](/ja-jp/img/e6c1a1521306919ab325030adafb2d2b.png)
+   ![](https://assets-docs.dify.ai/2025/05/e6c1a1521306919ab325030adafb2d2b.png)
 
 3. URLを入力した後、以下の設定を完了します：
    * Name IDフォーマットをEmailAddressに設定
@@ -43,11 +47,11 @@ version: '日本語'
    * Sign-on URL
    * Signing certificate
 
-   ![](/ja-jp/img/edd232ff0c1e0a28243fdce755f8ea1b.png)
+   ![](https://assets-docs.dify.ai/2025/05/edd232ff0c1e0a28243fdce755f8ea1b.png)
 
 2. 次に "Assignments" ページで、SSOログインを許可するメンバーを割り当てます。
 
-   ![](/ja-jp/img/7ce55440e9bce1965712e167ab8e8567.png)
+   ![](https://assets-docs.dify.ai/2025/05/7ce55440e9bce1965712e167ab8e8567.png)
 
 3. 最後に Difyエンタプライス版の Authentication ページに戻り、**"+ New Identity Provider → New SAML Provider"** をクリックし、前述の情報を順に入力して設定を完了します。
 
@@ -59,7 +63,7 @@ version: '日本語'
    -----END CERTIFICATE-----
    ```
 
-   ![](/ja-jp/img/1548ea93cfa68352384295fef8b038e3.png)
+   ![](https://assets-docs.dify.ai/2025/05/1548ea93cfa68352384295fef8b038e3.png)
 
 ## 4. SSO 強制認証を有効にする
 

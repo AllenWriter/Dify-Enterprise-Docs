@@ -36,13 +36,13 @@ version: '日本語'
 
 ### はじめに
 
-Difyは、[チャットフロー](key-concept#chatflow-he-workflow) と [ワークフロー](key-concept#chatflow-he-workflow) タイプのアプリでファイルをアップロードし、LLMに処理させる[変数](variables)をサポートしています。アプリ開発者は、以下の2つの方法でアプリにファイルアップロード機能を追加できます：
+Difyは、[チャットフロー](/ja-jp/guides/workflow/concepts) と [ワークフロー](/ja-jp/guides/workflow/concepts) タイプのアプリでファイルをアップロードし、LLMに処理させる[変数](/ja-jp/guides/workflow/variables)をサポートしています。アプリ開発者は、以下の2つの方法でアプリにファイルアップロード機能を追加できます：
 
 * ワークフローアプリの場合
-  * [開始ノード](node/start)にファイル変数を追加する
+  * [開始ノード](/ja-jp/guides/workflow/nodes/start)にファイル変数を追加する
 * チャットフローアプリの場合
-  * [追加機能](additional-features)でファイルアップロードを有効にする（チャットフローのみ対応）
-  * [開始ノード](node/start)にファイル変数を追加する
+  * [追加機能](/en/guides/workflow/additional-features)でファイルアップロードを有効にする（チャットフローのみ対応）
+  * [開始ノード](/ja-jp/guides/workflow/nodes/start)にファイル変数を追加する
   * これらの機能は同時に設定可能で、お互いに独立して動作します。ファイルアップロード機能（アップロード方法や数量制限を含む）は、開始ノードのファイル変数に影響を与えません。例えば、開始ノードでのみファイル変数を作成したい場合は、ファイルアップロード機能を追加で有効にする必要はありません。
 
 これらの方法は、さまざまなシーンの要件を満たすために、アプリケーションに柔軟なファイルアップロードオプションを提供します。
@@ -93,26 +93,26 @@ Difyは、[チャットフロー](key-concept#chatflow-he-workflow) と [ワー�
     この機能を有効にすると、アプリユーザーは対話中にいつでもファイルをアップロードおよび更新できます。最大10個のファイルを同時にアップロードでき、各ファイルのサイズ上限は15MBです。
 
 <Frame caption="ファイルアップロード機能">
-  <img src="/ja-jp/user-guide/.gitbook/assets/image (379).png" alt="Chatflow应用中文件上传功能的设置界面" />
+  <img src="https://assets-docs.dify.ai/2024/11/a7154e8966d979dcba13eac0a172ef89.png" alt="Chatflow应用中文件上传功能的设置界面" />
 </Frame>
 
 機能を有効にしても、LLM（大規模言語モデル）がファイルを直接読み取ることはできません。ファイルをLLMが理解できるテキスト形式に変換するには、が必要です。
 
 * 音声ファイルについては、`gpt-4o-audio-preview`などのマルチモーダル入力に対応したモデルを使用することで、音声を直接処理できます。この場合、追加のエクストラクタは必要ありません。
-* 映像やその他のファイルタイプについては、対応するエクストラクタがまだ用意されておらず、外部ツールを統合するためには開発者が外部ツールにアクセスする必要があります。[外部ツール](../tools/advanced-tool-integration)を接続して処理する必要があります。
+* 映像やその他のファイルタイプについては、対応するエクストラクタがまだ用意されておらず、外部ツールを統合するためには開発者が外部ツールにアクセスする必要があります。[外部ツール](/ja-jp/guides/workflow/nodes/iteration)を接続して処理する必要があります。
 
-2. [テキスト抽出ツール](node/doc-extractor)ノードを追加し、入力変数で `sys.files` 変数を選択します。
+2. [テキスト抽出ツール](/ja-jp/guides/workflow/nodes/doc-extractor)ノードを追加し、入力変数で `sys.files` 変数を選択します。
 3. LLMノードを追加し、システムプロンプトでテキスト抽出ツールノードの出力変数を選択します。
 4. 最後に「直接応答」ノードを追加し、LLMノードの出力変数を入力します。
 
 <Frame caption="ファイルアップロードののワークフロー">
-  <img src="/ja-jp/user-guide/.gitbook/assets/image (380).png" alt="包含文件上传的工作流示意图" />
+  <img src="https://assets-docs.dify.ai/dify-enterprise-mintlify/jp/guides/workflow/527c6752596356c263262f5e24ef8941.png" alt="包含文件上传的工作流示意图" />
 </Frame>
 
 有効にすると、ユーザーは対話ボックスでファイルをアップロードして対話できます。ただし、この方法では、LLMアプリはファイルの内容を記憶する能力を持ちません。各対話ごとにファイルをアップロードする必要があります。
 
 <Frame caption="会話ボックスでのファイルのアップロード">
-  <img src="/ja-jp/user-guide/.gitbook/assets/image (381).png" alt="对话框中上传文件的界面" />
+  <img src="https://assets-docs.dify.ai/dify-enterprise-mintlify/jp/guides/workflow/6802747ef5de4772ce8d05f6c0a23130.png" alt="对话框中上传文件的界面" />
 </Frame>
 
 LLMが対話中にファイル内容を記憶する機能を追加したい場合は、方法2を参照してください。
@@ -121,7 +121,7 @@ LLMが対話中にファイル内容を記憶する機能を追加したい場�
 
 #### 1. 「開始」ノードにファイル変数を追加する
 
-アプリの[「開始」](node/start)ノードに、**「単一ファイル」**または **「ファイルリスト」** といったフィールドタイプの変数を追加します。
+アプリの[「開始」](/ja-jp/guides/workflow/nodes/start)ノードに、**「単一ファイル」**または **「ファイルリスト」** といったフィールドタイプの変数を追加します。
 
 *   **単一ファイル**
 
@@ -148,24 +148,24 @@ LLMが対話中にファイル内容を記憶する機能を追加したい場�
 
 #### 2. テキスト抽出ツールノードの追加
 
-ファイルをアップロードすると、そのファイルは「単一ファイル」変数に保存されます。しかし、LLMは変数内のファイルを直接読み込むことができないため、まず[**「テキスト抽出ツール」**](node/doc-extractor)ノードを追加する必要があります。
+ファイルをアップロードすると、そのファイルは「単一ファイル」変数に保存されます。しかし、LLMは変数内のファイルを直接読み込むことができないため、まず[**「テキスト抽出ツール」**](/ja-jp/guides/workflow/nodes/doc-extractor)ノードを追加する必要があります。
 
 「開始」ノード内のファイル変数を **「テキスト抽出ツール」** ノードの入力変数として使用します。
 
 <Frame caption="入力変数を追加する">
-  <img src="/images/assets/image-4.png" alt="入力変数を追加する" />
+  <img src="https://assets-docs.dify.ai/dify-enterprise-mintlify/jp/guides/workflow/b18af11da3f339c496193d9732906849.png" alt="入力変数を追加する" />
 </Frame>
 
 「テキスト抽出ツール」ノードの出力変数をLLMノードのシステムプロンプトに貼り付けます。
 
 <Frame caption="システムプロンプトの単語を貼り付けます">
-  <img src="/images/assets/image-5.png" alt="システムプロンプトの単語を貼り付けます" />
+  <img src="https://assets-docs.dify.ai/dify-enterprise-mintlify/jp/guides/workflow/8e6a3deaaa5eebeb66f9e1d844dc1ec6.png" alt="システムプロンプトの単語を貼り付けます" />
 </Frame>
 
 これらの設定が完了すると、ユーザーはWebApp内でファイルのURLを貼り付けるか、ローカルファイルをアップロードでき、その後、ドキュメントの内容に基づいてLLMとの対話が可能になります。ユーザーは対話の過程でいつでもファイルを置き換えることができ、LLMは常に最新のファイル内容を取得します。
 
 <Frame caption="URL を貼り付けて会話を開始します">
-  <img src="/images/assets/image-6.png" alt="WebApp中粘贴URL进行对话的界面" />
+  <img src="https://assets-docs.dify.ai/dify-enterprise-mintlify/jp/guides/workflow/f6ea094b30b240c999a4248d1fc21a1c.png" alt="WebApp中粘贴URL进行对话的界面" />
 </Frame>
 
 **LLMノードでファイル変数を参照する方法**
@@ -194,8 +194,31 @@ LLMノード内でファイル変数を直接使用する際は、そのファ�
 
 ### 上級者向けの使用方法
 
-アプリが複数のファイル形式に対応できるようにしたい場合、例えば、ユーザーがドキュメントファイル、画像、音声、動画ファイルを同時にアップロードできるようにするには、「開始」ノードに「ファイルリスト」変数を追加し、「リスト操作」ノードを使用して異なるファイルタイプを処理する必要があります。詳細については、[リスト操作](node/list-operator)ノードを参照してください。
+アプリが複数のファイル形式に対応できるようにしたい場合、例えば、ユーザーがドキュメントファイル、画像、音声、動画ファイルを同時にアップロードできるようにするには、「開始」ノードに「ファイルリスト」変数を追加し、「リスト操作」ノードを使用して異なるファイルタイプを処理する必要があります。詳細については、[リスト操作](/ja-jp/guides/workflow/nodes/list-operator)ノードを参照してください。
 
 <Frame caption="複数のファイルタイプの処理">
-  <img src="/ja-jp/user-guide/.gitbook/assets/image (3).png" alt="处理多种文件类型的工作流示意图" />
+  <img src="https://assets-docs.dify.ai/dify-enterprise-mintlify/jp/guides/workflow/f8980732757050049a430eea934511cf.png" alt="处理多种文件类型的工作流示意图" />
 </Frame>
+
+{/*
+Contributing Section
+DO NOT edit this section!
+It will be automatically generated by the script.
+*/}
+
+<CardGroup cols="2">
+    <Card
+        title="このページを編集する"
+        icon="pen-to-square"
+        href="https://github.com/langgenius/dify-docs-mintlify/edit/main/ja-jp/guides/workflow/file-upload.mdx"
+    >
+        直接貢献することでドキュメントの改善にご協力ください
+    </Card>
+    <Card
+        title="問題を報告する"
+        icon="github"
+        href="https://github.com/langgenius/dify-docs-mintlify/issues/new?title=ドキュメントの問題%3A%20upl&body=%23%23%20問題の説明%0A%3C%21--%20発見した問題について簡単に説明してください%20--%3E%0A%0A%23%23%20ページリンク%0Ahttps%3A%2F%2Fgithub.com%2Flanggenius%2Fdify-docs-mintlify%2Fblob%2Fmain%2Fja-jp/guides/workflow%2Ffile-upload.mdx%0A%0A%23%23%20提案される変更%0A%3C%21--%20特定の変更案がある場合は、ここで説明してください%20--%3E%0A%0A%3C%21--%20ドキュメントの品質向上にご協力いただきありがとうございます！%20--%3E"
+    >
+        エラーを見つけたり提案がありますか？お知らせください
+    </Card>
+</CardGroup>

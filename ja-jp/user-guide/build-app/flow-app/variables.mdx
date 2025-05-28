@@ -1,6 +1,5 @@
 ---
 title: 変数
-version: '日本語'
 ---
 
 **ワークフロー**や**チャットフロー**は、単独ノードで構成されています。多くのノードは入力と出力のアイテムを持っていますが、各ノードの入力および出力情報は一貫性がなく、ダイナミックに変化します。
@@ -58,9 +57,7 @@ version: '日本語'
   </tbody>
 </table>
 
-<Frame caption="ワークフロー内のシステム変数">
-  <img src="/en-us/img/c405efa31fd5708542fdc3bd7c0cb708.png" alt="" />
-</Frame>
+![Workflow App System Variables](https://assets-docs.dify.ai/dify-enterprise-mintlify/en/guides/workflow/09d9f977965d41cf056f37a4f8f952db.png)
 
 #### チャットフロー
 
@@ -127,17 +124,13 @@ version: '日本語'
   </tbody>
 </table>
 
-<Frame caption="チャットフロー内のシステム変数">
-  <img src="/en-us/img/e387366fe2643688d57e6b9a69eacb1b.png" alt="chatflow app system variables" />
-</Frame>
+![Chatflow App System Variables](https://assets-docs.dify.ai/dify-enterprise-mintlify/en/guides/workflow/79340d58bf2c202dd6bd4e93fa03272d.png)
 
 ### 環境変数
 
 **環境変数は、APIキーやデータベースのパスワードといった機密性の高い情報を保護する際に、ワークフロー実行時に活用されます。** これらはコードに直接書き込むのではなく、ワークフローに設定され、異なる環境間での共有が可能になっています。
 
-<Frame caption="環境変数">
-  <img src="/ja-jp/img/jp-env-variable.png" alt="Environment Variables" />
-</Frame>
+![Environment Variables](https://assets-docs.dify.ai/dify-enterprise-mintlify/en/guides/workflow/475c2b9a04b8c9ab16b7d3dba21755f3.png)
 
 サポートされるデータ型には以下の3つがあります：
 
@@ -159,9 +152,7 @@ version: '日本語'
 
 例えば、ユーザーが最初の対話で設定した言語を会話変数に保存すれば、LLMはその情報を参照し、続く対話で指定された言語でユーザーに返信することが可能です。
 
-<Frame>
-  <img src="/ja-jp/img/conversation-var.png" alt="" />
-</Frame>
+![Conversation Variable](https://assets-docs.dify.ai/dify-enterprise-mintlify/en/guides/workflow/c04285fec92f13a20ccbd3e21361a30d.png)
 
 **会話変数**は以下の6つのデータ型をサポートしています：
 
@@ -179,6 +170,8 @@ version: '日本語'
 * 会話変数は読み書き可能な変数です；
 
 会話変数と変数代入ノードの具体的な使用方法については、[変数代入](./nodes/variable-assigner)をご参照ください。
+
+![](https://assets-docs.dify.ai/2024/11/cc8067fa4c96436f037f8210ebe3f65c.png)
 
 ### 注意事项
 

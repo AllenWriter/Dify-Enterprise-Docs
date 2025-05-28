@@ -1,6 +1,5 @@
 ---
 title: Configuring SAML with Okta
-version: 'English'
 ---
 
 In this guide, we will use Okta as the SSO provider, utilizing the SAML protocol to connect to the Dify Enterprise.
@@ -11,11 +10,11 @@ In this guide, we will use Okta as the SSO provider, utilizing the SAML protocol
 2. Navigate to the Applications page
 3. Click the "Create App Integration" button
 
-![](/images/okta-saml-1.png)
+![](https://assets-docs.dify.ai/2025/05/49d2eb9547c644a90a50e7ac1972b90c.png)
 
 4. Select "SAML 2.0" as the application type
 
-![](/images/okta-saml-2.png)
+![](https://assets-docs.dify.ai/2025/05/409f64e068449c2f9dc9c3e471a36946.png)
 
 5. Click Next to access the Configure SAML page
 6. Wait before filling in the parameters and open a new browser tab
@@ -29,7 +28,7 @@ Follow the instructions below to obtain the necessary information, then continue
    - Tap **"+ New Identity Provider → New OIDC Provider"**
    - View the Callback URL
 
-   ![](/images/okta-saml-3.png)
+   ![](https://assets-docs.dify.ai/2025/05/b5f44f58a5737409eff4b6b674ab63ac.png)
 
    It typically follows this format:
 
@@ -41,7 +40,7 @@ Follow the instructions below to obtain the necessary information, then continue
    
    Paste it into the Single sign-on URL and Audience URI (SP Entity ID) fields on the Configure SAML page.
 
-   ![](/images/okta-saml-4.png)
+   ![](https://assets-docs.dify.ai/2025/05/e6c1a1521306919ab325030adafb2d2b.png)
 
    After filling in the URL, continue with the following settings:
       - Set the Name ID format to EmailAddress
@@ -54,12 +53,12 @@ Follow the instructions below to obtain the necessary information, then continue
      - Sign-on URL
      - Signing certificate
 
-   ![](/images/okta-saml-5.png)
+   ![](https://assets-docs.dify.ai/2025/05/edd232ff0c1e0a28243fdce755f8ea1b.png)
 
 2. Assign members:
    - On the "Assignments" page, assign the members who are allowed to use SSO login
 
-   ![](/images/okta-saml-6.png)
+   ![](https://assets-docs.dify.ai/2025/05/7ce55440e9bce1965712e167ab8e8567.png)
 
 3. Configure Dify:
    - Return to the Authentication page of the Dify Enterprise
@@ -74,7 +73,7 @@ Follow the instructions below to obtain the necessary information, then continue
    -----END CERTIFICATE-----
    ```
 
-   ![](/images/okta-saml-7.png)
+   ![](https://assets-docs.dify.ai/2025/05/1548ea93cfa68352384295fef8b038e3.png)
 
 ## 4. Enable SSO Enforcement
 

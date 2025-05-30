@@ -1,0 +1,230 @@
+{
+  "version": "2.5.x",
+  "language": "ja",
+  "href": "/ja-jp/introduction",
+  "groups": [
+    {
+      "group": "はじめに",
+      "pages": [
+        "ja-jp/introduction"
+      ]
+    },
+    {
+      "group": "デプロイメントマニュアル",
+      "pages": [
+        "ja-jp/deployment/checklist",
+        "ja-jp/deployment/resources-checklist",
+        {
+          "group": "インストールガイド",
+          "pages": [
+            "ja-jp/deployment/prerequisites/kubernetes",
+            "ja-jp/deployment/prerequisites/minikube",
+            "ja-jp/deployment/prerequisites/docker-compose"
+          ]
+        },
+        {
+          "group": "環境隔離",
+          "pages": [
+            "ja-jp/deployment/test-production/testing-deployment",
+            "ja-jp/deployment/test-production/production-deployment"
+          ]
+        },
+        "ja-jp/deployment/license-activation",
+        "ja-jp/deployment/verify-services-status",
+        {
+          "group": "高度な設定",
+          "pages": [
+            "ja-jp/deployment/advanced-configuration/persistent-storage",
+            "ja-jp/deployment/advanced-configuration/postgresql-database",
+            "ja-jp/deployment/advanced-configuration/redis",
+            {
+              "group": "ベクトルデータベース",
+              "pages": [
+                "ja-jp/deployment/advanced-configuration/vector-database",
+                "ja-jp/deployment/advanced-configuration/qdrant/single-node",
+                "ja-jp/deployment/advanced-configuration/qdrant/qdrant-cluster"
+              ]
+            },
+            "ja-jp/deployment/advanced-configuration/rag",
+            "ja-jp/deployment/advanced-configuration/email-provider",
+            "ja-jp/deployment/advanced-configuration/file-upload",
+            "ja-jp/deployment/advanced-configuration/nginx-ingress-controller",
+            "ja-jp/deployment/advanced-configuration/domain-and-ssl-certificate",
+            "ja-jp/deployment/advanced-configuration/dify-system-logo",
+            "ja-jp/deployment/advanced-configuration/model-provider",
+            "ja-jp/deployment/advanced-configuration/tools",
+            "ja-jp/deployment/advanced-configuration/environment-variables",
+            "ja-jp/deployment/advanced-configuration/dify-helm-chart",
+            {
+              "group": "Docker",
+              "pages": [
+                "ja-jp/deployment/advanced-configuration/docker/docker-registry"
+              ]
+            },
+            {
+              "group": "アイコンのカスタマイズ",
+              "pages": [
+                "ja-jp/deployment/advanced-configuration/docker-compose/icon-customization"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "クラウドインフラストラクチャ",
+          "pages": [
+            "ja-jp/deployment/cloud-infrastructure/azure-poc-infra-setup",
+            "ja-jp/deployment/cloud-infrastructure/aws-setup"
+          ]
+        },
+        {
+          "group": "FAQ",
+          "pages": [
+            "ja-jp/deployment/faq/deploying"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "管理人ガイド",
+      "pages": [
+        "ja-jp/administrator-guide/workspace-management",
+        "ja-jp/administrator-guide/members-management",
+        {
+          "group": "認証",
+          "pages": [
+            "ja-jp/administrator-guide/authentication",
+            {
+              "group": "エンタープライズ SSO",
+              "pages": [
+                "ja-jp/administrator-guide/sso/introduction",
+                {
+                  "group": "Okta",
+                  "pages": [
+                    "ja-jp/administrator-guide/sso/okta/oidc",
+                    "ja-jp/administrator-guide/sso/okta/saml",
+                    "ja-jp/administrator-guide/sso/okta/oauth2"
+                  ]
+                },
+                {
+                  "group": "Azure",
+                  "pages": [
+                    "ja-jp/administrator-guide/sso/azure/saml"
+                  ]
+                },
+                {
+                  "group": "GitHub",
+                  "pages": [
+                    "ja-jp/administrator-guide/sso/github/oauth2"
+                  ]
+                }
+              ]
+            },
+            "ja-jp/administrator-guide/2sv"
+          ]
+        },
+        "ja-jp/administrator-guide/admin-apis",
+        "ja-jp/administrator-guide/branding",
+        "ja-jp/administrator-guide/system-settings",
+        "ja-jp/administrator-guide/faq"
+      ]
+    },
+    {
+      "group": "ユーザーマニュアル",
+      "pages": [
+        "ja-jp/user-guide/welcome",
+        {
+          "group": "モデルの接続",
+          "pages": [
+            "ja-jp/user-guide/models/model-configuration",
+            "ja-jp/user-guide/models/new-provider",
+            "ja-jp/user-guide/models/predefined-model",
+            "ja-jp/user-guide/models/customizable-model",
+            "ja-jp/user-guide/models/interfaces",
+            "ja-jp/user-guide/models/schema",
+            "ja-jp/user-guide/models/load-balancing"
+          ]
+        },
+        {
+          "group": "アプリの構築",
+          "pages": [
+            "ja-jp/user-guide/build-app/chatbot",
+            "ja-jp/user-guide/build-app/text-generator",
+            "ja-jp/user-guide/build-app/agent",
+            {
+              "group": "チャットフロー & ワークフロー",
+              "pages": [
+                "ja-jp/user-guide/build-app/flow-app/concepts",
+                "ja-jp/user-guide/build-app/flow-app/create-flow-app",
+                "ja-jp/user-guide/build-app/flow-app/variables",
+                {
+                  "group": "ノードの説明",
+                  "pages": [
+                    "ja-jp/user-guide/build-app/flow-app/nodes/start",
+                    "ja-jp/user-guide/build-app/flow-app/nodes/end",
+                    "ja-jp/user-guide/build-app/flow-app/nodes/answer",
+                    "ja-jp/user-guide/build-app/flow-app/nodes/llm",
+                    "ja-jp/user-guide/build-app/flow-app/nodes/knowledge-retrieval",
+                    "ja-jp/user-guide/build-app/flow-app/nodes/question-classifier",
+                    "ja-jp/user-guide/build-app/flow-app/nodes/ifelse",
+                    "ja-jp/user-guide/build-app/flow-app/nodes/code",
+                    "ja-jp/user-guide/build-app/flow-app/nodes/template",
+                    "ja-jp/user-guide/build-app/flow-app/nodes/doc-extractor",
+                    "ja-jp/user-guide/build-app/flow-app/nodes/list-operator",
+                    "ja-jp/user-guide/build-app/flow-app/nodes/variable-aggregator",
+                    "ja-jp/user-guide/build-app/flow-app/nodes/variable-assigner",
+                    "ja-jp/user-guide/build-app/flow-app/nodes/iteration",
+                    "ja-jp/user-guide/build-app/flow-app/nodes/parameter-extractor",
+                    "ja-jp/user-guide/build-app/flow-app/nodes/http-request",
+                    "ja-jp/user-guide/build-app/flow-app/nodes/tools"
+                  ]
+                },
+                "ja-jp/user-guide/build-app/flow-app/orchestrate-node",
+                "ja-jp/user-guide/build-app/flow-app/file-upload",
+                "ja-jp/user-guide/build-app/flow-app/additional-feature"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "アプリのデバッグ",
+          "pages": [
+            {
+              "group": "チャットフロー & ワークフロー",
+              "pages": [
+                "ja-jp/user-guide/debug-app/chatflow-and-workflow/preview-and-run",
+                "ja-jp/user-guide/debug-app/chatflow-and-workflow/step-run",
+                "ja-jp/user-guide/debug-app/chatflow-and-workflow/log",
+                "ja-jp/user-guide/debug-app/chatflow-and-workflow/checklist",
+                "ja-jp/user-guide/debug-app/chatflow-and-workflow/history"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "アプリの発表",
+          "pages": [
+            {
+              "group": "公開Webアプリとしてのリリース",
+              "pages": [
+                "ja-jp/user-guide/application-publishing/launch-your-webapp-quickly/web-app-settings",
+                "ja-jp/user-guide/application-publishing/launch-your-webapp-quickly/text-generator",
+                "ja-jp/user-guide/application-publishing/launch-your-webapp-quickly/conversation-application"
+              ]
+            },
+            "ja-jp/user-guide/application-publishing/embedding-in-websites",
+            "ja-jp/user-guide/application-publishing/developing-with-apis",
+            "ja-jp/user-guide/application-publishing/based-on-frontend-templates"
+          ]
+        },
+        {
+          "group": "管理",
+          "pages": [
+            "ja-jp/user-guide/management/app-management",
+            "ja-jp/user-guide/management/team-members-management",
+            "ja-jp/user-guide/management/personal-account-management"
+          ]
+        }
+      ]
+    }
+  ]
+}

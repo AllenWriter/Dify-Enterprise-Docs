@@ -1,0 +1,36 @@
+---
+title: Difyシステムのロゴ
+version: '日本語'
+---
+
+## 要求
+- favicon.ico  
+  - 高さ：48px  
+  - 幅：48px  
+- logo-site.png  
+  - 高さ：40px  
+  - 幅：任意の  
+
+## 設定
+### 画像をBase64エンコード
+次のコマンドを使って画像をBase64にエンコードできます。  
+```bash
+base64 -i favicon.ico -o favicon.ico.txt  
+base64 -i logo-site.png -o logo-site.png.txt  
+```
+
+#### Helm値を更新する
+生成されたファイルからBase64エンコードされた文字列をコピーして、以下の値の`#REPLACE_ME#`を置き換える。  
+
+````yaml
+web:
+  logoConfig:
+    enabled: true
+    # image:
+    #   repository: g-hsod9681-docker.pkg.coding.net/dify-artifact/dify/busybox
+    #   tag: "1.36.1"
+    faviconIcoBase64: |
+      #REPLACE_ME#
+    logoSitePngBase64: |
+      #REPLACE_ME#
+````

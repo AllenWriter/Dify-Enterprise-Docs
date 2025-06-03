@@ -1,0 +1,81 @@
+---
+title: Configure OIDC with Okta
+version: English
+---
+
+This guide uses **Okta** as an example SSO identity provider, demonstrating how to enable OIDC authentication for Dify Enterprise Edition.
+
+By enabling this feature, the login page in Enterprise Edition will utilize a unified authentication portal to enhance security. For internal enterprise users, there’s no need to set up complex passwords—logging in with an organizational account streamlines the process.
+
+## 1. Create a New Application in Okta
+
+1. Go to the **Okta Admin** console, navigate to **Applications**, and click **Create App Integration**.
+
+   ![](https://assets-docs.dify.ai/2025/05/eac08a1d4b7aa615d1108081b5e99731.png)
+
+2. Follow the prompts to name your application and define authorization scopes as needed.
+
+   - The **Sign-in redirect URIs** field must be set to the Dify Enterprise **Callback URL** (see [below](#2-configure-the-okta-application)).
+   - Leave the **Sign-out redirect URIs** field blank.
+
+## 2. Configure the Okta Application
+
+Depending on the SSO scope you want to enable, **the Callback URL may vary**. The system administrator must add the Dify Enterprise Callback URL to the corresponding **Okta App** in order to complete the setup.
+
+<Tabs>
+  <Tab title="Workspace">
+    On the Dify Enterprise **Authentication** page, in the **Workspace Settings** section, click **+ New Identity Provider → New OAuth2 Provider**. At the bottom of the page, locate the Callback URL.
+
+    ![](https://assets-docs.dify.ai/2025/02/cfb6498477ea20ce9db649a5c21f519d.png)
+
+    It typically follows this format:
+    ```bash
+    https://[your-dify-enterprise-url]/console/api/enterprise/sso/oauth2/callback
+    ```
+  </Tab>
+  <Tab title="WebApp">
+    On the Dify Enterprise **Authentication** page, in the **WebApp Settings** section, click **+ New Identity Provider → New OAuth2 Provider**. At the bottom of the page, locate the Callback URL.
+
+    ![](https://assets-docs.dify.ai/2025/02/eef6c4a32147675b7645bb1b46d19aea.png)
+
+    It typically follows this format:
+    ```bash
+    https://[your-app-url]/api/enterprise/sso/oauth2/callback
+    ```
+  </Tab>
+</Tabs>
+
+2. Paste this URL into the **Sign-in redirect URIs** field of your Okta app.
+
+## 3. Enable OIDC Authentication
+
+### 3.1 Retrieve Key Information from the Okta Application
+
+1. In the application’s **General** tab, locate the following fields:
+   - **Client ID**  
+   - **Client secret**  
+
+   ![](https://assets-docs.dify.ai/2025/05/069096069a162299f23e81d1e187e08c.png)
+
+2. Switch to the **Sign On** tab and find the **Issuer** field. Set **Issuer** to a fixed link, then copy the information.
+
+   ![](https://assets-docs.dify.ai/2025/02/0cf3c5b1c3b662e48d65827ae3b34ca4.png)
+
+### 3.2 Configure OAuth2 Authentication
+
+On the Dify Enterprise **Authentication** page, click **+ New Identity Provider → New OAuth2 Provider**, and follow the prompts to fill out the following information:
+
+- **Issuer URL**  
+- **Client ID**  
+- **Client Secret**  
+
+## 4. Enable SSO Enforcement (Optional)
+
+The system administrator can enable **SSO Enforcement** for the following scenarios, making authentication mandatory:
+
+- **Workspace**: Requires authorization to log in to the Dify Enterprise Workspace.
+- **WebApp**: Requires authorization for applications created by this Dify Enterprise instance.
+
+When enabled, users will be prompted for authorization upon accessing these scenarios.
+
+<img src="https://assets-docs.dify.ai/2025/02/87bf868d0058723607311265a57888c5.png" width="400" />

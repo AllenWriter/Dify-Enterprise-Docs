@@ -1,0 +1,75 @@
+---
+title: 'Minikube'
+version: '日本語'
+---
+
+## 必要条件
+- Minikube
+  - 4 CPU 16 GB RAM
+- Helm 3.14+
+- Kubectl
+
+## インストール
+### Minikubeの開始
+以下のコマンドを実行してMinikubeを開始できます:
+```bash
+minikube start --driver=docker --cpus=4 --memory=16384
+```
+
+### 永続化設定
+
+`values.yaml`を編集して永続化タイプを設定する必要があります。
+
+さらに詳しい情報については、[永続化ストレージ](/deployment/advanced-configuration/persistent-storage) を参照してください。
+
+> <a href="https://assets-docs.dify.ai/2025/01/e3d53c6c7d979c77d0a1809670fbf211.yaml" download="values.yaml">ここをクリック</a>して `values.yaml` ファイルをダウンロードしてください。
+
+### Difyエンタプライス版のインストール
+Difyエンタプライス版はHelmを使用してデプロイされます。
+
+```bash
+helm repo add dify https://langgenius.github.io/dify-helm
+helm repo update
+
+helm upgrade -i dify -f values.yaml dify/dify
+```
+
+詳細については、[Dify Helmチャート](/deployment/prerequisites/dify-helm-chart)を参照してください。
+
+### Ingressコントローラーの設定
+以下のコマンドを実行して、MinikubeクラスターでIngressコントローラーを有効にできます:
+```bash
+minikube addons enable ingress
+```
+
+サービスをホストマシンに公開するには、`minikube tunnel`コマンドを使用する必要があります。
+```bash
+minikube tunnel
+```
+
+### Difyエンタプライス版へのアクセス
+Ingressコントローラーが有効になった後、ローカルの`/etc/hosts`ファイルにドメインを設定できます。
+```
+127.0.0.1 console.dify.local
+127.0.0.1 app.dify.local
+127.0.0.1 api.dify.local
+127.0.0.1 upload.dify.local
+127.0.0.1 enterprise.dify.local
+```
+
+### インストールの検証
+**警告**：まず、Difyコンソールを`http://console.dify.local`で初期設定する必要があります。次、Difyエンタープライズ版ダッシュボード`http://enterprise.dify.local`にログインできます。
+
+#### 1. Difyコンソールの初期設定
+- `http://console.dify.local`にアクセスします。
+- メールアドレスとパスワードを入力します。
+- 初期設定が完了すると、ログインページにリダイレクトされ、ライセンスのアクティブ化を待ちます。
+![](/images/license-inactive.png)
+
+#### 2. ライセンスをアクティブ化するために、Difyエンタープライズ版ダッシュボードを設定します。
+- `http://enterprise.dify.local`にアクセスします。
+- デフォルトのメールアドレスとパスワードでログインします。ログイン後、パスワードを変更できます。
+    - メールアドレス：`dashboard@dify.ai`
+    - パスワード：`difyai123456`
+- ライセンスのアクティブ化：ログイン後、ライセンスをアクティブ化するためのダイアログボックスが表示されます。
+  > 詳細については、[ライセンスのアクティブ化](/ja-jp/deployment/license-activation)を参照してください。

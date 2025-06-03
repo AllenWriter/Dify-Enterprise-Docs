@@ -1,0 +1,26 @@
+---
+title: RAG
+version: '简体中文'
+---
+
+## 在 Helm Chart 值中查找 RAG 配置
+
+### 显示 Helm Chart 值
+
+```bash
+helm show values dify/dify
+````
+
+## 在 Helm Chart 值中查找 RAG 配置
+这是 Helm chart 值中 RAG 配置的示例。
+
+````yaml
+global:
+  rag:
+    etlType: "Unstructured"
+  ... ...
+````
+
+## `global.rag.etlType` 字段的选项
+- Unstructured: [Unstructured.io](https://unstructured.io/) 文件提取方案
+- dify: Dify 的专有文件提取方案

@@ -1,0 +1,81 @@
+---
+title: GitHub を使用した OAuth2 の設定
+version: '日本語'
+---
+
+本ドキュメントでは、**GitHub** を SSO（Single Sign-On）のアイデンティティプロバイダーとして使用し、Dify Enterprise Edition で OAuth2 認証を有効にする手順を示します。
+
+この機能を有効にすると、Enterprise Edition のログインページは統合された認証ポータルを利用し、セキュリティが強化されます。社内ユーザーは複雑なパスワードを入力する必要がなく、組織アカウントを使ってログインすることで認証を簡素化できます。
+
+## 1. GitHub で OAuth アプリを作成する
+
+1. **GitHub 管理者コンソール**にアクセスし、**Settings** ページへ移動し、**OAuth Apps** を選択して新しい OAuth アプリを作成します。
+
+   ![](https://assets-docs.dify.ai/2025/02/5d51e9ba8b3018f1a02a87aa3832acb2.png)
+
+2. 画面の指示に従い、以下の情報を入力してアプリの作成を完了します。
+
+   - **Application name**（必須）：アプリ名。自由に設定可能。  
+   - **Homepage URL**（必須）：アプリのホームページリンク。Dify Enterprise プラットフォームの URL を推奨。  
+   - **Application description**（任意）：アプリの説明。  
+   - **Authorization Callback URL**（必須）：コールバックリンク。取得方法は[下記](#2-获取-callback-url)を参照。
+
+> GitHub の OAuth2 アプリ作成方法の詳細については、[GitHub ドキュメント](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app)を参照してください。
+
+## 2. Callback URL の取得
+
+有効にしたい SSO の範囲によって、**Callback URL は異なります**。システム管理者は Dify Enterprise の Callback URL を対応する GitHub OAuth2 アプリに入力し、設定を完了する必要があります。
+
+<Tabs>
+  <Tab title="Workspace">
+    Dify Enterprise の **Authentication** ページを開き、**Workspace Settings** セクションの **「+ New Identity Provider → New OAuth2 Provider」** をクリックし、下部に表示される Callback URL を確認します。
+
+    ![](https://assets-docs.dify.ai/2025/02/cfb6498477ea20ce9db649a5c21f519d.png)
+
+    通常は以下の形式です：
+
+    ```bash
+    https://[your-dify-enterprise-url]/console/api/enterprise/sso/oauth2/callback
+    ```
+  </Tab>
+  <Tab title="WebApp">
+    Dify Enterprise の **Authentication** ページを開き、**WebApp Settings** セクションの **「+ New Identity Provider → New OAuth2 Provider」** をクリックし、下部に表示される Callback URL を確認します。
+
+    ![](https://assets-docs.dify.ai/2025/02/cc523f2ccc7ba7daf7df7065624bb9e5.png)
+
+    通常は以下の形式です：
+
+    ```bash
+    https://[your-app-url]/api/enterprise/sso/oauth2/callback
+    ```
+  </Tab>
+</Tabs>
+
+2. この URL を GitHub の OAuth2 アプリにある **Authorization callback URL** フィールドに貼り付けます。
+
+## 3. OAuth2 認証の有効化
+
+Dify Enterprise の **Authentication** ページへアクセスし、**「+ New Identity Provider → New OAuth2 Provider」** をクリックして、画面の指示に従い必要な情報を入力し、設定を完了します。
+
+OAuth アプリで以下の情報を取得してください：
+
+- **Client ID**
+- **Client Secrets**
+
+OAuth2 プロバイダーによって必要となる基本情報は異なります。詳細は各プロバイダーの公式ドキュメントを参照してください。以下の情報は参考例であり、実際の要件に応じて調整してください。
+
+- **Authorization Endpoint**: `https://github.com/login/oauth/authorize`
+- **Token Endpoint**: `https://github.com/login/oauth/access_token`
+- **User Info Endpoint**: `https://api.github.com/user`
+- **Scopes**: `openid,profile,email`
+
+## 4. SSO 強制認証の有効化（任意）
+
+システム管理者は以下の 2 つのシナリオで **SSO Enforcement** オプションを有効にすることで、認証を必須にできます。
+
+- **Workspace**：Dify Enterprise の Workspace ログイン時に認証が必要。
+- **WebApp**：現行 Dify Enterprise が作成したアプリケーション利用時に認証が必要。
+
+有効にすると、対応するシナリオへアクセスする際に認証許可が必要となります。
+
+<img src="https://assets-docs.dify.ai/2025/02/28a707cfe144c090d0379834bc41ad7e.png" width="400" />

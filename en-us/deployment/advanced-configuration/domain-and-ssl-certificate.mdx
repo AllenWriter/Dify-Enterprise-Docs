@@ -1,0 +1,87 @@
+---
+title: Domain and SSL Certificate
+---
+
+## Domain Requirements
+Dify Enterprise requires 5 domains to be set up. The domains are:
+- Console: console.dify.local
+- Services API: api.dify.local
+- APP: app.dify.local
+- Files: upload.dify.local
+- Enterprise: enterprise.dify.local
+
+## Find the Domain Configuration in the Helm Chart Values
+### Display Helm Chart Values
+```bash
+helm show values dify/dify
+```
+
+This is an example of the domain configuration in the Helm chart values.
+```yaml
+global:
+  consoleApiDomain: "console.dify.local"
+  consoleWebDomain: "console.dify.local"
+  serviceApiDomain: "api.dify.local"
+  appApiDomain: "app.dify.local"
+  appWebDomain: "app.dify.local"
+  filesDomain: "upload.dify.local"
+  enterpriseDomain: "enterprise.dify.local"
+  ... ...
+```
+
+
+## How to configure SSL Certificate
+### Generate SSL Certificate
+```bash
+kubectl create secret tls example-tls --key example.key --cert example.crt
+```
+
+### Update Helm values
+#### Set `useTLS` to `true`
+```yaml
+global:
+  useTLS: true
+```
+
+#### Update Ingress values
+If you only have one certificate, you can set it like this
+```yaml
+ingress:
+  tls: 
+  - hosts:
+    - console.dify.local
+    - app.dify.local
+    - api.dify.local
+    - upload.dify.local
+    - enterprise.dify.local
+    secretName: example-tls
+```
+
+If you have multiple certificates, you can set it like this
+```yaml
+ingress:
+  tls: 
+  - hosts:
+    - console.dify.local
+    secretName: example-tls
+  - hosts:
+    - app.dify.local
+    secretName: example-tls-2
+  - hosts:
+    - api.dify.local
+    secretName: example-tls-3
+  - hosts:
+    - upload.dify.local
+    secretName: example-tls-4
+  - hosts:
+    - enterprise.dify.local
+    secretName: example-tls-5
+```
+
+## The cache error of Http/Https
+After you configure the SSL Certificate, if you encounter the http/https errors on your browser, you can uninstall dify and try to install again.
+
+```bash
+helm uninstall dify
+helm upgrade -i dify -f values.yaml dify/dify
+```

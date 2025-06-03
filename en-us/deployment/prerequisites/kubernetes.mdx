@@ -1,0 +1,70 @@
+---
+title: 'Kubernetes'
+version: 'English'
+---
+
+> **Warning**: This is a quick start guide for Kubernetes. We use Persistent Volume for storage. Don't use this guide for production deployment.
+
+## Requirements
+- Kubernetes 1.24+
+  - 4 CPU 16 GB RAM
+- Helm 3.14+
+- Kubectl
+
+## Installation
+
+### Persistence Configration
+You need to edit `values.yaml` and set the persistence type.
+
+For more information, please refer to the [Persistent Storage](/en-us/deployment/advanced-configuration/persistent-storage).
+
+> <a href="https://assets-docs.dify.ai/2025/01/e3d53c6c7d979c77d0a1809670fbf211.yaml" download="values.yaml">Click here</a> to download the `values.yaml` file.
+
+### Install Dify Enterprise
+Dify Enterprise is deployed using Helm. 
+
+```bash
+helm repo add dify https://langgenius.github.io/dify-helm
+helm repo update
+
+helm upgrade -i dify -f values.yaml dify/dify
+```
+
+For more information, please refer to the [Dify Helm Chart](/en-us/deployment/advanced-configuration/dify-helm-chart).
+
+### Set up Ingress Controller
+There is no default ingress controller in the Helm chart. You need to set up the ingress controller by yourself.
+We use the `Nginx Ingress Controller` for quick start.
+- [How to set up Nginx Ingress Controller](/en-us/deployment/advanced-configuration/nginx-ingress-controller)
+
+### Access Dify Enterprise
+After Ingress Controller is set up, get the external IP of the Ingress Controller first.
+```bash
+kubectl get svc -n ingress-nginx
+```
+
+Then get the external IP of the Ingress Controller and add the following line to your `/etc/hosts` file.
+```bash
+4.152.1.216 console.dify.local
+4.152.1.216 app.dify.local
+4.152.1.216 api.dify.local
+4.152.1.216 upload.dify.local
+4.152.1.216 enterprise.dify.local
+```
+
+### Verify Installation
+**Warning**: You have to init Dify Console `http://console.dify.local` first before login to Dify Enterprise Dashboard `http://enterprise.dify.local`.
+
+#### 1. Init Dify Console
+- Visit `http://console.dify.local`.
+- Init Email and Password.
+- After initialization, you will be redirected to the login page and wait for license activation.
+![](/images/license-inactive.png)
+
+#### 2. Init Dify Enterprise Dashboard to Activate License
+- Visit `http://enterprise.dify.local`.
+- Login with the default email and password. You can change the password after login.
+    - email: `dashboard@dify.ai`
+    - password: `difyai123456`
+- License Activation: After login, a dialog will pop up to activate the license.
+  > For more information, please refer to the [License Activation](/en-us/deployment/license-activation).

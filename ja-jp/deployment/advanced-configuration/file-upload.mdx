@@ -1,0 +1,42 @@
+---
+title: ファイルアップロード
+version: '日本語'
+---
+
+## Helmチャートの値でファイル アップロード設定を見つけます。
+
+## Helmチャートの値を表示
+````bash
+helm show values dify/dify
+````
+
+## Helmチャートの値からファイルアップロード設定を確認する
+以下は、Helmチャートの値におけるファイルアップロード設定の例です。
+
+````yaml
+api:
+  limits:
+    # ファイルサイズ制限（単位：MB）
+    uploadFileSize: 15
+    # バッチアップロード数制限
+    uploadFileBatchCount: 5
+    # 画像ファイルサイズ制限（単位：MB）
+    uploadImageFileSize: 5
+  ... ...
+````
+
+
+## Nginx Ingressコントローラーの設定
+
+Nginx Ingressコントローラーを使用している場合、`annotations`フィールドにもファイルアップロードサイズの制限を設定する必要があります。
+
+````yaml
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations: {
+    # 设置文件上传大小限制
+    nginx.ingress.kubernetes.io/proxy-body-size: "15m"
+  }
+  ... ...
+````

@@ -1,0 +1,369 @@
+---
+title: AWS CDK デプロイガイド
+---
+
+このガイドでは、AWS CDK を使用して Difyエンタプライス版を AWS 上にデプロイする方法を説明します。
+
+![](https://assets-docs.dify.ai/2025/05/5c2ae20c1857537c15e0cbf927b3d2b1.png)
+
+### テストデプロイ
+
+| **コンポーネント**  | **Helmチャート 設定** | **数量** | **vCPU** | **メモリ (GB)** | **ストレージ (GB)** | **メモ** |
+| ------------------ | -------------------- | -------- | -------- | --------------- | ------------------- | -------- |
+| S3                 | persistence          | 1        |          |                 |                     |          |
+| Redis DB           | externalRedis        | 1        | 2        | 6.38            |                     |          |
+| RDS Postgres DB    | externalPostgres     | 2        | 2        | 8               |                     |          |
+| K8S Worker Node    |                      | 1        | 4        | 16              | 100                 |          |
+| OpenSearch         | vectorDB             | 1        | 2        | 16              | 100                 |          |
+
+### 本番デプロイ
+
+| **コンポーネント**  | **Helmチャート 設定** | **数量** | **vCPU** | **メモリ (GB)** | **ストレージ (GB)** | **メモ** |
+| ------------------ | -------------------- | -------- | -------- | --------------- | ------------------- | -------- |
+| S3                 | persistence          | 1        |          |                 |                     |          |
+| Redis DB           | externalRedis        | 1        | 2        | 12.93           |                     |          |
+| RDS Postgres DB    | externalPostgres     | 1        | 4        | 32              |                     |          |
+| K8S Worker Node    |                      | 6        | 8        | 32              | 100                 |          |
+| OpenSearch         | vectorDB             | 2        | 8        | 64              | 100                 |          |
+
+# デプロイ手順
+
+> すべての工程は約60分かかると予測されます。
+
+1. ### AWS CLI の設定：
+
+   [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) をインストールし、設定を行います：
+
+   ```bash
+   aws configure
+   ```
+
+2. ### リポジトリのクローン：
+
+   ```bash
+   git clone https://github.com/langgenius/aws-cdk-for-dify.git
+   ```
+
+3. ### NodeJS 依存パッケージのインストール：
+
+   ```bash
+   npm install
+   ```
+
+4. ### 環境変数の設定：
+
+   ```bash
+   cp .env.example .env
+   ```
+
+   `.env` ファイル内の環境変数を適切に設定します。
+
+   - `ENVIRONMENT`：デプロイ環境を指定；`test` または `prod` が必要です。
+
+   - `CDK_DEFAULT_REGION`：Difyエンタプライス版をデプロイする AWS リージョン。
+
+   - `CDK_DEFAULT_ACCOUNT`：AWS アカウント ID。
+
+   - `DEPLOY_VPC_ID`：使用する既存 VPC の IDを指定します。未設定の場合、新しい VPC が作成されます。
+
+   - **注意：** **既存の VPC を使用する場合は以下を確認してください**
+
+     - 确保您有 2 个或更多的**公共**子网用于应用负载均衡器，以及 2 个或更多的**私有**子网可以访问互联网（与 NAT 关联）以从互联网拉取 docker 镜像。
+     - 2つ以上の**パブリック**サブネットが必要です（アプリケーションロードバランサー用）。
+     - 2つ以上のインターネットにアクセス可能な**プライベート**サブネット（NAT付き）も必要です。
+
+     - サブネットに**タグ**を追加してください（タグ付けされていないと、ステップ6で警告が表示され、ロードバランサーが作成されません）：
+
+       | サブネットタイプ | タグキー                            | タグ値 |
+       | ---------------- | --------------------------------- | ------ |
+       | パブリック       | kubernetes.io/role/elb            | 1      |
+       | プライベート     | kubernetes.io/role/internal-elb   | 1      |
+
+   - サブネット設定（`DEPLOY_VPC_ID` 必須、カンマ区切り、スペースなし、**プライベートサブネット**の使用を推奨）：
+
+     - `EKS_CLUSTER_SUBNETS`：EKS コントロールプレーン用サブネット ID。少なくとも2つの異なるアベイラビリティゾーン (AZ) が必要です。
+     - `EKS_NODES_SUBNETS`：EKS ワーカーノード用サブネット ID。少なくとも2つの異なる AZ が必要です。
+     - `REDIS_SUBNETS`：Redis デプロイ用サブネット ID。
+     - `RDS_SUBNETS`：RDS データベース用サブネット ID。（少なくとも2つの異なる AZ が必要）
+     - `OPENSEARCH_SUBNETS`：OpenSearch デプロイ用サブネット ID。
+     - `OPENSEARCH_ADMINNAME`：OpenSearch ドメイン管理者名。
+     - `OPENSEARCH_PASSWORD`：OpenSearch ドメイン管理者パスワード。
+
+   - `AWS_EKS_CHART_REPO_URL`：（AWS 中国リージョンのみ）AWS EKS Helmチャート リポジトリ URL。
+
+   - `RDS_PUBLIC_ACCESSIBLE`：RDS を公開アクセス可能にする場合は `true` に設定します（推奨されません）。
+
+   **注意：**
+
+   - AWS 中国リージョンを使用している場合、`AWS_EKS_CHART_REPO_URL` の設定が必要です。詳細は Dify チームにお問い合わせください。
+   - 既存の VPC を使用することでリソースへのアクセスが容易になります。
+
+5. ### CDK ブートストラップ：
+
+   CDK 環境を初期化します：
+
+   ```bash
+   npm run init
+   ```
+
+6. ### CDK デプロイ：
+
+   - Difyエンタプライス版をデプロイします：
+
+     ```bash
+     npm run deploy
+     ```
+
+7. ### AWS EKS アクセス権の更新：
+
+   1. EKS クラスターのパネルに移動し、「アクセス」メニューを選択し、「管理アクセス」をクリックします。
+
+    ![](https://assets-docs.dify.ai/2025/05/03f0972d268e2d73445ad4de2ea19679.png)
+
+   2. 「管理アクセス」ダイアログで、「EKS API と ConfigMap」を選択し、「変更を保存」をクリックします。
+   3. IAM アクセスエントリパネルで、「アクセスエントリを作成」をクリックします。
+
+    ![](https://assets-docs.dify.ai/2025/05/2041171ef0a17527cd41f9deba602433.png)
+
+   4. あなたの IAM ユーザーを追加し、以下の権限を割り当てます：
+      - `AmazonEKSAdminPolicy`
+      - `AmazonEKSAdminViewPolicy`
+      - `AmazonEKSClusterAdminPolicy`
+
+8. ### Kubernetes (K8S) クラスターにローカルでアクセスするように `kubeconfig` を構成します。
+
+   ローカルで Kubernetes クラスターにアクセスするために、以下のコマンドを実行します：
+
+   ```bash
+   aws eks update-kubeconfig --region <cn-northwest-1> --name <Dify-Testing-DifyStackTest-EKS>
+   ```
+
+   `region` と `name` をデプロイに合わせて調整してください：
+
+   - **region：** クラスターがデプロイされている AWS リージョン。
+   - **name：** EKS 集群名称。
+
+9. ### データ永続化設定：
+
+   Helm `values.yaml` ファイルを編集します。以下のように `persistence` 部分を修正し、`{your-region-name}` と `{your-s3-bucket-name}` を CDK が作成したリソース名に置き換え、`useAwsManagedIam` を有効にしてください。
+
+   ```yaml
+   persistence:
+     type: "s3"
+     s3:
+       endpoint: "https://s3.{your-region-name}.amazonaws.com"
+       region: "{your-region-name}"
+       bucketName: "{your-s3-bucket-name}"
+       useAwsManagedIam: true
+   ```
+
+10. ### データベース設定：
+
+    Helm `values.yaml` ファイルを編集し、`postgre` 部分を削除して、`externalPostgres` 部分を以下のように修正します。`{your-postgres-endpoint}` と `{your-postgres-password}` を AWS Secrets Manager に保存された情報に置き換えます。
+
+    ```yaml
+    postgre:
+      enabled: false
+    externalPostgres:
+      enabled: true
+      address: "{your-postgres-endpoint}"
+      port: 5432
+      credentials:
+        dify:
+          database: "postgres"
+          username: "clusteradmin"
+          password: "{your-postgres-password}"
+          sslmode: "disable"
+        enterprise:
+          database: "postgres"
+          username: "clusteradmin"
+          password: "{your-postgres-password}"
+          sslmode: "disable"
+    ```
+
+11. ### Redis 設定：
+
+    Helm `values.yaml` ファイルを編集し、`redis` 部分を削除して、`externalRedis` 部分を以下のように修正します。`{your-redis-host}` を ElastiCache-Redis の `Primary endpoint` に置き換えます。
+
+    **注意：** `Primary endpoint` のポート番号は削除してください
+
+    ```yaml
+    redis:
+      enabled: false
+    externalRedis:
+      enabled: true
+      host: "{your-redis-host}"
+      port: 6379
+      username: ""
+      password: ""
+      useSSL: false
+    ```
+
+12. ### ベクターデータベース設定：
+
+    Helmの`values.yaml`ファイルを変更し、`externalType`の部分を以下のように修正してください：
+    1. AWS Opensearchインスタンスの**Domain endpoint**である`<openSearch_endpoint>`を置き換え、`https://`を削除した残りの部分を使用します。
+    2. `.env`で設定した値を用いて`<OPENSEARCH_ADMINNAME>`と`<OPENSEARCH_PASSWORD>`を置き換えます。
+
+    ```yaml
+    vectorDB:
+      useExternal: true
+      externalType: "opensearch"
+      externalOpenSearch:
+        host: "{openSearch_endpont}"
+        port: 443
+        user: "<OPENSEARCH_ADMINNAME>"
+        password: "<OPENSEARCH_PASSWORD>"
+        useTLS: true
+    ```
+
+13. ### Docker イメージプルキーの設定：
+
+    Difyエンタプライス版をインストールする前に、Docker イメージプルキーを設定する必要があります。
+
+    **注意：** ユーザー名とパスワードを取得していない場合は、サポートにお問い合わせください。メールアドレス：[Support@dify.ai](mailto:support@dify.ai)
+
+14. ### TLS 設定：
+
+    #### テストの場合：
+
+    デプロイプロセスをテストするだけであれば、このステップをスキップできます。
+
+    #### 本番の場合：
+
+    AWS `ACM` に移動して、Helmチャート 設定ファイル `values.yaml` で宣言されたドメイン名の証明書を申請します。
+
+    ```yaml
+      consoleApiDomain: "console.xxxx.com"
+      consoleWebDomain: "console.xxxx.com"
+      serviceApiDomain: "api.xxxx.com"
+      appApiDomain: "app.xxxx.com"
+      appWebDomain: "app.xxxx.com"
+      filesDomain: "upload.xxxx.com"
+      enterpriseDomain: "enterprise.xxxx.com"
+    ```
+
+    これらのドメインは次のようになります：
+
+    ```yaml
+    console.xxxx.com
+    api.xxxx.com
+    app.xxxx.com
+    upload.xxxx.com
+    enterprise.xxxx.com
+    ```
+
+    ドメイン名サービスプロバイダー（cloud flare、aws route53 など）にて、`cname` を設定してドメインの所有権を証明してください。
+
+    **values.yaml パラメータの `global.useTLS` を変更**
+
+    ```yaml
+      useTLS: true
+    ```
+
+15. ### AWS ロードバランサーの設定：
+
+    Helm `values.yaml` ファイルで AWS アプリケーションロードバランサー（ALB）を使用してイングレスを設定します。以下のように `ingress` 部分を修正してください：
+
+    **テストの場合：**
+
+    ```yaml
+    ingress:
+        enabled: true
+        className: "alb"
+        annotations: {
+            # 既存のアノテーション
+            ...
+            # 以下のアノテーションを追加
+            alb.ingress.kubernetes.io/target-type: "ip",
+            alb.ingress.kubernetes.io/scheme: "internet-facing",
+        }
+    ```
+
+    **本番の場合：**
+
+    詳細は：[AWS ロードバランサーコントローラ設定](https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.9/guide/ingress/cert_discovery/)
+
+    ```yaml
+    ingress:
+      enabled: true
+      className: "alb"
+      annotations: {
+        # ファイルアップロードサイズ制限を設定
+            alb.ingress.kubernetes.io/target-type: "ip",
+            alb.ingress.kubernetes.io/scheme: "internet-facing",
+            alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
+      }
+    ```
+
+16. ### Difyエンタプライス版のインストール：
+
+    Difyエンタプライス版は Helm を使用してデプロイされます。
+
+    ```bash
+    helm repo add dify https://langgenius.github.io/dify-helm
+    helm repo update
+    
+    helm upgrade -i dify -f values.yaml dify/dify
+    ```
+
+17. ### Difyエンタプライス版へのアクセス：
+
+    #### テストの場合：
+
+    設定が完了したら、ALB の一時的な外部 IP を取得します。
+
+    ```bash
+    ping {aws_alb_dns}
+    ```
+
+    その後、以下の行を `/etc/hosts` ファイルに追加します。
+
+    ```bash
+    4.152.1.216 console.dify.local
+    4.152.1.216 app.dify.local
+    4.152.1.216 api.dify.local
+    4.152.1.216 upload.dify.local
+    4.152.1.216 enterprise.dify.local
+    ```
+
+    #### 本番の場合：
+
+    ドメイン名サービスプロバイダーにて、DNS を ALB アドレスに設定します（AWS EC2 の Load Balancer に移動し、ALB の DNS を取得）。
+
+    | ドメイン名           | cname     |
+    | ------------------- | --------- |
+    | api.xxxx.com        | alb_dns   |
+    | app.xxxx.com        | alb_dns   |
+    | upload.xxxx.com     | alb_dns   |
+    | enterprise.xxxx.com | alb_dns   |
+    | console.xxxx.com    | alb_dns   |
+
+18. ### インストールの確認：
+
+    **警告**：Dify Enterprise Dashboard `http://enterprise.dify.local` にログインする前に、Dify Console `http://console.dify.local` を設定する必要があります。
+
+    - Dify Console：`http://console.dify.local` にアクセスし、インストールを完了します。
+
+    - Enterprise Dashboard：`http://enterprise.dify.local` にアクセスし、デフォルトのメールとパスワードでログインします。ログイン後、パスワードを変更できます。
+
+      ```
+      email: dashboard@dify.ai
+      password: difyai123456
+      ```
+
+# 破棄手順
+
+> この工程には約20分かかる可能性があります。
+
+`.env` ファイルで指定された `ENVIRONMENT` 環境のデプロイを破棄します。
+
+```bash
+npm run destroy
+```
+
+**注意**：AWS コンソールにログインし、VPC を確認して、CDK が作成した VPC が正しく破棄されていることを確認してください。破棄されていない場合、`Cloudformation` をチェックし、削除操作を実行してください。
+
+### 高度な設定
+
+カスタムデプロイメント設定を行うには、<a href="/assets/configs/test.ts" download="test.ts" target="_blank" rel="noopener noreferrer">test.ts</a>ファイル、または本番環境の<a href="/assets/configs/prod.ts" download="prod.ts" target="_blank" rel="noopener noreferrer">prod.ts</a>ファイルを変更してください。

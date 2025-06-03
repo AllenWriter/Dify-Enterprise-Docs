@@ -1,0 +1,75 @@
+---
+title: Deployment
+version: 'English'
+---
+
+## How to configure Nginx Ingress Controller?
+
+This is a common configuration for the Nginx Ingress Controller. You can use other ingress controllers depending on your cloud service provider. You can execute the following command to install the Nginx Ingress Controller on your Kubernetes cluster:
+
+```bash
+kubectl apply -f ./ingress-nginx-controller-v1.12.1.yaml
+```
+
+Update the `values.yaml` file and set the ingress configuration.
+
+> <a href="https://assets-docs.dify.ai/2025/01/e3d53c6c7d979c77d0a1809670fbf211.yaml" download="values.yaml">Click here</a> to download the `values.yaml` file.
+
+```yaml
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations: {
+    # Set file upload size limit
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+  }
+```
+
+After completing all configurations, you can execute the following command to upgrade the application on your Kubernetes cluster:
+
+```bash
+helm upgrade -i dify -f values.yaml dify/dify
+```
+
+## How to access Dify services?
+
+After installation, if you want to access the services, you should first configure ingress. You can get the ingress IP using the following command:
+
+```bash
+kubectl get services -o wide -w -n ingress-nginx
+```
+
+Then get the ingress IP and set up the domain in your local `/etc/hosts` file.
+
+```
+4.152.1.216 console.dify.local
+4.152.1.216 app.dify.local
+4.152.1.216 enterprise.dify.local
+```
+
+## How to access Dify Enterprise Dashboard?
+
+Open the URL `enterprise.dify.local` in your browser and log in with the default username and password. You can change the password after logging in.
+
+- Username: dashboard@dify.ai
+- Password: difyai123456
+
+### Display helm chart values
+
+To see the configurable options on the chart, use helm show values:
+
+```bash
+helm show values dify/dify
+```
+
+### Generate Kubernetes YAML using helm template
+
+Use the following command:
+
+```bash
+helm template dify -f values.yaml dify/dify > dify-k8s-template.yaml
+```
+
+## How to update Dify Enterprise version number?
+
+You can visit [Dify Enterprise Release](https://langgenius.github.io/dify-helm/#/) to check the latest version number and update using Helm. To ensure more robust service delivery, enterprise version updates will be slightly later than community version updates.

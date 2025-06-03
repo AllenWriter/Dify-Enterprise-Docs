@@ -1,0 +1,22 @@
+---
+title: RAG
+version: 'English'
+---
+
+## Find the RAG configuration in the Helm Chart Values
+### Display Helm Chart Values
+```bash
+helm show values dify/dify
+```
+
+This is an example of the RAG configuration in the Helm chart values.
+```yaml
+global:
+  rag:
+    etlType: "Unstructured"
+  ... ...
+```
+
+## The options for the `global.rag.etlType` field
+- Unstructured: [Unstructured.io](https://unstructured.io/) file extraction scheme
+- dify: Dify's proprietary file extraction scheme

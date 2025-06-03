@@ -1,0 +1,91 @@
+---
+title: Okta を使用した OAuth2 の設定
+version: '日本語'
+---
+
+本ドキュメントでは、**Okta** を SSO（Single Sign-On）のアイデンティティプロバイダーとして使用し、Dify Enterprise Edition で OAuth2 認証を有効にする手順を示します。
+
+この機能を有効にすると、Enterprise Edition のログインページは統合された認証ポータルを利用し、セキュリティが強化されます。社内ユーザーは複雑なパスワードを入力する必要がなく、組織アカウントを使ってログインすることで認証を簡素化できます。
+
+## 1. Okta で新規アプリケーションを作成する
+
+1. **Okta 管理コンソール**へアクセスし、**Applications** ページに移動します。**Create App Integration** ボタンをクリックし、OIDC ログイン方式と Web Application アプリケーションタイプを選択します。
+
+   ![](https://assets-docs.dify.ai/2025/02/21c12f61141314a3a942f3423086e5ef.png)
+
+2. 画面の指示に従ってアプリケーション名を入力し、必要に応じて認可スコープなどを設定します。
+
+   - `Sign-in redirect URIs` フィールドには Dify Enterprise の **Callback URL** を設定します（取得方法は[下記](#2-获取-callback-url)を参照）。
+   - `Sign-out redirect URIs` フィールドは空のままにします。
+
+## 2. Callback URL を取得する
+
+有効にしたい SSO の範囲によって、**Callback URL は異なります**。システム管理者は Dify Enterprise の Callback URL を対応する GitHub OAuth2 アプリに入力し、設定を完了する必要があります。
+
+<Tabs>
+  <Tab title="Workspace">
+    Dify Enterprise の **Authentication** ページを開き、**Workspace Settings** セクションにある **「+ New Identity Provider → New OAuth2 Provider」** をクリックし、下部に表示される Callback URL を確認します。
+
+    ![](https://assets-docs.dify.ai/2025/02/cfb6498477ea20ce9db649a5c21f519d.png)
+
+    通常は以下の形式です：
+
+    ```bash
+    https://[your-dify-enterprise-url]/console/api/enterprise/sso/oauth2/callback
+    ```
+  </Tab>
+  <Tab title="WebApp">
+    Dify Enterprise の **Authentication** ページを開き、**WebApp Settings** セクションにある **「+ New Identity Provider → New OAuth2 Provider」** をクリックし、下部に表示される Callback URL を確認します。
+
+    ![](https://assets-docs.dify.ai/2025/02/eef6c4a32147675b7645bb1b46d19aea.png)
+
+    通常は以下の形式です：
+
+    ```bash
+    https://[your-app-url]/api/enterprise/sso/oauth2/callback
+    ```
+  </Tab>
+</Tabs>
+
+2. この URL を Okta アプリの **Sign-in redirect URIs** フィールドに貼り付けます。
+
+## 3. OAuth2 認証を有効化する
+
+### 3.1 Okta アプリケーションからの主要情報取得
+
+1. Okta アプリケーションの **"General"** ページへ移動し、以下のフィールドをコピーしておきます。後で設定に使用します。
+   - **Client ID**
+   - **Client secret**
+
+   ![](/zh-cn/images/okta-oidc-5.png)
+
+2. **"Sign On"** ページに切り替え、**Issuer** を固定リンクに変更します。
+
+   ![](https://assets-docs.dify.ai/2025/02/0cf3c5b1c3b662e48d65827ae3b34ca4.png)
+
+### 3.2 OAuth2 認証を設定する
+
+Dify Enterprise の **Authentication** ページを開き、**「+ New Identity Provider → New OAuth2 Provider」** をクリックして、以下の情報を順に入力してください。
+
+- **Client ID**
+- **Client Secrets**
+
+OAuth2 プロバイダーの基本情報は各プロバイダーの公式ドキュメントによって異なる場合があります。下記は参考例であり、実際の要件に合わせて調整してください。
+
+- **Authorization Endpoint**: `https://your-okta-issuer-url/oauth2/v1/authorize`
+- **Token Endpoint**: `https://your-okta-issuer-url/login/oauth/access_token`
+- **User Info Endpoint**: `https://your-okta-issuer-url/oauth2/v1/userinfo`
+- **Scopes**: `openid,profile,email`
+
+> `your-okta-issuer-url` の取得方法：上記手順を参照し、Okta OAuth2 アプリの Issuer URL を固定リンクに設定して情報をコピーしてください。Okta アプリから追加のフィールドを取得する方法については、[Use of the Issuer](https://support.okta.com/help/s/article/What-is-theIssuerlocated-under-the-OpenID-Connect-ID-Token-app-settings-used-for?language=en_US) をご覧ください。
+
+## 4. SSO 強制認証を有効化（オプション）
+
+システム管理者は、以下の 2 つのシナリオで **SSO Enforcement** オプションを有効にし、必須認証とすることができます。
+
+- **Workspace**：Dify Enterprise の Workspace ログイン時に認証を要求
+- **WebApp**：この Dify Enterprise が作成したアプリケーションの利用時に認証を要求
+
+有効化すると、該当シナリオへのアクセス時に認証許可が必要となります。
+
+<img src="https://assets-docs.dify.ai/2025/02/87bf868d0058723607311265a57888c5.png" width="400" />

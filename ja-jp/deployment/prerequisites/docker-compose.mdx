@@ -1,0 +1,255 @@
+---
+title: 'Docker Compose'
+version: '日本語'
+---
+
+## 必須条件
+
+- Docker
+- Docker Compose
+- Linuxサーバー
+    - WindowsおよびMac用のDocker Desktopはサポートされていません。
+    - 最小要件：4 CPUコア、16 GBメモリ、100 GBのディスク容量
+
+## クイックスタート
+
+### ダウンロード
+
+Dify Enterpriseの[リポジトリ](https://langgenius.github.io/dify-enterprise-docker-compose/)から、特定のバージョンをダウンロードします。
+
+wget でダウンロードする場合：
+
+```bash
+wget https://langgenius.github.io/dify-enterprise-docker-compose/dify-docker-compose-<version>.tgz
+```
+
+curl でダウンロードする場合：
+
+```bash
+curl -O https://langgenius.github.io/dify-enterprise-docker-compose/dify-docker-compose-<version>.tgz
+```
+
+*注：`<version>` は、ダウンロードするバージョン番号に置き換えてください。*
+
+## インストール
+
+1.  ダウンロードしたファイルを、デプロイディレクトリに展開します。
+
+    ```bash
+    mkdir dify-enterprise
+    tar -xzf dify-docker-compose-<version>.tgz -C ./dify-enterprise/
+    ```
+
+2.  Docker Compose を起動します。
+
+    ```bash
+    cd dify-enterprise
+    docker compose up -d
+    ```
+
+3.  [Dify Enterprise へのアクセス方法](#dify-enterprise)
+
+4.  Dify サービスのステータスは、[こちらのリンク](/ja-jp/deployment/verify-services-status)を参照して確認してください。
+
+5.  [ライセンスのアクティベーション](/ja-jp/deployment/license-activation)
+
+## Community Edition からのアップグレード
+
+1.  エンタープライズデータベースを作成します（Community Edition が実行されていることを確認してください）。
+
+    ```bash
+    docker exec -it dify-db-1 psql -U postgres -c "CREATE DATABASE enterprise;"
+    ```
+
+    **補足:** 実行中のコンテナに基づいてコンテナ名を調整する必要がある場合があります。 `docker container ls` を使用して、`db` サービスの名前を確認してください。
+
+2.  Community Edition を停止します。
+
+    ```bash
+    docker compose down
+    ```
+
+3.  データと設定をバックアップします（権限によっては `sudo` コマンドが必要になる場合があります）。
+
+    ```bash
+    tar -czf backup.tgz volumes .env # 必要に応じて、その他のカスタマイズ済みファイルやフォルダを追加してください
+    ```
+
+4.  `backup.tgz` と `dify-docker-compose-<version>.tgz` を除く、Community Edition のすべてのファイルとフォルダを削除します。
+5.  ダウンロードしたファイルを、デプロイディレクトリに展開します。
+
+    ```bash
+    tar -xzf dify-docker-compose-<version>.tgz -C /path/to/directory
+    ```
+
+6.  `volumes` フォルダを削除して、バックアップを復元します。
+
+    ```bash
+    rm -rf volumes
+    ```
+
+    次に、以下を実行します。
+
+    ```bash
+    tar -xzf backup.tgz
+    ```
+
+7.  カスタム構成（例：`docker-compose.yaml`、`ssrf_proxy/squid.conf`、または `nginx/conf.d/default.conf`）がある場合は、対応するファイルを変更して更新します。
+8.  Docker Compose を起動します。
+
+    ```bash
+    docker compose up -d
+    ```
+
+9.  [Dify Enterprise へのアクセス方法](#dify-enterprise)
+
+10. Dify サービスのステータスは、[こちらのリンク](/ja-jp/deployment/verify-services-status)を参照して確認してください。
+
+11. [ライセンスのアクティベーション](/ja-jp/deployment/license-activation)
+
+## 以前の Enterprise Edition からのアップグレード
+
+1.  データと設定をバックアップします（権限によっては `sudo` コマンドが必要になる場合があります）。
+
+    ```bash
+    tar -czf backup.tgz volumes .env # 必要に応じて、その他のカスタマイズ済みファイルやフォルダを追加してください
+    ```
+
+2.  `backup.tgz` と `dify-docker-compose-<version>.tgz` を除く、**以前の** Enterprise Edition のすべてのファイルとフォルダを削除します。
+3.  ダウンロードしたファイルを、デプロイディレクトリに展開します。
+
+    ```bash
+    tar -xzf dify-docker-compose-<version>.tgz -C /path/to/directory
+    ```
+
+4.  `volumes` フォルダを削除して、バックアップを復元します。
+
+    ```bash
+    rm -rf volumes
+    ```
+
+    次に、以下を実行します。
+
+    ```bash
+    tar -xzf backup.tgz
+    ```
+
+5.  カスタム構成（例：`docker-compose.yaml`、`ssrf_proxy/squid.conf`、または `nginx/conf.d/default.conf`）がある場合は、対応するファイルを変更して更新します。
+6.  Docker Compose を起動します。
+
+    ```bash
+    docker compose up -d
+    ```
+
+## 高度な設定
+
+### Dify Enterprise へのアクセス方法
+
+Dify Enterprise にアクセスするには、サーバーの IP アドレスをドメイン名に関連付ける必要があります。そのため、ローカルマシンの hosts ファイルを編集し、以下のエントリを追加します。
+
+```bash
+4.152.1.216 console.dify.local
+4.152.1.216 app.dify.local
+4.152.1.216 api.dify.local
+4.152.1.216 upload.dify.local
+4.152.1.216 enterprise.dify.local
+```
+
+### ドメイン要件
+
+Dify Enterprise では、以下の 5 つのドメインを設定する必要があります。
+
+- Console: console.dify.local
+- Services API: api.dify.local
+- APP: app.dify.local
+- Files: upload.dify.local
+- Enterprise Dashboard: enterprise.dify.local
+
+変更を行う場合は、デプロイディレクトリの `.env` ファイルに以下の関連構成を追加してください。
+
+```bash
+# .env
+
+CONSOLE_API_URL="http://console.dify.local"
+CONSOLE_WEB_URL="http://console.dify.local"
+SERVICE_API_URL="http://api.dify.local"
+APP_API_URL="http://app.dify.local"
+APP_WEB_URL="http://app.dify.local"
+FILES_URL="http://upload.dify.local"
+ENTERPRISE_URL="http://enterprise.dify.local"
+```
+
+### 永続ストレージ
+
+Enterprise Edition では、デフォルトでローカルストレージが採用されています。別のストレージタイプを使用するには、デプロイディレクトリの `.env` ファイルに関連する構成を追加します。たとえば、AWS S3 を使用するには：
+
+```bash
+# .env
+
+STORAGE_TYPE=s3
+
+S3_USE_AWS_MANAGED_IAM=
+S3_ENDPOINT=
+S3_REGION=
+S3_BUCKET_NAME=
+S3_ACCESS_KEY=
+S3_SECRET_KEY=
+```
+
+他のストレージオプションの構成については、[ファイルストレージの構成](/ja-jp/deployment/advanced-configuration/environment-variables#file-storage-configuration)（英語）を参照してください。必要に応じてブラウザの翻訳機能を使用してください。
+
+### Postgres データベース
+
+Enterprise Edition では、デフォルトで Postgres データベースが使用されます。設定を変更する場合は、デプロイディレクトリの `.env` ファイルに関連する構成を追加します。
+
+```bash
+# .env
+
+DB_USERNAME=postgres
+DB_PASSWORD=difyai123456
+DB_HOST=db
+DB_PORT=5432
+DB_DATABASE=dify
+```
+
+他のデータベースの構成については、[データベースの構成](/ja-jp/deployment/advanced-configuration/environment-variables#database-configuration)（英語）を参照してください。必要に応じてブラウザの翻訳機能を使用してください。
+
+### Redis データベース
+
+Redis データベースの設定を変更するには、デプロイディレクトリの `.env` ファイルに関連する構成を追加します。
+
+```bash
+# .env
+
+REDIS_HOST=redis
+REDIS_PORT=6379
+REDIS_USERNAME=
+REDIS_PASSWORD=difyai123456
+REDIS_USE_SSL=false
+REDIS_DB=0
+```
+
+他のデータベースの構成については、[Redisの構成](/ja-jp/deployment/advanced-configuration/environment-variables#redis-configuration)（英語）を参照してください。必要に応じてブラウザの翻訳機能を使用してください。
+
+### ベクトルデータベース
+
+Enterprise Edition は、初期設定では Weaviate をベクトルデータベースとして使用します。Qdrant など、別のデータベースを使用する場合は、デプロイディレクトリの `.env` ファイルに関連する構成を追加します。
+
+```bash
+# .env
+
+VECTOR_STORE=qdrant
+
+QDRANT_URL=http://qdrant:6333
+QDRANT_API_KEY=difyai123456
+QDRANT_CLIENT_TIMEOUT=20
+QDRANT_GRPC_ENABLED=false
+QDRANT_GRPC_PORT=6334
+```
+
+他のベクトルデータベースの構成については、[ベクトルデータベースの構成](/ja-jp/deployment/advanced-configuration/environment-variables#vector-database-configuration)（英語）を参照してください。必要に応じてブラウザの翻訳機能を使用してください。
+
+**完了後**
+
+- [Dify サービスのステータス確認](/ja-jp/deployment/verify-services-status)
+- [ライセンスのアクティベーション](/ja-jp/deployment/license-activation)

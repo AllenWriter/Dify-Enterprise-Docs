@@ -105,11 +105,11 @@
         {
           "group": "身份认证",
           "pages": [
-            "versions/2-8-x/zh-cn/administrator-guide/authentication",
-            "versions/2-8-x/zh-cn/administrator-guide/members-auth",
-            "versions/2-8-x/zh-cn/administrator-guide/webapp-external-users-management",
+            "versions/2-8-x/zh-cn/administrator-guide/authentication/introduction",
+            "versions/2-8-x/zh-cn/administrator-guide/authentication/enterprise-user-auth",
+            "versions/2-8-x/zh-cn/administrator-guide/authentication/webapp-external-user-auth",
             {
-              "group": "企业 SSO",
+              "group": "配置 SSO 认证",
               "pages": [
                 "zh-cn/administrator-guide/sso/introduction",
                 {

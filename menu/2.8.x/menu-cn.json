@@ -105,7 +105,9 @@
         {
           "group": "身份认证",
           "pages": [
-            "zh-cn/administrator-guide/authentication",
+            "versions/2-8-x/zh-cn/administrator-guide/authentication",
+            "versions/2-8-x/zh-cn/administrator-guide/members-auth",
+            "versions/2-8-x/zh-cn/administrator-guide/webapp-external-users-management",
             {
               "group": "企业 SSO",
               "pages": [
@@ -216,7 +218,7 @@
         {
           "group": "发布应用",
           "pages": [
-            "zh-cn/user-guide/application-publishing/permission-management",
+            "versions/2-8-x/zh-cn/user-guide/application-publishing/permission-management",
             {
               "group": "发布为公开 Web 站点",
               "pages": [

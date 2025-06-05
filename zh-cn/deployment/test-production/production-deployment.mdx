@@ -4,7 +4,7 @@ version: '简体中文'
 ---
 
 ## 要求
-> 这些要求可以支持每日最多 `3000 活跃用户`。如果您有更多用户，可以根据需要扩展资源。
+> 这些要求可以支持每日最多 `3000 活跃用户`。如果你有更多用户，可以根据需要扩展资源。
 
 - Kubernetes 集群
     - 3 个主节点：每个 4 CPU，16 GB RAM
@@ -49,15 +49,15 @@ version: '简体中文'
 
 更新 <a href="https://assets-docs.dify.ai/2025/01/309efe405120571ee99b961d02341ab8.yaml" download="values-no-infra-for-prod.yaml">values-no-infra-for-prod.yaml</a> 文件。
 
-- 使用您的持久化存储配置更新 `persistence`
-- 使用您的 Postgres 数据库配置更新 `externalPostgres`
-- 使用您的 Redis 数据库配置更新 `externalRedis`
-- 使用您的向量数据库虚拟机配置更新 `vectorDB`
+- 使用你的持久化存储配置更新 `persistence`
+- 使用你的 Postgres 数据库配置更新 `externalPostgres`
+- 使用你的 Redis 数据库配置更新 `externalRedis`
+- 使用你的向量数据库虚拟机配置更新 `vectorDB`
 
 ### 安装 Dify Enterprise
-您可以使用以下指南安装 Dify Enterprise。但是您需要使用 `values-no-infra-for-prod.yaml` 而不是 `values.yaml`。
+你可以使用以下指南安装 Dify Enterprise。但是你需要使用 `values-no-infra-for-prod.yaml` 而不是 `values.yaml`。
 - [如何安装 Dify Enterprise](/zh-cn/deployment/prerequisites/kubernetes)
 
 ### 验证服务状态
-安装完成后，您可以参考以下指南验证服务状态。
+安装完成后，你可以参考以下指南验证服务状态。
 - [如何验证 Dify Enterprise 服务状态](/zh-cn/deployment/verify-services-status)

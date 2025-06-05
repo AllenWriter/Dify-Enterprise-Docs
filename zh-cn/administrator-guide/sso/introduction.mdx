@@ -1,6 +1,5 @@
 ---
 title: SSO 认证介绍
-version: '简体中文'
 ---
 
 Dify 企业版支持为组织成员实施强制单点登录（SSO）。开启后团队内的成员必须通过身份提供商（例如 Microsoft Entra ID、Okta 以及 GitHub 等身份验证供应商）登录 Dify 企业平台。
@@ -16,12 +15,14 @@ Dify 企业版的 SSO 认证系统提供了以下两种不同范围的单点登�
 ### Workspace SSO
 
 * 控制用户如何访问 Dify 企业版平台本身。
-* 启用后，所有用户在进入任何工作空间之前都需要通过您指定的身份提供商（IDP）进行身份验证。
+* 启用后，所有用户在进入任何工作空间之前都需要通过你指定的身份提供商（IDP）进行身份验证。
 
-### Web App SSO
+### Webapp SSO
 
 * 控制用户访问在 Dify 企业版平台内创建的 Web 应用的权限。
-* 启用后，用户访问任何由 Dify 企业版平台创建的 Web 应用之前都需要通过身份提供商（IDP）的身份验证，鉴权后才能够被允许访问。该设置为全局选项，暂时无法单独控制特定 WebApp 的访问权限。如需开启对单独 WebApp 的权限控制，请参考[常见问题](/administrator-guide/faq)。
+* 启用后，用户访问任何由 Dify 企业版平台创建的 Web 应用之前都需要通过身份提供商（IdP）的身份验证，鉴权后才能够被允许访问。该设置为全局选项，暂时无法单独控制某个单独的 WebApp 开启/关闭权限。如需开启对单独 Webapp 进行人员权限分组，请参考[应用访问权限管理](/versions/2-8-x/zh-cn/user-guide/application-publishing/permission-management)。
+
+> Workspace 和 Webapp SSO 的 Callback URL 有所分别，请注意区分。
 
 **⚠️ 注意事项**
 

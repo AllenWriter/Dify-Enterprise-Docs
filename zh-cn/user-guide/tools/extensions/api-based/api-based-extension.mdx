@@ -8,7 +8,7 @@ version: '简体中文'
 * `moderation` 敏感内容审计
 * `external_data_tool` 外部数据工具
 
-在扩展模块能力之前，您需要准备一个 API 和用于鉴权的 API Key（也可由 Dify 自动生成，可选）。
+在扩展模块能力之前，你需要准备一个 API 和用于鉴权的 API Key（也可由 Dify 自动生成，可选）。
 
 除了需要开发对应的模块能力，还需要遵照以下规范，以便 Dify 正确调用 API。
 
@@ -18,7 +18,7 @@ version: '简体中文'
 
 ### API 规范 <a href="#usercontentapi-gui-fan" id="usercontentapi-gui-fan"></a>
 
-Dify 将会以以下规范调用您的接口：
+Dify 将会以以下规范调用你的接口：
 
 ```
 POST {Your-API-Endpoint}
@@ -29,7 +29,7 @@ POST {Your-API-Endpoint}
 | Header          | Value             | Desc                                                                  |
 | --------------- | ----------------- | --------------------------------------------------------------------- |
 | `Content-Type`  | application/json  | 请求内容为 JSON 格式。                                                        |
-| `Authorization` | Bearer {api_key} | API Key 以 Token 令牌的方式传输，您需要解析该 `api_key` 并确认是否和提供的 API Key 一致，保证接口安全。 |
+| `Authorization` | Bearer {api_key} | API Key 以 Token 令牌的方式传输，你需要解析该 `api_key` 并确认是否和提供的 API Key 一致，保证接口安全。 |
 
 #### Request Body <a href="#user-content-request-body" id="user-content-request-body"></a>
 

@@ -15,7 +15,7 @@ version: '简体中文'
 
 ### 持久化配置
 
-您需要编辑 `values.yaml` 并设置持久化类型。有关更多信息，请参阅[持久化存储](/zh-cn/deployment/advanced-configuration/persistent-storage)。
+你需要编辑 `values.yaml` 并设置持久化类型。有关更多信息，请参阅[持久化存储](/zh-cn/deployment/advanced-configuration/persistent-storage)。
 
 > <a href="https://assets-docs.dify.ai/2025/01/e3d53c6c7d979c77d0a1809670fbf211.yaml" download="values.yaml">点击此处</a>下载 `values.yaml` 文件。
 
@@ -32,7 +32,7 @@ helm upgrade -i dify -f values.yaml dify/dify
 更多信息，请参考 [Dify Helm Chart](/zh-cn/deployment/advanced-configuration/dify-helm-chart)。
 
 ### 设置 Ingress 控制器
-Helm chart 中没有默认的 Ingress 控制器。您需要自行设置 Ingress 控制器。
+Helm chart 中没有默认的 Ingress 控制器。你需要自行设置 Ingress 控制器。
 我们使用 `Nginx Ingress Controller` 进行快速入门。
 
 - [如何设置 Nginx Ingress Controller](/zh-cn/deployment/advanced-configuration/nginx-ingress-controller)
@@ -43,7 +43,7 @@ Helm chart 中没有默认的 Ingress 控制器。您需要自行设置 Ingress 
 kubectl get svc -n ingress-nginx
 ```
 
-然后获取 Ingress 控制器的外部 IP，并将以下行添加到您的 `/etc/hosts` 文件中。
+然后获取 Ingress 控制器的外部 IP，并将以下行添加到你的 `/etc/hosts` 文件中。
 ```bash
 4.152.1.216 console.dify.local
 4.152.1.216 app.dify.local
@@ -58,12 +58,12 @@ kubectl get svc -n ingress-nginx
 #### 1. 初始化 Dify 控制台
 - 访问 `http://console.dify.local`。
 - 初始化电子邮件和密码。
-- 初始化完成后，您将被重定向到登录页面，并等待许可证激活。
+- 初始化完成后，你将被重定向到登录页面，并等待许可证激活。
 ![](/images/license-inactive.png)
 
 #### 2. 初始化 Dify 企业版仪表板以激活许可证
 - 访问 `http://enterprise.dify.local`。
-- 使用默认的电子邮件和密码登录。您可以在登录后更改密码。
+- 使用默认的电子邮件和密码登录。你可以在登录后更改密码。
     - 电子邮件： `dashboard@dify.ai`
     - 密码： `difyai123456`
 - 许可证激活：登录后，将弹出对话框以激活许可证。

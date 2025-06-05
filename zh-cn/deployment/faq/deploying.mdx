@@ -5,7 +5,7 @@ version: '简体中文'
 
 ## 如何配置 Nginx Ingress 控制器？
 
-这是 Nginx Ingress 控制器的常见配置。您可以根据您的云服务提供商使用其他 ingress 控制器。您可以执行以下命令在 Kubernetes 集群上安装 Nginx Ingress 控制器：
+这是 Nginx Ingress 控制器的常见配置。你可以根据你的云服务提供商使用其他 ingress 控制器。你可以执行以下命令在 Kubernetes 集群上安装 Nginx Ingress 控制器：
 
 ```bash
 kubectl apply -f ./ingress-nginx-controller-v1.12.1.yaml
@@ -25,7 +25,7 @@ ingress:
   }
 ```
 
-完成所有配置后，您可以执行以下命令在 Kubernetes 集群上升级应用程序：
+完成所有配置后，你可以执行以下命令在 Kubernetes 集群上升级应用程序：
 
 ```bash
 helm upgrade -i dify -f values.yaml dify/dify
@@ -33,7 +33,7 @@ helm upgrade -i dify -f values.yaml dify/dify
 
 ## 如何访问 Dify 服务？
 
-安装完成后，如果您想访问服务，应该首先配置 ingress。您可以通过以下命令获取 ingress IP：
+安装完成后，如果你想访问服务，应该首先配置 ingress。你可以通过以下命令获取 ingress IP：
 
 ```bash
 kubectl get services -o wide -w -n ingress-nginx

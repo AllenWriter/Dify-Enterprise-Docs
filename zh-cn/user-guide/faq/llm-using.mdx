@@ -59,7 +59,7 @@ Rate limit reached for default-gpt-3.5-turboin organization org-wDrZCxxxxxxxxxis
 
 ### 8. 用户自部署后，智聊不可使用，报错如下：**Unrecognized request argument supplied:functions**，该怎么解决？
 
-首先请检查前后端版本是否是最新版且前后端版本保持一致；其次，该错误有可能是因为您使用了 Azure OpenAI 的 key，但没有成功部署模型，请检查您使用的 Azure OpenAI 里是否部署了模型；其中 gpt-3.5-turbo 模型版本必须是 0613 以上版本。（因为 0613 之前的版本不支持 智聊 所使用的 function call 能力，所以无法使用）
+首先请检查前后端版本是否是最新版且前后端版本保持一致；其次，该错误有可能是因为你使用了 Azure OpenAI 的 key，但没有成功部署模型，请检查你使用的 Azure OpenAI 里是否部署了模型；其中 gpt-3.5-turbo 模型版本必须是 0613 以上版本。（因为 0613 之前的版本不支持 智聊 所使用的 function call 能力，所以无法使用）
 
 ### 9. 设置 OpenAI Key 时，报错如下，是什么原因？
 
@@ -67,7 +67,7 @@ Rate limit reached for default-gpt-3.5-turboin organization org-wDrZCxxxxxxxxxis
 Error communicating with OpenAl: HTTPSConnectionPool(host='api.openai.com', port=443): Max retriesexceeded with url: /v1/chat/completions (Caused byNewConnectionError( <urllib3.connection.HTTPSConnection object at 0x7f0462ed7af0>; Failed toestablish a new connection: [Errno -3] Temporary failure in name resolution'))
 ```
 
-通常情况下是由于您的环境设置了代理，请检查是否设置代理。
+通常情况下是由于你的环境设置了代理，请检查是否设置代理。
 
 ### 10. 应用里切换模型使用时遇到如下报错，该怎么解决？
 
@@ -91,7 +91,7 @@ Query or prefix prompt is too long, you can reduce the preix prompt, or shrink t
 
 ### 13. 在社区版中，数据集开启 **Q\&A 分段模式**一直显示排队中，是什么原因？
 
-请检查您所使用的 Embedding 模型 api-key 是否达到了速率限制。
+请检查你所使用的 Embedding 模型 api-key 是否达到了速率限制。
 
 ### 14. 用户在使用应用时遇到报错“Invalid token”，该怎么解决？
 
@@ -102,7 +102,7 @@ Query or prefix prompt is too long, you can reduce the preix prompt, or shrink t
 
 ### 15. 数据集文档上传的大小限制有哪些？
 
-目前数据集文档上传单个文档最大是 15MB，总文档数量限制 100 个。如您本地部署版本需要调整修改该限制，请参考[文档](/zh-cn/user-guide/faq/llm-using)。
+目前数据集文档上传单个文档最大是 15MB，总文档数量限制 100 个。如你本地部署版本需要调整修改该限制，请参考[文档](/zh-cn/user-guide/faq/llm-using)。
 
 ### 16. 为什么选择了 Claude 模型，还是会消耗 OpenAI 的费用？
 
@@ -139,5 +139,5 @@ Dify 支持以下作为 Embedding 模型使用，只需在配置框中选择 `Em
 
 ### 21. 如何把自己创建的应用设置成应用模板？
 
-该功能为 Dify 官方提供的应用模板供云端版用户参考使用，暂未支持将自己创建的应用设置成应用模板。如您使用云端版，可 **添加到工作区** 或 **自定义** 修改后成为你自己的应用。如您使用社区版，需要为团队内创建更多的应用模板，您可咨询我们商业化团队获得付费的技术支持：`business@dify.ai`
+该功能为 Dify 官方提供的应用模板供云端版用户参考使用，暂未支持将自己创建的应用设置成应用模板。如你使用云端版，可 **添加到工作区** 或 **自定义** 修改后成为你自己的应用。如你使用社区版，需要为团队内创建更多的应用模板，你可咨询我们商业化团队获得付费的技术支持：`business@dify.ai`
 

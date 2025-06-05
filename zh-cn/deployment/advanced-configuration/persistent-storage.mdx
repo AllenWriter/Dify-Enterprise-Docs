@@ -35,7 +35,7 @@ persistence:
 - tencent-cos
 
 ## 如何使用 IAM 角色配置 Amazon S3 存储
-如果您想使用 AWS IAM 角色访问 S3 存储桶，可以在 Helm chart 值中将 `useAwsManagedIam` 字段设置为 `true`。`region` 和 `bucketName` 字段是必需的。
+如果你想使用 AWS IAM 角色访问 S3 存储桶，可以在 Helm chart 值中将 `useAwsManagedIam` 字段设置为 `true`。`region` 和 `bucketName` 字段是必需的。
 ```yaml
 persistence:
   type: "s3"

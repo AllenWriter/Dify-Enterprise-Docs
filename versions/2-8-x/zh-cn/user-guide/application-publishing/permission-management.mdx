@@ -21,8 +21,10 @@ title: 应用访问权限管理
 
 Webapp 提供四种访问权限模式，你可以根据应用的使用场景选择合适的权限。
 
+![](https://assets-docs.dify.ai/2025/06/4f96327ddf919998a45c095511fae116.png)
+
 <Info>
-  为确保在发布 Webapp 时能正确启用权限管理功能，请确保系统管理员已在管理后台配置 Webapp SSO 设置。详细配置方法请参考[身份认证 - Webapp](/versions/2-8-x/zh-cn/administrator-guide/authentication#Webapp)。
+  为确保在发布 Webapp 时能正确启用权限管理功能，请确保系统管理员已在管理后台配置 Webapp SSO 认证。详细配置方法请参考[身份认证 - SSO 认证](/zh-cn/administrator-guide/sso/introduction)。
 </Info>
 
 ### 平台内所有成员
@@ -59,7 +61,11 @@ Webapp 提供四种访问权限模式，你可以根据应用的使用场景选�
 
 ### 经认证的外部用户
 
-该选项将允许任何获得互联网链接的用户访问应用，通常适用于公开演示的应用、面向客户的服务或公开资源。
+该选项将要求企业外部的用户通过 SSO 认证后访问应用。企业内的管理人员可通过第三方身份提供商（IdP）监测和管理外部用户。
+
+<Info>
+  若发现该选项右侧出现禁用提醒，请联系系统管理员前往管理后台，查看是否已配置并开启 Web App 外部用户 SSO 认证。详细说明请参考 [Web App 外部用户认证](/versions/2-8-x/zh-cn/administrator-guide/authentication/webapp-external-user-auth)。
+</Info>
 
 ### 任何人
 

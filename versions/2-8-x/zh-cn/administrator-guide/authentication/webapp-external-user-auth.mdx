@@ -60,16 +60,16 @@ Dify 企业版支持面向企业外部用户提供服务，通过配置第三方
 2. 将开关切换至 **开启** 状态
 
 <Info>
-  启用外部用户认证后，Web 应用的发布权限将启用外部用户访问。详细说明请参考 [应用访问权限管理](/versions/2-8-x/zh-cn/user-guide/application-publishing/permission-management)。
+  若已配置 SSO 但未开启认证，Web app 发布权限中的 **经认证的外部用户** 选项将被暂时禁用。如需了解更多关于 Web app 发布权限的配置，请参考 [应用访问权限管理](/versions/2-8-x/zh-cn/user-guide/application-publishing/permission-management)。
 </Info>
 
 ### 步骤 3：测试认证配置
 
-1. 获取任意一个 Web 应用的访问链接
-2. 在浏览器中打开链接
-3. 验证是否正确跳转到 SSO 登录页面
-4. 使用测试账户完成登录流程
-5. 确认能够正常访问 Web 应用
+1. 发布 Web app 时将权限范围设置为 **平台内所有成员** 或 **平台内指定成员**。
+2. 将 Web app 的 URL 发送至具备访问权限的用户。
+3. 验证是否正确跳转到 SSO 登录页面。
+4. 使用测试账户完成登录流程。
+5. 确认能够正常访问 Web 应用。
 
 ## 故障排除
 

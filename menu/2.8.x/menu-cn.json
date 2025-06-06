@@ -111,25 +111,25 @@
             {
               "group": "配置 SSO 认证",
               "pages": [
-                "zh-cn/administrator-guide/sso/introduction",
+                "versions/2-8-x/zh-cn/administrator-guide/sso/introduction",
                 {
                   "group": "Okta",
                   "pages": [
-                    "zh-cn/administrator-guide/sso/okta/oidc",
-                    "zh-cn/administrator-guide/sso/okta/saml",
-                    "zh-cn/administrator-guide/sso/okta/oauth2"
+                    "versions/2-8-x/zh-cn/administrator-guide/sso/okta/oidc",
+                    "versions/2-8-x/zh-cn/administrator-guide/sso/okta/saml",
+                    "versions/2-8-x/zh-cn/administrator-guide/sso/okta/oauth2"
                   ]
                 },
                 {
                   "group": "Azure",
                   "pages": [
-                    "zh-cn/administrator-guide/sso/azure/saml"
+                    "versions/2-8-x/zh-cn/administrator-guide/sso/azure/saml"
                   ]
                 },
                 {
                   "group": "GitHub",
                   "pages": [
-                    "zh-cn/administrator-guide/sso/github/oauth2"
+                    "versions/2-8-x/zh-cn/administrator-guide/sso/github/oauth2"
                   ]
                 }
               ]

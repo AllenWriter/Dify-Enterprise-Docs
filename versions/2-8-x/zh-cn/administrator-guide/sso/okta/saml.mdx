@@ -20,21 +20,41 @@ title: 使用 Okta 配置 SAML
 
 系统管理员需要将 Dify 企业版的 Callback URL 填写至 Okta 应用程序内。
 
-1. 点击 Dify 企业版的 Authentication 页，轻点 **"+ New Identity Provider → New SAML Provider"**，然后即可查看 ACS URL。
+<Tabs>
+  <Tab title="Workspace">
+  点击 **管理后台** → **身份认证** → **成员认证** →**SSO 身份提供商** → **New Identity Provider** → **New SAML Provider**，在底部获取 Callback URL。
 
-   ![](https://assets-docs.dify.ai/2025/05/b5f44f58a5737409eff4b6b674ab63ac.png)
+  它通常为以下格式：
+
+   ```bash
+   https://[your-dify-enterprise-url]/console/api/enterprise/sso/saml/acs
+   ```
+  </Tab>
+  <Tab title="WebApp Members（面向内部用户）">
+  点击 **管理后台** → **身份认证** → **成员认证** → **SSO 身份提供商** → **New Identity Provider** → **New SAML Provider**，在底部获取 Callback URL。
+
+  它通常为以下格式：
+
+   ```bash
+   https://[your-app-url]/api/enterprise/sso/members/saml/acs
+   ```
+  </Tab>
+  <Tab title="WebApp External Users（面向外部用户）">
+  点击 **管理后台** → **身份认证** → **Web App 外部用户认证** → **SSO 身份提供商** → **New Identity Provider** → **New SAML Provider**，在底部获取 Callback URL。
 
    它通常为以下格式：
 
+   ```bash
+   https://[your-app-url]/api/enterprise/sso/saml/acs
    ```
-   https://[your-dify-enterprise-url]/console/api/enterprise/sso/saml/acs
-   ```
+  </Tab>
+</Tabs>
 
-2. 将其粘贴至 Configure SAML 页的 Single sign-on URL 和 Audience URI (SP Entity ID) 字段内。
+将其粘贴至 Configure SAML 页的 Single sign-on URL 和 Audience URI (SP Entity ID) 字段内。
 
-   ![](https://assets-docs.dify.ai/2025/05/e6c1a1521306919ab325030adafb2d2b.png)
+![](https://assets-docs.dify.ai/2025/05/e6c1a1521306919ab325030adafb2d2b.png)
 
-3. 填写 URL 后，继续完成以下设置：
+填写 URL 后，继续完成以下设置：
    * 将 Name ID 格式设置为 EmailAddress
    * 在 "Show Advanced Settings" 下，验证响应和断言签名是否被设置为 Signed
 

@@ -37,15 +37,35 @@ version: '简体中文'
   </Frame>
 </div>
 
-系统管理员需要前往 Dify 企业版的 Authentication 页，轻点 **"+ New Identity Provider → New SAML Provider"**，然后即可获取 ACS URL。
+<Tabs>
+  <Tab title="Workspace">
+  点击 **管理后台** → **身份认证** → **成员认证** →**SSO 身份提供商** → **New Identity Provider** → **New SAML Provider**，在底部获取 Callback URL。
 
-![](https://assets-docs.dify.ai/2024/11/f66303a3902d7fff58c76228f6485386.png)
+  它通常为以下格式：
 
-它通常为以下格式：
+   ```bash
+   https://[your-dify-enterprise-url]/console/api/enterprise/sso/saml/acs
+   ```
+  </Tab>
+  <Tab title="Web App Members（面向内部用户）">
+  点击 **管理后台** → **身份认证** → **成员认证** → **SSO 身份提供商** → **New Identity Provider** → **New SAML Provider**，在底部获取 Callback URL。
 
-```bash
-https://[your-dify-enterprise-url]/console/api/enterprise/sso/oidc/callback
-```
+  它通常为以下格式：
+
+   ```bash
+   https://[your-app-url]/api/enterprise/sso/members/saml/acs
+   ```
+  </Tab>
+  <Tab title="WebApp External Users（面向外部用户）">
+  点击 **管理后台** → **身份认证** → **Web App 外部用户认证** → **SSO 身份提供商** → **New Identity Provider** → **New SAML Provider**，在底部获取 Callback URL。
+
+   它通常为以下格式：
+
+   ```bash
+   https://[your-app-url]/api/enterprise/sso/saml/acs
+   ```
+  </Tab>
+</Tabs>
 
 获取 ACS URL 后，切换回 Azure 应用程序页，在 SAML Certificates tab 栏中下载 Certificate；同时复制 set up 页的 Login URL。接下来需要将这两项参数填写至 Dify 企业版管理后台内。
 

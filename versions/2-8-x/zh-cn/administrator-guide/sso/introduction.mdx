@@ -10,29 +10,33 @@ Dify 企业版支持为组织成员实施强制单点登录（SSO）。开启后
 
 根据面向用户的范围，Dify 企业版的 SSO 认证系统提供了以下两种不同范围的单点登录（SSO）配置选项：
 
-### 企业内部用户
+### 内部用户
 
-**Workspace SSO**
+> 内部用户指的是已在 Dify 企业版工作空间内注册或在管理后台添加的成员。
 
-* 控制用户如何访问 Dify 企业版平台本身。
+**Workspace**
+
+* 控制用户如何访问 Dify 企业版工作空间。
 * 启用后，所有用户在进入任何工作空间之前都需要通过你指定的身份提供商（IDP）进行身份验证。
 
-**Webapp SSO**
+**Web App**
 
-* 控制用户访问在 Dify 企业版平台内创建的 Web 应用的权限。
-* 启用后，用户访问任何由 Dify 企业版平台创建的 Web 应用之前都需要通过身份提供商（IdP）的身份验证，鉴权后才能够被允许访问。该设置为全局选项，暂时无法单独控制某个单独的 WebApp 开启/关闭权限。如需开启对单独 Webapp 进行人员权限分组，请参考[应用访问权限管理](/versions/2-8-x/zh-cn/user-guide/application-publishing/permission-management)。
+* 控制内部用户访问在 Dify 企业版平台内创建的 Web App。
+* 启用后，内部用户访问任何由 Dify 企业版平台创建的 Web 应用之前都需要通过身份提供商（IdP）的身份验证，鉴权后才能够被允许访问。该设置为全局选项，暂时无法单独控制某个单独的 WebApp 开启/关闭权限。如需开启对单独 Webapp 进行人员权限分组，请参考[应用访问权限管理](/versions/2-8-x/zh-cn/user-guide/application-publishing/permission-management)。
 
 > Workspace 和 Webapp SSO 的 Callback URL 有所分别，请注意区分。
 
-### 企业外部用户
+### 外部用户
 
-**Webapp SSO**
+> 外部用户指的是未加入 Dify 企业版内的成员。
+
+**Web App**
 
 * 外部用户通过 SSO 认证后，可以访问 Dify 企业版平台内创建的 Web 应用。
 
 * 启用后，用户访问任何由 Dify 企业版创建的 Web 应用之前都需要通过身份提供商（IdP）的身份验证，鉴权后才能够被允许访问。
 
-> 该权限范围的 Webapp Callback URL 与面向内部用户的 Web app 回调地址有所不同，请注意区分。
+> 该权限范围的 Web App Callback URL 与面向内部用户的 Web App 有所不同，请注意区分。
 
 **⚠️ 注意事项**
 

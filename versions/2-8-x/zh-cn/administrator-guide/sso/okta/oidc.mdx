@@ -1,6 +1,5 @@
 ---
 title: 使用 Okta 配置 OIDC
-version: '简体中文'
 ---
 
 本篇文档将以 Okta 作为 SSO 身份提供商为例，演示如何为 Dify 企业版开启 OIDC 验证协议。
@@ -24,29 +23,29 @@ version: '简体中文'
 
 ## 2. 配置 Okta 应用程序
 
-根据所需要开启的 SSO 范围，**Callback URL 有所差异**。系统管理员需要将 Dify 企业版的 Callback URL 填写至对应的 GitHUb OAuth2 应用程序内以完成创建流程。
+根据所需要开启的 SSO 范围，**Callback URL 有所差异**。系统管理员需要将 Dify 企业版的 Callback URL 填写至对应的  Okta 的 OAuth2 应用程序内以完成创建流程。
 
 <Tabs>
   <Tab title="Workspace">
-   点击 Dify 企业版的 Authentication 页，轻点 Members Authentication 区域内的 **"+ New Identity Provider → New OAuth2 Provider"**，在底部查看 Callback URL。
+  点击 **管理后台** → **身份认证** → **成员认证** →**SSO 身份提供商** → **New Identity Provider** → **New OAuth2 Provider**，在底部获取 Callback URL。
 
-   它通常为以下格式：
+  它通常为以下格式：
 
    ```bash
    https://[your-dify-enterprise-url]/console/api/enterprise/sso/oidc/callback
    ```
   </Tab>
-  <Tab title="WebApp（面向内部用户）">
-   点击 Dify 企业版的 Authentication 页，轻点 WebApp Settings 区域内的 **"+ New Identity Provider → New OAuth2 Provider"**，在底部查看 Callback URL。
+  <Tab title="WebApp Members（面向内部用户）">
+  点击 **管理后台** → **身份认证** → **成员认证** → **SSO 身份提供商** → **New Identity Provider** → **New OAuth2 Provider**，在底部获取 Callback URL。
 
-   它通常为以下格式：
+  它通常为以下格式：
 
    ```bash
    https://[your-app-url]/api/enterprise/sso/members/oidc/callback
    ```
   </Tab>
-  <Tab title="WebApp（面向外部用户）">
-   点击 Dify 企业版的 Authentication 页，轻点 WebApp Settings 区域内的 **"+ New Identity Provider → New OAuth2 Provider"**，在底部查看 Callback URL。
+  <Tab title="WebApp External Users（面向外部用户）">
+  点击 **管理后台** → **身份认证** → **Web App 外部用户认证** → **SSO 身份提供商** → **New Identity Provider** → **New OAuth2 Provider**，在底部获取 Callback URL。
 
    它通常为以下格式：
 

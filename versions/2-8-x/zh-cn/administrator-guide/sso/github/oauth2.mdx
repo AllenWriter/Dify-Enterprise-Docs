@@ -7,9 +7,11 @@ version: '简体中文'
 
 通过启用此功能，企业版登录页将使用统一的身份认证入口以增强安全性。对于企业内部用户而言，无需输入复杂密码，使用组织账号登录即可通过验证，简化登录流程。
 
-> 本文将出现内部用户和外部用户的表述。现作出以下区分说明：
-> 内部成员：在 Dify 企业版工作空间内注册或在管理后台添加的成员。
-> 外部用户：未在 Dify 企业版内的成员
+<Info>
+本文将出现内部用户和外部用户的表述。现作出以下区分说明：
+- 内部成员：在 Dify 企业版工作空间内注册或在管理后台添加的成员。
+- 外部用户：未在 Dify 企业版内的成员
+</Info>
 
 ## 1. 在 GitHub 中创建 OAuth App
 
@@ -46,21 +48,19 @@ version: '简体中文'
    它通常为以下格式：
 
    ```bash
-   https://[your-app-url]/api/enterprise/sso/members/oidc/callback
+   https://[your-app-url]/api/enterprise/sso/members/oauth2/callback
    ```
   </Tab>
-    </Tab>
   <Tab title="WebApp（面向外部用户）">
    点击 Dify 企业版的“身份认证”页，轻点 Web 外部用户认证内的 SSO 选项内的 **"+ New Identity Provider → New OAuth2 Provider"**，在底部查看 Web App Callback URL。
 
    它通常为以下格式：
 
    ```bash
-   https://[your-app-url]/api/enterprise/sso/oidc/callback
+   https://[your-app-url]/api/enterprise/sso/oauth2/callback
    ```
   </Tab>
 </Tabs>
-
 
 2. 将其粘贴至 OAuth2 App 内的 **Authorization callback URL** 字段内。
 

@@ -28,25 +28,30 @@ version: '简体中文'
 
 <Tabs>
   <Tab title="Workspace">
-   点击 Dify 企业版的 Authentication 页，轻点 Workspace Settings 区域内的 **"+ New Identity Provider → New OAuth2 Provider"**，在底部查看 Callback URL。
-
-   ![](https://assets-docs.dify.ai/2025/02/cfb6498477ea20ce9db649a5c21f519d.png)
+   点击 Dify 企业版的 Authentication 页，轻点 Members Authentication 区域内的 **"+ New Identity Provider → New OAuth2 Provider"**，在底部查看 Callback URL。
 
    它通常为以下格式：
 
    ```bash
-   https://[your-dify-enterprise-url]/console/api/enterprise/sso/oauth2/callback
+   https://[your-dify-enterprise-url]/console/api/enterprise/sso/oidc/callback
    ```
   </Tab>
-  <Tab title="WebApp">
+  <Tab title="WebApp（面向内部用户）">
    点击 Dify 企业版的 Authentication 页，轻点 WebApp Settings 区域内的 **"+ New Identity Provider → New OAuth2 Provider"**，在底部查看 Callback URL。
-
-   ![](https://assets-docs.dify.ai/2025/02/eef6c4a32147675b7645bb1b46d19aea.png)
 
    它通常为以下格式：
 
    ```bash
-   https://[your-app-url]/api/enterprise/sso/oauth2/callback
+   https://[your-app-url]/api/enterprise/sso/members/oidc/callback
+   ```
+  </Tab>
+  <Tab title="WebApp（面向外部用户）">
+   点击 Dify 企业版的 Authentication 页，轻点 WebApp Settings 区域内的 **"+ New Identity Provider → New OAuth2 Provider"**，在底部查看 Callback URL。
+
+   它通常为以下格式：
+
+   ```bash
+   https://[your-app-url]/api/enterprise/sso/oidc/callback
    ```
   </Tab>
 </Tabs>

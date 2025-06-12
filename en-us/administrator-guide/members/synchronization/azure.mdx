@@ -17,13 +17,7 @@ Select **Create your own application**, give it a name (e.g., "dify"), choose **
 
 ![](https://assets-docs.dify.ai/2024/11/b823ecfaa94d18ba0ac794cc0290dc7f.png)
 
-### 2. Assign Users and Groups
-
-From the application's left menu, select **Users and groups**, then click **Add user/group**.
-
-![](https://assets-docs.dify.ai/2024/11/ed3c6f5de21c75e2261bf05d055ffb9e.png)
-
-### 3. Set Up Provisioning
+### 2. Set Up Provisioning
 
 1. In the left menu, go to **Provision → Get started → Connect your application**.
 
@@ -40,9 +34,11 @@ From the application's left menu, select **Users and groups**, then click **Add 
 
 3. Click **Test Connection** to verify your setup.
 
+> Make sure automatic sync is enabled in the Enterprise Admin Console before testing the connection. Refer to [Sync Members](/en-us/administrator-guide/members/synchronization/sync-team-members) for details.
+
 4. If the test passes, click **Save**.
 
-### 4. Configure Attribute Mappings
+### 3. Configure Attribute Mappings
 
 1. On the provisioning page, click **Mappings**. You'll see two default mappings:
 
@@ -66,6 +62,12 @@ From the application's left menu, select **Users and groups**, then click **Add 
 | displayName | displayName |
 | members | members |
 
+### 4. Assign Users and Groups
+
+From the application's left menu, select **Users and groups**, then click **Add user/group**.
+
+![](https://assets-docs.dify.ai/2024/11/ed3c6f5de21c75e2261bf05d055ffb9e.png)
+
 ### 5. Start Provisioning
 
 1. Return to the main **Provisioning** page
@@ -80,26 +82,6 @@ From the application's left menu, select **Users and groups**, then click **Add 
 4. Click **Start provisioning**
 
 <Note>
-  First-time sync can take 20 minutes to several hours, depending on your directory size.
+  First-time sync can take 20 minutes to several hours, depending on your directory size. You can view the auto-sync history on the application’s settings page. Automatic synchronization will **not** overwrite existing users and group data in the Dify enterprise admin dashboard.
 </Note>
 
-### 6. Sync User Groups
-
-To include groups in the sync:
-
-1. Create a group in Azure Entra ID
-2. In your Dify application, click **Users and groups**
-3. Add the groups you want to sync
-
-![](https://assets-docs.dify.ai/2025/05/af19820dfd75bd6bc00c602009574a77.png)
-
-## Enable SCIM in Dify
-
-Once Azure is configured:
-
-1. Go to the Dify admin dashboard
-2. Navigate to **Members** → click the menu button → **Automatic synchronization** → **Enable**
-
-![](https://assets-docs.dify.ai/2025/05/08d3b05fc5dfaa1eb0a6b8bd523ea5f9.png)
-
-> Sync isn't instant. Azure controls the sync schedule. Check your provisioning logs in Azure for sync history.

@@ -73,22 +73,29 @@ Here's how SCIM resources work with Dify features:
 | User           | Member (email, username, status) | Create, Update, Deactivate | Deactivating changes user status to "Disabled" but keeps their data |
 | Group          | Group (name, members)        | Create, Update, Delete | Deleting a group removes it permanently along with member relationships |
 
+### 3. Enable Automatic Synchronization
+
+Access to enterprise dashboard, click **Members** → **Menu Button** → **Sync Settings** → **Enable**.
+
+![](https://assets-docs.dify.ai/2025/05/08d3b05fc5dfaa1eb0a6b8bd523ea5f9.png)
+
 ## Key Things to Know
 
 <Info>
-  Once you enable SCIM sync, your identity provider becomes the single source of truth for user and group management. To learn about API limitations, check out the [Admin APIs](en-us/administrator-guide/admin-apis) documentation.
+  Once you enable SCIM sync, your identity provider becomes the single source of truth for user and group management. System Administrators are not be ablae to add users manually. To learn about API limitations, check out the [Admin APIs](en-us/administrator-guide/admin-apis) documentation.
 </Info>
 
 ### What Changes When SCIM is Active
 
 **With SCIM enabled:**
+
 - All user and group management happens through your identity provider
 - Admin APIs become read-only
 - Self-registration is disabled
 
 **With SCIM disabled:**
-- Full Admin API access returns
-- All user management features work normally
+
+- Full Admin API access
 
 ### If You Need to Make Manual Changes
 

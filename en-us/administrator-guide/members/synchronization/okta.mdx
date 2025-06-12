@@ -23,8 +23,7 @@ Go to your Okta admin portal and navigate to **Applications** → **Create App I
   - Click **Create**
 
 3. Enable SCIM:
-  - In the General tab, find App Settings
-  - Click **Edit**
+  - In the General tab, find App Settings. Click **Edit**
   - Update the Application label if needed
   - Enable SCIM provisioning
   - Click **Save**
@@ -73,13 +72,6 @@ Go to your Okta admin portal and navigate to **Applications** → **Create App I
 
 ![](https://assets-docs.dify.ai/2025/05/cbc2fdde9886807eed30c1e5d208f8cd.png)
 
-## Enable SCIM in Dify
-
-Once Okta is configured:
-
-1. Go to the Dify admin dashboard
-2. Navigate to **Members** → click the menu button → **Automatic synchronization** → **Enable**
-
-![](https://assets-docs.dify.ai/2025/05/08d3b05fc5dfaa1eb0a6b8bd523ea5f9.png)
-
-> Sync isn't instant. Okta controls the sync schedule. Check your provisioning logs in Okta for sync history.
+<Note>
+  First-time sync can take 20 minutes to several hours, depending on your directory size. You can view the auto-sync history on the application’s settings page. Automatic synchronization will **not** overwrite existing users and group data in the Dify enterprise admin dashboard.
+</Note>

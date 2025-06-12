@@ -1,0 +1,252 @@
+{
+  "version": "2.8.x",
+  "language": "cn",
+  "href": "/zh-cn/introduction",
+  "groups": [
+    {
+      "group": "简介",
+      "pages": [
+        "zh-cn/introduction"
+      ]
+    },
+    {
+      "group": "部署手册",
+      "pages": [
+        "zh-cn/deployment/checklist",
+        "zh-cn/deployment/resources-checklist",
+        {
+          "group": "安装指引",
+          "pages": [
+            "zh-cn/deployment/prerequisites/kubernetes",
+            "zh-cn/deployment/prerequisites/minikube",
+            "zh-cn/deployment/prerequisites/docker-compose"
+          ]
+        },
+        {
+          "group": "测试/生产环境部署",
+          "pages": [
+            "zh-cn/deployment/test-production/testing-deployment",
+            "zh-cn/deployment/test-production/production-deployment"
+          ]
+        },
+        "zh-cn/deployment/license-activation",
+        "zh-cn/deployment/verify-services-status",
+        {
+          "group": "高级配置",
+          "pages": [
+            "zh-cn/deployment/advanced-configuration/persistent-storage",
+            "zh-cn/deployment/advanced-configuration/postgresql-database",
+            "zh-cn/deployment/advanced-configuration/redis",
+            {
+              "group": "向量数据库",
+              "pages": [
+                "zh-cn/deployment/advanced-configuration/vector-database",
+                "zh-cn/deployment/advanced-configuration/qdrant/single-node",
+                "zh-cn/deployment/advanced-configuration/qdrant/qdrant-cluster"
+              ]
+            },
+            "zh-cn/deployment/advanced-configuration/rag",
+            "zh-cn/deployment/advanced-configuration/email-provider",
+            "zh-cn/deployment/advanced-configuration/file-upload",
+            "zh-cn/deployment/advanced-configuration/nginx-ingress-controller",
+            "zh-cn/deployment/advanced-configuration/domain-and-ssl-certificate",
+            "zh-cn/deployment/advanced-configuration/dify-system-logo",
+            "zh-cn/deployment/advanced-configuration/model-provider",
+            "zh-cn/deployment/advanced-configuration/tools",
+            "zh-cn/deployment/advanced-configuration/environment-variables",
+            "zh-cn/deployment/advanced-configuration/dify-helm-chart",
+            {
+              "group": "Docker",
+              "pages": [
+                "zh-cn/deployment/advanced-configuration/docker/docker-registry"
+              ]
+            },
+            {
+              "group": "Docker Compose",
+              "pages": [
+                "zh-cn/deployment/advanced-configuration/docker-compose/icon-customization"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "云基础设施",
+          "pages": [
+            "zh-cn/deployment/cloud-infrastructure/azure-poc-infra-setup",
+            "zh-cn/deployment/cloud-infrastructure/aws-setup"
+          ]
+        },
+        {
+          "group": "常见问题",
+          "pages": [
+            "zh-cn/deployment/faq/deploying"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "管理员手册",
+      "pages": [
+        "zh-cn/administrator-guide/workspace-management",
+        {
+          "group": "成员管理",
+          "pages": [
+            "zh-cn/administrator-guide/members-management",
+            {
+              "group": "自动同步成员",
+              "pages": [
+                "zh-cn/administrator-guide/members/synchronization/sync-team-members",
+                "zh-cn/administrator-guide/members/synchronization/azure",
+                "zh-cn/administrator-guide/members/synchronization/okta"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "身份认证",
+          "pages": [
+            "versions/2-8-x/zh-cn/administrator-guide/authentication/introduction",
+            "versions/2-8-x/zh-cn/administrator-guide/authentication/enterprise-user-auth",
+            "versions/2-8-x/zh-cn/administrator-guide/authentication/webapp-external-user-auth",
+            {
+              "group": "配置 SSO 认证",
+              "pages": [
+                "versions/2-8-x/zh-cn/administrator-guide/sso/introduction",
+                {
+                  "group": "Okta",
+                  "pages": [
+                    "versions/2-8-x/zh-cn/administrator-guide/sso/okta/oidc",
+                    "versions/2-8-x/zh-cn/administrator-guide/sso/okta/saml",
+                    "versions/2-8-x/zh-cn/administrator-guide/sso/okta/oauth2"
+                  ]
+                },
+                {
+                  "group": "Azure",
+                  "pages": [
+                    "versions/2-8-x/zh-cn/administrator-guide/sso/azure/saml"
+                  ]
+                },
+                {
+                  "group": "GitHub",
+                  "pages": [
+                    "versions/2-8-x/zh-cn/administrator-guide/sso/github/oauth2"
+                  ]
+                }
+              ]
+            },
+            "zh-cn/administrator-guide/2sv"
+          ]
+        },
+        "zh-cn/administrator-guide/admin-apis",
+        "zh-cn/administrator-guide/branding",
+        {
+          "group": "系统设置",
+          "pages": [
+            "versions/2-8-x/zh-cn/administrator-guide/systems/users",
+            "versions/2-8-x/zh-cn/administrator-guide/systems/2sv"
+          ]
+        },
+        "zh-cn/administrator-guide/faq"
+      ]
+    },
+    {
+      "group": "用户手册",
+      "pages": [
+        "zh-cn/user-guide/welcome",
+        {
+          "group": "接入模型",
+          "pages": [
+            "zh-cn/user-guide/models/model-configuration",
+            "zh-cn/user-guide/models/new-provider",
+            "zh-cn/user-guide/models/predefined-model",
+            "zh-cn/user-guide/models/customizable-model",
+            "zh-cn/user-guide/models/interfaces",
+            "zh-cn/user-guide/models/schema",
+            "zh-cn/user-guide/models/load-balancing"
+          ]
+        },
+        {
+          "group": "构建应用",
+          "pages": [
+            "zh-cn/user-guide/build-app/chatbot",
+            "zh-cn/user-guide/build-app/text-generator",
+            "zh-cn/user-guide/build-app/agent",
+            {
+              "group": "Chatflow & Workflow",
+              "pages": [
+                "zh-cn/user-guide/build-app/flow-app/concepts",
+                "zh-cn/user-guide/build-app/flow-app/create-flow-app",
+                "zh-cn/user-guide/build-app/flow-app/variables",
+                {
+                  "group": "节点说明",
+                  "pages": [
+                    "zh-cn/user-guide/build-app/flow-app/nodes/start",
+                    "zh-cn/user-guide/build-app/flow-app/nodes/end",
+                    "zh-cn/user-guide/build-app/flow-app/nodes/answer",
+                    "zh-cn/user-guide/build-app/flow-app/nodes/llm",
+                    "zh-cn/user-guide/build-app/flow-app/nodes/knowledge-retrieval",
+                    "zh-cn/user-guide/build-app/flow-app/nodes/question-classifier",
+                    "zh-cn/user-guide/build-app/flow-app/nodes/ifelse",
+                    "zh-cn/user-guide/build-app/flow-app/nodes/code",
+                    "zh-cn/user-guide/build-app/flow-app/nodes/template",
+                    "zh-cn/user-guide/build-app/flow-app/nodes/doc-extractor",
+                    "zh-cn/user-guide/build-app/flow-app/nodes/list-operator",
+                    "zh-cn/user-guide/build-app/flow-app/nodes/variable-aggregator",
+                    "zh-cn/user-guide/build-app/flow-app/nodes/variable-assigner",
+                    "zh-cn/user-guide/build-app/flow-app/nodes/iteration",
+                    "zh-cn/user-guide/build-app/flow-app/nodes/parameter-extractor",
+                    "zh-cn/user-guide/build-app/flow-app/nodes/http-request",
+                    "zh-cn/user-guide/build-app/flow-app/nodes/tools"
+                  ]
+                },
+                "zh-cn/user-guide/build-app/flow-app/orchestrate-node",
+                "zh-cn/user-guide/build-app/flow-app/file-upload",
+                "zh-cn/user-guide/build-app/flow-app/additional-feature"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "调试应用",
+          "pages": [
+            {
+              "group": "Chatflow & Workflow",
+              "pages": [
+                "zh-cn/user-guide/debug-app/chatflow-and-workflow/preview-and-run",
+                "zh-cn/user-guide/debug-app/chatflow-and-workflow/step-run",
+                "zh-cn/user-guide/debug-app/chatflow-and-workflow/log",
+                "zh-cn/user-guide/debug-app/chatflow-and-workflow/checklist",
+                "zh-cn/user-guide/debug-app/chatflow-and-workflow/history"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "发布应用",
+          "pages": [
+            "versions/2-8-x/zh-cn/user-guide/application-publishing/permission-management",
+            {
+              "group": "发布为公开 Web 站点",
+              "pages": [
+                "zh-cn/user-guide/application-publishing/launch-your-webapp-quickly/web-app-settings",
+                "zh-cn/user-guide/application-publishing/launch-your-webapp-quickly/text-generator",
+                "zh-cn/user-guide/application-publishing/launch-your-webapp-quickly/conversation-application"
+              ]
+            },
+            "zh-cn/user-guide/application-publishing/embedding-in-websites",
+            "zh-cn/user-guide/application-publishing/developing-with-apis",
+            "zh-cn/user-guide/application-publishing/based-on-frontend-templates"
+          ]
+        },
+        {
+          "group": "管理",
+          "pages": [
+            "zh-cn/user-guide/management/app-management",
+            "zh-cn/user-guide/management/team-members-management",
+            "zh-cn/user-guide/management/personal-account-management"
+          ]
+        }
+      ]
+    }
+  ]
+}

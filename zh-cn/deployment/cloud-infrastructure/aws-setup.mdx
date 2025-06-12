@@ -65,13 +65,13 @@ version: '简体中文'
 
    - `CDK_DEFAULT_REGION`：Dify 企业版将部署的 AWS 区域。
 
-   - `CDK_DEFAULT_ACCOUNT`：您的 AWS 账户 ID。
+   - `CDK_DEFAULT_ACCOUNT`：你的 AWS 账户 ID。
 
-   - `DEPLOY_VPC_ID`：用于部署的现有 VPC 的 ID。如果未设置，CDK 将为您创建一个。
+   - `DEPLOY_VPC_ID`：用于部署的现有 VPC 的 ID。如果未设置，CDK 将为你创建一个。
 
    - **注意：** **如果使用现有 VPC**
 
-     - 确保您有 2 个或更多的**公共**子网用于应用负载均衡器，以及 2 个或更多的**私有**子网可以访问互联网（与 NAT 关联）以从互联网拉取 docker 镜像。
+     - 确保你有 2 个或更多的**公共**子网用于应用负载均衡器，以及 2 个或更多的**私有**子网可以访问互联网（与 NAT 关联）以从互联网拉取 docker 镜像。
 
      - 为子网添加**标签**（**否则**，步骤 6 将显示关于自动标记失败的警告，这将导致应用负载均衡器创建失败）：
 
@@ -96,7 +96,7 @@ version: '简体中文'
 
    **注意：**
 
-   - 如果您使用的是 AWS 中国区域，必须配置 `AWS_EKS_CHART_REPO_URL` 以确保功能正常。请联系 Dify 团队获取 URL。
+   - 如果你使用的是 AWS 中国区域，必须配置 `AWS_EKS_CHART_REPO_URL` 以确保功能正常。请联系 Dify 团队获取 URL。
    - 建议使用现有 VPC 以便更容易访问资源。
 
 5. ### CDK 引导：
@@ -126,7 +126,7 @@ version: '简体中文'
       
     ![](https://assets-docs.dify.ai/2025/05/2041171ef0a17527cd41f9deba602433.png)
 
-   4. 添加您的 IAM 用户并分配以下权限：
+   4. 添加你的 IAM 用户并分配以下权限：
       - `AmazonEKSAdminPolicy`
       - `AmazonEKSAdminViewPolicy`
       - `AmazonEKSClusterAdminPolicy`
@@ -137,9 +137,9 @@ version: '简体中文'
    aws eks update-kubeconfig --region <cn-northwest-1> --name <Dify-Testing-DifyStackTest-EKS>
    ```
 
-   根据您的部署调整 `region` 和 `name` 参数：
+   根据你的部署调整 `region` 和 `name` 参数：
 
-   - **region：** 您的集群部署的 AWS 区域。
+   - **region：** 你的集群部署的 AWS 区域。
    - **name：** EKS 集群名称。
 
 9. ### 数据持久化配置：
@@ -202,7 +202,7 @@ version: '简体中文'
 
     修改 Helm `values.yaml` 文件，按如下方式修改 `externalType` 部分：
      1. 用 AWS Opensearch 实例的 **Domain endpoint** 替换 `{openSearch_endpont}`，删除 `https://` 并使用剩余部分。
-     2. 用您在 `.env` 中设置的值替换 `<OPENSEARCH_ADMINNAME>` 和 `<OPENSEARCH_PASSWORD>`
+     2. 用你在 `.env` 中设置的值替换 `<OPENSEARCH_ADMINNAME>` 和 `<OPENSEARCH_PASSWORD>`
 
     ```yaml
     vectorDB:
@@ -218,19 +218,19 @@ version: '简体中文'
 
 13. ### 设置 docker 镜像拉取密钥
 
-    在安装 Dify 企业版之前，您需要设置 docker 镜像拉取密钥。
+    在安装 Dify 企业版之前，你需要设置 docker 镜像拉取密钥。
     
-    **注意：** 如果您还没有获得用户名和密码，请联系我们，邮箱地址：[Support@dify.ai](support@dify.ai)
+    **注意：** 如果你还没有获得用户名和密码，请联系我们，邮箱地址：[Support@dify.ai](support@dify.ai)
 
 14. ### TLS 配置
 
     #### 测试环境：
 
-    如果您只是在测试部署过程，可以忽略此步骤直接继续。
+    如果你只是在测试部署过程，可以忽略此步骤直接继续。
 
     #### 生产环境：
 
-    前往 AWS `ACM` 为您在 helm chart 配置文件 `values.yaml` 中声明的域名申请证书：
+    前往 AWS `ACM` 为你在 helm chart 配置文件 `values.yaml` 中声明的域名申请证书：
 
     ```yaml
       consoleApiDomain: "console.xxxx.com"
@@ -252,7 +252,7 @@ version: '简体中文'
     enterprise.xxxx.com
     ```
 
-    前往您的域名服务提供商（如 cloud flare、aws route53 等）设置 `cname` 以证明您对这些域名的所有权。
+    前往你的域名服务提供商（如 cloud flare、aws route53 等）设置 `cname` 以证明你对这些域名的所有权。
 
     **修改 values.yaml 参数：global.useTLS**
 
@@ -316,7 +316,7 @@ version: '简体中文'
     ping {aws_alb_dns}
     ```
 
-    然后将以下行添加到您的 `/etc/hosts` 文件中。
+    然后将以下行添加到你的 `/etc/hosts` 文件中。
 
     ```bash
     4.152.1.216 console.dify.local
@@ -328,7 +328,7 @@ version: '简体中文'
 
     #### 生产环境
 
-    前往您的域名服务提供商，将 DNS 设置为 ALB 地址（在 AWS-EC2-Load Balancer 中获取 alb 的 dns）：
+    前往你的域名服务提供商，将 DNS 设置为 ALB 地址（在 AWS-EC2-Load Balancer 中获取 alb 的 dns）：
 
     | 域名                | cname         |
     | ------------------- | ------------- |
@@ -341,7 +341,7 @@ version: '简体中文'
 
 18. ### 验证安装
 
-    **警告**：在登录 Dify Enterprise Dashboard `http://enterprise.dify.local` 之前，您必须先设置 Dify Console `http://console.dify.local`。
+    **警告**：在登录 Dify Enterprise Dashboard `http://enterprise.dify.local` 之前，你必须先设置 Dify Console `http://console.dify.local`。
 
     - Dify Console：访问 `http://console.dify.local` 并完成安装。
 

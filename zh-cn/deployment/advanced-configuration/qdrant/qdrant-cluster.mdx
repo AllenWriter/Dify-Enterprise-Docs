@@ -14,7 +14,7 @@ version: '简体中文'
 
 ## 安装
 ### `QDRANT__SERVICE__API_KEY` 是必需的环境变量
-您可以使用以下命令生成一个随机的 32 字节十六进制字符串：
+你可以使用以下命令生成一个随机的 32 字节十六进制字符串：
 
 ```bash
 openssl rand -hex 32
@@ -87,7 +87,7 @@ curl -H 'api-key: <QDRANT__SERVICE__API_KEY>' localhost:6333/cluster | python3 -
 ````
 
 
-运行上述命令后，您应该看到以下示例输出：
+运行上述命令后，你应该看到以下示例输出：
 
 
 ````json
@@ -127,7 +127,7 @@ curl -H 'api-key: <QDRANT__SERVICE__API_KEY>' localhost:6333/cluster | python3 -
 
 
 ## 添加负载均衡器
-- 部署 qdrant 集群后，您可以添加一个负载均衡器来分配请求到 qdrant 节点。
+- 部署 qdrant 集群后，你可以添加一个负载均衡器来分配请求到 qdrant 节点。
 - 负载均衡器应配置为在 6333 端口上分配请求到 qdrant 节点。
 - 6335 端口仅用于内部通信，无需暴露给公众。
 

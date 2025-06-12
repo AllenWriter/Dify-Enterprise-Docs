@@ -374,29 +374,31 @@
                   {
                     "group": "Identity Authentication",
                     "pages": [
-                      "en-us/administrator-guide/authentication",
+                      "versions/2-8-x/en-us/administrator-guide/authentication/introduction",
+                      "versions/2-8-x/en-us/administrator-guide/authentication/enterprise-user-auth",
+                      "versions/2-8-x/en-us/administrator-guide/authentication/webapp-external-user-auth",
                       {
-                        "group": "SSO",
+                        "group": "Configure SSO Authentication",
                         "pages": [
-                          "en-us/administrator-guide/sso/introduction",
+                          "versions/2-8-x/en-us/administrator-guide/sso/introduction",
                           {
                             "group": "Okta",
                             "pages": [
-                              "en-us/administrator-guide/sso/okta/oidc",
-                              "en-us/administrator-guide/sso/okta/saml",
-                              "en-us/administrator-guide/sso/okta/oauth2"
+                              "versions/2-8-x/en-us/administrator-guide/sso/okta/oidc",
+                              "versions/2-8-x/en-us/administrator-guide/sso/okta/saml",
+                              "versions/2-8-x/en-us/administrator-guide/sso/okta/oauth2"
                             ]
                           },
                           {
                             "group": "Azure",
                             "pages": [
-                              "en-us/administrator-guide/sso/azure/saml"
+                              "versions/2-8-x/en-us/administrator-guide/sso/azure/saml"
                             ]
                           },
                           {
                             "group": "GitHub",
                             "pages": [
-                              "en-us/administrator-guide/sso/github/oauth2"
+                              "versions/2-8-x/en-us/administrator-guide/sso/github/oauth2"
                             ]
                           }
                         ]
@@ -406,7 +408,13 @@
                   },
                   "en-us/administrator-guide/admin-apis",
                   "en-us/administrator-guide/branding",
-                  "en-us/administrator-guide/system-settings",
+                  {
+                    "group": "System Settings",
+                    "pages": [
+                      "versions/2-8-x/en-us/administrator-guide/systems/users",
+                      "versions/2-8-x/en-us/administrator-guide/systems/2sv"
+                    ]
+                  },
                   "en-us/administrator-guide/faq"
                 ]
               },
@@ -486,7 +494,7 @@
                   {
                     "group": "Application Publishing",
                     "pages": [
-                      "en-us/user-guide/application-publishing/permission-management",
+                      "versions/2-8-x/en-us/user-guide/application-publishing/permission-management",
                       {
                         "group": "Publish as a Single-page Web App",
                         "pages": [
@@ -551,7 +559,7 @@
                     ]
                   },
                   {
-                    "group": "環境隔離",
+                    "group": "テスト/本番環境デプロイメント",
                     "pages": [
                       "ja-jp/deployment/test-production/testing-deployment",
                       "ja-jp/deployment/test-production/production-deployment"
@@ -590,7 +598,7 @@
                         ]
                       },
                       {
-                        "group": "アイコンのカスタマイズ",
+                        "group": "Docker Compose",
                         "pages": [
                           "ja-jp/deployment/advanced-configuration/docker-compose/icon-customization"
                         ]
@@ -605,7 +613,7 @@
                     ]
                   },
                   {
-                    "group": "FAQ",
+                    "group": "よくある質問",
                     "pages": [
                       "ja-jp/deployment/faq/deploying"
                     ]
@@ -613,7 +621,7 @@
                 ]
               },
               {
-                "group": "管理人ガイド",
+                "group": "管理者ガイド",
                 "pages": [
                   "ja-jp/administrator-guide/workspace-management",
                   {
@@ -621,7 +629,7 @@
                     "pages": [
                       "ja-jp/administrator-guide/members-management",
                       {
-                        "group": "メンバーの同期",
+                        "group": "メンバー自動同期",
                         "pages": [
                           "ja-jp/administrator-guide/members/synchronization/sync-team-members",
                           "ja-jp/administrator-guide/members/synchronization/azure",
@@ -631,31 +639,33 @@
                     ]
                   },
                   {
-                    "group": "認証",
+                    "group": "身元認証",
                     "pages": [
-                      "ja-jp/administrator-guide/authentication",
+                      "versions/2-8-x/ja-jp/administrator-guide/authentication/introduction",
+                      "versions/2-8-x/ja-jp/administrator-guide/authentication/enterprise-user-auth",
+                      "versions/2-8-x/ja-jp/administrator-guide/authentication/webapp-external-user-auth",
                       {
-                        "group": "エンタープライズ SSO",
+                        "group": "SSO認証設定",
                         "pages": [
-                          "ja-jp/administrator-guide/sso/introduction",
+                          "versions/2-8-x/ja-jp/administrator-guide/sso/introduction",
                           {
                             "group": "Okta",
                             "pages": [
-                              "ja-jp/administrator-guide/sso/okta/oidc",
-                              "ja-jp/administrator-guide/sso/okta/saml",
-                              "ja-jp/administrator-guide/sso/okta/oauth2"
+                              "versions/2-8-x/ja-jp/administrator-guide/sso/okta/oidc",
+                              "versions/2-8-x/ja-jp/administrator-guide/sso/okta/saml",
+                              "versions/2-8-x/ja-jp/administrator-guide/sso/okta/oauth2"
                             ]
                           },
                           {
                             "group": "Azure",
                             "pages": [
-                              "ja-jp/administrator-guide/sso/azure/saml"
+                              "versions/2-8-x/ja-jp/administrator-guide/sso/azure/saml"
                             ]
                           },
                           {
                             "group": "GitHub",
                             "pages": [
-                              "ja-jp/administrator-guide/sso/github/oauth2"
+                              "versions/2-8-x/ja-jp/administrator-guide/sso/github/oauth2"
                             ]
                           }
                         ]
@@ -665,7 +675,13 @@
                   },
                   "ja-jp/administrator-guide/admin-apis",
                   "ja-jp/administrator-guide/branding",
-                  "ja-jp/administrator-guide/system-settings",
+                  {
+                    "group": "システム設定",
+                    "pages": [
+                      "versions/2-8-x/ja-jp/administrator-guide/systems/users",
+                      "versions/2-8-x/ja-jp/administrator-guide/systems/2sv"
+                    ]
+                  },
                   "ja-jp/administrator-guide/faq"
                 ]
               },
@@ -744,7 +760,7 @@
                   {
                     "group": "アプリの発表",
                     "pages": [
-                      "ja-jp/user-guide/application-publishing/permission-management",
+                      "versions/2-8-x/ja-jp/user-guide/application-publishing/permission-management",
                       {
                         "group": "公開Webアプリとしてのリリース",
                         "pages": [
@@ -764,6 +780,21 @@
                       "ja-jp/user-guide/management/app-management",
                       "ja-jp/user-guide/management/team-members-management",
                       "ja-jp/user-guide/management/personal-account-management"
+                    ]
+                  },
+                  {
+                    "group": "監視",
+                    "pages": [
+                      "ja-jp/user-guide/monitoring/analysis",
+                      "ja-jp/user-guide/monitoring/logs",
+                      "ja-jp/user-guide/monitoring/annotation-reply",
+                      {
+                        "group": "外部Opsツールの統合",
+                        "pages": [
+                          "ja-jp/user-guide/monitoring/integrate-external-ops-tools/integrate-langfuse",
+                          "ja-jp/user-guide/monitoring/integrate-external-ops-tools/integrate-langsmith"
+                        ]
+                      }
                     ]
                   }
                 ]

@@ -1,5 +1,5 @@
 {
-  "version": "2.7.x",
+  "version": "2.8.x",
   "language": "en",
   "href": "/en-us/introduction",
   "groups": [
@@ -105,29 +105,31 @@
         {
           "group": "Identity Authentication",
           "pages": [
-            "en-us/administrator-guide/authentication",
+            "versions/2-8-x/en-us/administrator-guide/authentication/introduction",
+            "versions/2-8-x/en-us/administrator-guide/authentication/enterprise-user-auth",
+            "versions/2-8-x/en-us/administrator-guide/authentication/webapp-external-user-auth",
             {
-              "group": "SSO",
+              "group": "Configure SSO Authentication",
               "pages": [
-                "en-us/administrator-guide/sso/introduction",
+                "versions/2-8-x/en-us/administrator-guide/sso/introduction",
                 {
                   "group": "Okta",
                   "pages": [
-                    "en-us/administrator-guide/sso/okta/oidc",
-                    "en-us/administrator-guide/sso/okta/saml",
-                    "en-us/administrator-guide/sso/okta/oauth2"
+                    "versions/2-8-x/en-us/administrator-guide/sso/okta/oidc",
+                    "versions/2-8-x/en-us/administrator-guide/sso/okta/saml",
+                    "versions/2-8-x/en-us/administrator-guide/sso/okta/oauth2"
                   ]
                 },
                 {
                   "group": "Azure",
                   "pages": [
-                    "en-us/administrator-guide/sso/azure/saml"
+                    "versions/2-8-x/en-us/administrator-guide/sso/azure/saml"
                   ]
                 },
                 {
                   "group": "GitHub",
                   "pages": [
-                    "en-us/administrator-guide/sso/github/oauth2"
+                    "versions/2-8-x/en-us/administrator-guide/sso/github/oauth2"
                   ]
                 }
               ]
@@ -137,7 +139,13 @@
         },
         "en-us/administrator-guide/admin-apis",
         "en-us/administrator-guide/branding",
-        "en-us/administrator-guide/system-settings",
+        {
+          "group": "System Settings",
+          "pages": [
+            "versions/2-8-x/en-us/administrator-guide/systems/users",
+            "versions/2-8-x/en-us/administrator-guide/systems/2sv"
+          ]
+        },
         "en-us/administrator-guide/faq"
       ]
     },
@@ -217,7 +225,7 @@
         {
           "group": "Application Publishing",
           "pages": [
-            "en-us/user-guide/application-publishing/permission-management",
+            "versions/2-8-x/en-us/user-guide/application-publishing/permission-management",
             {
               "group": "Publish as a Single-page Web App",
               "pages": [

@@ -139,7 +139,13 @@
         },
         "zh-cn/administrator-guide/admin-apis",
         "zh-cn/administrator-guide/branding",
-        "zh-cn/administrator-guide/system-settings",
+        {
+          "group": "系统设置",
+          "pages": [
+            "versions/2-8-x/zh-cn/administrator-guide/systems/users",
+            "versions/2-8-x/zh-cn/administrator-guide/systems/2sv"
+          ]
+        },
         "zh-cn/administrator-guide/faq"
       ]
     },
